@@ -2,17 +2,44 @@ syntax = "proto3";
 
 package message;
 
-enum StringMessageType {
-    MAZE_MAP = 0;
+
+// New room use room_id = 0 to say hello, otherwise means join room
+message HelloMessage {
+    int32 room_id = 1;
+}
+
+enum CharacterType {
+    REAPER = 0;
+    SOUL_DOG = 1;
+    SOUL_PSYCHOLOGIST = 2;
+    SOUL_DETECTIVE = 3;
+}
+
+message Character {
+    int32 player_id = 1;
+    CharacterType character_type = 2;
+}
+
+// If room_id in HelloMessage is not 0 and the room_id does not exist, bool is_join is false
+message RoomMessage {
+    bool is_join = 1;
+    int32 room_id = 2;
+    int32 player_id = 3;
+    repeated Character characters = 4;
 }
 
 message MessageWrapper {
     oneof payload {
         StringMessage string_message = 1;
-        PlayerBasicMessage player_basic_message = 2;
-        AttackMessage attack_message = 3;
-        PropGetMessage prop_get_message = 4;
+        SoulBasicMessage soul_basic_message = 2;
+        ReaperAttackMessage attack_message = 3;
+        PropTryGetMessage prop_try_get_message = 4;
+        PropGetMessage prop_get_message = 5;
     }
+}
+
+enum StringMessageType {
+    MAZE_MAP = 0;
 }
 
 message StringMessage {
@@ -20,23 +47,33 @@ message StringMessage {
     string message_content = 2;
 }
 
-message PlayerBasicMessage {
+message SoulBasicMessage {
     int32 player_id = 1;
     float position_x = 2;
     float position_y = 3;
-    int32 hp = 4;
-    int32 max_hp = 5;
+    float hp = 4;
+    float max_hp = 5;
 }
 
-message AttackMessage {
+message ReaperBasicMessage {
     int32 player_id = 1;
-    int32 target_id = 2;
-    int32 skill_id = 3;
+    float position_x = 2;
+    float position_y = 3;
+}
+
+message ReaperAttackMessage {
+    int32 soul_player_id = 1;
+    int32 skill_id = 2;
+}
+
+message PropTryGetMessage {
+    int32 player_id = 1;
+    int32 prop_id = 2;
+    int32 prop_type = 3; // TODO: Need define 'a b c d' in map to give prop type, or random by client (server can mutex lock to only one client get prop)
 }
 
 message PropGetMessage {
-    int32 player_id = 1;
-    int32 prop_id = 2;
-    int32 prop_type = 3;
-    int32 amount = 4;
-} 
+    bool is_get = 1;
+    int32 player_id = 2;
+    int32 prop_id = 3;
+}
