@@ -2,6 +2,24 @@ syntax = "proto3";
 
 package message;
 
+enum MessageType {
+    MAZE_MAP = 0;
+    MOVE_MESSAGE = 1;
+    ATTACK_MESSAGE = 2;
+    PLAYER_BASIC_MESSAGE = 3;
+    PROP_GET_MESSAGE = 4;
+}
+
+message MessageWrapper {
+    oneof payload {
+        MazeMapMessage maze_map = 1;
+        MoveMessage move_message = 2;
+        AttackMessage attack_message = 3;
+        PlayerBasicMessage player_basic_message = 4;
+        PropGetMessage prop_get_message = 5;
+    }
+}
+
 // Client Messages
 message MoveMessage {
     float x = 1;
@@ -28,7 +46,7 @@ message PropGetMessage {
     int32 amount = 3;
 } 
 
-message StringMessage {
+message MazeMapMessage {
     int32 message_type = 1;
     string message_content = 2;
 }

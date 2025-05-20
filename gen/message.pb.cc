@@ -17,6 +17,18 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace message {
+constexpr MessageWrapper::MessageWrapper(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct MessageWrapperDefaultTypeInternal {
+  constexpr MessageWrapperDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~MessageWrapperDefaultTypeInternal() {}
+  union {
+    MessageWrapper _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT MessageWrapperDefaultTypeInternal _MessageWrapper_default_instance_;
 constexpr MoveMessage::MoveMessage(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : x_(0)
@@ -73,25 +85,37 @@ struct PropGetMessageDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
-constexpr StringMessage::StringMessage(
+constexpr MazeMapMessage::MazeMapMessage(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : message_content_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , message_type_(0){}
-struct StringMessageDefaultTypeInternal {
-  constexpr StringMessageDefaultTypeInternal()
+struct MazeMapMessageDefaultTypeInternal {
+  constexpr MazeMapMessageDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~StringMessageDefaultTypeInternal() {}
+  ~MazeMapMessageDefaultTypeInternal() {}
   union {
-    StringMessage _instance;
+    MazeMapMessage _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StringMessageDefaultTypeInternal _StringMessage_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT MazeMapMessageDefaultTypeInternal _MazeMapMessage_default_instance_;
 }  // namespace message
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[5];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_message_2eproto = nullptr;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[6];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_message_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_message_2eproto = nullptr;
 
 const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::message::MessageWrapper, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::message::MessageWrapper, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::message::MessageWrapper, payload_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::message::MoveMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -129,46 +153,58 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   PROTOBUF_FIELD_OFFSET(::message::PropGetMessage, prop_type_),
   PROTOBUF_FIELD_OFFSET(::message::PropGetMessage, amount_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::message::StringMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::message::StringMessage, message_type_),
-  PROTOBUF_FIELD_OFFSET(::message::StringMessage, message_content_),
+  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, message_type_),
+  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, message_content_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::message::MoveMessage)},
-  { 8, -1, -1, sizeof(::message::AttackMessage)},
-  { 16, -1, -1, sizeof(::message::PlayerBasicMessage)},
-  { 27, -1, -1, sizeof(::message::PropGetMessage)},
-  { 36, -1, -1, sizeof(::message::StringMessage)},
+  { 0, -1, -1, sizeof(::message::MessageWrapper)},
+  { 12, -1, -1, sizeof(::message::MoveMessage)},
+  { 20, -1, -1, sizeof(::message::AttackMessage)},
+  { 28, -1, -1, sizeof(::message::PlayerBasicMessage)},
+  { 39, -1, -1, sizeof(::message::PropGetMessage)},
+  { 48, -1, -1, sizeof(::message::MazeMapMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_MessageWrapper_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_MoveMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_AttackMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_PlayerBasicMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_PropGetMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_StringMessage_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_MazeMapMessage_default_instance_),
 };
 
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rmessage.proto\022\007message\"#\n\013MoveMessage\022"
-  "\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"4\n\rAttackMessage\022\021"
-  "\n\ttarget_id\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005\"k\n\022P"
-  "layerBasicMessage\022\021\n\tplayer_id\030\001 \001(\005\022\022\n\n"
-  "position_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001(\002\022\n\n\002"
-  "hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\"D\n\016PropGetMessa"
-  "ge\022\017\n\007prop_id\030\001 \001(\005\022\021\n\tprop_type\030\002 \001(\005\022\016"
-  "\n\006amount\030\003 \001(\005\">\n\rStringMessage\022\024\n\014messa"
-  "ge_type\030\001 \001(\005\022\027\n\017message_content\030\002 \001(\tb\006"
-  "proto3"
+  "\n\rmessage.proto\022\007message\"\232\002\n\016MessageWrap"
+  "per\022+\n\010maze_map\030\001 \001(\0132\027.message.MazeMapM"
+  "essageH\000\022,\n\014move_message\030\002 \001(\0132\024.message"
+  ".MoveMessageH\000\0220\n\016attack_message\030\003 \001(\0132\026"
+  ".message.AttackMessageH\000\022;\n\024player_basic"
+  "_message\030\004 \001(\0132\033.message.PlayerBasicMess"
+  "ageH\000\0223\n\020prop_get_message\030\005 \001(\0132\027.messag"
+  "e.PropGetMessageH\000B\t\n\007payload\"#\n\013MoveMes"
+  "sage\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"4\n\rAttackMess"
+  "age\022\021\n\ttarget_id\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005"
+  "\"k\n\022PlayerBasicMessage\022\021\n\tplayer_id\030\001 \001("
+  "\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001("
+  "\002\022\n\n\002hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\"D\n\016PropGet"
+  "Message\022\017\n\007prop_id\030\001 \001(\005\022\021\n\tprop_type\030\002 "
+  "\001(\005\022\016\n\006amount\030\003 \001(\005\"\?\n\016MazeMapMessage\022\024\n"
+  "\014message_type\030\001 \001(\005\022\027\n\017message_content\030\002"
+  " \001(\t*q\n\013MessageType\022\014\n\010MAZE_MAP\020\000\022\020\n\014MOV"
+  "E_MESSAGE\020\001\022\022\n\016ATTACK_MESSAGE\020\002\022\030\n\024PLAYE"
+  "R_BASIC_MESSAGE\020\003\022\024\n\020PROP_GET_MESSAGE\020\004b"
+  "\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 366, descriptor_table_protodef_message_2eproto, "message.proto", 
-  &descriptor_table_message_2eproto_once, nullptr, 0, 5,
+  false, false, 767, descriptor_table_protodef_message_2eproto, "message.proto", 
+  &descriptor_table_message_2eproto_once, nullptr, 0, 6,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
 };
@@ -179,6 +215,494 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_message_2eproto(&descriptor_table_message_2eproto);
 namespace message {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MessageType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_message_2eproto);
+  return file_level_enum_descriptors_message_2eproto[0];
+}
+bool MessageType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+
+// ===================================================================
+
+class MessageWrapper::_Internal {
+ public:
+  static const ::message::MazeMapMessage& maze_map(const MessageWrapper* msg);
+  static const ::message::MoveMessage& move_message(const MessageWrapper* msg);
+  static const ::message::AttackMessage& attack_message(const MessageWrapper* msg);
+  static const ::message::PlayerBasicMessage& player_basic_message(const MessageWrapper* msg);
+  static const ::message::PropGetMessage& prop_get_message(const MessageWrapper* msg);
+};
+
+const ::message::MazeMapMessage&
+MessageWrapper::_Internal::maze_map(const MessageWrapper* msg) {
+  return *msg->payload_.maze_map_;
+}
+const ::message::MoveMessage&
+MessageWrapper::_Internal::move_message(const MessageWrapper* msg) {
+  return *msg->payload_.move_message_;
+}
+const ::message::AttackMessage&
+MessageWrapper::_Internal::attack_message(const MessageWrapper* msg) {
+  return *msg->payload_.attack_message_;
+}
+const ::message::PlayerBasicMessage&
+MessageWrapper::_Internal::player_basic_message(const MessageWrapper* msg) {
+  return *msg->payload_.player_basic_message_;
+}
+const ::message::PropGetMessage&
+MessageWrapper::_Internal::prop_get_message(const MessageWrapper* msg) {
+  return *msg->payload_.prop_get_message_;
+}
+void MessageWrapper::set_allocated_maze_map(::message::MazeMapMessage* maze_map) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (maze_map) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::MazeMapMessage>::GetOwningArena(maze_map);
+    if (message_arena != submessage_arena) {
+      maze_map = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, maze_map, submessage_arena);
+    }
+    set_has_maze_map();
+    payload_.maze_map_ = maze_map;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.maze_map)
+}
+void MessageWrapper::set_allocated_move_message(::message::MoveMessage* move_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (move_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::MoveMessage>::GetOwningArena(move_message);
+    if (message_arena != submessage_arena) {
+      move_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, move_message, submessage_arena);
+    }
+    set_has_move_message();
+    payload_.move_message_ = move_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.move_message)
+}
+void MessageWrapper::set_allocated_attack_message(::message::AttackMessage* attack_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (attack_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::AttackMessage>::GetOwningArena(attack_message);
+    if (message_arena != submessage_arena) {
+      attack_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, attack_message, submessage_arena);
+    }
+    set_has_attack_message();
+    payload_.attack_message_ = attack_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.attack_message)
+}
+void MessageWrapper::set_allocated_player_basic_message(::message::PlayerBasicMessage* player_basic_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (player_basic_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::PlayerBasicMessage>::GetOwningArena(player_basic_message);
+    if (message_arena != submessage_arena) {
+      player_basic_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, player_basic_message, submessage_arena);
+    }
+    set_has_player_basic_message();
+    payload_.player_basic_message_ = player_basic_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.player_basic_message)
+}
+void MessageWrapper::set_allocated_prop_get_message(::message::PropGetMessage* prop_get_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (prop_get_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::PropGetMessage>::GetOwningArena(prop_get_message);
+    if (message_arena != submessage_arena) {
+      prop_get_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, prop_get_message, submessage_arena);
+    }
+    set_has_prop_get_message();
+    payload_.prop_get_message_ = prop_get_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.prop_get_message)
+}
+MessageWrapper::MessageWrapper(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:message.MessageWrapper)
+}
+MessageWrapper::MessageWrapper(const MessageWrapper& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  clear_has_payload();
+  switch (from.payload_case()) {
+    case kMazeMap: {
+      _internal_mutable_maze_map()->::message::MazeMapMessage::MergeFrom(from._internal_maze_map());
+      break;
+    }
+    case kMoveMessage: {
+      _internal_mutable_move_message()->::message::MoveMessage::MergeFrom(from._internal_move_message());
+      break;
+    }
+    case kAttackMessage: {
+      _internal_mutable_attack_message()->::message::AttackMessage::MergeFrom(from._internal_attack_message());
+      break;
+    }
+    case kPlayerBasicMessage: {
+      _internal_mutable_player_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_player_basic_message());
+      break;
+    }
+    case kPropGetMessage: {
+      _internal_mutable_prop_get_message()->::message::PropGetMessage::MergeFrom(from._internal_prop_get_message());
+      break;
+    }
+    case PAYLOAD_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:message.MessageWrapper)
+}
+
+inline void MessageWrapper::SharedCtor() {
+clear_has_payload();
+}
+
+MessageWrapper::~MessageWrapper() {
+  // @@protoc_insertion_point(destructor:message.MessageWrapper)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void MessageWrapper::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (has_payload()) {
+    clear_payload();
+  }
+}
+
+void MessageWrapper::ArenaDtor(void* object) {
+  MessageWrapper* _this = reinterpret_cast< MessageWrapper* >(object);
+  (void)_this;
+}
+void MessageWrapper::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void MessageWrapper::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void MessageWrapper::clear_payload() {
+// @@protoc_insertion_point(one_of_clear_start:message.MessageWrapper)
+  switch (payload_case()) {
+    case kMazeMap: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.maze_map_;
+      }
+      break;
+    }
+    case kMoveMessage: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.move_message_;
+      }
+      break;
+    }
+    case kAttackMessage: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.attack_message_;
+      }
+      break;
+    }
+    case kPlayerBasicMessage: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.player_basic_message_;
+      }
+      break;
+    }
+    case kPropGetMessage: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.prop_get_message_;
+      }
+      break;
+    }
+    case PAYLOAD_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = PAYLOAD_NOT_SET;
+}
+
+
+void MessageWrapper::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.MessageWrapper)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_payload();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* MessageWrapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .message.MazeMapMessage maze_map = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_maze_map(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.MoveMessage move_message = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_move_message(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.AttackMessage attack_message = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_attack_message(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.PlayerBasicMessage player_basic_message = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_player_basic_message(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.PropGetMessage prop_get_message = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_prop_get_message(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* MessageWrapper::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:message.MessageWrapper)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .message.MazeMapMessage maze_map = 1;
+  if (_internal_has_maze_map()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::maze_map(this), target, stream);
+  }
+
+  // .message.MoveMessage move_message = 2;
+  if (_internal_has_move_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::move_message(this), target, stream);
+  }
+
+  // .message.AttackMessage attack_message = 3;
+  if (_internal_has_attack_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::attack_message(this), target, stream);
+  }
+
+  // .message.PlayerBasicMessage player_basic_message = 4;
+  if (_internal_has_player_basic_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::player_basic_message(this), target, stream);
+  }
+
+  // .message.PropGetMessage prop_get_message = 5;
+  if (_internal_has_prop_get_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::prop_get_message(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:message.MessageWrapper)
+  return target;
+}
+
+size_t MessageWrapper::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.MessageWrapper)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  switch (payload_case()) {
+    // .message.MazeMapMessage maze_map = 1;
+    case kMazeMap: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.maze_map_);
+      break;
+    }
+    // .message.MoveMessage move_message = 2;
+    case kMoveMessage: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.move_message_);
+      break;
+    }
+    // .message.AttackMessage attack_message = 3;
+    case kAttackMessage: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.attack_message_);
+      break;
+    }
+    // .message.PlayerBasicMessage player_basic_message = 4;
+    case kPlayerBasicMessage: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.player_basic_message_);
+      break;
+    }
+    // .message.PropGetMessage prop_get_message = 5;
+    case kPropGetMessage: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.prop_get_message_);
+      break;
+    }
+    case PAYLOAD_NOT_SET: {
+      break;
+    }
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MessageWrapper::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    MessageWrapper::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MessageWrapper::GetClassData() const { return &_class_data_; }
+
+void MessageWrapper::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<MessageWrapper *>(to)->MergeFrom(
+      static_cast<const MessageWrapper &>(from));
+}
+
+
+void MessageWrapper::MergeFrom(const MessageWrapper& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:message.MessageWrapper)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.payload_case()) {
+    case kMazeMap: {
+      _internal_mutable_maze_map()->::message::MazeMapMessage::MergeFrom(from._internal_maze_map());
+      break;
+    }
+    case kMoveMessage: {
+      _internal_mutable_move_message()->::message::MoveMessage::MergeFrom(from._internal_move_message());
+      break;
+    }
+    case kAttackMessage: {
+      _internal_mutable_attack_message()->::message::AttackMessage::MergeFrom(from._internal_attack_message());
+      break;
+    }
+    case kPlayerBasicMessage: {
+      _internal_mutable_player_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_player_basic_message());
+      break;
+    }
+    case kPropGetMessage: {
+      _internal_mutable_prop_get_message()->::message::PropGetMessage::MergeFrom(from._internal_prop_get_message());
+      break;
+    }
+    case PAYLOAD_NOT_SET: {
+      break;
+    }
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void MessageWrapper::CopyFrom(const MessageWrapper& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.MessageWrapper)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MessageWrapper::IsInitialized() const {
+  return true;
+}
+
+void MessageWrapper::InternalSwap(MessageWrapper* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(payload_, other->payload_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata MessageWrapper::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
+      file_level_metadata_message_2eproto[0]);
+}
 
 // ===================================================================
 
@@ -413,7 +937,7 @@ void MoveMessage::InternalSwap(MoveMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MoveMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
-      file_level_metadata_message_2eproto[0]);
+      file_level_metadata_message_2eproto[1]);
 }
 
 // ===================================================================
@@ -625,7 +1149,7 @@ void AttackMessage::InternalSwap(AttackMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AttackMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
-      file_level_metadata_message_2eproto[1]);
+      file_level_metadata_message_2eproto[2]);
 }
 
 // ===================================================================
@@ -927,7 +1451,7 @@ void PlayerBasicMessage::InternalSwap(PlayerBasicMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PlayerBasicMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
-      file_level_metadata_message_2eproto[2]);
+      file_level_metadata_message_2eproto[3]);
 }
 
 // ===================================================================
@@ -1161,25 +1685,25 @@ void PropGetMessage::InternalSwap(PropGetMessage* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PropGetMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
-      file_level_metadata_message_2eproto[3]);
+      file_level_metadata_message_2eproto[4]);
 }
 
 // ===================================================================
 
-class StringMessage::_Internal {
+class MazeMapMessage::_Internal {
  public:
 };
 
-StringMessage::StringMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+MazeMapMessage::MazeMapMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:message.StringMessage)
+  // @@protoc_insertion_point(arena_constructor:message.MazeMapMessage)
 }
-StringMessage::StringMessage(const StringMessage& from)
+MazeMapMessage::MazeMapMessage(const MazeMapMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1191,10 +1715,10 @@ StringMessage::StringMessage(const StringMessage& from)
       GetArenaForAllocation());
   }
   message_type_ = from.message_type_;
-  // @@protoc_insertion_point(copy_constructor:message.StringMessage)
+  // @@protoc_insertion_point(copy_constructor:message.MazeMapMessage)
 }
 
-inline void StringMessage::SharedCtor() {
+inline void MazeMapMessage::SharedCtor() {
 message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   message_content_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -1202,30 +1726,30 @@ message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptySt
 message_type_ = 0;
 }
 
-StringMessage::~StringMessage() {
-  // @@protoc_insertion_point(destructor:message.StringMessage)
+MazeMapMessage::~MazeMapMessage() {
+  // @@protoc_insertion_point(destructor:message.MazeMapMessage)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void StringMessage::SharedDtor() {
+inline void MazeMapMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_content_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void StringMessage::ArenaDtor(void* object) {
-  StringMessage* _this = reinterpret_cast< StringMessage* >(object);
+void MazeMapMessage::ArenaDtor(void* object) {
+  MazeMapMessage* _this = reinterpret_cast< MazeMapMessage* >(object);
   (void)_this;
 }
-void StringMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void MazeMapMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void StringMessage::SetCachedSize(int size) const {
+void MazeMapMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void StringMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:message.StringMessage)
+void MazeMapMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.MazeMapMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1235,7 +1759,7 @@ void StringMessage::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* StringMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MazeMapMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1254,7 +1778,7 @@ const char* StringMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_message_content();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "message.StringMessage.message_content"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "message.MazeMapMessage.message_content"));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1282,9 +1806,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* StringMessage::_InternalSerialize(
+uint8_t* MazeMapMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:message.StringMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:message.MazeMapMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1299,7 +1823,7 @@ uint8_t* StringMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message_content().data(), static_cast<int>(this->_internal_message_content().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "message.StringMessage.message_content");
+      "message.MazeMapMessage.message_content");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_message_content(), target);
   }
@@ -1308,12 +1832,12 @@ uint8_t* StringMessage::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:message.StringMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:message.MazeMapMessage)
   return target;
 }
 
-size_t StringMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:message.StringMessage)
+size_t MazeMapMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.MazeMapMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1335,21 +1859,21 @@ size_t StringMessage::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StringMessage::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MazeMapMessage::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    StringMessage::MergeImpl
+    MazeMapMessage::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StringMessage::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MazeMapMessage::GetClassData() const { return &_class_data_; }
 
-void StringMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void MazeMapMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<StringMessage *>(to)->MergeFrom(
-      static_cast<const StringMessage &>(from));
+  static_cast<MazeMapMessage *>(to)->MergeFrom(
+      static_cast<const MazeMapMessage &>(from));
 }
 
 
-void StringMessage::MergeFrom(const StringMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:message.StringMessage)
+void MazeMapMessage::MergeFrom(const MazeMapMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:message.MazeMapMessage)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1363,18 +1887,18 @@ void StringMessage::MergeFrom(const StringMessage& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void StringMessage::CopyFrom(const StringMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:message.StringMessage)
+void MazeMapMessage::CopyFrom(const MazeMapMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.MazeMapMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool StringMessage::IsInitialized() const {
+bool MazeMapMessage::IsInitialized() const {
   return true;
 }
 
-void StringMessage::InternalSwap(StringMessage* other) {
+void MazeMapMessage::InternalSwap(MazeMapMessage* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -1387,15 +1911,18 @@ void StringMessage::InternalSwap(StringMessage* other) {
   swap(message_type_, other->message_type_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata StringMessage::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata MazeMapMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
-      file_level_metadata_message_2eproto[4]);
+      file_level_metadata_message_2eproto[5]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace message
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::message::MessageWrapper* Arena::CreateMaybeMessage< ::message::MessageWrapper >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::message::MessageWrapper >(arena);
+}
 template<> PROTOBUF_NOINLINE ::message::MoveMessage* Arena::CreateMaybeMessage< ::message::MoveMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::message::MoveMessage >(arena);
 }
@@ -1408,8 +1935,8 @@ template<> PROTOBUF_NOINLINE ::message::PlayerBasicMessage* Arena::CreateMaybeMe
 template<> PROTOBUF_NOINLINE ::message::PropGetMessage* Arena::CreateMaybeMessage< ::message::PropGetMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::message::PropGetMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::message::StringMessage* Arena::CreateMaybeMessage< ::message::StringMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::message::StringMessage >(arena);
+template<> PROTOBUF_NOINLINE ::message::MazeMapMessage* Arena::CreateMaybeMessage< ::message::MazeMapMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::message::MazeMapMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

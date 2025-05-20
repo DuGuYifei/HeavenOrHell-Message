@@ -24,29 +24,494 @@ namespace Message {
     static MessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIiMKC01vdmVNZXNzYWdlEgkKAXgY",
-            "ASABKAISCQoBeRgCIAEoAiI0Cg1BdHRhY2tNZXNzYWdlEhEKCXRhcmdldF9p",
-            "ZBgBIAEoBRIQCghza2lsbF9pZBgCIAEoBSJrChJQbGF5ZXJCYXNpY01lc3Nh",
-            "Z2USEQoJcGxheWVyX2lkGAEgASgFEhIKCnBvc2l0aW9uX3gYAiABKAISEgoK",
-            "cG9zaXRpb25feRgDIAEoAhIKCgJocBgEIAEoBRIOCgZtYXhfaHAYBSABKAUi",
-            "RAoOUHJvcEdldE1lc3NhZ2USDwoHcHJvcF9pZBgBIAEoBRIRCglwcm9wX3R5",
-            "cGUYAiABKAUSDgoGYW1vdW50GAMgASgFIj4KDVN0cmluZ01lc3NhZ2USFAoM",
-            "bWVzc2FnZV90eXBlGAEgASgFEhcKD21lc3NhZ2VfY29udGVudBgCIAEoCWIG",
-            "cHJvdG8z"));
+            "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIpoCCg5NZXNzYWdlV3JhcHBlchIr",
+            "CghtYXplX21hcBgBIAEoCzIXLm1lc3NhZ2UuTWF6ZU1hcE1lc3NhZ2VIABIs",
+            "Cgxtb3ZlX21lc3NhZ2UYAiABKAsyFC5tZXNzYWdlLk1vdmVNZXNzYWdlSAAS",
+            "MAoOYXR0YWNrX21lc3NhZ2UYAyABKAsyFi5tZXNzYWdlLkF0dGFja01lc3Nh",
+            "Z2VIABI7ChRwbGF5ZXJfYmFzaWNfbWVzc2FnZRgEIAEoCzIbLm1lc3NhZ2Uu",
+            "UGxheWVyQmFzaWNNZXNzYWdlSAASMwoQcHJvcF9nZXRfbWVzc2FnZRgFIAEo",
+            "CzIXLm1lc3NhZ2UuUHJvcEdldE1lc3NhZ2VIAEIJCgdwYXlsb2FkIiMKC01v",
+            "dmVNZXNzYWdlEgkKAXgYASABKAISCQoBeRgCIAEoAiI0Cg1BdHRhY2tNZXNz",
+            "YWdlEhEKCXRhcmdldF9pZBgBIAEoBRIQCghza2lsbF9pZBgCIAEoBSJrChJQ",
+            "bGF5ZXJCYXNpY01lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEhIKCnBvc2l0",
+            "aW9uX3gYAiABKAISEgoKcG9zaXRpb25feRgDIAEoAhIKCgJocBgEIAEoBRIO",
+            "CgZtYXhfaHAYBSABKAUiRAoOUHJvcEdldE1lc3NhZ2USDwoHcHJvcF9pZBgB",
+            "IAEoBRIRCglwcm9wX3R5cGUYAiABKAUSDgoGYW1vdW50GAMgASgFIj8KDk1h",
+            "emVNYXBNZXNzYWdlEhQKDG1lc3NhZ2VfdHlwZRgBIAEoBRIXCg9tZXNzYWdl",
+            "X2NvbnRlbnQYAiABKAkqcQoLTWVzc2FnZVR5cGUSDAoITUFaRV9NQVAQABIQ",
+            "CgxNT1ZFX01FU1NBR0UQARISCg5BVFRBQ0tfTUVTU0FHRRACEhgKFFBMQVlF",
+            "Ul9CQVNJQ19NRVNTQUdFEAMSFAoQUFJPUF9HRVRfTUVTU0FHRRAEYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.MessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "MazeMap", "MoveMessage", "AttackMessage", "PlayerBasicMessage", "PropGetMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.MoveMessage), global::Message.MoveMessage.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.AttackMessage), global::Message.AttackMessage.Parser, new[]{ "TargetId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerBasicMessage), global::Message.PlayerBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropGetMessage), global::Message.PropGetMessage.Parser, new[]{ "PropId", "PropType", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MazeMapMessage), global::Message.MazeMapMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  public enum MessageType {
+    [pbr::OriginalName("MAZE_MAP")] MazeMap = 0,
+    [pbr::OriginalName("MOVE_MESSAGE")] MoveMessage = 1,
+    [pbr::OriginalName("ATTACK_MESSAGE")] AttackMessage = 2,
+    [pbr::OriginalName("PLAYER_BASIC_MESSAGE")] PlayerBasicMessage = 3,
+    [pbr::OriginalName("PROP_GET_MESSAGE")] PropGetMessage = 4,
+  }
+
+  #endregion
+
   #region Messages
+  public sealed partial class MessageWrapper : pb::IMessage<MessageWrapper>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MessageWrapper> _parser = new pb::MessageParser<MessageWrapper>(() => new MessageWrapper());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MessageWrapper> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageWrapper() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageWrapper(MessageWrapper other) : this() {
+      switch (other.PayloadCase) {
+        case PayloadOneofCase.MazeMap:
+          MazeMap = other.MazeMap.Clone();
+          break;
+        case PayloadOneofCase.MoveMessage:
+          MoveMessage = other.MoveMessage.Clone();
+          break;
+        case PayloadOneofCase.AttackMessage:
+          AttackMessage = other.AttackMessage.Clone();
+          break;
+        case PayloadOneofCase.PlayerBasicMessage:
+          PlayerBasicMessage = other.PlayerBasicMessage.Clone();
+          break;
+        case PayloadOneofCase.PropGetMessage:
+          PropGetMessage = other.PropGetMessage.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageWrapper Clone() {
+      return new MessageWrapper(this);
+    }
+
+    /// <summary>Field number for the "maze_map" field.</summary>
+    public const int MazeMapFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.MazeMapMessage MazeMap {
+      get { return payloadCase_ == PayloadOneofCase.MazeMap ? (global::Message.MazeMapMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MazeMap;
+      }
+    }
+
+    /// <summary>Field number for the "move_message" field.</summary>
+    public const int MoveMessageFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.MoveMessage MoveMessage {
+      get { return payloadCase_ == PayloadOneofCase.MoveMessage ? (global::Message.MoveMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MoveMessage;
+      }
+    }
+
+    /// <summary>Field number for the "attack_message" field.</summary>
+    public const int AttackMessageFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.AttackMessage AttackMessage {
+      get { return payloadCase_ == PayloadOneofCase.AttackMessage ? (global::Message.AttackMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.AttackMessage;
+      }
+    }
+
+    /// <summary>Field number for the "player_basic_message" field.</summary>
+    public const int PlayerBasicMessageFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.PlayerBasicMessage PlayerBasicMessage {
+      get { return payloadCase_ == PayloadOneofCase.PlayerBasicMessage ? (global::Message.PlayerBasicMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PlayerBasicMessage;
+      }
+    }
+
+    /// <summary>Field number for the "prop_get_message" field.</summary>
+    public const int PropGetMessageFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.PropGetMessage PropGetMessage {
+      get { return payloadCase_ == PayloadOneofCase.PropGetMessage ? (global::Message.PropGetMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PropGetMessage;
+      }
+    }
+
+    private object payload_;
+    /// <summary>Enum of possible cases for the "payload" oneof.</summary>
+    public enum PayloadOneofCase {
+      None = 0,
+      MazeMap = 1,
+      MoveMessage = 2,
+      AttackMessage = 3,
+      PlayerBasicMessage = 4,
+      PropGetMessage = 5,
+    }
+    private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PayloadOneofCase PayloadCase {
+      get { return payloadCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPayload() {
+      payloadCase_ = PayloadOneofCase.None;
+      payload_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MessageWrapper);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MessageWrapper other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MazeMap, other.MazeMap)) return false;
+      if (!object.Equals(MoveMessage, other.MoveMessage)) return false;
+      if (!object.Equals(AttackMessage, other.AttackMessage)) return false;
+      if (!object.Equals(PlayerBasicMessage, other.PlayerBasicMessage)) return false;
+      if (!object.Equals(PropGetMessage, other.PropGetMessage)) return false;
+      if (PayloadCase != other.PayloadCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (payloadCase_ == PayloadOneofCase.MazeMap) hash ^= MazeMap.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.MoveMessage) hash ^= MoveMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.AttackMessage) hash ^= AttackMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) hash ^= PlayerBasicMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) hash ^= PropGetMessage.GetHashCode();
+      hash ^= (int) payloadCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (payloadCase_ == PayloadOneofCase.MazeMap) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MazeMap);
+      }
+      if (payloadCase_ == PayloadOneofCase.MoveMessage) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MoveMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.AttackMessage) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AttackMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PlayerBasicMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PropGetMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (payloadCase_ == PayloadOneofCase.MazeMap) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MazeMap);
+      }
+      if (payloadCase_ == PayloadOneofCase.MoveMessage) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MoveMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.AttackMessage) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AttackMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PlayerBasicMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PropGetMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (payloadCase_ == PayloadOneofCase.MazeMap) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MazeMap);
+      }
+      if (payloadCase_ == PayloadOneofCase.MoveMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MoveMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.AttackMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AttackMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerBasicMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropGetMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MessageWrapper other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.PayloadCase) {
+        case PayloadOneofCase.MazeMap:
+          if (MazeMap == null) {
+            MazeMap = new global::Message.MazeMapMessage();
+          }
+          MazeMap.MergeFrom(other.MazeMap);
+          break;
+        case PayloadOneofCase.MoveMessage:
+          if (MoveMessage == null) {
+            MoveMessage = new global::Message.MoveMessage();
+          }
+          MoveMessage.MergeFrom(other.MoveMessage);
+          break;
+        case PayloadOneofCase.AttackMessage:
+          if (AttackMessage == null) {
+            AttackMessage = new global::Message.AttackMessage();
+          }
+          AttackMessage.MergeFrom(other.AttackMessage);
+          break;
+        case PayloadOneofCase.PlayerBasicMessage:
+          if (PlayerBasicMessage == null) {
+            PlayerBasicMessage = new global::Message.PlayerBasicMessage();
+          }
+          PlayerBasicMessage.MergeFrom(other.PlayerBasicMessage);
+          break;
+        case PayloadOneofCase.PropGetMessage:
+          if (PropGetMessage == null) {
+            PropGetMessage = new global::Message.PropGetMessage();
+          }
+          PropGetMessage.MergeFrom(other.PropGetMessage);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Message.MazeMapMessage subBuilder = new global::Message.MazeMapMessage();
+            if (payloadCase_ == PayloadOneofCase.MazeMap) {
+              subBuilder.MergeFrom(MazeMap);
+            }
+            input.ReadMessage(subBuilder);
+            MazeMap = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Message.MoveMessage subBuilder = new global::Message.MoveMessage();
+            if (payloadCase_ == PayloadOneofCase.MoveMessage) {
+              subBuilder.MergeFrom(MoveMessage);
+            }
+            input.ReadMessage(subBuilder);
+            MoveMessage = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Message.AttackMessage subBuilder = new global::Message.AttackMessage();
+            if (payloadCase_ == PayloadOneofCase.AttackMessage) {
+              subBuilder.MergeFrom(AttackMessage);
+            }
+            input.ReadMessage(subBuilder);
+            AttackMessage = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Message.PlayerBasicMessage subBuilder = new global::Message.PlayerBasicMessage();
+            if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
+              subBuilder.MergeFrom(PlayerBasicMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PlayerBasicMessage = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+              subBuilder.MergeFrom(PropGetMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PropGetMessage = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Message.MazeMapMessage subBuilder = new global::Message.MazeMapMessage();
+            if (payloadCase_ == PayloadOneofCase.MazeMap) {
+              subBuilder.MergeFrom(MazeMap);
+            }
+            input.ReadMessage(subBuilder);
+            MazeMap = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Message.MoveMessage subBuilder = new global::Message.MoveMessage();
+            if (payloadCase_ == PayloadOneofCase.MoveMessage) {
+              subBuilder.MergeFrom(MoveMessage);
+            }
+            input.ReadMessage(subBuilder);
+            MoveMessage = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Message.AttackMessage subBuilder = new global::Message.AttackMessage();
+            if (payloadCase_ == PayloadOneofCase.AttackMessage) {
+              subBuilder.MergeFrom(AttackMessage);
+            }
+            input.ReadMessage(subBuilder);
+            AttackMessage = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Message.PlayerBasicMessage subBuilder = new global::Message.PlayerBasicMessage();
+            if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
+              subBuilder.MergeFrom(PlayerBasicMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PlayerBasicMessage = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+              subBuilder.MergeFrom(PropGetMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PropGetMessage = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// Client Messages
   /// </summary>
@@ -64,7 +529,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -290,7 +755,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -519,7 +984,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -856,7 +1321,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1105,21 +1570,21 @@ namespace Message {
 
   }
 
-  public sealed partial class StringMessage : pb::IMessage<StringMessage>
+  public sealed partial class MazeMapMessage : pb::IMessage<MazeMapMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<StringMessage> _parser = new pb::MessageParser<StringMessage>(() => new StringMessage());
+    private static readonly pb::MessageParser<MazeMapMessage> _parser = new pb::MessageParser<MazeMapMessage>(() => new MazeMapMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StringMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<MazeMapMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1130,7 +1595,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StringMessage() {
+    public MazeMapMessage() {
       OnConstruction();
     }
 
@@ -1138,7 +1603,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StringMessage(StringMessage other) : this() {
+    public MazeMapMessage(MazeMapMessage other) : this() {
       messageType_ = other.messageType_;
       messageContent_ = other.messageContent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1146,8 +1611,8 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StringMessage Clone() {
-      return new StringMessage(this);
+    public MazeMapMessage Clone() {
+      return new MazeMapMessage(this);
     }
 
     /// <summary>Field number for the "message_type" field.</summary>
@@ -1177,12 +1642,12 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as StringMessage);
+      return Equals(other as MazeMapMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StringMessage other) {
+    public bool Equals(MazeMapMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1268,7 +1733,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StringMessage other) {
+    public void MergeFrom(MazeMapMessage other) {
       if (other == null) {
         return;
       }

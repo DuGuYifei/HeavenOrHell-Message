@@ -6,3 +6,11 @@ for `csharp`:
 ```sh
 protoc --csharp_out=./gen_cs/ ./*.proto
 ```
+
+for compiling in `csharp`:
+
+1. add NuGet for Unity by `add package from git URL` in the Package Manager
+    ```
+    https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity
+    ```
+2. search `Google.Protobuf` from the NuGetForUnity window. (NuGet in the top bar) 
