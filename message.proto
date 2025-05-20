@@ -9,25 +9,17 @@ enum StringMessageType {
 message MessageWrapper {
     oneof payload {
         StringMessage string_message = 1;
-        MoveMessage move_message = 2;
+        PlayerBasicMessage player_basic_message = 2;
         AttackMessage attack_message = 3;
-        PlayerBasicMessage player_basic_message = 4;
-        PropGetMessage prop_get_message = 5;
+        PropGetMessage prop_get_message = 4;
     }
 }
 
-// Client Messages
-message MoveMessage {
-    float x = 1;
-    float y = 2;
+message StringMessage {
+    int32 message_type = 1;
+    string message_content = 2;
 }
 
-message AttackMessage {
-    int32 target_id = 1;
-    int32 skill_id = 2;
-}
-
-// Server Messages
 message PlayerBasicMessage {
     int32 player_id = 1;
     float position_x = 2;
@@ -36,13 +28,15 @@ message PlayerBasicMessage {
     int32 max_hp = 5;
 }
 
-message PropGetMessage {
-    int32 prop_id = 1;
-    int32 prop_type = 2;
-    int32 amount = 3;
-} 
-
-message StringMessage {
-    int32 message_type = 1;
-    string message_content = 2;
+message AttackMessage {
+    int32 player_id = 1;
+    int32 target_id = 2;
+    int32 skill_id = 3;
 }
+
+message PropGetMessage {
+    int32 player_id = 1;
+    int32 prop_id = 2;
+    int32 prop_type = 3;
+    int32 amount = 4;
+} 
