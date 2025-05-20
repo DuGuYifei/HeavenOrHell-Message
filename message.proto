@@ -20,22 +20,24 @@ message Character {
     CharacterType character_type = 2;
 }
 
+message MessageWrapper {
+    oneof payload {
+        RoomMessage room_message = 1;
+        StringMessage string_message = 2;
+        SoulBasicMessage soul_basic_message = 3;
+        ReaperAttackMessage reaper_attack_message = 4;
+        PropTryGetMessage prop_try_get_message = 5;
+        PropGetMessage prop_get_message = 6;
+        ReaperAttackResultMessage reaper_attack_result_message = 7;
+    }
+}
+
 // If room_id in HelloMessage is not 0 and the room_id does not exist, bool is_join is false
 message RoomMessage {
     bool is_join = 1;
     int32 room_id = 2;
     int32 player_id = 3;
     repeated Character characters = 4;
-}
-
-message MessageWrapper {
-    oneof payload {
-        StringMessage string_message = 1;
-        SoulBasicMessage soul_basic_message = 2;
-        ReaperAttackMessage attack_message = 3;
-        PropTryGetMessage prop_try_get_message = 4;
-        PropGetMessage prop_get_message = 5;
-    }
 }
 
 enum StringMessageType {
@@ -76,4 +78,9 @@ message PropGetMessage {
     bool is_get = 1;
     int32 player_id = 2;
     int32 prop_id = 3;
+}
+
+message ReaperAttackResultMessage {
+    int32 soul_player_id = 1;
+    bool is_hit = 2;
 }
