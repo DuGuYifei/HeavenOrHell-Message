@@ -58,9 +58,6 @@ namespace message {
 class AttackMessage;
 struct AttackMessageDefaultTypeInternal;
 extern AttackMessageDefaultTypeInternal _AttackMessage_default_instance_;
-class MazeMapMessage;
-struct MazeMapMessageDefaultTypeInternal;
-extern MazeMapMessageDefaultTypeInternal _MazeMapMessage_default_instance_;
 class MessageWrapper;
 struct MessageWrapperDefaultTypeInternal;
 extern MessageWrapperDefaultTypeInternal _MessageWrapper_default_instance_;
@@ -73,44 +70,43 @@ extern PlayerBasicMessageDefaultTypeInternal _PlayerBasicMessage_default_instanc
 class PropGetMessage;
 struct PropGetMessageDefaultTypeInternal;
 extern PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
+class StringMessage;
+struct StringMessageDefaultTypeInternal;
+extern StringMessageDefaultTypeInternal _StringMessage_default_instance_;
 }  // namespace message
 PROTOBUF_NAMESPACE_OPEN
 template<> ::message::AttackMessage* Arena::CreateMaybeMessage<::message::AttackMessage>(Arena*);
-template<> ::message::MazeMapMessage* Arena::CreateMaybeMessage<::message::MazeMapMessage>(Arena*);
 template<> ::message::MessageWrapper* Arena::CreateMaybeMessage<::message::MessageWrapper>(Arena*);
 template<> ::message::MoveMessage* Arena::CreateMaybeMessage<::message::MoveMessage>(Arena*);
 template<> ::message::PlayerBasicMessage* Arena::CreateMaybeMessage<::message::PlayerBasicMessage>(Arena*);
 template<> ::message::PropGetMessage* Arena::CreateMaybeMessage<::message::PropGetMessage>(Arena*);
+template<> ::message::StringMessage* Arena::CreateMaybeMessage<::message::StringMessage>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace message {
 
-enum MessageType : int {
+enum StringMessageType : int {
   MAZE_MAP = 0,
-  MOVE_MESSAGE = 1,
-  ATTACK_MESSAGE = 2,
-  PLAYER_BASIC_MESSAGE = 3,
-  PROP_GET_MESSAGE = 4,
-  MessageType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
-  MessageType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+  StringMessageType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  StringMessageType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
-bool MessageType_IsValid(int value);
-constexpr MessageType MessageType_MIN = MAZE_MAP;
-constexpr MessageType MessageType_MAX = PROP_GET_MESSAGE;
-constexpr int MessageType_ARRAYSIZE = MessageType_MAX + 1;
+bool StringMessageType_IsValid(int value);
+constexpr StringMessageType StringMessageType_MIN = MAZE_MAP;
+constexpr StringMessageType StringMessageType_MAX = MAZE_MAP;
+constexpr int StringMessageType_ARRAYSIZE = StringMessageType_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MessageType_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* StringMessageType_descriptor();
 template<typename T>
-inline const std::string& MessageType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, MessageType>::value ||
+inline const std::string& StringMessageType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, StringMessageType>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function MessageType_Name.");
+    "Incorrect type passed to function StringMessageType_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    MessageType_descriptor(), enum_t_value);
+    StringMessageType_descriptor(), enum_t_value);
 }
-inline bool MessageType_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, MessageType* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<MessageType>(
-    MessageType_descriptor(), name, value);
+inline bool StringMessageType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, StringMessageType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<StringMessageType>(
+    StringMessageType_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -158,7 +154,7 @@ class MessageWrapper final :
     return *internal_default_instance();
   }
   enum PayloadCase {
-    kMazeMap = 1,
+    kStringMessage = 1,
     kMoveMessage = 2,
     kAttackMessage = 3,
     kPlayerBasicMessage = 4,
@@ -245,29 +241,29 @@ class MessageWrapper final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMazeMapFieldNumber = 1,
+    kStringMessageFieldNumber = 1,
     kMoveMessageFieldNumber = 2,
     kAttackMessageFieldNumber = 3,
     kPlayerBasicMessageFieldNumber = 4,
     kPropGetMessageFieldNumber = 5,
   };
-  // .message.MazeMapMessage maze_map = 1;
-  bool has_maze_map() const;
+  // .message.StringMessage string_message = 1;
+  bool has_string_message() const;
   private:
-  bool _internal_has_maze_map() const;
+  bool _internal_has_string_message() const;
   public:
-  void clear_maze_map();
-  const ::message::MazeMapMessage& maze_map() const;
-  PROTOBUF_NODISCARD ::message::MazeMapMessage* release_maze_map();
-  ::message::MazeMapMessage* mutable_maze_map();
-  void set_allocated_maze_map(::message::MazeMapMessage* maze_map);
+  void clear_string_message();
+  const ::message::StringMessage& string_message() const;
+  PROTOBUF_NODISCARD ::message::StringMessage* release_string_message();
+  ::message::StringMessage* mutable_string_message();
+  void set_allocated_string_message(::message::StringMessage* string_message);
   private:
-  const ::message::MazeMapMessage& _internal_maze_map() const;
-  ::message::MazeMapMessage* _internal_mutable_maze_map();
+  const ::message::StringMessage& _internal_string_message() const;
+  ::message::StringMessage* _internal_mutable_string_message();
   public:
-  void unsafe_arena_set_allocated_maze_map(
-      ::message::MazeMapMessage* maze_map);
-  ::message::MazeMapMessage* unsafe_arena_release_maze_map();
+  void unsafe_arena_set_allocated_string_message(
+      ::message::StringMessage* string_message);
+  ::message::StringMessage* unsafe_arena_release_string_message();
 
   // .message.MoveMessage move_message = 2;
   bool has_move_message() const;
@@ -346,7 +342,7 @@ class MessageWrapper final :
   // @@protoc_insertion_point(class_scope:message.MessageWrapper)
  private:
   class _Internal;
-  void set_has_maze_map();
+  void set_has_string_message();
   void set_has_move_message();
   void set_has_attack_message();
   void set_has_player_basic_message();
@@ -361,7 +357,7 @@ class MessageWrapper final :
   union PayloadUnion {
     constexpr PayloadUnion() : _constinit_{} {}
       ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-    ::message::MazeMapMessage* maze_map_;
+    ::message::StringMessage* string_message_;
     ::message::MoveMessage* move_message_;
     ::message::AttackMessage* attack_message_;
     ::message::PlayerBasicMessage* player_basic_message_;
@@ -1046,24 +1042,24 @@ class PropGetMessage final :
 };
 // -------------------------------------------------------------------
 
-class MazeMapMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.MazeMapMessage) */ {
+class StringMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.StringMessage) */ {
  public:
-  inline MazeMapMessage() : MazeMapMessage(nullptr) {}
-  ~MazeMapMessage() override;
-  explicit constexpr MazeMapMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline StringMessage() : StringMessage(nullptr) {}
+  ~StringMessage() override;
+  explicit constexpr StringMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  MazeMapMessage(const MazeMapMessage& from);
-  MazeMapMessage(MazeMapMessage&& from) noexcept
-    : MazeMapMessage() {
+  StringMessage(const StringMessage& from);
+  StringMessage(StringMessage&& from) noexcept
+    : StringMessage() {
     *this = ::std::move(from);
   }
 
-  inline MazeMapMessage& operator=(const MazeMapMessage& from) {
+  inline StringMessage& operator=(const StringMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline MazeMapMessage& operator=(MazeMapMessage&& from) noexcept {
+  inline StringMessage& operator=(StringMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1086,20 +1082,20 @@ class MazeMapMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const MazeMapMessage& default_instance() {
+  static const StringMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const MazeMapMessage* internal_default_instance() {
-    return reinterpret_cast<const MazeMapMessage*>(
-               &_MazeMapMessage_default_instance_);
+  static inline const StringMessage* internal_default_instance() {
+    return reinterpret_cast<const StringMessage*>(
+               &_StringMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(MazeMapMessage& a, MazeMapMessage& b) {
+  friend void swap(StringMessage& a, StringMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(MazeMapMessage* other) {
+  inline void Swap(StringMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1112,7 +1108,7 @@ class MazeMapMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(MazeMapMessage* other) {
+  void UnsafeArenaSwap(StringMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1120,13 +1116,13 @@ class MazeMapMessage final :
 
   // implements Message ----------------------------------------------
 
-  MazeMapMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<MazeMapMessage>(arena);
+  StringMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StringMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const MazeMapMessage& from);
+  void CopyFrom(const StringMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const MazeMapMessage& from);
+  void MergeFrom(const StringMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1143,15 +1139,15 @@ class MazeMapMessage final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(MazeMapMessage* other);
+  void InternalSwap(StringMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "message.MazeMapMessage";
+    return "message.StringMessage";
   }
   protected:
-  explicit MazeMapMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit StringMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1194,7 +1190,7 @@ class MazeMapMessage final :
   void _internal_set_message_type(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:message.MazeMapMessage)
+  // @@protoc_insertion_point(class_scope:message.StringMessage)
  private:
   class _Internal;
 
@@ -1217,77 +1213,77 @@ class MazeMapMessage final :
 #endif  // __GNUC__
 // MessageWrapper
 
-// .message.MazeMapMessage maze_map = 1;
-inline bool MessageWrapper::_internal_has_maze_map() const {
-  return payload_case() == kMazeMap;
+// .message.StringMessage string_message = 1;
+inline bool MessageWrapper::_internal_has_string_message() const {
+  return payload_case() == kStringMessage;
 }
-inline bool MessageWrapper::has_maze_map() const {
-  return _internal_has_maze_map();
+inline bool MessageWrapper::has_string_message() const {
+  return _internal_has_string_message();
 }
-inline void MessageWrapper::set_has_maze_map() {
-  _oneof_case_[0] = kMazeMap;
+inline void MessageWrapper::set_has_string_message() {
+  _oneof_case_[0] = kStringMessage;
 }
-inline void MessageWrapper::clear_maze_map() {
-  if (_internal_has_maze_map()) {
+inline void MessageWrapper::clear_string_message() {
+  if (_internal_has_string_message()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete payload_.maze_map_;
+      delete payload_.string_message_;
     }
     clear_has_payload();
   }
 }
-inline ::message::MazeMapMessage* MessageWrapper::release_maze_map() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.maze_map)
-  if (_internal_has_maze_map()) {
+inline ::message::StringMessage* MessageWrapper::release_string_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.string_message)
+  if (_internal_has_string_message()) {
     clear_has_payload();
-      ::message::MazeMapMessage* temp = payload_.maze_map_;
+      ::message::StringMessage* temp = payload_.string_message_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    payload_.maze_map_ = nullptr;
+    payload_.string_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::message::MazeMapMessage& MessageWrapper::_internal_maze_map() const {
-  return _internal_has_maze_map()
-      ? *payload_.maze_map_
-      : reinterpret_cast< ::message::MazeMapMessage&>(::message::_MazeMapMessage_default_instance_);
+inline const ::message::StringMessage& MessageWrapper::_internal_string_message() const {
+  return _internal_has_string_message()
+      ? *payload_.string_message_
+      : reinterpret_cast< ::message::StringMessage&>(::message::_StringMessage_default_instance_);
 }
-inline const ::message::MazeMapMessage& MessageWrapper::maze_map() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.maze_map)
-  return _internal_maze_map();
+inline const ::message::StringMessage& MessageWrapper::string_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.string_message)
+  return _internal_string_message();
 }
-inline ::message::MazeMapMessage* MessageWrapper::unsafe_arena_release_maze_map() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.maze_map)
-  if (_internal_has_maze_map()) {
+inline ::message::StringMessage* MessageWrapper::unsafe_arena_release_string_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.string_message)
+  if (_internal_has_string_message()) {
     clear_has_payload();
-    ::message::MazeMapMessage* temp = payload_.maze_map_;
-    payload_.maze_map_ = nullptr;
+    ::message::StringMessage* temp = payload_.string_message_;
+    payload_.string_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void MessageWrapper::unsafe_arena_set_allocated_maze_map(::message::MazeMapMessage* maze_map) {
+inline void MessageWrapper::unsafe_arena_set_allocated_string_message(::message::StringMessage* string_message) {
   clear_payload();
-  if (maze_map) {
-    set_has_maze_map();
-    payload_.maze_map_ = maze_map;
+  if (string_message) {
+    set_has_string_message();
+    payload_.string_message_ = string_message;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.maze_map)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.string_message)
 }
-inline ::message::MazeMapMessage* MessageWrapper::_internal_mutable_maze_map() {
-  if (!_internal_has_maze_map()) {
+inline ::message::StringMessage* MessageWrapper::_internal_mutable_string_message() {
+  if (!_internal_has_string_message()) {
     clear_payload();
-    set_has_maze_map();
-    payload_.maze_map_ = CreateMaybeMessage< ::message::MazeMapMessage >(GetArenaForAllocation());
+    set_has_string_message();
+    payload_.string_message_ = CreateMaybeMessage< ::message::StringMessage >(GetArenaForAllocation());
   }
-  return payload_.maze_map_;
+  return payload_.string_message_;
 }
-inline ::message::MazeMapMessage* MessageWrapper::mutable_maze_map() {
-  ::message::MazeMapMessage* _msg = _internal_mutable_maze_map();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.maze_map)
+inline ::message::StringMessage* MessageWrapper::mutable_string_message() {
+  ::message::StringMessage* _msg = _internal_mutable_string_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.string_message)
   return _msg;
 }
 
@@ -1854,64 +1850,64 @@ inline void PropGetMessage::set_amount(int32_t value) {
 
 // -------------------------------------------------------------------
 
-// MazeMapMessage
+// StringMessage
 
 // int32 message_type = 1;
-inline void MazeMapMessage::clear_message_type() {
+inline void StringMessage::clear_message_type() {
   message_type_ = 0;
 }
-inline int32_t MazeMapMessage::_internal_message_type() const {
+inline int32_t StringMessage::_internal_message_type() const {
   return message_type_;
 }
-inline int32_t MazeMapMessage::message_type() const {
-  // @@protoc_insertion_point(field_get:message.MazeMapMessage.message_type)
+inline int32_t StringMessage::message_type() const {
+  // @@protoc_insertion_point(field_get:message.StringMessage.message_type)
   return _internal_message_type();
 }
-inline void MazeMapMessage::_internal_set_message_type(int32_t value) {
+inline void StringMessage::_internal_set_message_type(int32_t value) {
   
   message_type_ = value;
 }
-inline void MazeMapMessage::set_message_type(int32_t value) {
+inline void StringMessage::set_message_type(int32_t value) {
   _internal_set_message_type(value);
-  // @@protoc_insertion_point(field_set:message.MazeMapMessage.message_type)
+  // @@protoc_insertion_point(field_set:message.StringMessage.message_type)
 }
 
 // string message_content = 2;
-inline void MazeMapMessage::clear_message_content() {
+inline void StringMessage::clear_message_content() {
   message_content_.ClearToEmpty();
 }
-inline const std::string& MazeMapMessage::message_content() const {
-  // @@protoc_insertion_point(field_get:message.MazeMapMessage.message_content)
+inline const std::string& StringMessage::message_content() const {
+  // @@protoc_insertion_point(field_get:message.StringMessage.message_content)
   return _internal_message_content();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MazeMapMessage::set_message_content(ArgT0&& arg0, ArgT... args) {
+void StringMessage::set_message_content(ArgT0&& arg0, ArgT... args) {
  
  message_content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:message.MazeMapMessage.message_content)
+  // @@protoc_insertion_point(field_set:message.StringMessage.message_content)
 }
-inline std::string* MazeMapMessage::mutable_message_content() {
+inline std::string* StringMessage::mutable_message_content() {
   std::string* _s = _internal_mutable_message_content();
-  // @@protoc_insertion_point(field_mutable:message.MazeMapMessage.message_content)
+  // @@protoc_insertion_point(field_mutable:message.StringMessage.message_content)
   return _s;
 }
-inline const std::string& MazeMapMessage::_internal_message_content() const {
+inline const std::string& StringMessage::_internal_message_content() const {
   return message_content_.Get();
 }
-inline void MazeMapMessage::_internal_set_message_content(const std::string& value) {
+inline void StringMessage::_internal_set_message_content(const std::string& value) {
   
   message_content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* MazeMapMessage::_internal_mutable_message_content() {
+inline std::string* StringMessage::_internal_mutable_message_content() {
   
   return message_content_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* MazeMapMessage::release_message_content() {
-  // @@protoc_insertion_point(field_release:message.MazeMapMessage.message_content)
+inline std::string* StringMessage::release_message_content() {
+  // @@protoc_insertion_point(field_release:message.StringMessage.message_content)
   return message_content_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
-inline void MazeMapMessage::set_allocated_message_content(std::string* message_content) {
+inline void StringMessage::set_allocated_message_content(std::string* message_content) {
   if (message_content != nullptr) {
     
   } else {
@@ -1924,7 +1920,7 @@ inline void MazeMapMessage::set_allocated_message_content(std::string* message_c
     message_content_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:message.MazeMapMessage.message_content)
+  // @@protoc_insertion_point(field_set_allocated:message.StringMessage.message_content)
 }
 
 #ifdef __GNUC__
@@ -1947,10 +1943,10 @@ inline void MazeMapMessage::set_allocated_message_content(std::string* message_c
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::message::MessageType> : ::std::true_type {};
+template <> struct is_proto_enum< ::message::StringMessageType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::message::MessageType>() {
-  return ::message::MessageType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::message::StringMessageType>() {
+  return ::message::StringMessageType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

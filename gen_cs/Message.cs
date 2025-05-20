@@ -24,45 +24,39 @@ namespace Message {
     static MessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIpoCCg5NZXNzYWdlV3JhcHBlchIr",
-            "CghtYXplX21hcBgBIAEoCzIXLm1lc3NhZ2UuTWF6ZU1hcE1lc3NhZ2VIABIs",
-            "Cgxtb3ZlX21lc3NhZ2UYAiABKAsyFC5tZXNzYWdlLk1vdmVNZXNzYWdlSAAS",
-            "MAoOYXR0YWNrX21lc3NhZ2UYAyABKAsyFi5tZXNzYWdlLkF0dGFja01lc3Nh",
-            "Z2VIABI7ChRwbGF5ZXJfYmFzaWNfbWVzc2FnZRgEIAEoCzIbLm1lc3NhZ2Uu",
-            "UGxheWVyQmFzaWNNZXNzYWdlSAASMwoQcHJvcF9nZXRfbWVzc2FnZRgFIAEo",
-            "CzIXLm1lc3NhZ2UuUHJvcEdldE1lc3NhZ2VIAEIJCgdwYXlsb2FkIiMKC01v",
-            "dmVNZXNzYWdlEgkKAXgYASABKAISCQoBeRgCIAEoAiI0Cg1BdHRhY2tNZXNz",
-            "YWdlEhEKCXRhcmdldF9pZBgBIAEoBRIQCghza2lsbF9pZBgCIAEoBSJrChJQ",
-            "bGF5ZXJCYXNpY01lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEhIKCnBvc2l0",
-            "aW9uX3gYAiABKAISEgoKcG9zaXRpb25feRgDIAEoAhIKCgJocBgEIAEoBRIO",
-            "CgZtYXhfaHAYBSABKAUiRAoOUHJvcEdldE1lc3NhZ2USDwoHcHJvcF9pZBgB",
-            "IAEoBRIRCglwcm9wX3R5cGUYAiABKAUSDgoGYW1vdW50GAMgASgFIj8KDk1h",
-            "emVNYXBNZXNzYWdlEhQKDG1lc3NhZ2VfdHlwZRgBIAEoBRIXCg9tZXNzYWdl",
-            "X2NvbnRlbnQYAiABKAkqcQoLTWVzc2FnZVR5cGUSDAoITUFaRV9NQVAQABIQ",
-            "CgxNT1ZFX01FU1NBR0UQARISCg5BVFRBQ0tfTUVTU0FHRRACEhgKFFBMQVlF",
-            "Ul9CQVNJQ19NRVNTQUdFEAMSFAoQUFJPUF9HRVRfTUVTU0FHRRAEYgZwcm90",
-            "bzM="));
+            "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIp8CCg5NZXNzYWdlV3JhcHBlchIw",
+            "Cg5zdHJpbmdfbWVzc2FnZRgBIAEoCzIWLm1lc3NhZ2UuU3RyaW5nTWVzc2Fn",
+            "ZUgAEiwKDG1vdmVfbWVzc2FnZRgCIAEoCzIULm1lc3NhZ2UuTW92ZU1lc3Nh",
+            "Z2VIABIwCg5hdHRhY2tfbWVzc2FnZRgDIAEoCzIWLm1lc3NhZ2UuQXR0YWNr",
+            "TWVzc2FnZUgAEjsKFHBsYXllcl9iYXNpY19tZXNzYWdlGAQgASgLMhsubWVz",
+            "c2FnZS5QbGF5ZXJCYXNpY01lc3NhZ2VIABIzChBwcm9wX2dldF9tZXNzYWdl",
+            "GAUgASgLMhcubWVzc2FnZS5Qcm9wR2V0TWVzc2FnZUgAQgkKB3BheWxvYWQi",
+            "IwoLTW92ZU1lc3NhZ2USCQoBeBgBIAEoAhIJCgF5GAIgASgCIjQKDUF0dGFj",
+            "a01lc3NhZ2USEQoJdGFyZ2V0X2lkGAEgASgFEhAKCHNraWxsX2lkGAIgASgF",
+            "ImsKElBsYXllckJhc2ljTWVzc2FnZRIRCglwbGF5ZXJfaWQYASABKAUSEgoK",
+            "cG9zaXRpb25feBgCIAEoAhISCgpwb3NpdGlvbl95GAMgASgCEgoKAmhwGAQg",
+            "ASgFEg4KBm1heF9ocBgFIAEoBSJECg5Qcm9wR2V0TWVzc2FnZRIPCgdwcm9w",
+            "X2lkGAEgASgFEhEKCXByb3BfdHlwZRgCIAEoBRIOCgZhbW91bnQYAyABKAUi",
+            "PgoNU3RyaW5nTWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVz",
+            "c2FnZV9jb250ZW50GAIgASgJKiEKEVN0cmluZ01lc3NhZ2VUeXBlEgwKCE1B",
+            "WkVfTUFQEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.MessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "MazeMap", "MoveMessage", "AttackMessage", "PlayerBasicMessage", "PropGetMessage" }, new[]{ "Payload" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.StringMessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "StringMessage", "MoveMessage", "AttackMessage", "PlayerBasicMessage", "PropGetMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.MoveMessage), global::Message.MoveMessage.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.AttackMessage), global::Message.AttackMessage.Parser, new[]{ "TargetId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerBasicMessage), global::Message.PlayerBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropGetMessage), global::Message.PropGetMessage.Parser, new[]{ "PropId", "PropType", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MazeMapMessage), global::Message.MazeMapMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
-  public enum MessageType {
+  public enum StringMessageType {
     [pbr::OriginalName("MAZE_MAP")] MazeMap = 0,
-    [pbr::OriginalName("MOVE_MESSAGE")] MoveMessage = 1,
-    [pbr::OriginalName("ATTACK_MESSAGE")] AttackMessage = 2,
-    [pbr::OriginalName("PLAYER_BASIC_MESSAGE")] PlayerBasicMessage = 3,
-    [pbr::OriginalName("PROP_GET_MESSAGE")] PropGetMessage = 4,
   }
 
   #endregion
@@ -103,8 +97,8 @@ namespace Message {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageWrapper(MessageWrapper other) : this() {
       switch (other.PayloadCase) {
-        case PayloadOneofCase.MazeMap:
-          MazeMap = other.MazeMap.Clone();
+        case PayloadOneofCase.StringMessage:
+          StringMessage = other.StringMessage.Clone();
           break;
         case PayloadOneofCase.MoveMessage:
           MoveMessage = other.MoveMessage.Clone();
@@ -129,15 +123,15 @@ namespace Message {
       return new MessageWrapper(this);
     }
 
-    /// <summary>Field number for the "maze_map" field.</summary>
-    public const int MazeMapFieldNumber = 1;
+    /// <summary>Field number for the "string_message" field.</summary>
+    public const int StringMessageFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.MazeMapMessage MazeMap {
-      get { return payloadCase_ == PayloadOneofCase.MazeMap ? (global::Message.MazeMapMessage) payload_ : null; }
+    public global::Message.StringMessage StringMessage {
+      get { return payloadCase_ == PayloadOneofCase.StringMessage ? (global::Message.StringMessage) payload_ : null; }
       set {
         payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MazeMap;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.StringMessage;
       }
     }
 
@@ -193,7 +187,7 @@ namespace Message {
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
-      MazeMap = 1,
+      StringMessage = 1,
       MoveMessage = 2,
       AttackMessage = 3,
       PlayerBasicMessage = 4,
@@ -228,7 +222,7 @@ namespace Message {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(MazeMap, other.MazeMap)) return false;
+      if (!object.Equals(StringMessage, other.StringMessage)) return false;
       if (!object.Equals(MoveMessage, other.MoveMessage)) return false;
       if (!object.Equals(AttackMessage, other.AttackMessage)) return false;
       if (!object.Equals(PlayerBasicMessage, other.PlayerBasicMessage)) return false;
@@ -241,7 +235,7 @@ namespace Message {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (payloadCase_ == PayloadOneofCase.MazeMap) hash ^= MazeMap.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.StringMessage) hash ^= StringMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MoveMessage) hash ^= MoveMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.AttackMessage) hash ^= AttackMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) hash ^= PlayerBasicMessage.GetHashCode();
@@ -265,9 +259,9 @@ namespace Message {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (payloadCase_ == PayloadOneofCase.MazeMap) {
+      if (payloadCase_ == PayloadOneofCase.StringMessage) {
         output.WriteRawTag(10);
-        output.WriteMessage(MazeMap);
+        output.WriteMessage(StringMessage);
       }
       if (payloadCase_ == PayloadOneofCase.MoveMessage) {
         output.WriteRawTag(18);
@@ -295,9 +289,9 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (payloadCase_ == PayloadOneofCase.MazeMap) {
+      if (payloadCase_ == PayloadOneofCase.StringMessage) {
         output.WriteRawTag(10);
-        output.WriteMessage(MazeMap);
+        output.WriteMessage(StringMessage);
       }
       if (payloadCase_ == PayloadOneofCase.MoveMessage) {
         output.WriteRawTag(18);
@@ -325,8 +319,8 @@ namespace Message {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (payloadCase_ == PayloadOneofCase.MazeMap) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MazeMap);
+      if (payloadCase_ == PayloadOneofCase.StringMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StringMessage);
       }
       if (payloadCase_ == PayloadOneofCase.MoveMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MoveMessage);
@@ -353,11 +347,11 @@ namespace Message {
         return;
       }
       switch (other.PayloadCase) {
-        case PayloadOneofCase.MazeMap:
-          if (MazeMap == null) {
-            MazeMap = new global::Message.MazeMapMessage();
+        case PayloadOneofCase.StringMessage:
+          if (StringMessage == null) {
+            StringMessage = new global::Message.StringMessage();
           }
-          MazeMap.MergeFrom(other.MazeMap);
+          StringMessage.MergeFrom(other.StringMessage);
           break;
         case PayloadOneofCase.MoveMessage:
           if (MoveMessage == null) {
@@ -401,12 +395,12 @@ namespace Message {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Message.MazeMapMessage subBuilder = new global::Message.MazeMapMessage();
-            if (payloadCase_ == PayloadOneofCase.MazeMap) {
-              subBuilder.MergeFrom(MazeMap);
+            global::Message.StringMessage subBuilder = new global::Message.StringMessage();
+            if (payloadCase_ == PayloadOneofCase.StringMessage) {
+              subBuilder.MergeFrom(StringMessage);
             }
             input.ReadMessage(subBuilder);
-            MazeMap = subBuilder;
+            StringMessage = subBuilder;
             break;
           }
           case 18: {
@@ -461,12 +455,12 @@ namespace Message {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            global::Message.MazeMapMessage subBuilder = new global::Message.MazeMapMessage();
-            if (payloadCase_ == PayloadOneofCase.MazeMap) {
-              subBuilder.MergeFrom(MazeMap);
+            global::Message.StringMessage subBuilder = new global::Message.StringMessage();
+            if (payloadCase_ == PayloadOneofCase.StringMessage) {
+              subBuilder.MergeFrom(StringMessage);
             }
             input.ReadMessage(subBuilder);
-            MazeMap = subBuilder;
+            StringMessage = subBuilder;
             break;
           }
           case 18: {
@@ -1570,16 +1564,16 @@ namespace Message {
 
   }
 
-  public sealed partial class MazeMapMessage : pb::IMessage<MazeMapMessage>
+  public sealed partial class StringMessage : pb::IMessage<StringMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MazeMapMessage> _parser = new pb::MessageParser<MazeMapMessage>(() => new MazeMapMessage());
+    private static readonly pb::MessageParser<StringMessage> _parser = new pb::MessageParser<StringMessage>(() => new StringMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MazeMapMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<StringMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1595,7 +1589,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MazeMapMessage() {
+    public StringMessage() {
       OnConstruction();
     }
 
@@ -1603,7 +1597,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MazeMapMessage(MazeMapMessage other) : this() {
+    public StringMessage(StringMessage other) : this() {
       messageType_ = other.messageType_;
       messageContent_ = other.messageContent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1611,8 +1605,8 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MazeMapMessage Clone() {
-      return new MazeMapMessage(this);
+    public StringMessage Clone() {
+      return new StringMessage(this);
     }
 
     /// <summary>Field number for the "message_type" field.</summary>
@@ -1642,12 +1636,12 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MazeMapMessage);
+      return Equals(other as StringMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MazeMapMessage other) {
+    public bool Equals(StringMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1733,7 +1727,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MazeMapMessage other) {
+    public void MergeFrom(StringMessage other) {
       if (other == null) {
         return;
       }

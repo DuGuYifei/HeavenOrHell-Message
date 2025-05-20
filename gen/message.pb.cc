@@ -85,19 +85,19 @@ struct PropGetMessageDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
-constexpr MazeMapMessage::MazeMapMessage(
+constexpr StringMessage::StringMessage(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : message_content_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , message_type_(0){}
-struct MazeMapMessageDefaultTypeInternal {
-  constexpr MazeMapMessageDefaultTypeInternal()
+struct StringMessageDefaultTypeInternal {
+  constexpr StringMessageDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~MazeMapMessageDefaultTypeInternal() {}
+  ~StringMessageDefaultTypeInternal() {}
   union {
-    MazeMapMessage _instance;
+    StringMessage _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT MazeMapMessageDefaultTypeInternal _MazeMapMessage_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StringMessageDefaultTypeInternal _StringMessage_default_instance_;
 }  // namespace message
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[6];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_message_2eproto[1];
@@ -153,13 +153,13 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   PROTOBUF_FIELD_OFFSET(::message::PropGetMessage, prop_type_),
   PROTOBUF_FIELD_OFFSET(::message::PropGetMessage, amount_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::message::StringMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, message_type_),
-  PROTOBUF_FIELD_OFFSET(::message::MazeMapMessage, message_content_),
+  PROTOBUF_FIELD_OFFSET(::message::StringMessage, message_type_),
+  PROTOBUF_FIELD_OFFSET(::message::StringMessage, message_content_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::message::MessageWrapper)},
@@ -167,7 +167,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 20, -1, -1, sizeof(::message::AttackMessage)},
   { 28, -1, -1, sizeof(::message::PlayerBasicMessage)},
   { 39, -1, -1, sizeof(::message::PropGetMessage)},
-  { 48, -1, -1, sizeof(::message::MazeMapMessage)},
+  { 48, -1, -1, sizeof(::message::StringMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -176,34 +176,32 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_AttackMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_PlayerBasicMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_PropGetMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_MazeMapMessage_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_StringMessage_default_instance_),
 };
 
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rmessage.proto\022\007message\"\232\002\n\016MessageWrap"
-  "per\022+\n\010maze_map\030\001 \001(\0132\027.message.MazeMapM"
-  "essageH\000\022,\n\014move_message\030\002 \001(\0132\024.message"
-  ".MoveMessageH\000\0220\n\016attack_message\030\003 \001(\0132\026"
-  ".message.AttackMessageH\000\022;\n\024player_basic"
-  "_message\030\004 \001(\0132\033.message.PlayerBasicMess"
-  "ageH\000\0223\n\020prop_get_message\030\005 \001(\0132\027.messag"
-  "e.PropGetMessageH\000B\t\n\007payload\"#\n\013MoveMes"
-  "sage\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"4\n\rAttackMess"
-  "age\022\021\n\ttarget_id\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005"
-  "\"k\n\022PlayerBasicMessage\022\021\n\tplayer_id\030\001 \001("
-  "\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001("
-  "\002\022\n\n\002hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\"D\n\016PropGet"
-  "Message\022\017\n\007prop_id\030\001 \001(\005\022\021\n\tprop_type\030\002 "
-  "\001(\005\022\016\n\006amount\030\003 \001(\005\"\?\n\016MazeMapMessage\022\024\n"
-  "\014message_type\030\001 \001(\005\022\027\n\017message_content\030\002"
-  " \001(\t*q\n\013MessageType\022\014\n\010MAZE_MAP\020\000\022\020\n\014MOV"
-  "E_MESSAGE\020\001\022\022\n\016ATTACK_MESSAGE\020\002\022\030\n\024PLAYE"
-  "R_BASIC_MESSAGE\020\003\022\024\n\020PROP_GET_MESSAGE\020\004b"
-  "\006proto3"
+  "\n\rmessage.proto\022\007message\"\237\002\n\016MessageWrap"
+  "per\0220\n\016string_message\030\001 \001(\0132\026.message.St"
+  "ringMessageH\000\022,\n\014move_message\030\002 \001(\0132\024.me"
+  "ssage.MoveMessageH\000\0220\n\016attack_message\030\003 "
+  "\001(\0132\026.message.AttackMessageH\000\022;\n\024player_"
+  "basic_message\030\004 \001(\0132\033.message.PlayerBasi"
+  "cMessageH\000\0223\n\020prop_get_message\030\005 \001(\0132\027.m"
+  "essage.PropGetMessageH\000B\t\n\007payload\"#\n\013Mo"
+  "veMessage\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"4\n\rAttac"
+  "kMessage\022\021\n\ttarget_id\030\001 \001(\005\022\020\n\010skill_id\030"
+  "\002 \001(\005\"k\n\022PlayerBasicMessage\022\021\n\tplayer_id"
+  "\030\001 \001(\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y"
+  "\030\003 \001(\002\022\n\n\002hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\"D\n\016Pr"
+  "opGetMessage\022\017\n\007prop_id\030\001 \001(\005\022\021\n\tprop_ty"
+  "pe\030\002 \001(\005\022\016\n\006amount\030\003 \001(\005\">\n\rStringMessag"
+  "e\022\024\n\014message_type\030\001 \001(\005\022\027\n\017message_conte"
+  "nt\030\002 \001(\t*!\n\021StringMessageType\022\014\n\010MAZE_MA"
+  "P\020\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 767, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 691, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 6,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -215,17 +213,13 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_message_2eproto(&descriptor_table_message_2eproto);
 namespace message {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MessageType_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* StringMessageType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_message_2eproto);
   return file_level_enum_descriptors_message_2eproto[0];
 }
-bool MessageType_IsValid(int value) {
+bool StringMessageType_IsValid(int value) {
   switch (value) {
     case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
       return true;
     default:
       return false;
@@ -237,16 +231,16 @@ bool MessageType_IsValid(int value) {
 
 class MessageWrapper::_Internal {
  public:
-  static const ::message::MazeMapMessage& maze_map(const MessageWrapper* msg);
+  static const ::message::StringMessage& string_message(const MessageWrapper* msg);
   static const ::message::MoveMessage& move_message(const MessageWrapper* msg);
   static const ::message::AttackMessage& attack_message(const MessageWrapper* msg);
   static const ::message::PlayerBasicMessage& player_basic_message(const MessageWrapper* msg);
   static const ::message::PropGetMessage& prop_get_message(const MessageWrapper* msg);
 };
 
-const ::message::MazeMapMessage&
-MessageWrapper::_Internal::maze_map(const MessageWrapper* msg) {
-  return *msg->payload_.maze_map_;
+const ::message::StringMessage&
+MessageWrapper::_Internal::string_message(const MessageWrapper* msg) {
+  return *msg->payload_.string_message_;
 }
 const ::message::MoveMessage&
 MessageWrapper::_Internal::move_message(const MessageWrapper* msg) {
@@ -264,20 +258,20 @@ const ::message::PropGetMessage&
 MessageWrapper::_Internal::prop_get_message(const MessageWrapper* msg) {
   return *msg->payload_.prop_get_message_;
 }
-void MessageWrapper::set_allocated_maze_map(::message::MazeMapMessage* maze_map) {
+void MessageWrapper::set_allocated_string_message(::message::StringMessage* string_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_payload();
-  if (maze_map) {
+  if (string_message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::MazeMapMessage>::GetOwningArena(maze_map);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::StringMessage>::GetOwningArena(string_message);
     if (message_arena != submessage_arena) {
-      maze_map = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, maze_map, submessage_arena);
+      string_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, string_message, submessage_arena);
     }
-    set_has_maze_map();
-    payload_.maze_map_ = maze_map;
+    set_has_string_message();
+    payload_.string_message_ = string_message;
   }
-  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.maze_map)
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.string_message)
 }
 void MessageWrapper::set_allocated_move_message(::message::MoveMessage* move_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
@@ -353,8 +347,8 @@ MessageWrapper::MessageWrapper(const MessageWrapper& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_payload();
   switch (from.payload_case()) {
-    case kMazeMap: {
-      _internal_mutable_maze_map()->::message::MazeMapMessage::MergeFrom(from._internal_maze_map());
+    case kStringMessage: {
+      _internal_mutable_string_message()->::message::StringMessage::MergeFrom(from._internal_string_message());
       break;
     }
     case kMoveMessage: {
@@ -411,9 +405,9 @@ void MessageWrapper::SetCachedSize(int size) const {
 void MessageWrapper::clear_payload() {
 // @@protoc_insertion_point(one_of_clear_start:message.MessageWrapper)
   switch (payload_case()) {
-    case kMazeMap: {
+    case kStringMessage: {
       if (GetArenaForAllocation() == nullptr) {
-        delete payload_.maze_map_;
+        delete payload_.string_message_;
       }
       break;
     }
@@ -465,10 +459,10 @@ const char* MessageWrapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .message.MazeMapMessage maze_map = 1;
+      // .message.StringMessage string_message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_maze_map(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_string_message(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -534,12 +528,12 @@ uint8_t* MessageWrapper::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .message.MazeMapMessage maze_map = 1;
-  if (_internal_has_maze_map()) {
+  // .message.StringMessage string_message = 1;
+  if (_internal_has_string_message()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        1, _Internal::maze_map(this), target, stream);
+        1, _Internal::string_message(this), target, stream);
   }
 
   // .message.MoveMessage move_message = 2;
@@ -591,11 +585,11 @@ size_t MessageWrapper::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (payload_case()) {
-    // .message.MazeMapMessage maze_map = 1;
-    case kMazeMap: {
+    // .message.StringMessage string_message = 1;
+    case kStringMessage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *payload_.maze_map_);
+          *payload_.string_message_);
       break;
     }
     // .message.MoveMessage move_message = 2;
@@ -653,8 +647,8 @@ void MessageWrapper::MergeFrom(const MessageWrapper& from) {
   (void) cached_has_bits;
 
   switch (from.payload_case()) {
-    case kMazeMap: {
-      _internal_mutable_maze_map()->::message::MazeMapMessage::MergeFrom(from._internal_maze_map());
+    case kStringMessage: {
+      _internal_mutable_string_message()->::message::StringMessage::MergeFrom(from._internal_string_message());
       break;
     }
     case kMoveMessage: {
@@ -1690,20 +1684,20 @@ void PropGetMessage::InternalSwap(PropGetMessage* other) {
 
 // ===================================================================
 
-class MazeMapMessage::_Internal {
+class StringMessage::_Internal {
  public:
 };
 
-MazeMapMessage::MazeMapMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+StringMessage::StringMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:message.MazeMapMessage)
+  // @@protoc_insertion_point(arena_constructor:message.StringMessage)
 }
-MazeMapMessage::MazeMapMessage(const MazeMapMessage& from)
+StringMessage::StringMessage(const StringMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1715,10 +1709,10 @@ MazeMapMessage::MazeMapMessage(const MazeMapMessage& from)
       GetArenaForAllocation());
   }
   message_type_ = from.message_type_;
-  // @@protoc_insertion_point(copy_constructor:message.MazeMapMessage)
+  // @@protoc_insertion_point(copy_constructor:message.StringMessage)
 }
 
-inline void MazeMapMessage::SharedCtor() {
+inline void StringMessage::SharedCtor() {
 message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   message_content_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -1726,30 +1720,30 @@ message_content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptySt
 message_type_ = 0;
 }
 
-MazeMapMessage::~MazeMapMessage() {
-  // @@protoc_insertion_point(destructor:message.MazeMapMessage)
+StringMessage::~StringMessage() {
+  // @@protoc_insertion_point(destructor:message.StringMessage)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void MazeMapMessage::SharedDtor() {
+inline void StringMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   message_content_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void MazeMapMessage::ArenaDtor(void* object) {
-  MazeMapMessage* _this = reinterpret_cast< MazeMapMessage* >(object);
+void StringMessage::ArenaDtor(void* object) {
+  StringMessage* _this = reinterpret_cast< StringMessage* >(object);
   (void)_this;
 }
-void MazeMapMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void StringMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void MazeMapMessage::SetCachedSize(int size) const {
+void StringMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void MazeMapMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:message.MazeMapMessage)
+void StringMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.StringMessage)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1759,7 +1753,7 @@ void MazeMapMessage::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MazeMapMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* StringMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1778,7 +1772,7 @@ const char* MazeMapMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_message_content();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "message.MazeMapMessage.message_content"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "message.StringMessage.message_content"));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1806,9 +1800,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* MazeMapMessage::_InternalSerialize(
+uint8_t* StringMessage::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:message.MazeMapMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:message.StringMessage)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1823,7 +1817,7 @@ uint8_t* MazeMapMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message_content().data(), static_cast<int>(this->_internal_message_content().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "message.MazeMapMessage.message_content");
+      "message.StringMessage.message_content");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_message_content(), target);
   }
@@ -1832,12 +1826,12 @@ uint8_t* MazeMapMessage::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:message.MazeMapMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:message.StringMessage)
   return target;
 }
 
-size_t MazeMapMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:message.MazeMapMessage)
+size_t StringMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.StringMessage)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1859,21 +1853,21 @@ size_t MazeMapMessage::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MazeMapMessage::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StringMessage::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    MazeMapMessage::MergeImpl
+    StringMessage::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MazeMapMessage::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StringMessage::GetClassData() const { return &_class_data_; }
 
-void MazeMapMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void StringMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<MazeMapMessage *>(to)->MergeFrom(
-      static_cast<const MazeMapMessage &>(from));
+  static_cast<StringMessage *>(to)->MergeFrom(
+      static_cast<const StringMessage &>(from));
 }
 
 
-void MazeMapMessage::MergeFrom(const MazeMapMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:message.MazeMapMessage)
+void StringMessage::MergeFrom(const StringMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:message.StringMessage)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1887,18 +1881,18 @@ void MazeMapMessage::MergeFrom(const MazeMapMessage& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void MazeMapMessage::CopyFrom(const MazeMapMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:message.MazeMapMessage)
+void StringMessage::CopyFrom(const StringMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.StringMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool MazeMapMessage::IsInitialized() const {
+bool StringMessage::IsInitialized() const {
   return true;
 }
 
-void MazeMapMessage::InternalSwap(MazeMapMessage* other) {
+void StringMessage::InternalSwap(StringMessage* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -1911,7 +1905,7 @@ void MazeMapMessage::InternalSwap(MazeMapMessage* other) {
   swap(message_type_, other->message_type_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MazeMapMessage::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata StringMessage::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
       file_level_metadata_message_2eproto[5]);
@@ -1935,8 +1929,8 @@ template<> PROTOBUF_NOINLINE ::message::PlayerBasicMessage* Arena::CreateMaybeMe
 template<> PROTOBUF_NOINLINE ::message::PropGetMessage* Arena::CreateMaybeMessage< ::message::PropGetMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::message::PropGetMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::message::MazeMapMessage* Arena::CreateMaybeMessage< ::message::MazeMapMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::message::MazeMapMessage >(arena);
+template<> PROTOBUF_NOINLINE ::message::StringMessage* Arena::CreateMaybeMessage< ::message::StringMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::message::StringMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
