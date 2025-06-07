@@ -2,85 +2,103 @@ syntax = "proto3";
 
 package message;
 
-
 // New room use room_id = 0 to say hello, otherwise means join room
-message HelloMessage {
-    int32 room_id = 1;
-}
+message HelloMessage { int32 room_id = 1; }
 
 enum CharacterType {
-    REAPER = 0;
-    SOUL_DOG = 1;
-    SOUL_PSYCHOLOGIST = 2;
-    SOUL_DETECTIVE = 3;
+  REAPER = 0;
+  SOUL_DOG = 1;
+  SOUL_PSYCHOLOGIST = 2;
+  SOUL_DETECTIVE = 3;
 }
 
 message Character {
-    int32 player_id = 1;
-    CharacterType character_type = 2;
+  int32 player_id = 1;
+  CharacterType character_type = 2;
 }
 
 message MessageWrapper {
-    oneof payload {
-        RoomMessage room_message = 1;
-        StringMessage string_message = 2;
-        SoulBasicMessage soul_basic_message = 3;
-        ReaperAttackMessage reaper_attack_message = 4;
-        PropTryGetMessage prop_try_get_message = 5;
-        PropGetMessage prop_get_message = 6;
-        ReaperAttackResultMessage reaper_attack_result_message = 7;
-    }
+  oneof payload {
+    RoomMessage room_message = 1;
+    StringMessage string_message = 2;
+    SoulBasicMessage soul_basic_message = 3;
+    ReaperAttackMessage reaper_attack_message = 4;
+    PropTryGetMessage prop_try_get_message = 5;
+    PropGetMessage prop_get_message = 6;
+    ReaperAttackResultMessage reaper_attack_result_message = 7;
+    LobbyMessage lobby_message = 8;
+  }
 }
 
-// If room_id in HelloMessage is not 0 and the room_id does not exist, bool is_join is false
+// If room_id in HelloMessage is not 0 and the room_id does not exist, bool
+// is_join is false
 message RoomMessage {
-    bool is_join = 1;
-    int32 room_id = 2;
-    int32 player_id = 3;
-    repeated Character characters = 4;
+  bool is_join = 1;
+  int32 room_id = 2;
+  int32 player_id = 3;
+  repeated Character characters = 4;
 }
 
 enum StringMessageType {
-    MAZE_MAP = 0;
+  MAZE_MAP = 0;
 }
 
 message StringMessage {
-    int32 message_type = 1;
-    string message_content = 2;
+  int32 message_type = 1;
+  string message_content = 2;
+}
+
+// Client send it to server and server broadcast it to all players
+message LobbyMessage {
+  bool is_ready = 1;
+  int32 player_id = 2;
+  Character character = 3;
+}
+
+// Will check if atomic value bool start_game is true (all players are ready and
+// if only one player is reaper),
+// otherwise not send anything.
+// This message is
+// sent by player when they start game in map
+message StartReceiveMsgMessage {
+  int32 player_id = 1;
+  Character character = 2;
 }
 
 message SoulBasicMessage {
-    int32 player_id = 1;
-    float position_x = 2;
-    float position_y = 3;
-    float hp = 4;
-    float max_hp = 5;
+  int32 player_id = 1;
+  float position_x = 2;
+  float position_y = 3;
+  float hp = 4;
+  float max_hp = 5;
 }
 
 message ReaperBasicMessage {
-    int32 player_id = 1;
-    float position_x = 2;
-    float position_y = 3;
+  int32 player_id = 1;
+  float position_x = 2;
+  float position_y = 3;
 }
 
 message ReaperAttackMessage {
-    int32 soul_player_id = 1;
-    int32 skill_id = 2;
+  int32 soul_player_id = 1;
+  int32 skill_id = 2;
 }
 
 message PropTryGetMessage {
-    int32 player_id = 1;
-    int32 prop_id = 2;
-    int32 prop_type = 3; // TODO: Need define 'a b c d' in map to give prop type, or random by client (server can mutex lock to only one client get prop)
+  int32 player_id = 1;
+  int32 prop_id = 2;
+  int32 prop_type =
+      3; // TODO: Need define 'a b c d' in map to give prop type, or random by
+         // client (server can mutex lock to only one client get prop)
 }
 
 message PropGetMessage {
-    bool is_get = 1;
-    int32 player_id = 2;
-    int32 prop_id = 3;
+  bool is_get = 1;
+  int32 player_id = 2;
+  int32 prop_id = 3;
 }
 
 message ReaperAttackResultMessage {
-    int32 soul_player_id = 1;
-    bool is_hit = 2;
+  int32 soul_player_id = 1;
+  bool is_hit = 2;
 }
