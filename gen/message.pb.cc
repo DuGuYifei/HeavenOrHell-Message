@@ -331,46 +331,46 @@ const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE
   "\n\rmessage.proto\022\007message\"\037\n\014HelloMessage"
   "\022\017\n\007room_id\030\001 \001(\005\"N\n\tCharacter\022\021\n\tplayer"
   "_id\030\001 \001(\005\022.\n\016character_type\030\002 \001(\0162\026.mess"
-  "age.CharacterType\"\250\004\n\016MessageWrapper\022,\n\014"
+  "age.CharacterType\"\252\004\n\016MessageWrapper\022,\n\014"
   "room_message\030\001 \001(\0132\024.message.RoomMessage"
   "H\000\0220\n\016string_message\030\002 \001(\0132\026.message.Str"
   "ingMessageH\000\022.\n\rlobby_message\030\003 \001(\0132\025.me"
   "ssage.LobbyMessageH\000\022D\n\031start_receive_ms"
   "g_message\030\004 \001(\0132\037.message.StartReceiveMs"
-  "gMessageH\000\0229\n\022soul_basic_message\030\005 \001(\0132\033"
-  ".message.PlayerBasicMessageH\000\022=\n\025reaper_"
-  "attack_message\030\006 \001(\0132\034.message.ReaperAtt"
-  "ackMessageH\000\022J\n\034reaper_attack_result_mes"
-  "sage\030\007 \001(\0132\".message.ReaperAttackResultM"
-  "essageH\000\022:\n\024prop_try_get_message\030\010 \001(\0132\032"
-  ".message.PropTryGetMessageH\000\0223\n\020prop_get"
-  "_message\030\t \001(\0132\027.message.PropGetMessageH"
-  "\000B\t\n\007payload\"j\n\013RoomMessage\022\017\n\007is_join\030\001"
-  " \001(\010\022\017\n\007room_id\030\002 \001(\005\022\021\n\tplayer_id\030\003 \001(\005"
-  "\022&\n\ncharacters\030\004 \003(\0132\022.message.Character"
-  "\">\n\rStringMessage\022\024\n\014message_type\030\001 \001(\005\022"
-  "\027\n\017message_content\030\002 \001(\t\"c\n\014LobbyMessage"
-  "\022\020\n\010is_ready\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022.\n"
-  "\016character_type\030\003 \001(\0162\026.message.Characte"
-  "rType\"+\n\026StartReceiveMsgMessage\022\021\n\tplaye"
-  "r_id\030\001 \001(\005\"k\n\022PlayerBasicMessage\022\021\n\tplay"
-  "er_id\030\001 \001(\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposit"
-  "ion_y\030\003 \001(\002\022\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\""
-  "\?\n\023ReaperAttackMessage\022\026\n\016soul_player_id"
-  "\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005\"J\n\021PropTryGetMe"
-  "ssage\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007prop_id\030\002 \001("
-  "\005\022\021\n\tprop_type\030\003 \001(\005\"D\n\016PropGetMessage\022\016"
-  "\n\006is_get\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007pro"
-  "p_id\030\003 \001(\005\"C\n\031ReaperAttackResultMessage\022"
-  "\026\n\016soul_player_id\030\001 \001(\005\022\016\n\006is_hit\030\002 \001(\010*"
-  "T\n\rCharacterType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG"
-  "\020\001\022\025\n\021SOUL_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETECT"
-  "IVE\020\003*!\n\021StringMessageType\022\014\n\010MAZE_MAP\020\000"
-  "b\006proto3"
+  "gMessageH\000\022;\n\024player_basic_message\030\005 \001(\013"
+  "2\033.message.PlayerBasicMessageH\000\022=\n\025reape"
+  "r_attack_message\030\006 \001(\0132\034.message.ReaperA"
+  "ttackMessageH\000\022J\n\034reaper_attack_result_m"
+  "essage\030\007 \001(\0132\".message.ReaperAttackResul"
+  "tMessageH\000\022:\n\024prop_try_get_message\030\010 \001(\013"
+  "2\032.message.PropTryGetMessageH\000\0223\n\020prop_g"
+  "et_message\030\t \001(\0132\027.message.PropGetMessag"
+  "eH\000B\t\n\007payload\"j\n\013RoomMessage\022\017\n\007is_join"
+  "\030\001 \001(\010\022\017\n\007room_id\030\002 \001(\005\022\021\n\tplayer_id\030\003 \001"
+  "(\005\022&\n\ncharacters\030\004 \003(\0132\022.message.Charact"
+  "er\">\n\rStringMessage\022\024\n\014message_type\030\001 \001("
+  "\005\022\027\n\017message_content\030\002 \001(\t\"c\n\014LobbyMessa"
+  "ge\022\020\n\010is_ready\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022"
+  ".\n\016character_type\030\003 \001(\0162\026.message.Charac"
+  "terType\"+\n\026StartReceiveMsgMessage\022\021\n\tpla"
+  "yer_id\030\001 \001(\005\"k\n\022PlayerBasicMessage\022\021\n\tpl"
+  "ayer_id\030\001 \001(\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\npos"
+  "ition_y\030\003 \001(\002\022\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001("
+  "\002\"\?\n\023ReaperAttackMessage\022\026\n\016soul_player_"
+  "id\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005\"J\n\021PropTryGet"
+  "Message\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007prop_id\030\002 "
+  "\001(\005\022\021\n\tprop_type\030\003 \001(\005\"D\n\016PropGetMessage"
+  "\022\016\n\006is_get\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007p"
+  "rop_id\030\003 \001(\005\"C\n\031ReaperAttackResultMessag"
+  "e\022\026\n\016soul_player_id\030\001 \001(\005\022\016\n\006is_hit\030\002 \001("
+  "\010*T\n\rCharacterType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_D"
+  "OG\020\001\022\025\n\021SOUL_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETE"
+  "CTIVE\020\003*!\n\021StringMessageType\022\014\n\010MAZE_MAP"
+  "\020\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 1528, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 1530, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 12,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -813,7 +813,7 @@ class MessageWrapper::_Internal {
   static const ::message::StringMessage& string_message(const MessageWrapper* msg);
   static const ::message::LobbyMessage& lobby_message(const MessageWrapper* msg);
   static const ::message::StartReceiveMsgMessage& start_receive_msg_message(const MessageWrapper* msg);
-  static const ::message::PlayerBasicMessage& soul_basic_message(const MessageWrapper* msg);
+  static const ::message::PlayerBasicMessage& player_basic_message(const MessageWrapper* msg);
   static const ::message::ReaperAttackMessage& reaper_attack_message(const MessageWrapper* msg);
   static const ::message::ReaperAttackResultMessage& reaper_attack_result_message(const MessageWrapper* msg);
   static const ::message::PropTryGetMessage& prop_try_get_message(const MessageWrapper* msg);
@@ -837,8 +837,8 @@ MessageWrapper::_Internal::start_receive_msg_message(const MessageWrapper* msg) 
   return *msg->payload_.start_receive_msg_message_;
 }
 const ::message::PlayerBasicMessage&
-MessageWrapper::_Internal::soul_basic_message(const MessageWrapper* msg) {
-  return *msg->payload_.soul_basic_message_;
+MessageWrapper::_Internal::player_basic_message(const MessageWrapper* msg) {
+  return *msg->payload_.player_basic_message_;
 }
 const ::message::ReaperAttackMessage&
 MessageWrapper::_Internal::reaper_attack_message(const MessageWrapper* msg) {
@@ -916,20 +916,20 @@ void MessageWrapper::set_allocated_start_receive_msg_message(::message::StartRec
   }
   // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.start_receive_msg_message)
 }
-void MessageWrapper::set_allocated_soul_basic_message(::message::PlayerBasicMessage* soul_basic_message) {
+void MessageWrapper::set_allocated_player_basic_message(::message::PlayerBasicMessage* player_basic_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_payload();
-  if (soul_basic_message) {
+  if (player_basic_message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::PlayerBasicMessage>::GetOwningArena(soul_basic_message);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::PlayerBasicMessage>::GetOwningArena(player_basic_message);
     if (message_arena != submessage_arena) {
-      soul_basic_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, soul_basic_message, submessage_arena);
+      player_basic_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, player_basic_message, submessage_arena);
     }
-    set_has_soul_basic_message();
-    payload_.soul_basic_message_ = soul_basic_message;
+    set_has_player_basic_message();
+    payload_.player_basic_message_ = player_basic_message;
   }
-  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.soul_basic_message)
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.player_basic_message)
 }
 void MessageWrapper::set_allocated_reaper_attack_message(::message::ReaperAttackMessage* reaper_attack_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
@@ -1021,8 +1021,8 @@ MessageWrapper::MessageWrapper(const MessageWrapper& from)
       _internal_mutable_start_receive_msg_message()->::message::StartReceiveMsgMessage::MergeFrom(from._internal_start_receive_msg_message());
       break;
     }
-    case kSoulBasicMessage: {
-      _internal_mutable_soul_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_soul_basic_message());
+    case kPlayerBasicMessage: {
+      _internal_mutable_player_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_player_basic_message());
       break;
     }
     case kReaperAttackMessage: {
@@ -1103,9 +1103,9 @@ void MessageWrapper::clear_payload() {
       }
       break;
     }
-    case kSoulBasicMessage: {
+    case kPlayerBasicMessage: {
       if (GetArenaForAllocation() == nullptr) {
-        delete payload_.soul_basic_message_;
+        delete payload_.player_basic_message_;
       }
       break;
     }
@@ -1189,10 +1189,10 @@ const char* MessageWrapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         } else
           goto handle_unusual;
         continue;
-      // .message.PlayerBasicMessage soul_basic_message = 5;
+      // .message.PlayerBasicMessage player_basic_message = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soul_basic_message(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_player_basic_message(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1290,12 +1290,12 @@ uint8_t* MessageWrapper::_InternalSerialize(
         4, _Internal::start_receive_msg_message(this), target, stream);
   }
 
-  // .message.PlayerBasicMessage soul_basic_message = 5;
-  if (_internal_has_soul_basic_message()) {
+  // .message.PlayerBasicMessage player_basic_message = 5;
+  if (_internal_has_player_basic_message()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        5, _Internal::soul_basic_message(this), target, stream);
+        5, _Internal::player_basic_message(this), target, stream);
   }
 
   // .message.ReaperAttackMessage reaper_attack_message = 6;
@@ -1375,11 +1375,11 @@ size_t MessageWrapper::ByteSizeLong() const {
           *payload_.start_receive_msg_message_);
       break;
     }
-    // .message.PlayerBasicMessage soul_basic_message = 5;
-    case kSoulBasicMessage: {
+    // .message.PlayerBasicMessage player_basic_message = 5;
+    case kPlayerBasicMessage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *payload_.soul_basic_message_);
+          *payload_.player_basic_message_);
       break;
     }
     // .message.ReaperAttackMessage reaper_attack_message = 6;
@@ -1453,8 +1453,8 @@ void MessageWrapper::MergeFrom(const MessageWrapper& from) {
       _internal_mutable_start_receive_msg_message()->::message::StartReceiveMsgMessage::MergeFrom(from._internal_start_receive_msg_message());
       break;
     }
-    case kSoulBasicMessage: {
-      _internal_mutable_soul_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_soul_basic_message());
+    case kPlayerBasicMessage: {
+      _internal_mutable_player_basic_message()->::message::PlayerBasicMessage::MergeFrom(from._internal_player_basic_message());
       break;
     }
     case kReaperAttackMessage: {

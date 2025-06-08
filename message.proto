@@ -23,7 +23,7 @@ message MessageWrapper {
     StringMessage string_message = 2;
     LobbyMessage lobby_message = 3;
     StartReceiveMsgMessage start_receive_msg_message = 4;
-    PlayerBasicMessage soul_basic_message = 5;
+    PlayerBasicMessage player_basic_message = 5;
     ReaperAttackMessage reaper_attack_message = 6;
     ReaperAttackResultMessage reaper_attack_result_message = 7;
     PropTryGetMessage prop_try_get_message = 8;

@@ -512,7 +512,7 @@ class MessageWrapper final :
     kStringMessage = 2,
     kLobbyMessage = 3,
     kStartReceiveMsgMessage = 4,
-    kSoulBasicMessage = 5,
+    kPlayerBasicMessage = 5,
     kReaperAttackMessage = 6,
     kReaperAttackResultMessage = 7,
     kPropTryGetMessage = 8,
@@ -603,7 +603,7 @@ class MessageWrapper final :
     kStringMessageFieldNumber = 2,
     kLobbyMessageFieldNumber = 3,
     kStartReceiveMsgMessageFieldNumber = 4,
-    kSoulBasicMessageFieldNumber = 5,
+    kPlayerBasicMessageFieldNumber = 5,
     kReaperAttackMessageFieldNumber = 6,
     kReaperAttackResultMessageFieldNumber = 7,
     kPropTryGetMessageFieldNumber = 8,
@@ -681,23 +681,23 @@ class MessageWrapper final :
       ::message::StartReceiveMsgMessage* start_receive_msg_message);
   ::message::StartReceiveMsgMessage* unsafe_arena_release_start_receive_msg_message();
 
-  // .message.PlayerBasicMessage soul_basic_message = 5;
-  bool has_soul_basic_message() const;
+  // .message.PlayerBasicMessage player_basic_message = 5;
+  bool has_player_basic_message() const;
   private:
-  bool _internal_has_soul_basic_message() const;
+  bool _internal_has_player_basic_message() const;
   public:
-  void clear_soul_basic_message();
-  const ::message::PlayerBasicMessage& soul_basic_message() const;
-  PROTOBUF_NODISCARD ::message::PlayerBasicMessage* release_soul_basic_message();
-  ::message::PlayerBasicMessage* mutable_soul_basic_message();
-  void set_allocated_soul_basic_message(::message::PlayerBasicMessage* soul_basic_message);
+  void clear_player_basic_message();
+  const ::message::PlayerBasicMessage& player_basic_message() const;
+  PROTOBUF_NODISCARD ::message::PlayerBasicMessage* release_player_basic_message();
+  ::message::PlayerBasicMessage* mutable_player_basic_message();
+  void set_allocated_player_basic_message(::message::PlayerBasicMessage* player_basic_message);
   private:
-  const ::message::PlayerBasicMessage& _internal_soul_basic_message() const;
-  ::message::PlayerBasicMessage* _internal_mutable_soul_basic_message();
+  const ::message::PlayerBasicMessage& _internal_player_basic_message() const;
+  ::message::PlayerBasicMessage* _internal_mutable_player_basic_message();
   public:
-  void unsafe_arena_set_allocated_soul_basic_message(
-      ::message::PlayerBasicMessage* soul_basic_message);
-  ::message::PlayerBasicMessage* unsafe_arena_release_soul_basic_message();
+  void unsafe_arena_set_allocated_player_basic_message(
+      ::message::PlayerBasicMessage* player_basic_message);
+  ::message::PlayerBasicMessage* unsafe_arena_release_player_basic_message();
 
   // .message.ReaperAttackMessage reaper_attack_message = 6;
   bool has_reaper_attack_message() const;
@@ -780,7 +780,7 @@ class MessageWrapper final :
   void set_has_string_message();
   void set_has_lobby_message();
   void set_has_start_receive_msg_message();
-  void set_has_soul_basic_message();
+  void set_has_player_basic_message();
   void set_has_reaper_attack_message();
   void set_has_reaper_attack_result_message();
   void set_has_prop_try_get_message();
@@ -799,7 +799,7 @@ class MessageWrapper final :
     ::message::StringMessage* string_message_;
     ::message::LobbyMessage* lobby_message_;
     ::message::StartReceiveMsgMessage* start_receive_msg_message_;
-    ::message::PlayerBasicMessage* soul_basic_message_;
+    ::message::PlayerBasicMessage* player_basic_message_;
     ::message::ReaperAttackMessage* reaper_attack_message_;
     ::message::ReaperAttackResultMessage* reaper_attack_result_message_;
     ::message::PropTryGetMessage* prop_try_get_message_;
@@ -2689,77 +2689,77 @@ inline ::message::StartReceiveMsgMessage* MessageWrapper::mutable_start_receive_
   return _msg;
 }
 
-// .message.PlayerBasicMessage soul_basic_message = 5;
-inline bool MessageWrapper::_internal_has_soul_basic_message() const {
-  return payload_case() == kSoulBasicMessage;
+// .message.PlayerBasicMessage player_basic_message = 5;
+inline bool MessageWrapper::_internal_has_player_basic_message() const {
+  return payload_case() == kPlayerBasicMessage;
 }
-inline bool MessageWrapper::has_soul_basic_message() const {
-  return _internal_has_soul_basic_message();
+inline bool MessageWrapper::has_player_basic_message() const {
+  return _internal_has_player_basic_message();
 }
-inline void MessageWrapper::set_has_soul_basic_message() {
-  _oneof_case_[0] = kSoulBasicMessage;
+inline void MessageWrapper::set_has_player_basic_message() {
+  _oneof_case_[0] = kPlayerBasicMessage;
 }
-inline void MessageWrapper::clear_soul_basic_message() {
-  if (_internal_has_soul_basic_message()) {
+inline void MessageWrapper::clear_player_basic_message() {
+  if (_internal_has_player_basic_message()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete payload_.soul_basic_message_;
+      delete payload_.player_basic_message_;
     }
     clear_has_payload();
   }
 }
-inline ::message::PlayerBasicMessage* MessageWrapper::release_soul_basic_message() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.soul_basic_message)
-  if (_internal_has_soul_basic_message()) {
+inline ::message::PlayerBasicMessage* MessageWrapper::release_player_basic_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.player_basic_message)
+  if (_internal_has_player_basic_message()) {
     clear_has_payload();
-      ::message::PlayerBasicMessage* temp = payload_.soul_basic_message_;
+      ::message::PlayerBasicMessage* temp = payload_.player_basic_message_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    payload_.soul_basic_message_ = nullptr;
+    payload_.player_basic_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::message::PlayerBasicMessage& MessageWrapper::_internal_soul_basic_message() const {
-  return _internal_has_soul_basic_message()
-      ? *payload_.soul_basic_message_
+inline const ::message::PlayerBasicMessage& MessageWrapper::_internal_player_basic_message() const {
+  return _internal_has_player_basic_message()
+      ? *payload_.player_basic_message_
       : reinterpret_cast< ::message::PlayerBasicMessage&>(::message::_PlayerBasicMessage_default_instance_);
 }
-inline const ::message::PlayerBasicMessage& MessageWrapper::soul_basic_message() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.soul_basic_message)
-  return _internal_soul_basic_message();
+inline const ::message::PlayerBasicMessage& MessageWrapper::player_basic_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.player_basic_message)
+  return _internal_player_basic_message();
 }
-inline ::message::PlayerBasicMessage* MessageWrapper::unsafe_arena_release_soul_basic_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.soul_basic_message)
-  if (_internal_has_soul_basic_message()) {
+inline ::message::PlayerBasicMessage* MessageWrapper::unsafe_arena_release_player_basic_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.player_basic_message)
+  if (_internal_has_player_basic_message()) {
     clear_has_payload();
-    ::message::PlayerBasicMessage* temp = payload_.soul_basic_message_;
-    payload_.soul_basic_message_ = nullptr;
+    ::message::PlayerBasicMessage* temp = payload_.player_basic_message_;
+    payload_.player_basic_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void MessageWrapper::unsafe_arena_set_allocated_soul_basic_message(::message::PlayerBasicMessage* soul_basic_message) {
+inline void MessageWrapper::unsafe_arena_set_allocated_player_basic_message(::message::PlayerBasicMessage* player_basic_message) {
   clear_payload();
-  if (soul_basic_message) {
-    set_has_soul_basic_message();
-    payload_.soul_basic_message_ = soul_basic_message;
+  if (player_basic_message) {
+    set_has_player_basic_message();
+    payload_.player_basic_message_ = player_basic_message;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.soul_basic_message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.player_basic_message)
 }
-inline ::message::PlayerBasicMessage* MessageWrapper::_internal_mutable_soul_basic_message() {
-  if (!_internal_has_soul_basic_message()) {
+inline ::message::PlayerBasicMessage* MessageWrapper::_internal_mutable_player_basic_message() {
+  if (!_internal_has_player_basic_message()) {
     clear_payload();
-    set_has_soul_basic_message();
-    payload_.soul_basic_message_ = CreateMaybeMessage< ::message::PlayerBasicMessage >(GetArenaForAllocation());
+    set_has_player_basic_message();
+    payload_.player_basic_message_ = CreateMaybeMessage< ::message::PlayerBasicMessage >(GetArenaForAllocation());
   }
-  return payload_.soul_basic_message_;
+  return payload_.player_basic_message_;
 }
-inline ::message::PlayerBasicMessage* MessageWrapper::mutable_soul_basic_message() {
-  ::message::PlayerBasicMessage* _msg = _internal_mutable_soul_basic_message();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.soul_basic_message)
+inline ::message::PlayerBasicMessage* MessageWrapper::mutable_player_basic_message() {
+  ::message::PlayerBasicMessage* _msg = _internal_mutable_player_basic_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.player_basic_message)
   return _msg;
 }
 
