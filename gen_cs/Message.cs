@@ -27,50 +27,49 @@ namespace Message {
             "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIh8KDEhlbGxvTWVzc2FnZRIPCgdy",
             "b29tX2lkGAEgASgFIk4KCUNoYXJhY3RlchIRCglwbGF5ZXJfaWQYASABKAUS",
             "LgoOY2hhcmFjdGVyX3R5cGUYAiABKA4yFi5tZXNzYWdlLkNoYXJhY3RlclR5",
-            "cGUi4AMKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
+            "cGUiqAQKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
             "Lm1lc3NhZ2UuUm9vbU1lc3NhZ2VIABIwCg5zdHJpbmdfbWVzc2FnZRgCIAEo",
-            "CzIWLm1lc3NhZ2UuU3RyaW5nTWVzc2FnZUgAEjcKEnNvdWxfYmFzaWNfbWVz",
-            "c2FnZRgDIAEoCzIZLm1lc3NhZ2UuU291bEJhc2ljTWVzc2FnZUgAEj0KFXJl",
-            "YXBlcl9hdHRhY2tfbWVzc2FnZRgEIAEoCzIcLm1lc3NhZ2UuUmVhcGVyQXR0",
-            "YWNrTWVzc2FnZUgAEjoKFHByb3BfdHJ5X2dldF9tZXNzYWdlGAUgASgLMhou",
-            "bWVzc2FnZS5Qcm9wVHJ5R2V0TWVzc2FnZUgAEjMKEHByb3BfZ2V0X21lc3Nh",
-            "Z2UYBiABKAsyFy5tZXNzYWdlLlByb3BHZXRNZXNzYWdlSAASSgoccmVhcGVy",
-            "X2F0dGFja19yZXN1bHRfbWVzc2FnZRgHIAEoCzIiLm1lc3NhZ2UuUmVhcGVy",
-            "QXR0YWNrUmVzdWx0TWVzc2FnZUgAEi4KDWxvYmJ5X21lc3NhZ2UYCCABKAsy",
-            "FS5tZXNzYWdlLkxvYmJ5TWVzc2FnZUgAQgkKB3BheWxvYWQiagoLUm9vbU1l",
-            "c3NhZ2USDwoHaXNfam9pbhgBIAEoCBIPCgdyb29tX2lkGAIgASgFEhEKCXBs",
-            "YXllcl9pZBgDIAEoBRImCgpjaGFyYWN0ZXJzGAQgAygLMhIubWVzc2FnZS5D",
-            "aGFyYWN0ZXIiPgoNU3RyaW5nTWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASAB",
-            "KAUSFwoPbWVzc2FnZV9jb250ZW50GAIgASgJIloKDExvYmJ5TWVzc2FnZRIQ",
-            "Cghpc19yZWFkeRgBIAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSJQoJY2hhcmFj",
-            "dGVyGAMgASgLMhIubWVzc2FnZS5DaGFyYWN0ZXIiUgoWU3RhcnRSZWNlaXZl",
-            "TXNnTWVzc2FnZRIRCglwbGF5ZXJfaWQYASABKAUSJQoJY2hhcmFjdGVyGAIg",
-            "ASgLMhIubWVzc2FnZS5DaGFyYWN0ZXIiaQoQU291bEJhc2ljTWVzc2FnZRIR",
-            "CglwbGF5ZXJfaWQYASABKAUSEgoKcG9zaXRpb25feBgCIAEoAhISCgpwb3Np",
-            "dGlvbl95GAMgASgCEgoKAmhwGAQgASgCEg4KBm1heF9ocBgFIAEoAiJPChJS",
-            "ZWFwZXJCYXNpY01lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEhIKCnBvc2l0",
-            "aW9uX3gYAiABKAISEgoKcG9zaXRpb25feRgDIAEoAiI/ChNSZWFwZXJBdHRh",
-            "Y2tNZXNzYWdlEhYKDnNvdWxfcGxheWVyX2lkGAEgASgFEhAKCHNraWxsX2lk",
-            "GAIgASgFIkoKEVByb3BUcnlHZXRNZXNzYWdlEhEKCXBsYXllcl9pZBgBIAEo",
-            "BRIPCgdwcm9wX2lkGAIgASgFEhEKCXByb3BfdHlwZRgDIAEoBSJECg5Qcm9w",
-            "R2V0TWVzc2FnZRIOCgZpc19nZXQYASABKAgSEQoJcGxheWVyX2lkGAIgASgF",
-            "Eg8KB3Byb3BfaWQYAyABKAUiQwoZUmVhcGVyQXR0YWNrUmVzdWx0TWVzc2Fn",
-            "ZRIWCg5zb3VsX3BsYXllcl9pZBgBIAEoBRIOCgZpc19oaXQYAiABKAgqVAoN",
-            "Q2hhcmFjdGVyVHlwZRIKCgZSRUFQRVIQABIMCghTT1VMX0RPRxABEhUKEVNP",
-            "VUxfUFNZQ0hPTE9HSVNUEAISEgoOU09VTF9ERVRFQ1RJVkUQAyohChFTdHJp",
-            "bmdNZXNzYWdlVHlwZRIMCghNQVpFX01BUBAAYgZwcm90bzM="));
+            "CzIWLm1lc3NhZ2UuU3RyaW5nTWVzc2FnZUgAEi4KDWxvYmJ5X21lc3NhZ2UY",
+            "AyABKAsyFS5tZXNzYWdlLkxvYmJ5TWVzc2FnZUgAEkQKGXN0YXJ0X3JlY2Vp",
+            "dmVfbXNnX21lc3NhZ2UYBCABKAsyHy5tZXNzYWdlLlN0YXJ0UmVjZWl2ZU1z",
+            "Z01lc3NhZ2VIABI5ChJzb3VsX2Jhc2ljX21lc3NhZ2UYBSABKAsyGy5tZXNz",
+            "YWdlLlBsYXllckJhc2ljTWVzc2FnZUgAEj0KFXJlYXBlcl9hdHRhY2tfbWVz",
+            "c2FnZRgGIAEoCzIcLm1lc3NhZ2UuUmVhcGVyQXR0YWNrTWVzc2FnZUgAEkoK",
+            "HHJlYXBlcl9hdHRhY2tfcmVzdWx0X21lc3NhZ2UYByABKAsyIi5tZXNzYWdl",
+            "LlJlYXBlckF0dGFja1Jlc3VsdE1lc3NhZ2VIABI6ChRwcm9wX3RyeV9nZXRf",
+            "bWVzc2FnZRgIIAEoCzIaLm1lc3NhZ2UuUHJvcFRyeUdldE1lc3NhZ2VIABIz",
+            "ChBwcm9wX2dldF9tZXNzYWdlGAkgASgLMhcubWVzc2FnZS5Qcm9wR2V0TWVz",
+            "c2FnZUgAQgkKB3BheWxvYWQiagoLUm9vbU1lc3NhZ2USDwoHaXNfam9pbhgB",
+            "IAEoCBIPCgdyb29tX2lkGAIgASgFEhEKCXBsYXllcl9pZBgDIAEoBRImCgpj",
+            "aGFyYWN0ZXJzGAQgAygLMhIubWVzc2FnZS5DaGFyYWN0ZXIiPgoNU3RyaW5n",
+            "TWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVzc2FnZV9jb250",
+            "ZW50GAIgASgJIloKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFkeRgBIAEoCBIR",
+            "CglwbGF5ZXJfaWQYAiABKAUSJQoJY2hhcmFjdGVyGAMgASgLMhIubWVzc2Fn",
+            "ZS5DaGFyYWN0ZXIiUgoWU3RhcnRSZWNlaXZlTXNnTWVzc2FnZRIRCglwbGF5",
+            "ZXJfaWQYASABKAUSJQoJY2hhcmFjdGVyGAIgASgLMhIubWVzc2FnZS5DaGFy",
+            "YWN0ZXIiawoSUGxheWVyQmFzaWNNZXNzYWdlEhEKCXBsYXllcl9pZBgBIAEo",
+            "BRISCgpwb3NpdGlvbl94GAIgASgCEhIKCnBvc2l0aW9uX3kYAyABKAISCgoC",
+            "aHAYBCABKAISDgoGbWF4X2hwGAUgASgCIj8KE1JlYXBlckF0dGFja01lc3Nh",
+            "Z2USFgoOc291bF9wbGF5ZXJfaWQYASABKAUSEAoIc2tpbGxfaWQYAiABKAUi",
+            "SgoRUHJvcFRyeUdldE1lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEg8KB3By",
+            "b3BfaWQYAiABKAUSEQoJcHJvcF90eXBlGAMgASgFIkQKDlByb3BHZXRNZXNz",
+            "YWdlEg4KBmlzX2dldBgBIAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSDwoHcHJv",
+            "cF9pZBgDIAEoBSJDChlSZWFwZXJBdHRhY2tSZXN1bHRNZXNzYWdlEhYKDnNv",
+            "dWxfcGxheWVyX2lkGAEgASgFEg4KBmlzX2hpdBgCIAEoCCpUCg1DaGFyYWN0",
+            "ZXJUeXBlEgoKBlJFQVBFUhAAEgwKCFNPVUxfRE9HEAESFQoRU09VTF9QU1lD",
+            "SE9MT0dJU1QQAhISCg5TT1VMX0RFVEVDVElWRRADKiEKEVN0cmluZ01lc3Nh",
+            "Z2VUeXBlEgwKCE1BWkVfTUFQEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.CharacterType), typeof(global::Message.StringMessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.HelloMessage), global::Message.HelloMessage.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.Character), global::Message.Character.Parser, new[]{ "PlayerId", "CharacterType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "SoulBasicMessage", "ReaperAttackMessage", "PropTryGetMessage", "PropGetMessage", "ReaperAttackResultMessage", "LobbyMessage" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "SoulBasicMessage", "ReaperAttackMessage", "ReaperAttackResultMessage", "PropTryGetMessage", "PropGetMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.RoomMessage), global::Message.RoomMessage.Parser, new[]{ "IsJoin", "RoomId", "PlayerId", "Characters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.LobbyMessage), global::Message.LobbyMessage.Parser, new[]{ "IsReady", "PlayerId", "Character" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StartReceiveMsgMessage), global::Message.StartReceiveMsgMessage.Parser, new[]{ "PlayerId", "Character" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.SoulBasicMessage), global::Message.SoulBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.ReaperBasicMessage), global::Message.ReaperBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerBasicMessage), global::Message.PlayerBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.ReaperAttackMessage), global::Message.ReaperAttackMessage.Parser, new[]{ "SoulPlayerId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropTryGetMessage), global::Message.PropTryGetMessage.Parser, new[]{ "PlayerId", "PropId", "PropType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropGetMessage), global::Message.PropGetMessage.Parser, new[]{ "IsGet", "PlayerId", "PropId" }, null, null, null, null),
@@ -554,23 +553,26 @@ namespace Message {
         case PayloadOneofCase.StringMessage:
           StringMessage = other.StringMessage.Clone();
           break;
+        case PayloadOneofCase.LobbyMessage:
+          LobbyMessage = other.LobbyMessage.Clone();
+          break;
+        case PayloadOneofCase.StartReceiveMsgMessage:
+          StartReceiveMsgMessage = other.StartReceiveMsgMessage.Clone();
+          break;
         case PayloadOneofCase.SoulBasicMessage:
           SoulBasicMessage = other.SoulBasicMessage.Clone();
           break;
         case PayloadOneofCase.ReaperAttackMessage:
           ReaperAttackMessage = other.ReaperAttackMessage.Clone();
           break;
+        case PayloadOneofCase.ReaperAttackResultMessage:
+          ReaperAttackResultMessage = other.ReaperAttackResultMessage.Clone();
+          break;
         case PayloadOneofCase.PropTryGetMessage:
           PropTryGetMessage = other.PropTryGetMessage.Clone();
           break;
         case PayloadOneofCase.PropGetMessage:
           PropGetMessage = other.PropGetMessage.Clone();
-          break;
-        case PayloadOneofCase.ReaperAttackResultMessage:
-          ReaperAttackResultMessage = other.ReaperAttackResultMessage.Clone();
-          break;
-        case PayloadOneofCase.LobbyMessage:
-          LobbyMessage = other.LobbyMessage.Clone();
           break;
       }
 
@@ -607,12 +609,36 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "soul_basic_message" field.</summary>
-    public const int SoulBasicMessageFieldNumber = 3;
+    /// <summary>Field number for the "lobby_message" field.</summary>
+    public const int LobbyMessageFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.SoulBasicMessage SoulBasicMessage {
-      get { return payloadCase_ == PayloadOneofCase.SoulBasicMessage ? (global::Message.SoulBasicMessage) payload_ : null; }
+    public global::Message.LobbyMessage LobbyMessage {
+      get { return payloadCase_ == PayloadOneofCase.LobbyMessage ? (global::Message.LobbyMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.LobbyMessage;
+      }
+    }
+
+    /// <summary>Field number for the "start_receive_msg_message" field.</summary>
+    public const int StartReceiveMsgMessageFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.StartReceiveMsgMessage StartReceiveMsgMessage {
+      get { return payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage ? (global::Message.StartReceiveMsgMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.StartReceiveMsgMessage;
+      }
+    }
+
+    /// <summary>Field number for the "soul_basic_message" field.</summary>
+    public const int SoulBasicMessageFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.PlayerBasicMessage SoulBasicMessage {
+      get { return payloadCase_ == PayloadOneofCase.SoulBasicMessage ? (global::Message.PlayerBasicMessage) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.SoulBasicMessage;
@@ -620,7 +646,7 @@ namespace Message {
     }
 
     /// <summary>Field number for the "reaper_attack_message" field.</summary>
-    public const int ReaperAttackMessageFieldNumber = 4;
+    public const int ReaperAttackMessageFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Message.ReaperAttackMessage ReaperAttackMessage {
@@ -628,30 +654,6 @@ namespace Message {
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReaperAttackMessage;
-      }
-    }
-
-    /// <summary>Field number for the "prop_try_get_message" field.</summary>
-    public const int PropTryGetMessageFieldNumber = 5;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.PropTryGetMessage PropTryGetMessage {
-      get { return payloadCase_ == PayloadOneofCase.PropTryGetMessage ? (global::Message.PropTryGetMessage) payload_ : null; }
-      set {
-        payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PropTryGetMessage;
-      }
-    }
-
-    /// <summary>Field number for the "prop_get_message" field.</summary>
-    public const int PropGetMessageFieldNumber = 6;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.PropGetMessage PropGetMessage {
-      get { return payloadCase_ == PayloadOneofCase.PropGetMessage ? (global::Message.PropGetMessage) payload_ : null; }
-      set {
-        payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PropGetMessage;
       }
     }
 
@@ -667,15 +669,27 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "lobby_message" field.</summary>
-    public const int LobbyMessageFieldNumber = 8;
+    /// <summary>Field number for the "prop_try_get_message" field.</summary>
+    public const int PropTryGetMessageFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.LobbyMessage LobbyMessage {
-      get { return payloadCase_ == PayloadOneofCase.LobbyMessage ? (global::Message.LobbyMessage) payload_ : null; }
+    public global::Message.PropTryGetMessage PropTryGetMessage {
+      get { return payloadCase_ == PayloadOneofCase.PropTryGetMessage ? (global::Message.PropTryGetMessage) payload_ : null; }
       set {
         payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.LobbyMessage;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PropTryGetMessage;
+      }
+    }
+
+    /// <summary>Field number for the "prop_get_message" field.</summary>
+    public const int PropGetMessageFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.PropGetMessage PropGetMessage {
+      get { return payloadCase_ == PayloadOneofCase.PropGetMessage ? (global::Message.PropGetMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.PropGetMessage;
       }
     }
 
@@ -685,12 +699,13 @@ namespace Message {
       None = 0,
       RoomMessage = 1,
       StringMessage = 2,
-      SoulBasicMessage = 3,
-      ReaperAttackMessage = 4,
-      PropTryGetMessage = 5,
-      PropGetMessage = 6,
+      LobbyMessage = 3,
+      StartReceiveMsgMessage = 4,
+      SoulBasicMessage = 5,
+      ReaperAttackMessage = 6,
       ReaperAttackResultMessage = 7,
-      LobbyMessage = 8,
+      PropTryGetMessage = 8,
+      PropGetMessage = 9,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -723,12 +738,13 @@ namespace Message {
       }
       if (!object.Equals(RoomMessage, other.RoomMessage)) return false;
       if (!object.Equals(StringMessage, other.StringMessage)) return false;
+      if (!object.Equals(LobbyMessage, other.LobbyMessage)) return false;
+      if (!object.Equals(StartReceiveMsgMessage, other.StartReceiveMsgMessage)) return false;
       if (!object.Equals(SoulBasicMessage, other.SoulBasicMessage)) return false;
       if (!object.Equals(ReaperAttackMessage, other.ReaperAttackMessage)) return false;
+      if (!object.Equals(ReaperAttackResultMessage, other.ReaperAttackResultMessage)) return false;
       if (!object.Equals(PropTryGetMessage, other.PropTryGetMessage)) return false;
       if (!object.Equals(PropGetMessage, other.PropGetMessage)) return false;
-      if (!object.Equals(ReaperAttackResultMessage, other.ReaperAttackResultMessage)) return false;
-      if (!object.Equals(LobbyMessage, other.LobbyMessage)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -739,12 +755,13 @@ namespace Message {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.RoomMessage) hash ^= RoomMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.StringMessage) hash ^= StringMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.LobbyMessage) hash ^= LobbyMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) hash ^= StartReceiveMsgMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) hash ^= SoulBasicMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) hash ^= ReaperAttackMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) hash ^= ReaperAttackResultMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) hash ^= PropTryGetMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) hash ^= PropGetMessage.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) hash ^= ReaperAttackResultMessage.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.LobbyMessage) hash ^= LobbyMessage.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -772,29 +789,33 @@ namespace Message {
         output.WriteRawTag(18);
         output.WriteMessage(StringMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
+      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
         output.WriteRawTag(26);
+        output.WriteMessage(LobbyMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartReceiveMsgMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
+        output.WriteRawTag(42);
         output.WriteMessage(SoulBasicMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ReaperAttackMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-        output.WriteRawTag(42);
-        output.WriteMessage(PropTryGetMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
         output.WriteRawTag(50);
-        output.WriteMessage(PropGetMessage);
+        output.WriteMessage(ReaperAttackMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
         output.WriteRawTag(58);
         output.WriteMessage(ReaperAttackResultMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
+      if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
         output.WriteRawTag(66);
-        output.WriteMessage(LobbyMessage);
+        output.WriteMessage(PropTryGetMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PropGetMessage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -814,29 +835,33 @@ namespace Message {
         output.WriteRawTag(18);
         output.WriteMessage(StringMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
+      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
         output.WriteRawTag(26);
+        output.WriteMessage(LobbyMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartReceiveMsgMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
+        output.WriteRawTag(42);
         output.WriteMessage(SoulBasicMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ReaperAttackMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-        output.WriteRawTag(42);
-        output.WriteMessage(PropTryGetMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
         output.WriteRawTag(50);
-        output.WriteMessage(PropGetMessage);
+        output.WriteMessage(ReaperAttackMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
         output.WriteRawTag(58);
         output.WriteMessage(ReaperAttackResultMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
+      if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
         output.WriteRawTag(66);
-        output.WriteMessage(LobbyMessage);
+        output.WriteMessage(PropTryGetMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PropGetMessage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -854,23 +879,26 @@ namespace Message {
       if (payloadCase_ == PayloadOneofCase.StringMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StringMessage);
       }
+      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LobbyMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartReceiveMsgMessage);
+      }
       if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SoulBasicMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReaperAttackMessage);
       }
+      if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReaperAttackResultMessage);
+      }
       if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropTryGetMessage);
       }
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropGetMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReaperAttackResultMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LobbyMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -897,9 +925,21 @@ namespace Message {
           }
           StringMessage.MergeFrom(other.StringMessage);
           break;
+        case PayloadOneofCase.LobbyMessage:
+          if (LobbyMessage == null) {
+            LobbyMessage = new global::Message.LobbyMessage();
+          }
+          LobbyMessage.MergeFrom(other.LobbyMessage);
+          break;
+        case PayloadOneofCase.StartReceiveMsgMessage:
+          if (StartReceiveMsgMessage == null) {
+            StartReceiveMsgMessage = new global::Message.StartReceiveMsgMessage();
+          }
+          StartReceiveMsgMessage.MergeFrom(other.StartReceiveMsgMessage);
+          break;
         case PayloadOneofCase.SoulBasicMessage:
           if (SoulBasicMessage == null) {
-            SoulBasicMessage = new global::Message.SoulBasicMessage();
+            SoulBasicMessage = new global::Message.PlayerBasicMessage();
           }
           SoulBasicMessage.MergeFrom(other.SoulBasicMessage);
           break;
@@ -908,6 +948,12 @@ namespace Message {
             ReaperAttackMessage = new global::Message.ReaperAttackMessage();
           }
           ReaperAttackMessage.MergeFrom(other.ReaperAttackMessage);
+          break;
+        case PayloadOneofCase.ReaperAttackResultMessage:
+          if (ReaperAttackResultMessage == null) {
+            ReaperAttackResultMessage = new global::Message.ReaperAttackResultMessage();
+          }
+          ReaperAttackResultMessage.MergeFrom(other.ReaperAttackResultMessage);
           break;
         case PayloadOneofCase.PropTryGetMessage:
           if (PropTryGetMessage == null) {
@@ -920,18 +966,6 @@ namespace Message {
             PropGetMessage = new global::Message.PropGetMessage();
           }
           PropGetMessage.MergeFrom(other.PropGetMessage);
-          break;
-        case PayloadOneofCase.ReaperAttackResultMessage:
-          if (ReaperAttackResultMessage == null) {
-            ReaperAttackResultMessage = new global::Message.ReaperAttackResultMessage();
-          }
-          ReaperAttackResultMessage.MergeFrom(other.ReaperAttackResultMessage);
-          break;
-        case PayloadOneofCase.LobbyMessage:
-          if (LobbyMessage == null) {
-            LobbyMessage = new global::Message.LobbyMessage();
-          }
-          LobbyMessage.MergeFrom(other.LobbyMessage);
           break;
       }
 
@@ -969,7 +1003,25 @@ namespace Message {
             break;
           }
           case 26: {
-            global::Message.SoulBasicMessage subBuilder = new global::Message.SoulBasicMessage();
+            global::Message.LobbyMessage subBuilder = new global::Message.LobbyMessage();
+            if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
+              subBuilder.MergeFrom(LobbyMessage);
+            }
+            input.ReadMessage(subBuilder);
+            LobbyMessage = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Message.StartReceiveMsgMessage subBuilder = new global::Message.StartReceiveMsgMessage();
+            if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) {
+              subBuilder.MergeFrom(StartReceiveMsgMessage);
+            }
+            input.ReadMessage(subBuilder);
+            StartReceiveMsgMessage = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Message.PlayerBasicMessage subBuilder = new global::Message.PlayerBasicMessage();
             if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
               subBuilder.MergeFrom(SoulBasicMessage);
             }
@@ -977,31 +1029,13 @@ namespace Message {
             SoulBasicMessage = subBuilder;
             break;
           }
-          case 34: {
+          case 50: {
             global::Message.ReaperAttackMessage subBuilder = new global::Message.ReaperAttackMessage();
             if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
               subBuilder.MergeFrom(ReaperAttackMessage);
             }
             input.ReadMessage(subBuilder);
             ReaperAttackMessage = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
-            if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-              subBuilder.MergeFrom(PropTryGetMessage);
-            }
-            input.ReadMessage(subBuilder);
-            PropTryGetMessage = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
-            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
-              subBuilder.MergeFrom(PropGetMessage);
-            }
-            input.ReadMessage(subBuilder);
-            PropGetMessage = subBuilder;
             break;
           }
           case 58: {
@@ -1014,12 +1048,21 @@ namespace Message {
             break;
           }
           case 66: {
-            global::Message.LobbyMessage subBuilder = new global::Message.LobbyMessage();
-            if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
-              subBuilder.MergeFrom(LobbyMessage);
+            global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
+              subBuilder.MergeFrom(PropTryGetMessage);
             }
             input.ReadMessage(subBuilder);
-            LobbyMessage = subBuilder;
+            PropTryGetMessage = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+              subBuilder.MergeFrom(PropGetMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PropGetMessage = subBuilder;
             break;
           }
         }
@@ -1056,7 +1099,25 @@ namespace Message {
             break;
           }
           case 26: {
-            global::Message.SoulBasicMessage subBuilder = new global::Message.SoulBasicMessage();
+            global::Message.LobbyMessage subBuilder = new global::Message.LobbyMessage();
+            if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
+              subBuilder.MergeFrom(LobbyMessage);
+            }
+            input.ReadMessage(subBuilder);
+            LobbyMessage = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Message.StartReceiveMsgMessage subBuilder = new global::Message.StartReceiveMsgMessage();
+            if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) {
+              subBuilder.MergeFrom(StartReceiveMsgMessage);
+            }
+            input.ReadMessage(subBuilder);
+            StartReceiveMsgMessage = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Message.PlayerBasicMessage subBuilder = new global::Message.PlayerBasicMessage();
             if (payloadCase_ == PayloadOneofCase.SoulBasicMessage) {
               subBuilder.MergeFrom(SoulBasicMessage);
             }
@@ -1064,31 +1125,13 @@ namespace Message {
             SoulBasicMessage = subBuilder;
             break;
           }
-          case 34: {
+          case 50: {
             global::Message.ReaperAttackMessage subBuilder = new global::Message.ReaperAttackMessage();
             if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
               subBuilder.MergeFrom(ReaperAttackMessage);
             }
             input.ReadMessage(subBuilder);
             ReaperAttackMessage = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
-            if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-              subBuilder.MergeFrom(PropTryGetMessage);
-            }
-            input.ReadMessage(subBuilder);
-            PropTryGetMessage = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
-            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
-              subBuilder.MergeFrom(PropGetMessage);
-            }
-            input.ReadMessage(subBuilder);
-            PropGetMessage = subBuilder;
             break;
           }
           case 58: {
@@ -1101,12 +1144,21 @@ namespace Message {
             break;
           }
           case 66: {
-            global::Message.LobbyMessage subBuilder = new global::Message.LobbyMessage();
-            if (payloadCase_ == PayloadOneofCase.LobbyMessage) {
-              subBuilder.MergeFrom(LobbyMessage);
+            global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
+              subBuilder.MergeFrom(PropTryGetMessage);
             }
             input.ReadMessage(subBuilder);
-            LobbyMessage = subBuilder;
+            PropTryGetMessage = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
+            if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
+              subBuilder.MergeFrom(PropGetMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PropGetMessage = subBuilder;
             break;
           }
         }
@@ -1636,7 +1688,7 @@ namespace Message {
   }
 
   /// <summary>
-  /// Client send it to server and server broadcast it to all players
+  /// Client send it to server and server send it to other players
   /// </summary>
   public sealed partial class LobbyMessage : pb::IMessage<LobbyMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2152,16 +2204,16 @@ namespace Message {
 
   }
 
-  public sealed partial class SoulBasicMessage : pb::IMessage<SoulBasicMessage>
+  public sealed partial class PlayerBasicMessage : pb::IMessage<PlayerBasicMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SoulBasicMessage> _parser = new pb::MessageParser<SoulBasicMessage>(() => new SoulBasicMessage());
+    private static readonly pb::MessageParser<PlayerBasicMessage> _parser = new pb::MessageParser<PlayerBasicMessage>(() => new PlayerBasicMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SoulBasicMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<PlayerBasicMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2177,7 +2229,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SoulBasicMessage() {
+    public PlayerBasicMessage() {
       OnConstruction();
     }
 
@@ -2185,7 +2237,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SoulBasicMessage(SoulBasicMessage other) : this() {
+    public PlayerBasicMessage(PlayerBasicMessage other) : this() {
       playerId_ = other.playerId_;
       positionX_ = other.positionX_;
       positionY_ = other.positionY_;
@@ -2196,8 +2248,8 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SoulBasicMessage Clone() {
-      return new SoulBasicMessage(this);
+    public PlayerBasicMessage Clone() {
+      return new PlayerBasicMessage(this);
     }
 
     /// <summary>Field number for the "player_id" field.</summary>
@@ -2263,12 +2315,12 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SoulBasicMessage);
+      return Equals(other as PlayerBasicMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SoulBasicMessage other) {
+    public bool Equals(PlayerBasicMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2393,7 +2445,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SoulBasicMessage other) {
+    public void MergeFrom(PlayerBasicMessage other) {
       if (other == null) {
         return;
       }
@@ -2489,269 +2541,6 @@ namespace Message {
 
   }
 
-  public sealed partial class ReaperBasicMessage : pb::IMessage<ReaperBasicMessage>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ReaperBasicMessage> _parser = new pb::MessageParser<ReaperBasicMessage>(() => new ReaperBasicMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReaperBasicMessage> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[8]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperBasicMessage() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperBasicMessage(ReaperBasicMessage other) : this() {
-      playerId_ = other.playerId_;
-      positionX_ = other.positionX_;
-      positionY_ = other.positionY_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperBasicMessage Clone() {
-      return new ReaperBasicMessage(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private int playerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "position_x" field.</summary>
-    public const int PositionXFieldNumber = 2;
-    private float positionX_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PositionX {
-      get { return positionX_; }
-      set {
-        positionX_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "position_y" field.</summary>
-    public const int PositionYFieldNumber = 3;
-    private float positionY_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float PositionY {
-      get { return positionY_; }
-      set {
-        positionY_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ReaperBasicMessage);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReaperBasicMessage other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (PlayerId != other.PlayerId) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PositionX, other.PositionX)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PositionY, other.PositionY)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
-      if (PositionX != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PositionX);
-      if (PositionY != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PositionY);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (PlayerId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(PlayerId);
-      }
-      if (PositionX != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(PositionX);
-      }
-      if (PositionY != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(PositionY);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(PlayerId);
-      }
-      if (PositionX != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(PositionX);
-      }
-      if (PositionY != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(PositionY);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (PlayerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerId);
-      }
-      if (PositionX != 0F) {
-        size += 1 + 4;
-      }
-      if (PositionY != 0F) {
-        size += 1 + 4;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReaperBasicMessage other) {
-      if (other == null) {
-        return;
-      }
-      if (other.PlayerId != 0) {
-        PlayerId = other.PlayerId;
-      }
-      if (other.PositionX != 0F) {
-        PositionX = other.PositionX;
-      }
-      if (other.PositionY != 0F) {
-        PositionY = other.PositionY;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            PlayerId = input.ReadInt32();
-            break;
-          }
-          case 21: {
-            PositionX = input.ReadFloat();
-            break;
-          }
-          case 29: {
-            PositionY = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            PlayerId = input.ReadInt32();
-            break;
-          }
-          case 21: {
-            PositionX = input.ReadFloat();
-            break;
-          }
-          case 29: {
-            PositionY = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class ReaperAttackMessage : pb::IMessage<ReaperAttackMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2766,7 +2555,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2992,7 +2781,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3052,7 +2841,7 @@ namespace Message {
     public const int PropTypeFieldNumber = 3;
     private int propType_;
     /// <summary>
-    /// TODO: Need define 'a b c d' in map to give prop type, or random by
+    /// TODO: Need define 'a b c d' in map to give prop type, or random by client (server can mutex lock to only one client get prop)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3258,7 +3047,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3521,7 +3310,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -67,6 +67,9 @@ extern LobbyMessageDefaultTypeInternal _LobbyMessage_default_instance_;
 class MessageWrapper;
 struct MessageWrapperDefaultTypeInternal;
 extern MessageWrapperDefaultTypeInternal _MessageWrapper_default_instance_;
+class PlayerBasicMessage;
+struct PlayerBasicMessageDefaultTypeInternal;
+extern PlayerBasicMessageDefaultTypeInternal _PlayerBasicMessage_default_instance_;
 class PropGetMessage;
 struct PropGetMessageDefaultTypeInternal;
 extern PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
@@ -79,15 +82,9 @@ extern ReaperAttackMessageDefaultTypeInternal _ReaperAttackMessage_default_insta
 class ReaperAttackResultMessage;
 struct ReaperAttackResultMessageDefaultTypeInternal;
 extern ReaperAttackResultMessageDefaultTypeInternal _ReaperAttackResultMessage_default_instance_;
-class ReaperBasicMessage;
-struct ReaperBasicMessageDefaultTypeInternal;
-extern ReaperBasicMessageDefaultTypeInternal _ReaperBasicMessage_default_instance_;
 class RoomMessage;
 struct RoomMessageDefaultTypeInternal;
 extern RoomMessageDefaultTypeInternal _RoomMessage_default_instance_;
-class SoulBasicMessage;
-struct SoulBasicMessageDefaultTypeInternal;
-extern SoulBasicMessageDefaultTypeInternal _SoulBasicMessage_default_instance_;
 class StartReceiveMsgMessage;
 struct StartReceiveMsgMessageDefaultTypeInternal;
 extern StartReceiveMsgMessageDefaultTypeInternal _StartReceiveMsgMessage_default_instance_;
@@ -100,13 +97,12 @@ template<> ::message::Character* Arena::CreateMaybeMessage<::message::Character>
 template<> ::message::HelloMessage* Arena::CreateMaybeMessage<::message::HelloMessage>(Arena*);
 template<> ::message::LobbyMessage* Arena::CreateMaybeMessage<::message::LobbyMessage>(Arena*);
 template<> ::message::MessageWrapper* Arena::CreateMaybeMessage<::message::MessageWrapper>(Arena*);
+template<> ::message::PlayerBasicMessage* Arena::CreateMaybeMessage<::message::PlayerBasicMessage>(Arena*);
 template<> ::message::PropGetMessage* Arena::CreateMaybeMessage<::message::PropGetMessage>(Arena*);
 template<> ::message::PropTryGetMessage* Arena::CreateMaybeMessage<::message::PropTryGetMessage>(Arena*);
 template<> ::message::ReaperAttackMessage* Arena::CreateMaybeMessage<::message::ReaperAttackMessage>(Arena*);
 template<> ::message::ReaperAttackResultMessage* Arena::CreateMaybeMessage<::message::ReaperAttackResultMessage>(Arena*);
-template<> ::message::ReaperBasicMessage* Arena::CreateMaybeMessage<::message::ReaperBasicMessage>(Arena*);
 template<> ::message::RoomMessage* Arena::CreateMaybeMessage<::message::RoomMessage>(Arena*);
-template<> ::message::SoulBasicMessage* Arena::CreateMaybeMessage<::message::SoulBasicMessage>(Arena*);
 template<> ::message::StartReceiveMsgMessage* Arena::CreateMaybeMessage<::message::StartReceiveMsgMessage>(Arena*);
 template<> ::message::StringMessage* Arena::CreateMaybeMessage<::message::StringMessage>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -514,12 +510,13 @@ class MessageWrapper final :
   enum PayloadCase {
     kRoomMessage = 1,
     kStringMessage = 2,
-    kSoulBasicMessage = 3,
-    kReaperAttackMessage = 4,
-    kPropTryGetMessage = 5,
-    kPropGetMessage = 6,
+    kLobbyMessage = 3,
+    kStartReceiveMsgMessage = 4,
+    kSoulBasicMessage = 5,
+    kReaperAttackMessage = 6,
     kReaperAttackResultMessage = 7,
-    kLobbyMessage = 8,
+    kPropTryGetMessage = 8,
+    kPropGetMessage = 9,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -604,12 +601,13 @@ class MessageWrapper final :
   enum : int {
     kRoomMessageFieldNumber = 1,
     kStringMessageFieldNumber = 2,
-    kSoulBasicMessageFieldNumber = 3,
-    kReaperAttackMessageFieldNumber = 4,
-    kPropTryGetMessageFieldNumber = 5,
-    kPropGetMessageFieldNumber = 6,
+    kLobbyMessageFieldNumber = 3,
+    kStartReceiveMsgMessageFieldNumber = 4,
+    kSoulBasicMessageFieldNumber = 5,
+    kReaperAttackMessageFieldNumber = 6,
     kReaperAttackResultMessageFieldNumber = 7,
-    kLobbyMessageFieldNumber = 8,
+    kPropTryGetMessageFieldNumber = 8,
+    kPropGetMessageFieldNumber = 9,
   };
   // .message.RoomMessage room_message = 1;
   bool has_room_message() const;
@@ -647,25 +645,61 @@ class MessageWrapper final :
       ::message::StringMessage* string_message);
   ::message::StringMessage* unsafe_arena_release_string_message();
 
-  // .message.SoulBasicMessage soul_basic_message = 3;
+  // .message.LobbyMessage lobby_message = 3;
+  bool has_lobby_message() const;
+  private:
+  bool _internal_has_lobby_message() const;
+  public:
+  void clear_lobby_message();
+  const ::message::LobbyMessage& lobby_message() const;
+  PROTOBUF_NODISCARD ::message::LobbyMessage* release_lobby_message();
+  ::message::LobbyMessage* mutable_lobby_message();
+  void set_allocated_lobby_message(::message::LobbyMessage* lobby_message);
+  private:
+  const ::message::LobbyMessage& _internal_lobby_message() const;
+  ::message::LobbyMessage* _internal_mutable_lobby_message();
+  public:
+  void unsafe_arena_set_allocated_lobby_message(
+      ::message::LobbyMessage* lobby_message);
+  ::message::LobbyMessage* unsafe_arena_release_lobby_message();
+
+  // .message.StartReceiveMsgMessage start_receive_msg_message = 4;
+  bool has_start_receive_msg_message() const;
+  private:
+  bool _internal_has_start_receive_msg_message() const;
+  public:
+  void clear_start_receive_msg_message();
+  const ::message::StartReceiveMsgMessage& start_receive_msg_message() const;
+  PROTOBUF_NODISCARD ::message::StartReceiveMsgMessage* release_start_receive_msg_message();
+  ::message::StartReceiveMsgMessage* mutable_start_receive_msg_message();
+  void set_allocated_start_receive_msg_message(::message::StartReceiveMsgMessage* start_receive_msg_message);
+  private:
+  const ::message::StartReceiveMsgMessage& _internal_start_receive_msg_message() const;
+  ::message::StartReceiveMsgMessage* _internal_mutable_start_receive_msg_message();
+  public:
+  void unsafe_arena_set_allocated_start_receive_msg_message(
+      ::message::StartReceiveMsgMessage* start_receive_msg_message);
+  ::message::StartReceiveMsgMessage* unsafe_arena_release_start_receive_msg_message();
+
+  // .message.PlayerBasicMessage soul_basic_message = 5;
   bool has_soul_basic_message() const;
   private:
   bool _internal_has_soul_basic_message() const;
   public:
   void clear_soul_basic_message();
-  const ::message::SoulBasicMessage& soul_basic_message() const;
-  PROTOBUF_NODISCARD ::message::SoulBasicMessage* release_soul_basic_message();
-  ::message::SoulBasicMessage* mutable_soul_basic_message();
-  void set_allocated_soul_basic_message(::message::SoulBasicMessage* soul_basic_message);
+  const ::message::PlayerBasicMessage& soul_basic_message() const;
+  PROTOBUF_NODISCARD ::message::PlayerBasicMessage* release_soul_basic_message();
+  ::message::PlayerBasicMessage* mutable_soul_basic_message();
+  void set_allocated_soul_basic_message(::message::PlayerBasicMessage* soul_basic_message);
   private:
-  const ::message::SoulBasicMessage& _internal_soul_basic_message() const;
-  ::message::SoulBasicMessage* _internal_mutable_soul_basic_message();
+  const ::message::PlayerBasicMessage& _internal_soul_basic_message() const;
+  ::message::PlayerBasicMessage* _internal_mutable_soul_basic_message();
   public:
   void unsafe_arena_set_allocated_soul_basic_message(
-      ::message::SoulBasicMessage* soul_basic_message);
-  ::message::SoulBasicMessage* unsafe_arena_release_soul_basic_message();
+      ::message::PlayerBasicMessage* soul_basic_message);
+  ::message::PlayerBasicMessage* unsafe_arena_release_soul_basic_message();
 
-  // .message.ReaperAttackMessage reaper_attack_message = 4;
+  // .message.ReaperAttackMessage reaper_attack_message = 6;
   bool has_reaper_attack_message() const;
   private:
   bool _internal_has_reaper_attack_message() const;
@@ -682,42 +716,6 @@ class MessageWrapper final :
   void unsafe_arena_set_allocated_reaper_attack_message(
       ::message::ReaperAttackMessage* reaper_attack_message);
   ::message::ReaperAttackMessage* unsafe_arena_release_reaper_attack_message();
-
-  // .message.PropTryGetMessage prop_try_get_message = 5;
-  bool has_prop_try_get_message() const;
-  private:
-  bool _internal_has_prop_try_get_message() const;
-  public:
-  void clear_prop_try_get_message();
-  const ::message::PropTryGetMessage& prop_try_get_message() const;
-  PROTOBUF_NODISCARD ::message::PropTryGetMessage* release_prop_try_get_message();
-  ::message::PropTryGetMessage* mutable_prop_try_get_message();
-  void set_allocated_prop_try_get_message(::message::PropTryGetMessage* prop_try_get_message);
-  private:
-  const ::message::PropTryGetMessage& _internal_prop_try_get_message() const;
-  ::message::PropTryGetMessage* _internal_mutable_prop_try_get_message();
-  public:
-  void unsafe_arena_set_allocated_prop_try_get_message(
-      ::message::PropTryGetMessage* prop_try_get_message);
-  ::message::PropTryGetMessage* unsafe_arena_release_prop_try_get_message();
-
-  // .message.PropGetMessage prop_get_message = 6;
-  bool has_prop_get_message() const;
-  private:
-  bool _internal_has_prop_get_message() const;
-  public:
-  void clear_prop_get_message();
-  const ::message::PropGetMessage& prop_get_message() const;
-  PROTOBUF_NODISCARD ::message::PropGetMessage* release_prop_get_message();
-  ::message::PropGetMessage* mutable_prop_get_message();
-  void set_allocated_prop_get_message(::message::PropGetMessage* prop_get_message);
-  private:
-  const ::message::PropGetMessage& _internal_prop_get_message() const;
-  ::message::PropGetMessage* _internal_mutable_prop_get_message();
-  public:
-  void unsafe_arena_set_allocated_prop_get_message(
-      ::message::PropGetMessage* prop_get_message);
-  ::message::PropGetMessage* unsafe_arena_release_prop_get_message();
 
   // .message.ReaperAttackResultMessage reaper_attack_result_message = 7;
   bool has_reaper_attack_result_message() const;
@@ -737,23 +735,41 @@ class MessageWrapper final :
       ::message::ReaperAttackResultMessage* reaper_attack_result_message);
   ::message::ReaperAttackResultMessage* unsafe_arena_release_reaper_attack_result_message();
 
-  // .message.LobbyMessage lobby_message = 8;
-  bool has_lobby_message() const;
+  // .message.PropTryGetMessage prop_try_get_message = 8;
+  bool has_prop_try_get_message() const;
   private:
-  bool _internal_has_lobby_message() const;
+  bool _internal_has_prop_try_get_message() const;
   public:
-  void clear_lobby_message();
-  const ::message::LobbyMessage& lobby_message() const;
-  PROTOBUF_NODISCARD ::message::LobbyMessage* release_lobby_message();
-  ::message::LobbyMessage* mutable_lobby_message();
-  void set_allocated_lobby_message(::message::LobbyMessage* lobby_message);
+  void clear_prop_try_get_message();
+  const ::message::PropTryGetMessage& prop_try_get_message() const;
+  PROTOBUF_NODISCARD ::message::PropTryGetMessage* release_prop_try_get_message();
+  ::message::PropTryGetMessage* mutable_prop_try_get_message();
+  void set_allocated_prop_try_get_message(::message::PropTryGetMessage* prop_try_get_message);
   private:
-  const ::message::LobbyMessage& _internal_lobby_message() const;
-  ::message::LobbyMessage* _internal_mutable_lobby_message();
+  const ::message::PropTryGetMessage& _internal_prop_try_get_message() const;
+  ::message::PropTryGetMessage* _internal_mutable_prop_try_get_message();
   public:
-  void unsafe_arena_set_allocated_lobby_message(
-      ::message::LobbyMessage* lobby_message);
-  ::message::LobbyMessage* unsafe_arena_release_lobby_message();
+  void unsafe_arena_set_allocated_prop_try_get_message(
+      ::message::PropTryGetMessage* prop_try_get_message);
+  ::message::PropTryGetMessage* unsafe_arena_release_prop_try_get_message();
+
+  // .message.PropGetMessage prop_get_message = 9;
+  bool has_prop_get_message() const;
+  private:
+  bool _internal_has_prop_get_message() const;
+  public:
+  void clear_prop_get_message();
+  const ::message::PropGetMessage& prop_get_message() const;
+  PROTOBUF_NODISCARD ::message::PropGetMessage* release_prop_get_message();
+  ::message::PropGetMessage* mutable_prop_get_message();
+  void set_allocated_prop_get_message(::message::PropGetMessage* prop_get_message);
+  private:
+  const ::message::PropGetMessage& _internal_prop_get_message() const;
+  ::message::PropGetMessage* _internal_mutable_prop_get_message();
+  public:
+  void unsafe_arena_set_allocated_prop_get_message(
+      ::message::PropGetMessage* prop_get_message);
+  ::message::PropGetMessage* unsafe_arena_release_prop_get_message();
 
   void clear_payload();
   PayloadCase payload_case() const;
@@ -762,12 +778,13 @@ class MessageWrapper final :
   class _Internal;
   void set_has_room_message();
   void set_has_string_message();
+  void set_has_lobby_message();
+  void set_has_start_receive_msg_message();
   void set_has_soul_basic_message();
   void set_has_reaper_attack_message();
+  void set_has_reaper_attack_result_message();
   void set_has_prop_try_get_message();
   void set_has_prop_get_message();
-  void set_has_reaper_attack_result_message();
-  void set_has_lobby_message();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -780,12 +797,13 @@ class MessageWrapper final :
       ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
     ::message::RoomMessage* room_message_;
     ::message::StringMessage* string_message_;
-    ::message::SoulBasicMessage* soul_basic_message_;
+    ::message::LobbyMessage* lobby_message_;
+    ::message::StartReceiveMsgMessage* start_receive_msg_message_;
+    ::message::PlayerBasicMessage* soul_basic_message_;
     ::message::ReaperAttackMessage* reaper_attack_message_;
+    ::message::ReaperAttackResultMessage* reaper_attack_result_message_;
     ::message::PropTryGetMessage* prop_try_get_message_;
     ::message::PropGetMessage* prop_get_message_;
-    ::message::ReaperAttackResultMessage* reaper_attack_result_message_;
-    ::message::LobbyMessage* lobby_message_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   uint32_t _oneof_case_[1];
@@ -1487,24 +1505,24 @@ class StartReceiveMsgMessage final :
 };
 // -------------------------------------------------------------------
 
-class SoulBasicMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.SoulBasicMessage) */ {
+class PlayerBasicMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.PlayerBasicMessage) */ {
  public:
-  inline SoulBasicMessage() : SoulBasicMessage(nullptr) {}
-  ~SoulBasicMessage() override;
-  explicit constexpr SoulBasicMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PlayerBasicMessage() : PlayerBasicMessage(nullptr) {}
+  ~PlayerBasicMessage() override;
+  explicit constexpr PlayerBasicMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  SoulBasicMessage(const SoulBasicMessage& from);
-  SoulBasicMessage(SoulBasicMessage&& from) noexcept
-    : SoulBasicMessage() {
+  PlayerBasicMessage(const PlayerBasicMessage& from);
+  PlayerBasicMessage(PlayerBasicMessage&& from) noexcept
+    : PlayerBasicMessage() {
     *this = ::std::move(from);
   }
 
-  inline SoulBasicMessage& operator=(const SoulBasicMessage& from) {
+  inline PlayerBasicMessage& operator=(const PlayerBasicMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SoulBasicMessage& operator=(SoulBasicMessage&& from) noexcept {
+  inline PlayerBasicMessage& operator=(PlayerBasicMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1527,20 +1545,20 @@ class SoulBasicMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const SoulBasicMessage& default_instance() {
+  static const PlayerBasicMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const SoulBasicMessage* internal_default_instance() {
-    return reinterpret_cast<const SoulBasicMessage*>(
-               &_SoulBasicMessage_default_instance_);
+  static inline const PlayerBasicMessage* internal_default_instance() {
+    return reinterpret_cast<const PlayerBasicMessage*>(
+               &_PlayerBasicMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(SoulBasicMessage& a, SoulBasicMessage& b) {
+  friend void swap(PlayerBasicMessage& a, PlayerBasicMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(SoulBasicMessage* other) {
+  inline void Swap(PlayerBasicMessage* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1553,7 +1571,7 @@ class SoulBasicMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SoulBasicMessage* other) {
+  void UnsafeArenaSwap(PlayerBasicMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1561,13 +1579,13 @@ class SoulBasicMessage final :
 
   // implements Message ----------------------------------------------
 
-  SoulBasicMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<SoulBasicMessage>(arena);
+  PlayerBasicMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PlayerBasicMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const SoulBasicMessage& from);
+  void CopyFrom(const PlayerBasicMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const SoulBasicMessage& from);
+  void MergeFrom(const PlayerBasicMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1584,15 +1602,15 @@ class SoulBasicMessage final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(SoulBasicMessage* other);
+  void InternalSwap(PlayerBasicMessage* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "message.SoulBasicMessage";
+    return "message.PlayerBasicMessage";
   }
   protected:
-  explicit SoulBasicMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PlayerBasicMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1660,7 +1678,7 @@ class SoulBasicMessage final :
   void _internal_set_max_hp(float value);
   public:
 
-  // @@protoc_insertion_point(class_scope:message.SoulBasicMessage)
+  // @@protoc_insertion_point(class_scope:message.PlayerBasicMessage)
  private:
   class _Internal;
 
@@ -1672,174 +1690,6 @@ class SoulBasicMessage final :
   float position_y_;
   float hp_;
   float max_hp_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_message_2eproto;
-};
-// -------------------------------------------------------------------
-
-class ReaperBasicMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.ReaperBasicMessage) */ {
- public:
-  inline ReaperBasicMessage() : ReaperBasicMessage(nullptr) {}
-  ~ReaperBasicMessage() override;
-  explicit constexpr ReaperBasicMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  ReaperBasicMessage(const ReaperBasicMessage& from);
-  ReaperBasicMessage(ReaperBasicMessage&& from) noexcept
-    : ReaperBasicMessage() {
-    *this = ::std::move(from);
-  }
-
-  inline ReaperBasicMessage& operator=(const ReaperBasicMessage& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline ReaperBasicMessage& operator=(ReaperBasicMessage&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const ReaperBasicMessage& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const ReaperBasicMessage* internal_default_instance() {
-    return reinterpret_cast<const ReaperBasicMessage*>(
-               &_ReaperBasicMessage_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    8;
-
-  friend void swap(ReaperBasicMessage& a, ReaperBasicMessage& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(ReaperBasicMessage* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(ReaperBasicMessage* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  ReaperBasicMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReaperBasicMessage>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ReaperBasicMessage& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const ReaperBasicMessage& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(ReaperBasicMessage* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "message.ReaperBasicMessage";
-  }
-  protected:
-  explicit ReaperBasicMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kPlayerIdFieldNumber = 1,
-    kPositionXFieldNumber = 2,
-    kPositionYFieldNumber = 3,
-  };
-  // int32 player_id = 1;
-  void clear_player_id();
-  int32_t player_id() const;
-  void set_player_id(int32_t value);
-  private:
-  int32_t _internal_player_id() const;
-  void _internal_set_player_id(int32_t value);
-  public:
-
-  // float position_x = 2;
-  void clear_position_x();
-  float position_x() const;
-  void set_position_x(float value);
-  private:
-  float _internal_position_x() const;
-  void _internal_set_position_x(float value);
-  public:
-
-  // float position_y = 3;
-  void clear_position_y();
-  float position_y() const;
-  void set_position_y(float value);
-  private:
-  float _internal_position_y() const;
-  void _internal_set_position_y(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:message.ReaperBasicMessage)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  int32_t player_id_;
-  float position_x_;
-  float position_y_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -1893,7 +1743,7 @@ class ReaperAttackMessage final :
                &_ReaperAttackMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    8;
 
   friend void swap(ReaperAttackMessage& a, ReaperAttackMessage& b) {
     a.Swap(&b);
@@ -2050,7 +1900,7 @@ class PropTryGetMessage final :
                &_PropTryGetMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    9;
 
   friend void swap(PropTryGetMessage& a, PropTryGetMessage& b) {
     a.Swap(&b);
@@ -2218,7 +2068,7 @@ class PropGetMessage final :
                &_PropGetMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(PropGetMessage& a, PropGetMessage& b) {
     a.Swap(&b);
@@ -2386,7 +2236,7 @@ class ReaperAttackResultMessage final :
                &_ReaperAttackResultMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
   friend void swap(ReaperAttackResultMessage& a, ReaperAttackResultMessage& b) {
     a.Swap(&b);
@@ -2720,7 +2570,155 @@ inline ::message::StringMessage* MessageWrapper::mutable_string_message() {
   return _msg;
 }
 
-// .message.SoulBasicMessage soul_basic_message = 3;
+// .message.LobbyMessage lobby_message = 3;
+inline bool MessageWrapper::_internal_has_lobby_message() const {
+  return payload_case() == kLobbyMessage;
+}
+inline bool MessageWrapper::has_lobby_message() const {
+  return _internal_has_lobby_message();
+}
+inline void MessageWrapper::set_has_lobby_message() {
+  _oneof_case_[0] = kLobbyMessage;
+}
+inline void MessageWrapper::clear_lobby_message() {
+  if (_internal_has_lobby_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.lobby_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::LobbyMessage* MessageWrapper::release_lobby_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.lobby_message)
+  if (_internal_has_lobby_message()) {
+    clear_has_payload();
+      ::message::LobbyMessage* temp = payload_.lobby_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.lobby_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::LobbyMessage& MessageWrapper::_internal_lobby_message() const {
+  return _internal_has_lobby_message()
+      ? *payload_.lobby_message_
+      : reinterpret_cast< ::message::LobbyMessage&>(::message::_LobbyMessage_default_instance_);
+}
+inline const ::message::LobbyMessage& MessageWrapper::lobby_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.lobby_message)
+  return _internal_lobby_message();
+}
+inline ::message::LobbyMessage* MessageWrapper::unsafe_arena_release_lobby_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.lobby_message)
+  if (_internal_has_lobby_message()) {
+    clear_has_payload();
+    ::message::LobbyMessage* temp = payload_.lobby_message_;
+    payload_.lobby_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_lobby_message(::message::LobbyMessage* lobby_message) {
+  clear_payload();
+  if (lobby_message) {
+    set_has_lobby_message();
+    payload_.lobby_message_ = lobby_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.lobby_message)
+}
+inline ::message::LobbyMessage* MessageWrapper::_internal_mutable_lobby_message() {
+  if (!_internal_has_lobby_message()) {
+    clear_payload();
+    set_has_lobby_message();
+    payload_.lobby_message_ = CreateMaybeMessage< ::message::LobbyMessage >(GetArenaForAllocation());
+  }
+  return payload_.lobby_message_;
+}
+inline ::message::LobbyMessage* MessageWrapper::mutable_lobby_message() {
+  ::message::LobbyMessage* _msg = _internal_mutable_lobby_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.lobby_message)
+  return _msg;
+}
+
+// .message.StartReceiveMsgMessage start_receive_msg_message = 4;
+inline bool MessageWrapper::_internal_has_start_receive_msg_message() const {
+  return payload_case() == kStartReceiveMsgMessage;
+}
+inline bool MessageWrapper::has_start_receive_msg_message() const {
+  return _internal_has_start_receive_msg_message();
+}
+inline void MessageWrapper::set_has_start_receive_msg_message() {
+  _oneof_case_[0] = kStartReceiveMsgMessage;
+}
+inline void MessageWrapper::clear_start_receive_msg_message() {
+  if (_internal_has_start_receive_msg_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.start_receive_msg_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::StartReceiveMsgMessage* MessageWrapper::release_start_receive_msg_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.start_receive_msg_message)
+  if (_internal_has_start_receive_msg_message()) {
+    clear_has_payload();
+      ::message::StartReceiveMsgMessage* temp = payload_.start_receive_msg_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.start_receive_msg_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::StartReceiveMsgMessage& MessageWrapper::_internal_start_receive_msg_message() const {
+  return _internal_has_start_receive_msg_message()
+      ? *payload_.start_receive_msg_message_
+      : reinterpret_cast< ::message::StartReceiveMsgMessage&>(::message::_StartReceiveMsgMessage_default_instance_);
+}
+inline const ::message::StartReceiveMsgMessage& MessageWrapper::start_receive_msg_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.start_receive_msg_message)
+  return _internal_start_receive_msg_message();
+}
+inline ::message::StartReceiveMsgMessage* MessageWrapper::unsafe_arena_release_start_receive_msg_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.start_receive_msg_message)
+  if (_internal_has_start_receive_msg_message()) {
+    clear_has_payload();
+    ::message::StartReceiveMsgMessage* temp = payload_.start_receive_msg_message_;
+    payload_.start_receive_msg_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_start_receive_msg_message(::message::StartReceiveMsgMessage* start_receive_msg_message) {
+  clear_payload();
+  if (start_receive_msg_message) {
+    set_has_start_receive_msg_message();
+    payload_.start_receive_msg_message_ = start_receive_msg_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.start_receive_msg_message)
+}
+inline ::message::StartReceiveMsgMessage* MessageWrapper::_internal_mutable_start_receive_msg_message() {
+  if (!_internal_has_start_receive_msg_message()) {
+    clear_payload();
+    set_has_start_receive_msg_message();
+    payload_.start_receive_msg_message_ = CreateMaybeMessage< ::message::StartReceiveMsgMessage >(GetArenaForAllocation());
+  }
+  return payload_.start_receive_msg_message_;
+}
+inline ::message::StartReceiveMsgMessage* MessageWrapper::mutable_start_receive_msg_message() {
+  ::message::StartReceiveMsgMessage* _msg = _internal_mutable_start_receive_msg_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.start_receive_msg_message)
+  return _msg;
+}
+
+// .message.PlayerBasicMessage soul_basic_message = 5;
 inline bool MessageWrapper::_internal_has_soul_basic_message() const {
   return payload_case() == kSoulBasicMessage;
 }
@@ -2738,11 +2736,11 @@ inline void MessageWrapper::clear_soul_basic_message() {
     clear_has_payload();
   }
 }
-inline ::message::SoulBasicMessage* MessageWrapper::release_soul_basic_message() {
+inline ::message::PlayerBasicMessage* MessageWrapper::release_soul_basic_message() {
   // @@protoc_insertion_point(field_release:message.MessageWrapper.soul_basic_message)
   if (_internal_has_soul_basic_message()) {
     clear_has_payload();
-      ::message::SoulBasicMessage* temp = payload_.soul_basic_message_;
+      ::message::PlayerBasicMessage* temp = payload_.soul_basic_message_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -2752,27 +2750,27 @@ inline ::message::SoulBasicMessage* MessageWrapper::release_soul_basic_message()
     return nullptr;
   }
 }
-inline const ::message::SoulBasicMessage& MessageWrapper::_internal_soul_basic_message() const {
+inline const ::message::PlayerBasicMessage& MessageWrapper::_internal_soul_basic_message() const {
   return _internal_has_soul_basic_message()
       ? *payload_.soul_basic_message_
-      : reinterpret_cast< ::message::SoulBasicMessage&>(::message::_SoulBasicMessage_default_instance_);
+      : reinterpret_cast< ::message::PlayerBasicMessage&>(::message::_PlayerBasicMessage_default_instance_);
 }
-inline const ::message::SoulBasicMessage& MessageWrapper::soul_basic_message() const {
+inline const ::message::PlayerBasicMessage& MessageWrapper::soul_basic_message() const {
   // @@protoc_insertion_point(field_get:message.MessageWrapper.soul_basic_message)
   return _internal_soul_basic_message();
 }
-inline ::message::SoulBasicMessage* MessageWrapper::unsafe_arena_release_soul_basic_message() {
+inline ::message::PlayerBasicMessage* MessageWrapper::unsafe_arena_release_soul_basic_message() {
   // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.soul_basic_message)
   if (_internal_has_soul_basic_message()) {
     clear_has_payload();
-    ::message::SoulBasicMessage* temp = payload_.soul_basic_message_;
+    ::message::PlayerBasicMessage* temp = payload_.soul_basic_message_;
     payload_.soul_basic_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void MessageWrapper::unsafe_arena_set_allocated_soul_basic_message(::message::SoulBasicMessage* soul_basic_message) {
+inline void MessageWrapper::unsafe_arena_set_allocated_soul_basic_message(::message::PlayerBasicMessage* soul_basic_message) {
   clear_payload();
   if (soul_basic_message) {
     set_has_soul_basic_message();
@@ -2780,21 +2778,21 @@ inline void MessageWrapper::unsafe_arena_set_allocated_soul_basic_message(::mess
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.soul_basic_message)
 }
-inline ::message::SoulBasicMessage* MessageWrapper::_internal_mutable_soul_basic_message() {
+inline ::message::PlayerBasicMessage* MessageWrapper::_internal_mutable_soul_basic_message() {
   if (!_internal_has_soul_basic_message()) {
     clear_payload();
     set_has_soul_basic_message();
-    payload_.soul_basic_message_ = CreateMaybeMessage< ::message::SoulBasicMessage >(GetArenaForAllocation());
+    payload_.soul_basic_message_ = CreateMaybeMessage< ::message::PlayerBasicMessage >(GetArenaForAllocation());
   }
   return payload_.soul_basic_message_;
 }
-inline ::message::SoulBasicMessage* MessageWrapper::mutable_soul_basic_message() {
-  ::message::SoulBasicMessage* _msg = _internal_mutable_soul_basic_message();
+inline ::message::PlayerBasicMessage* MessageWrapper::mutable_soul_basic_message() {
+  ::message::PlayerBasicMessage* _msg = _internal_mutable_soul_basic_message();
   // @@protoc_insertion_point(field_mutable:message.MessageWrapper.soul_basic_message)
   return _msg;
 }
 
-// .message.ReaperAttackMessage reaper_attack_message = 4;
+// .message.ReaperAttackMessage reaper_attack_message = 6;
 inline bool MessageWrapper::_internal_has_reaper_attack_message() const {
   return payload_case() == kReaperAttackMessage;
 }
@@ -2865,154 +2863,6 @@ inline ::message::ReaperAttackMessage* MessageWrapper::_internal_mutable_reaper_
 inline ::message::ReaperAttackMessage* MessageWrapper::mutable_reaper_attack_message() {
   ::message::ReaperAttackMessage* _msg = _internal_mutable_reaper_attack_message();
   // @@protoc_insertion_point(field_mutable:message.MessageWrapper.reaper_attack_message)
-  return _msg;
-}
-
-// .message.PropTryGetMessage prop_try_get_message = 5;
-inline bool MessageWrapper::_internal_has_prop_try_get_message() const {
-  return payload_case() == kPropTryGetMessage;
-}
-inline bool MessageWrapper::has_prop_try_get_message() const {
-  return _internal_has_prop_try_get_message();
-}
-inline void MessageWrapper::set_has_prop_try_get_message() {
-  _oneof_case_[0] = kPropTryGetMessage;
-}
-inline void MessageWrapper::clear_prop_try_get_message() {
-  if (_internal_has_prop_try_get_message()) {
-    if (GetArenaForAllocation() == nullptr) {
-      delete payload_.prop_try_get_message_;
-    }
-    clear_has_payload();
-  }
-}
-inline ::message::PropTryGetMessage* MessageWrapper::release_prop_try_get_message() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.prop_try_get_message)
-  if (_internal_has_prop_try_get_message()) {
-    clear_has_payload();
-      ::message::PropTryGetMessage* temp = payload_.prop_try_get_message_;
-    if (GetArenaForAllocation() != nullptr) {
-      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-    }
-    payload_.prop_try_get_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::message::PropTryGetMessage& MessageWrapper::_internal_prop_try_get_message() const {
-  return _internal_has_prop_try_get_message()
-      ? *payload_.prop_try_get_message_
-      : reinterpret_cast< ::message::PropTryGetMessage&>(::message::_PropTryGetMessage_default_instance_);
-}
-inline const ::message::PropTryGetMessage& MessageWrapper::prop_try_get_message() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.prop_try_get_message)
-  return _internal_prop_try_get_message();
-}
-inline ::message::PropTryGetMessage* MessageWrapper::unsafe_arena_release_prop_try_get_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.prop_try_get_message)
-  if (_internal_has_prop_try_get_message()) {
-    clear_has_payload();
-    ::message::PropTryGetMessage* temp = payload_.prop_try_get_message_;
-    payload_.prop_try_get_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline void MessageWrapper::unsafe_arena_set_allocated_prop_try_get_message(::message::PropTryGetMessage* prop_try_get_message) {
-  clear_payload();
-  if (prop_try_get_message) {
-    set_has_prop_try_get_message();
-    payload_.prop_try_get_message_ = prop_try_get_message;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.prop_try_get_message)
-}
-inline ::message::PropTryGetMessage* MessageWrapper::_internal_mutable_prop_try_get_message() {
-  if (!_internal_has_prop_try_get_message()) {
-    clear_payload();
-    set_has_prop_try_get_message();
-    payload_.prop_try_get_message_ = CreateMaybeMessage< ::message::PropTryGetMessage >(GetArenaForAllocation());
-  }
-  return payload_.prop_try_get_message_;
-}
-inline ::message::PropTryGetMessage* MessageWrapper::mutable_prop_try_get_message() {
-  ::message::PropTryGetMessage* _msg = _internal_mutable_prop_try_get_message();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.prop_try_get_message)
-  return _msg;
-}
-
-// .message.PropGetMessage prop_get_message = 6;
-inline bool MessageWrapper::_internal_has_prop_get_message() const {
-  return payload_case() == kPropGetMessage;
-}
-inline bool MessageWrapper::has_prop_get_message() const {
-  return _internal_has_prop_get_message();
-}
-inline void MessageWrapper::set_has_prop_get_message() {
-  _oneof_case_[0] = kPropGetMessage;
-}
-inline void MessageWrapper::clear_prop_get_message() {
-  if (_internal_has_prop_get_message()) {
-    if (GetArenaForAllocation() == nullptr) {
-      delete payload_.prop_get_message_;
-    }
-    clear_has_payload();
-  }
-}
-inline ::message::PropGetMessage* MessageWrapper::release_prop_get_message() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.prop_get_message)
-  if (_internal_has_prop_get_message()) {
-    clear_has_payload();
-      ::message::PropGetMessage* temp = payload_.prop_get_message_;
-    if (GetArenaForAllocation() != nullptr) {
-      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-    }
-    payload_.prop_get_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::message::PropGetMessage& MessageWrapper::_internal_prop_get_message() const {
-  return _internal_has_prop_get_message()
-      ? *payload_.prop_get_message_
-      : reinterpret_cast< ::message::PropGetMessage&>(::message::_PropGetMessage_default_instance_);
-}
-inline const ::message::PropGetMessage& MessageWrapper::prop_get_message() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.prop_get_message)
-  return _internal_prop_get_message();
-}
-inline ::message::PropGetMessage* MessageWrapper::unsafe_arena_release_prop_get_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.prop_get_message)
-  if (_internal_has_prop_get_message()) {
-    clear_has_payload();
-    ::message::PropGetMessage* temp = payload_.prop_get_message_;
-    payload_.prop_get_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline void MessageWrapper::unsafe_arena_set_allocated_prop_get_message(::message::PropGetMessage* prop_get_message) {
-  clear_payload();
-  if (prop_get_message) {
-    set_has_prop_get_message();
-    payload_.prop_get_message_ = prop_get_message;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.prop_get_message)
-}
-inline ::message::PropGetMessage* MessageWrapper::_internal_mutable_prop_get_message() {
-  if (!_internal_has_prop_get_message()) {
-    clear_payload();
-    set_has_prop_get_message();
-    payload_.prop_get_message_ = CreateMaybeMessage< ::message::PropGetMessage >(GetArenaForAllocation());
-  }
-  return payload_.prop_get_message_;
-}
-inline ::message::PropGetMessage* MessageWrapper::mutable_prop_get_message() {
-  ::message::PropGetMessage* _msg = _internal_mutable_prop_get_message();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.prop_get_message)
   return _msg;
 }
 
@@ -3090,77 +2940,151 @@ inline ::message::ReaperAttackResultMessage* MessageWrapper::mutable_reaper_atta
   return _msg;
 }
 
-// .message.LobbyMessage lobby_message = 8;
-inline bool MessageWrapper::_internal_has_lobby_message() const {
-  return payload_case() == kLobbyMessage;
+// .message.PropTryGetMessage prop_try_get_message = 8;
+inline bool MessageWrapper::_internal_has_prop_try_get_message() const {
+  return payload_case() == kPropTryGetMessage;
 }
-inline bool MessageWrapper::has_lobby_message() const {
-  return _internal_has_lobby_message();
+inline bool MessageWrapper::has_prop_try_get_message() const {
+  return _internal_has_prop_try_get_message();
 }
-inline void MessageWrapper::set_has_lobby_message() {
-  _oneof_case_[0] = kLobbyMessage;
+inline void MessageWrapper::set_has_prop_try_get_message() {
+  _oneof_case_[0] = kPropTryGetMessage;
 }
-inline void MessageWrapper::clear_lobby_message() {
-  if (_internal_has_lobby_message()) {
+inline void MessageWrapper::clear_prop_try_get_message() {
+  if (_internal_has_prop_try_get_message()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete payload_.lobby_message_;
+      delete payload_.prop_try_get_message_;
     }
     clear_has_payload();
   }
 }
-inline ::message::LobbyMessage* MessageWrapper::release_lobby_message() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.lobby_message)
-  if (_internal_has_lobby_message()) {
+inline ::message::PropTryGetMessage* MessageWrapper::release_prop_try_get_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.prop_try_get_message)
+  if (_internal_has_prop_try_get_message()) {
     clear_has_payload();
-      ::message::LobbyMessage* temp = payload_.lobby_message_;
+      ::message::PropTryGetMessage* temp = payload_.prop_try_get_message_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    payload_.lobby_message_ = nullptr;
+    payload_.prop_try_get_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::message::LobbyMessage& MessageWrapper::_internal_lobby_message() const {
-  return _internal_has_lobby_message()
-      ? *payload_.lobby_message_
-      : reinterpret_cast< ::message::LobbyMessage&>(::message::_LobbyMessage_default_instance_);
+inline const ::message::PropTryGetMessage& MessageWrapper::_internal_prop_try_get_message() const {
+  return _internal_has_prop_try_get_message()
+      ? *payload_.prop_try_get_message_
+      : reinterpret_cast< ::message::PropTryGetMessage&>(::message::_PropTryGetMessage_default_instance_);
 }
-inline const ::message::LobbyMessage& MessageWrapper::lobby_message() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.lobby_message)
-  return _internal_lobby_message();
+inline const ::message::PropTryGetMessage& MessageWrapper::prop_try_get_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.prop_try_get_message)
+  return _internal_prop_try_get_message();
 }
-inline ::message::LobbyMessage* MessageWrapper::unsafe_arena_release_lobby_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.lobby_message)
-  if (_internal_has_lobby_message()) {
+inline ::message::PropTryGetMessage* MessageWrapper::unsafe_arena_release_prop_try_get_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.prop_try_get_message)
+  if (_internal_has_prop_try_get_message()) {
     clear_has_payload();
-    ::message::LobbyMessage* temp = payload_.lobby_message_;
-    payload_.lobby_message_ = nullptr;
+    ::message::PropTryGetMessage* temp = payload_.prop_try_get_message_;
+    payload_.prop_try_get_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void MessageWrapper::unsafe_arena_set_allocated_lobby_message(::message::LobbyMessage* lobby_message) {
+inline void MessageWrapper::unsafe_arena_set_allocated_prop_try_get_message(::message::PropTryGetMessage* prop_try_get_message) {
   clear_payload();
-  if (lobby_message) {
-    set_has_lobby_message();
-    payload_.lobby_message_ = lobby_message;
+  if (prop_try_get_message) {
+    set_has_prop_try_get_message();
+    payload_.prop_try_get_message_ = prop_try_get_message;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.lobby_message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.prop_try_get_message)
 }
-inline ::message::LobbyMessage* MessageWrapper::_internal_mutable_lobby_message() {
-  if (!_internal_has_lobby_message()) {
+inline ::message::PropTryGetMessage* MessageWrapper::_internal_mutable_prop_try_get_message() {
+  if (!_internal_has_prop_try_get_message()) {
     clear_payload();
-    set_has_lobby_message();
-    payload_.lobby_message_ = CreateMaybeMessage< ::message::LobbyMessage >(GetArenaForAllocation());
+    set_has_prop_try_get_message();
+    payload_.prop_try_get_message_ = CreateMaybeMessage< ::message::PropTryGetMessage >(GetArenaForAllocation());
   }
-  return payload_.lobby_message_;
+  return payload_.prop_try_get_message_;
 }
-inline ::message::LobbyMessage* MessageWrapper::mutable_lobby_message() {
-  ::message::LobbyMessage* _msg = _internal_mutable_lobby_message();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.lobby_message)
+inline ::message::PropTryGetMessage* MessageWrapper::mutable_prop_try_get_message() {
+  ::message::PropTryGetMessage* _msg = _internal_mutable_prop_try_get_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.prop_try_get_message)
+  return _msg;
+}
+
+// .message.PropGetMessage prop_get_message = 9;
+inline bool MessageWrapper::_internal_has_prop_get_message() const {
+  return payload_case() == kPropGetMessage;
+}
+inline bool MessageWrapper::has_prop_get_message() const {
+  return _internal_has_prop_get_message();
+}
+inline void MessageWrapper::set_has_prop_get_message() {
+  _oneof_case_[0] = kPropGetMessage;
+}
+inline void MessageWrapper::clear_prop_get_message() {
+  if (_internal_has_prop_get_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.prop_get_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::PropGetMessage* MessageWrapper::release_prop_get_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.prop_get_message)
+  if (_internal_has_prop_get_message()) {
+    clear_has_payload();
+      ::message::PropGetMessage* temp = payload_.prop_get_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.prop_get_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::PropGetMessage& MessageWrapper::_internal_prop_get_message() const {
+  return _internal_has_prop_get_message()
+      ? *payload_.prop_get_message_
+      : reinterpret_cast< ::message::PropGetMessage&>(::message::_PropGetMessage_default_instance_);
+}
+inline const ::message::PropGetMessage& MessageWrapper::prop_get_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.prop_get_message)
+  return _internal_prop_get_message();
+}
+inline ::message::PropGetMessage* MessageWrapper::unsafe_arena_release_prop_get_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.prop_get_message)
+  if (_internal_has_prop_get_message()) {
+    clear_has_payload();
+    ::message::PropGetMessage* temp = payload_.prop_get_message_;
+    payload_.prop_get_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_prop_get_message(::message::PropGetMessage* prop_get_message) {
+  clear_payload();
+  if (prop_get_message) {
+    set_has_prop_get_message();
+    payload_.prop_get_message_ = prop_get_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.prop_get_message)
+}
+inline ::message::PropGetMessage* MessageWrapper::_internal_mutable_prop_get_message() {
+  if (!_internal_has_prop_get_message()) {
+    clear_payload();
+    set_has_prop_get_message();
+    payload_.prop_get_message_ = CreateMaybeMessage< ::message::PropGetMessage >(GetArenaForAllocation());
+  }
+  return payload_.prop_get_message_;
+}
+inline ::message::PropGetMessage* MessageWrapper::mutable_prop_get_message() {
+  ::message::PropGetMessage* _msg = _internal_mutable_prop_get_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.prop_get_message)
   return _msg;
 }
 
@@ -3602,170 +3526,106 @@ inline void StartReceiveMsgMessage::set_allocated_character(::message::Character
 
 // -------------------------------------------------------------------
 
-// SoulBasicMessage
+// PlayerBasicMessage
 
 // int32 player_id = 1;
-inline void SoulBasicMessage::clear_player_id() {
+inline void PlayerBasicMessage::clear_player_id() {
   player_id_ = 0;
 }
-inline int32_t SoulBasicMessage::_internal_player_id() const {
+inline int32_t PlayerBasicMessage::_internal_player_id() const {
   return player_id_;
 }
-inline int32_t SoulBasicMessage::player_id() const {
-  // @@protoc_insertion_point(field_get:message.SoulBasicMessage.player_id)
+inline int32_t PlayerBasicMessage::player_id() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.player_id)
   return _internal_player_id();
 }
-inline void SoulBasicMessage::_internal_set_player_id(int32_t value) {
+inline void PlayerBasicMessage::_internal_set_player_id(int32_t value) {
   
   player_id_ = value;
 }
-inline void SoulBasicMessage::set_player_id(int32_t value) {
+inline void PlayerBasicMessage::set_player_id(int32_t value) {
   _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:message.SoulBasicMessage.player_id)
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.player_id)
 }
 
 // float position_x = 2;
-inline void SoulBasicMessage::clear_position_x() {
+inline void PlayerBasicMessage::clear_position_x() {
   position_x_ = 0;
 }
-inline float SoulBasicMessage::_internal_position_x() const {
+inline float PlayerBasicMessage::_internal_position_x() const {
   return position_x_;
 }
-inline float SoulBasicMessage::position_x() const {
-  // @@protoc_insertion_point(field_get:message.SoulBasicMessage.position_x)
+inline float PlayerBasicMessage::position_x() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.position_x)
   return _internal_position_x();
 }
-inline void SoulBasicMessage::_internal_set_position_x(float value) {
+inline void PlayerBasicMessage::_internal_set_position_x(float value) {
   
   position_x_ = value;
 }
-inline void SoulBasicMessage::set_position_x(float value) {
+inline void PlayerBasicMessage::set_position_x(float value) {
   _internal_set_position_x(value);
-  // @@protoc_insertion_point(field_set:message.SoulBasicMessage.position_x)
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.position_x)
 }
 
 // float position_y = 3;
-inline void SoulBasicMessage::clear_position_y() {
+inline void PlayerBasicMessage::clear_position_y() {
   position_y_ = 0;
 }
-inline float SoulBasicMessage::_internal_position_y() const {
+inline float PlayerBasicMessage::_internal_position_y() const {
   return position_y_;
 }
-inline float SoulBasicMessage::position_y() const {
-  // @@protoc_insertion_point(field_get:message.SoulBasicMessage.position_y)
+inline float PlayerBasicMessage::position_y() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.position_y)
   return _internal_position_y();
 }
-inline void SoulBasicMessage::_internal_set_position_y(float value) {
+inline void PlayerBasicMessage::_internal_set_position_y(float value) {
   
   position_y_ = value;
 }
-inline void SoulBasicMessage::set_position_y(float value) {
+inline void PlayerBasicMessage::set_position_y(float value) {
   _internal_set_position_y(value);
-  // @@protoc_insertion_point(field_set:message.SoulBasicMessage.position_y)
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.position_y)
 }
 
 // float hp = 4;
-inline void SoulBasicMessage::clear_hp() {
+inline void PlayerBasicMessage::clear_hp() {
   hp_ = 0;
 }
-inline float SoulBasicMessage::_internal_hp() const {
+inline float PlayerBasicMessage::_internal_hp() const {
   return hp_;
 }
-inline float SoulBasicMessage::hp() const {
-  // @@protoc_insertion_point(field_get:message.SoulBasicMessage.hp)
+inline float PlayerBasicMessage::hp() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.hp)
   return _internal_hp();
 }
-inline void SoulBasicMessage::_internal_set_hp(float value) {
+inline void PlayerBasicMessage::_internal_set_hp(float value) {
   
   hp_ = value;
 }
-inline void SoulBasicMessage::set_hp(float value) {
+inline void PlayerBasicMessage::set_hp(float value) {
   _internal_set_hp(value);
-  // @@protoc_insertion_point(field_set:message.SoulBasicMessage.hp)
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.hp)
 }
 
 // float max_hp = 5;
-inline void SoulBasicMessage::clear_max_hp() {
+inline void PlayerBasicMessage::clear_max_hp() {
   max_hp_ = 0;
 }
-inline float SoulBasicMessage::_internal_max_hp() const {
+inline float PlayerBasicMessage::_internal_max_hp() const {
   return max_hp_;
 }
-inline float SoulBasicMessage::max_hp() const {
-  // @@protoc_insertion_point(field_get:message.SoulBasicMessage.max_hp)
+inline float PlayerBasicMessage::max_hp() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.max_hp)
   return _internal_max_hp();
 }
-inline void SoulBasicMessage::_internal_set_max_hp(float value) {
+inline void PlayerBasicMessage::_internal_set_max_hp(float value) {
   
   max_hp_ = value;
 }
-inline void SoulBasicMessage::set_max_hp(float value) {
+inline void PlayerBasicMessage::set_max_hp(float value) {
   _internal_set_max_hp(value);
-  // @@protoc_insertion_point(field_set:message.SoulBasicMessage.max_hp)
-}
-
-// -------------------------------------------------------------------
-
-// ReaperBasicMessage
-
-// int32 player_id = 1;
-inline void ReaperBasicMessage::clear_player_id() {
-  player_id_ = 0;
-}
-inline int32_t ReaperBasicMessage::_internal_player_id() const {
-  return player_id_;
-}
-inline int32_t ReaperBasicMessage::player_id() const {
-  // @@protoc_insertion_point(field_get:message.ReaperBasicMessage.player_id)
-  return _internal_player_id();
-}
-inline void ReaperBasicMessage::_internal_set_player_id(int32_t value) {
-  
-  player_id_ = value;
-}
-inline void ReaperBasicMessage::set_player_id(int32_t value) {
-  _internal_set_player_id(value);
-  // @@protoc_insertion_point(field_set:message.ReaperBasicMessage.player_id)
-}
-
-// float position_x = 2;
-inline void ReaperBasicMessage::clear_position_x() {
-  position_x_ = 0;
-}
-inline float ReaperBasicMessage::_internal_position_x() const {
-  return position_x_;
-}
-inline float ReaperBasicMessage::position_x() const {
-  // @@protoc_insertion_point(field_get:message.ReaperBasicMessage.position_x)
-  return _internal_position_x();
-}
-inline void ReaperBasicMessage::_internal_set_position_x(float value) {
-  
-  position_x_ = value;
-}
-inline void ReaperBasicMessage::set_position_x(float value) {
-  _internal_set_position_x(value);
-  // @@protoc_insertion_point(field_set:message.ReaperBasicMessage.position_x)
-}
-
-// float position_y = 3;
-inline void ReaperBasicMessage::clear_position_y() {
-  position_y_ = 0;
-}
-inline float ReaperBasicMessage::_internal_position_y() const {
-  return position_y_;
-}
-inline float ReaperBasicMessage::position_y() const {
-  // @@protoc_insertion_point(field_get:message.ReaperBasicMessage.position_y)
-  return _internal_position_y();
-}
-inline void ReaperBasicMessage::_internal_set_position_y(float value) {
-  
-  position_y_ = value;
-}
-inline void ReaperBasicMessage::set_position_y(float value) {
-  _internal_set_position_y(value);
-  // @@protoc_insertion_point(field_set:message.ReaperBasicMessage.position_y)
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.max_hp)
 }
 
 // -------------------------------------------------------------------
@@ -3987,8 +3847,6 @@ inline void ReaperAttackResultMessage::set_is_hit(bool value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

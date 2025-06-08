@@ -23,11 +23,11 @@ message MessageWrapper {
     StringMessage string_message = 2;
     LobbyMessage lobby_message = 3;
     StartReceiveMsgMessage start_receive_msg_message = 4;
-    SoulBasicMessage soul_basic_message = 5;
+    PlayerBasicMessage soul_basic_message = 5;
     ReaperAttackMessage reaper_attack_message = 6;
-    PropTryGetMessage prop_try_get_message = 7;
-    PropGetMessage prop_get_message = 8;
-    ReaperAttackResultMessage reaper_attack_result_message = 9;
+    ReaperAttackResultMessage reaper_attack_result_message = 7;
+    PropTryGetMessage prop_try_get_message = 8;
+    PropGetMessage prop_get_message = 9;
   }
 }
 
@@ -49,7 +49,7 @@ message StringMessage {
   string message_content = 2;
 }
 
-// Client send it to server and server broadcast it to all players
+// Client send it to server and server send it to other players
 message LobbyMessage {
   bool is_ready = 1;
   int32 player_id = 2;
@@ -66,18 +66,12 @@ message StartReceiveMsgMessage {
   Character character = 2;
 }
 
-message SoulBasicMessage {
+message PlayerBasicMessage {
   int32 player_id = 1;
   float position_x = 2;
   float position_y = 3;
   float hp = 4;
   float max_hp = 5;
-}
-
-message ReaperBasicMessage {
-  int32 player_id = 1;
-  float position_x = 2;
-  float position_y = 3;
 }
 
 message ReaperAttackMessage {
@@ -88,9 +82,7 @@ message ReaperAttackMessage {
 message PropTryGetMessage {
   int32 player_id = 1;
   int32 prop_id = 2;
-  int32 prop_type =
-      3; // TODO: Need define 'a b c d' in map to give prop type, or random by
-         // client (server can mutex lock to only one client get prop)
+  int32 prop_type = 3; // TODO: Need define 'a b c d' in map to give prop type, or random by client (server can mutex lock to only one client get prop)
 }
 
 message PropGetMessage {
