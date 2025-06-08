@@ -85,9 +85,10 @@ struct StringMessageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StringMessageDefaultTypeInternal _StringMessage_default_instance_;
 constexpr LobbyMessage::LobbyMessage(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : character_(nullptr)
-  , is_ready_(false)
-  , player_id_(0){}
+  : is_ready_(false)
+  , player_id_(0)
+  , character_type_(0)
+{}
 struct LobbyMessageDefaultTypeInternal {
   constexpr LobbyMessageDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -99,8 +100,7 @@ struct LobbyMessageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LobbyMessageDefaultTypeInternal _LobbyMessage_default_instance_;
 constexpr StartReceiveMsgMessage::StartReceiveMsgMessage(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : character_(nullptr)
-  , player_id_(0){}
+  : player_id_(0){}
 struct StartReceiveMsgMessageDefaultTypeInternal {
   constexpr StartReceiveMsgMessageDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -243,7 +243,7 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::message::LobbyMessage, is_ready_),
   PROTOBUF_FIELD_OFFSET(::message::LobbyMessage, player_id_),
-  PROTOBUF_FIELD_OFFSET(::message::LobbyMessage, character_),
+  PROTOBUF_FIELD_OFFSET(::message::LobbyMessage, character_type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::message::StartReceiveMsgMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -251,7 +251,6 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::message::StartReceiveMsgMessage, player_id_),
-  PROTOBUF_FIELD_OFFSET(::message::StartReceiveMsgMessage, character_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -306,11 +305,11 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 41, -1, -1, sizeof(::message::StringMessage)},
   { 49, -1, -1, sizeof(::message::LobbyMessage)},
   { 58, -1, -1, sizeof(::message::StartReceiveMsgMessage)},
-  { 66, -1, -1, sizeof(::message::PlayerBasicMessage)},
-  { 77, -1, -1, sizeof(::message::ReaperAttackMessage)},
-  { 85, -1, -1, sizeof(::message::PropTryGetMessage)},
-  { 94, -1, -1, sizeof(::message::PropGetMessage)},
-  { 103, -1, -1, sizeof(::message::ReaperAttackResultMessage)},
+  { 65, -1, -1, sizeof(::message::PlayerBasicMessage)},
+  { 76, -1, -1, sizeof(::message::ReaperAttackMessage)},
+  { 84, -1, -1, sizeof(::message::PropTryGetMessage)},
+  { 93, -1, -1, sizeof(::message::PropGetMessage)},
+  { 102, -1, -1, sizeof(::message::ReaperAttackResultMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -350,28 +349,28 @@ const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE
   " \001(\010\022\017\n\007room_id\030\002 \001(\005\022\021\n\tplayer_id\030\003 \001(\005"
   "\022&\n\ncharacters\030\004 \003(\0132\022.message.Character"
   "\">\n\rStringMessage\022\024\n\014message_type\030\001 \001(\005\022"
-  "\027\n\017message_content\030\002 \001(\t\"Z\n\014LobbyMessage"
-  "\022\020\n\010is_ready\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022%\n"
-  "\tcharacter\030\003 \001(\0132\022.message.Character\"R\n\026"
-  "StartReceiveMsgMessage\022\021\n\tplayer_id\030\001 \001("
-  "\005\022%\n\tcharacter\030\002 \001(\0132\022.message.Character"
-  "\"k\n\022PlayerBasicMessage\022\021\n\tplayer_id\030\001 \001("
-  "\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001("
-  "\002\022\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\"\?\n\023ReaperA"
-  "ttackMessage\022\026\n\016soul_player_id\030\001 \001(\005\022\020\n\010"
-  "skill_id\030\002 \001(\005\"J\n\021PropTryGetMessage\022\021\n\tp"
-  "layer_id\030\001 \001(\005\022\017\n\007prop_id\030\002 \001(\005\022\021\n\tprop_"
-  "type\030\003 \001(\005\"D\n\016PropGetMessage\022\016\n\006is_get\030\001"
-  " \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007prop_id\030\003 \001(\005"
-  "\"C\n\031ReaperAttackResultMessage\022\026\n\016soul_pl"
-  "ayer_id\030\001 \001(\005\022\016\n\006is_hit\030\002 \001(\010*T\n\rCharact"
-  "erType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG\020\001\022\025\n\021SOUL"
-  "_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETECTIVE\020\003*!\n\021S"
-  "tringMessageType\022\014\n\010MAZE_MAP\020\000b\006proto3"
+  "\027\n\017message_content\030\002 \001(\t\"c\n\014LobbyMessage"
+  "\022\020\n\010is_ready\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022.\n"
+  "\016character_type\030\003 \001(\0162\026.message.Characte"
+  "rType\"+\n\026StartReceiveMsgMessage\022\021\n\tplaye"
+  "r_id\030\001 \001(\005\"k\n\022PlayerBasicMessage\022\021\n\tplay"
+  "er_id\030\001 \001(\005\022\022\n\nposition_x\030\002 \001(\002\022\022\n\nposit"
+  "ion_y\030\003 \001(\002\022\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\""
+  "\?\n\023ReaperAttackMessage\022\026\n\016soul_player_id"
+  "\030\001 \001(\005\022\020\n\010skill_id\030\002 \001(\005\"J\n\021PropTryGetMe"
+  "ssage\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007prop_id\030\002 \001("
+  "\005\022\021\n\tprop_type\030\003 \001(\005\"D\n\016PropGetMessage\022\016"
+  "\n\006is_get\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007pro"
+  "p_id\030\003 \001(\005\"C\n\031ReaperAttackResultMessage\022"
+  "\026\n\016soul_player_id\030\001 \001(\005\022\016\n\006is_hit\030\002 \001(\010*"
+  "T\n\rCharacterType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG"
+  "\020\001\022\025\n\021SOUL_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETECT"
+  "IVE\020\003*!\n\021StringMessageType\022\014\n\010MAZE_MAP\020\000"
+  "b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 1558, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 1528, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 12,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -2005,13 +2004,8 @@ void StringMessage::InternalSwap(StringMessage* other) {
 
 class LobbyMessage::_Internal {
  public:
-  static const ::message::Character& character(const LobbyMessage* msg);
 };
 
-const ::message::Character&
-LobbyMessage::_Internal::character(const LobbyMessage* msg) {
-  return *msg->character_;
-}
 LobbyMessage::LobbyMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -2024,22 +2018,17 @@ LobbyMessage::LobbyMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
 LobbyMessage::LobbyMessage(const LobbyMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_character()) {
-    character_ = new ::message::Character(*from.character_);
-  } else {
-    character_ = nullptr;
-  }
   ::memcpy(&is_ready_, &from.is_ready_,
-    static_cast<size_t>(reinterpret_cast<char*>(&player_id_) -
-    reinterpret_cast<char*>(&is_ready_)) + sizeof(player_id_));
+    static_cast<size_t>(reinterpret_cast<char*>(&character_type_) -
+    reinterpret_cast<char*>(&is_ready_)) + sizeof(character_type_));
   // @@protoc_insertion_point(copy_constructor:message.LobbyMessage)
 }
 
 inline void LobbyMessage::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&character_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&player_id_) -
-    reinterpret_cast<char*>(&character_)) + sizeof(player_id_));
+    reinterpret_cast<char*>(&is_ready_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&character_type_) -
+    reinterpret_cast<char*>(&is_ready_)) + sizeof(character_type_));
 }
 
 LobbyMessage::~LobbyMessage() {
@@ -2051,7 +2040,6 @@ LobbyMessage::~LobbyMessage() {
 
 inline void LobbyMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete character_;
 }
 
 void LobbyMessage::ArenaDtor(void* object) {
@@ -2070,13 +2058,9 @@ void LobbyMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && character_ != nullptr) {
-    delete character_;
-  }
-  character_ = nullptr;
   ::memset(&is_ready_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&player_id_) -
-      reinterpret_cast<char*>(&is_ready_)) + sizeof(player_id_));
+      reinterpret_cast<char*>(&character_type_) -
+      reinterpret_cast<char*>(&is_ready_)) + sizeof(character_type_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2102,11 +2086,12 @@ const char* LobbyMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         } else
           goto handle_unusual;
         continue;
-      // .message.Character character = 3;
+      // .message.CharacterType character_type = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_character(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+          _internal_set_character_type(static_cast<::message::CharacterType>(val));
         } else
           goto handle_unusual;
         continue;
@@ -2151,12 +2136,11 @@ uint8_t* LobbyMessage::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_player_id(), target);
   }
 
-  // .message.Character character = 3;
-  if (this->_internal_has_character()) {
+  // .message.CharacterType character_type = 3;
+  if (this->_internal_character_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::character(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_character_type(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2175,13 +2159,6 @@ size_t LobbyMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .message.Character character = 3;
-  if (this->_internal_has_character()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *character_);
-  }
-
   // bool is_ready = 1;
   if (this->_internal_is_ready() != 0) {
     total_size += 1 + 1;
@@ -2190,6 +2167,12 @@ size_t LobbyMessage::ByteSizeLong() const {
   // int32 player_id = 2;
   if (this->_internal_player_id() != 0) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_player_id());
+  }
+
+  // .message.CharacterType character_type = 3;
+  if (this->_internal_character_type() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_character_type());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
@@ -2214,14 +2197,14 @@ void LobbyMessage::MergeFrom(const LobbyMessage& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_character()) {
-    _internal_mutable_character()->::message::Character::MergeFrom(from._internal_character());
-  }
   if (from._internal_is_ready() != 0) {
     _internal_set_is_ready(from._internal_is_ready());
   }
   if (from._internal_player_id() != 0) {
     _internal_set_player_id(from._internal_player_id());
+  }
+  if (from._internal_character_type() != 0) {
+    _internal_set_character_type(from._internal_character_type());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2241,11 +2224,11 @@ void LobbyMessage::InternalSwap(LobbyMessage* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LobbyMessage, player_id_)
-      + sizeof(LobbyMessage::player_id_)
-      - PROTOBUF_FIELD_OFFSET(LobbyMessage, character_)>(
-          reinterpret_cast<char*>(&character_),
-          reinterpret_cast<char*>(&other->character_));
+      PROTOBUF_FIELD_OFFSET(LobbyMessage, character_type_)
+      + sizeof(LobbyMessage::character_type_)
+      - PROTOBUF_FIELD_OFFSET(LobbyMessage, is_ready_)>(
+          reinterpret_cast<char*>(&is_ready_),
+          reinterpret_cast<char*>(&other->is_ready_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LobbyMessage::GetMetadata() const {
@@ -2258,13 +2241,8 @@ void LobbyMessage::InternalSwap(LobbyMessage* other) {
 
 class StartReceiveMsgMessage::_Internal {
  public:
-  static const ::message::Character& character(const StartReceiveMsgMessage* msg);
 };
 
-const ::message::Character&
-StartReceiveMsgMessage::_Internal::character(const StartReceiveMsgMessage* msg) {
-  return *msg->character_;
-}
 StartReceiveMsgMessage::StartReceiveMsgMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -2277,20 +2255,12 @@ StartReceiveMsgMessage::StartReceiveMsgMessage(::PROTOBUF_NAMESPACE_ID::Arena* a
 StartReceiveMsgMessage::StartReceiveMsgMessage(const StartReceiveMsgMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_character()) {
-    character_ = new ::message::Character(*from.character_);
-  } else {
-    character_ = nullptr;
-  }
   player_id_ = from.player_id_;
   // @@protoc_insertion_point(copy_constructor:message.StartReceiveMsgMessage)
 }
 
 inline void StartReceiveMsgMessage::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&character_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&player_id_) -
-    reinterpret_cast<char*>(&character_)) + sizeof(player_id_));
+player_id_ = 0;
 }
 
 StartReceiveMsgMessage::~StartReceiveMsgMessage() {
@@ -2302,7 +2272,6 @@ StartReceiveMsgMessage::~StartReceiveMsgMessage() {
 
 inline void StartReceiveMsgMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete character_;
 }
 
 void StartReceiveMsgMessage::ArenaDtor(void* object) {
@@ -2321,10 +2290,6 @@ void StartReceiveMsgMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && character_ != nullptr) {
-    delete character_;
-  }
-  character_ = nullptr;
   player_id_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2339,14 +2304,6 @@ const char* StartReceiveMsgMessage::_InternalParse(const char* ptr, ::PROTOBUF_N
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           player_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // .message.Character character = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_character(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2386,14 +2343,6 @@ uint8_t* StartReceiveMsgMessage::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_player_id(), target);
   }
 
-  // .message.Character character = 2;
-  if (this->_internal_has_character()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::character(this), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2409,13 +2358,6 @@ size_t StartReceiveMsgMessage::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // .message.Character character = 2;
-  if (this->_internal_has_character()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *character_);
-  }
 
   // int32 player_id = 1;
   if (this->_internal_player_id() != 0) {
@@ -2444,9 +2386,6 @@ void StartReceiveMsgMessage::MergeFrom(const StartReceiveMsgMessage& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_character()) {
-    _internal_mutable_character()->::message::Character::MergeFrom(from._internal_character());
-  }
   if (from._internal_player_id() != 0) {
     _internal_set_player_id(from._internal_player_id());
   }
@@ -2467,12 +2406,7 @@ bool StartReceiveMsgMessage::IsInitialized() const {
 void StartReceiveMsgMessage::InternalSwap(StartReceiveMsgMessage* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(StartReceiveMsgMessage, player_id_)
-      + sizeof(StartReceiveMsgMessage::player_id_)
-      - PROTOBUF_FIELD_OFFSET(StartReceiveMsgMessage, character_)>(
-          reinterpret_cast<char*>(&character_),
-          reinterpret_cast<char*>(&other->character_));
+  swap(player_id_, other->player_id_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata StartReceiveMsgMessage::GetMetadata() const {

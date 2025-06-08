@@ -43,22 +43,21 @@ namespace Message {
             "IAEoCBIPCgdyb29tX2lkGAIgASgFEhEKCXBsYXllcl9pZBgDIAEoBRImCgpj",
             "aGFyYWN0ZXJzGAQgAygLMhIubWVzc2FnZS5DaGFyYWN0ZXIiPgoNU3RyaW5n",
             "TWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVzc2FnZV9jb250",
-            "ZW50GAIgASgJIloKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFkeRgBIAEoCBIR",
-            "CglwbGF5ZXJfaWQYAiABKAUSJQoJY2hhcmFjdGVyGAMgASgLMhIubWVzc2Fn",
-            "ZS5DaGFyYWN0ZXIiUgoWU3RhcnRSZWNlaXZlTXNnTWVzc2FnZRIRCglwbGF5",
-            "ZXJfaWQYASABKAUSJQoJY2hhcmFjdGVyGAIgASgLMhIubWVzc2FnZS5DaGFy",
-            "YWN0ZXIiawoSUGxheWVyQmFzaWNNZXNzYWdlEhEKCXBsYXllcl9pZBgBIAEo",
-            "BRISCgpwb3NpdGlvbl94GAIgASgCEhIKCnBvc2l0aW9uX3kYAyABKAISCgoC",
-            "aHAYBCABKAISDgoGbWF4X2hwGAUgASgCIj8KE1JlYXBlckF0dGFja01lc3Nh",
-            "Z2USFgoOc291bF9wbGF5ZXJfaWQYASABKAUSEAoIc2tpbGxfaWQYAiABKAUi",
-            "SgoRUHJvcFRyeUdldE1lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEg8KB3By",
-            "b3BfaWQYAiABKAUSEQoJcHJvcF90eXBlGAMgASgFIkQKDlByb3BHZXRNZXNz",
-            "YWdlEg4KBmlzX2dldBgBIAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSDwoHcHJv",
-            "cF9pZBgDIAEoBSJDChlSZWFwZXJBdHRhY2tSZXN1bHRNZXNzYWdlEhYKDnNv",
-            "dWxfcGxheWVyX2lkGAEgASgFEg4KBmlzX2hpdBgCIAEoCCpUCg1DaGFyYWN0",
-            "ZXJUeXBlEgoKBlJFQVBFUhAAEgwKCFNPVUxfRE9HEAESFQoRU09VTF9QU1lD",
-            "SE9MT0dJU1QQAhISCg5TT1VMX0RFVEVDVElWRRADKiEKEVN0cmluZ01lc3Nh",
-            "Z2VUeXBlEgwKCE1BWkVfTUFQEABiBnByb3RvMw=="));
+            "ZW50GAIgASgJImMKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFkeRgBIAEoCBIR",
+            "CglwbGF5ZXJfaWQYAiABKAUSLgoOY2hhcmFjdGVyX3R5cGUYAyABKA4yFi5t",
+            "ZXNzYWdlLkNoYXJhY3RlclR5cGUiKwoWU3RhcnRSZWNlaXZlTXNnTWVzc2Fn",
+            "ZRIRCglwbGF5ZXJfaWQYASABKAUiawoSUGxheWVyQmFzaWNNZXNzYWdlEhEK",
+            "CXBsYXllcl9pZBgBIAEoBRISCgpwb3NpdGlvbl94GAIgASgCEhIKCnBvc2l0",
+            "aW9uX3kYAyABKAISCgoCaHAYBCABKAISDgoGbWF4X2hwGAUgASgCIj8KE1Jl",
+            "YXBlckF0dGFja01lc3NhZ2USFgoOc291bF9wbGF5ZXJfaWQYASABKAUSEAoI",
+            "c2tpbGxfaWQYAiABKAUiSgoRUHJvcFRyeUdldE1lc3NhZ2USEQoJcGxheWVy",
+            "X2lkGAEgASgFEg8KB3Byb3BfaWQYAiABKAUSEQoJcHJvcF90eXBlGAMgASgF",
+            "IkQKDlByb3BHZXRNZXNzYWdlEg4KBmlzX2dldBgBIAEoCBIRCglwbGF5ZXJf",
+            "aWQYAiABKAUSDwoHcHJvcF9pZBgDIAEoBSJDChlSZWFwZXJBdHRhY2tSZXN1",
+            "bHRNZXNzYWdlEhYKDnNvdWxfcGxheWVyX2lkGAEgASgFEg4KBmlzX2hpdBgC",
+            "IAEoCCpUCg1DaGFyYWN0ZXJUeXBlEgoKBlJFQVBFUhAAEgwKCFNPVUxfRE9H",
+            "EAESFQoRU09VTF9QU1lDSE9MT0dJU1QQAhISCg5TT1VMX0RFVEVDVElWRRAD",
+            "KiEKEVN0cmluZ01lc3NhZ2VUeXBlEgwKCE1BWkVfTUFQEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.CharacterType), typeof(global::Message.StringMessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,8 +66,8 @@ namespace Message {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "SoulBasicMessage", "ReaperAttackMessage", "ReaperAttackResultMessage", "PropTryGetMessage", "PropGetMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.RoomMessage), global::Message.RoomMessage.Parser, new[]{ "IsJoin", "RoomId", "PlayerId", "Characters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.LobbyMessage), global::Message.LobbyMessage.Parser, new[]{ "IsReady", "PlayerId", "Character" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.StartReceiveMsgMessage), global::Message.StartReceiveMsgMessage.Parser, new[]{ "PlayerId", "Character" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.LobbyMessage), global::Message.LobbyMessage.Parser, new[]{ "IsReady", "PlayerId", "CharacterType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.StartReceiveMsgMessage), global::Message.StartReceiveMsgMessage.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerBasicMessage), global::Message.PlayerBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.ReaperAttackMessage), global::Message.ReaperAttackMessage.Parser, new[]{ "SoulPlayerId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropTryGetMessage), global::Message.PropTryGetMessage.Parser, new[]{ "PlayerId", "PropId", "PropType" }, null, null, null, null),
@@ -1726,7 +1725,7 @@ namespace Message {
     public LobbyMessage(LobbyMessage other) : this() {
       isReady_ = other.isReady_;
       playerId_ = other.playerId_;
-      character_ = other.character_ != null ? other.character_.Clone() : null;
+      characterType_ = other.characterType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1760,15 +1759,15 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "character" field.</summary>
-    public const int CharacterFieldNumber = 3;
-    private global::Message.Character character_;
+    /// <summary>Field number for the "character_type" field.</summary>
+    public const int CharacterTypeFieldNumber = 3;
+    private global::Message.CharacterType characterType_ = global::Message.CharacterType.Reaper;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.Character Character {
-      get { return character_; }
+    public global::Message.CharacterType CharacterType {
+      get { return characterType_; }
       set {
-        character_ = value;
+        characterType_ = value;
       }
     }
 
@@ -1789,7 +1788,7 @@ namespace Message {
       }
       if (IsReady != other.IsReady) return false;
       if (PlayerId != other.PlayerId) return false;
-      if (!object.Equals(Character, other.Character)) return false;
+      if (CharacterType != other.CharacterType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1799,7 +1798,7 @@ namespace Message {
       int hash = 1;
       if (IsReady != false) hash ^= IsReady.GetHashCode();
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
-      if (character_ != null) hash ^= Character.GetHashCode();
+      if (CharacterType != global::Message.CharacterType.Reaper) hash ^= CharacterType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1826,9 +1825,9 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteInt32(PlayerId);
       }
-      if (character_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Character);
+      if (CharacterType != global::Message.CharacterType.Reaper) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CharacterType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1848,9 +1847,9 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteInt32(PlayerId);
       }
-      if (character_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Character);
+      if (CharacterType != global::Message.CharacterType.Reaper) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CharacterType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1868,8 +1867,8 @@ namespace Message {
       if (PlayerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerId);
       }
-      if (character_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Character);
+      if (CharacterType != global::Message.CharacterType.Reaper) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CharacterType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1889,11 +1888,8 @@ namespace Message {
       if (other.PlayerId != 0) {
         PlayerId = other.PlayerId;
       }
-      if (other.character_ != null) {
-        if (character_ == null) {
-          Character = new global::Message.Character();
-        }
-        Character.MergeFrom(other.Character);
+      if (other.CharacterType != global::Message.CharacterType.Reaper) {
+        CharacterType = other.CharacterType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1918,11 +1914,8 @@ namespace Message {
             PlayerId = input.ReadInt32();
             break;
           }
-          case 26: {
-            if (character_ == null) {
-              Character = new global::Message.Character();
-            }
-            input.ReadMessage(Character);
+          case 24: {
+            CharacterType = (global::Message.CharacterType) input.ReadEnum();
             break;
           }
         }
@@ -1948,11 +1941,8 @@ namespace Message {
             PlayerId = input.ReadInt32();
             break;
           }
-          case 26: {
-            if (character_ == null) {
-              Character = new global::Message.Character();
-            }
-            input.ReadMessage(Character);
+          case 24: {
+            CharacterType = (global::Message.CharacterType) input.ReadEnum();
             break;
           }
         }
@@ -2004,7 +1994,6 @@ namespace Message {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartReceiveMsgMessage(StartReceiveMsgMessage other) : this() {
       playerId_ = other.playerId_;
-      character_ = other.character_ != null ? other.character_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2026,18 +2015,6 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "character" field.</summary>
-    public const int CharacterFieldNumber = 2;
-    private global::Message.Character character_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.Character Character {
-      get { return character_; }
-      set {
-        character_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2054,7 +2031,6 @@ namespace Message {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
-      if (!object.Equals(Character, other.Character)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2063,7 +2039,6 @@ namespace Message {
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
-      if (character_ != null) hash ^= Character.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2086,10 +2061,6 @@ namespace Message {
         output.WriteRawTag(8);
         output.WriteInt32(PlayerId);
       }
-      if (character_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Character);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2104,10 +2075,6 @@ namespace Message {
         output.WriteRawTag(8);
         output.WriteInt32(PlayerId);
       }
-      if (character_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Character);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2120,9 +2087,6 @@ namespace Message {
       int size = 0;
       if (PlayerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerId);
-      }
-      if (character_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Character);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2138,12 +2102,6 @@ namespace Message {
       }
       if (other.PlayerId != 0) {
         PlayerId = other.PlayerId;
-      }
-      if (other.character_ != null) {
-        if (character_ == null) {
-          Character = new global::Message.Character();
-        }
-        Character.MergeFrom(other.Character);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2164,13 +2122,6 @@ namespace Message {
             PlayerId = input.ReadInt32();
             break;
           }
-          case 18: {
-            if (character_ == null) {
-              Character = new global::Message.Character();
-            }
-            input.ReadMessage(Character);
-            break;
-          }
         }
       }
     #endif
@@ -2188,13 +2139,6 @@ namespace Message {
             break;
           case 8: {
             PlayerId = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            if (character_ == null) {
-              Character = new global::Message.Character();
-            }
-            input.ReadMessage(Character);
             break;
           }
         }

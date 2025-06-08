@@ -1284,28 +1284,10 @@ class LobbyMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCharacterFieldNumber = 3,
     kIsReadyFieldNumber = 1,
     kPlayerIdFieldNumber = 2,
+    kCharacterTypeFieldNumber = 3,
   };
-  // .message.Character character = 3;
-  bool has_character() const;
-  private:
-  bool _internal_has_character() const;
-  public:
-  void clear_character();
-  const ::message::Character& character() const;
-  PROTOBUF_NODISCARD ::message::Character* release_character();
-  ::message::Character* mutable_character();
-  void set_allocated_character(::message::Character* character);
-  private:
-  const ::message::Character& _internal_character() const;
-  ::message::Character* _internal_mutable_character();
-  public:
-  void unsafe_arena_set_allocated_character(
-      ::message::Character* character);
-  ::message::Character* unsafe_arena_release_character();
-
   // bool is_ready = 1;
   void clear_is_ready();
   bool is_ready() const;
@@ -1324,6 +1306,15 @@ class LobbyMessage final :
   void _internal_set_player_id(int32_t value);
   public:
 
+  // .message.CharacterType character_type = 3;
+  void clear_character_type();
+  ::message::CharacterType character_type() const;
+  void set_character_type(::message::CharacterType value);
+  private:
+  ::message::CharacterType _internal_character_type() const;
+  void _internal_set_character_type(::message::CharacterType value);
+  public:
+
   // @@protoc_insertion_point(class_scope:message.LobbyMessage)
  private:
   class _Internal;
@@ -1331,9 +1322,9 @@ class LobbyMessage final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::message::Character* character_;
   bool is_ready_;
   int32_t player_id_;
+  int character_type_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -1461,27 +1452,8 @@ class StartReceiveMsgMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCharacterFieldNumber = 2,
     kPlayerIdFieldNumber = 1,
   };
-  // .message.Character character = 2;
-  bool has_character() const;
-  private:
-  bool _internal_has_character() const;
-  public:
-  void clear_character();
-  const ::message::Character& character() const;
-  PROTOBUF_NODISCARD ::message::Character* release_character();
-  ::message::Character* mutable_character();
-  void set_allocated_character(::message::Character* character);
-  private:
-  const ::message::Character& _internal_character() const;
-  ::message::Character* _internal_mutable_character();
-  public:
-  void unsafe_arena_set_allocated_character(
-      ::message::Character* character);
-  ::message::Character* unsafe_arena_release_character();
-
   // int32 player_id = 1;
   void clear_player_id();
   int32_t player_id() const;
@@ -1498,7 +1470,6 @@ class StartReceiveMsgMessage final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::message::Character* character_;
   int32_t player_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
@@ -3320,94 +3291,24 @@ inline void LobbyMessage::set_player_id(int32_t value) {
   // @@protoc_insertion_point(field_set:message.LobbyMessage.player_id)
 }
 
-// .message.Character character = 3;
-inline bool LobbyMessage::_internal_has_character() const {
-  return this != internal_default_instance() && character_ != nullptr;
+// .message.CharacterType character_type = 3;
+inline void LobbyMessage::clear_character_type() {
+  character_type_ = 0;
 }
-inline bool LobbyMessage::has_character() const {
-  return _internal_has_character();
+inline ::message::CharacterType LobbyMessage::_internal_character_type() const {
+  return static_cast< ::message::CharacterType >(character_type_);
 }
-inline void LobbyMessage::clear_character() {
-  if (GetArenaForAllocation() == nullptr && character_ != nullptr) {
-    delete character_;
-  }
-  character_ = nullptr;
+inline ::message::CharacterType LobbyMessage::character_type() const {
+  // @@protoc_insertion_point(field_get:message.LobbyMessage.character_type)
+  return _internal_character_type();
 }
-inline const ::message::Character& LobbyMessage::_internal_character() const {
-  const ::message::Character* p = character_;
-  return p != nullptr ? *p : reinterpret_cast<const ::message::Character&>(
-      ::message::_Character_default_instance_);
-}
-inline const ::message::Character& LobbyMessage::character() const {
-  // @@protoc_insertion_point(field_get:message.LobbyMessage.character)
-  return _internal_character();
-}
-inline void LobbyMessage::unsafe_arena_set_allocated_character(
-    ::message::Character* character) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(character_);
-  }
-  character_ = character;
-  if (character) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.LobbyMessage.character)
-}
-inline ::message::Character* LobbyMessage::release_character() {
+inline void LobbyMessage::_internal_set_character_type(::message::CharacterType value) {
   
-  ::message::Character* temp = character_;
-  character_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
+  character_type_ = value;
 }
-inline ::message::Character* LobbyMessage::unsafe_arena_release_character() {
-  // @@protoc_insertion_point(field_release:message.LobbyMessage.character)
-  
-  ::message::Character* temp = character_;
-  character_ = nullptr;
-  return temp;
-}
-inline ::message::Character* LobbyMessage::_internal_mutable_character() {
-  
-  if (character_ == nullptr) {
-    auto* p = CreateMaybeMessage<::message::Character>(GetArenaForAllocation());
-    character_ = p;
-  }
-  return character_;
-}
-inline ::message::Character* LobbyMessage::mutable_character() {
-  ::message::Character* _msg = _internal_mutable_character();
-  // @@protoc_insertion_point(field_mutable:message.LobbyMessage.character)
-  return _msg;
-}
-inline void LobbyMessage::set_allocated_character(::message::Character* character) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete character_;
-  }
-  if (character) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::Character>::GetOwningArena(character);
-    if (message_arena != submessage_arena) {
-      character = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, character, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  character_ = character;
-  // @@protoc_insertion_point(field_set_allocated:message.LobbyMessage.character)
+inline void LobbyMessage::set_character_type(::message::CharacterType value) {
+  _internal_set_character_type(value);
+  // @@protoc_insertion_point(field_set:message.LobbyMessage.character_type)
 }
 
 // -------------------------------------------------------------------
@@ -3432,96 +3333,6 @@ inline void StartReceiveMsgMessage::_internal_set_player_id(int32_t value) {
 inline void StartReceiveMsgMessage::set_player_id(int32_t value) {
   _internal_set_player_id(value);
   // @@protoc_insertion_point(field_set:message.StartReceiveMsgMessage.player_id)
-}
-
-// .message.Character character = 2;
-inline bool StartReceiveMsgMessage::_internal_has_character() const {
-  return this != internal_default_instance() && character_ != nullptr;
-}
-inline bool StartReceiveMsgMessage::has_character() const {
-  return _internal_has_character();
-}
-inline void StartReceiveMsgMessage::clear_character() {
-  if (GetArenaForAllocation() == nullptr && character_ != nullptr) {
-    delete character_;
-  }
-  character_ = nullptr;
-}
-inline const ::message::Character& StartReceiveMsgMessage::_internal_character() const {
-  const ::message::Character* p = character_;
-  return p != nullptr ? *p : reinterpret_cast<const ::message::Character&>(
-      ::message::_Character_default_instance_);
-}
-inline const ::message::Character& StartReceiveMsgMessage::character() const {
-  // @@protoc_insertion_point(field_get:message.StartReceiveMsgMessage.character)
-  return _internal_character();
-}
-inline void StartReceiveMsgMessage::unsafe_arena_set_allocated_character(
-    ::message::Character* character) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(character_);
-  }
-  character_ = character;
-  if (character) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.StartReceiveMsgMessage.character)
-}
-inline ::message::Character* StartReceiveMsgMessage::release_character() {
-  
-  ::message::Character* temp = character_;
-  character_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::message::Character* StartReceiveMsgMessage::unsafe_arena_release_character() {
-  // @@protoc_insertion_point(field_release:message.StartReceiveMsgMessage.character)
-  
-  ::message::Character* temp = character_;
-  character_ = nullptr;
-  return temp;
-}
-inline ::message::Character* StartReceiveMsgMessage::_internal_mutable_character() {
-  
-  if (character_ == nullptr) {
-    auto* p = CreateMaybeMessage<::message::Character>(GetArenaForAllocation());
-    character_ = p;
-  }
-  return character_;
-}
-inline ::message::Character* StartReceiveMsgMessage::mutable_character() {
-  ::message::Character* _msg = _internal_mutable_character();
-  // @@protoc_insertion_point(field_mutable:message.StartReceiveMsgMessage.character)
-  return _msg;
-}
-inline void StartReceiveMsgMessage::set_allocated_character(::message::Character* character) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete character_;
-  }
-  if (character) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::Character>::GetOwningArena(character);
-    if (message_arena != submessage_arena) {
-      character = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, character, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  character_ = character;
-  // @@protoc_insertion_point(field_set_allocated:message.StartReceiveMsgMessage.character)
 }
 
 // -------------------------------------------------------------------

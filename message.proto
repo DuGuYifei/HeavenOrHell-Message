@@ -53,7 +53,7 @@ message StringMessage {
 message LobbyMessage {
   bool is_ready = 1;
   int32 player_id = 2;
-  Character character = 3;
+  CharacterType character_type = 3;
 }
 
 // Will check if atomic value bool start_game is true (all players are ready and
@@ -63,7 +63,6 @@ message LobbyMessage {
 // sent by player when they start game in map
 message StartReceiveMsgMessage {
   int32 player_id = 1;
-  Character character = 2;
 }
 
 message PlayerBasicMessage {
