@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,6 +58,12 @@ namespace message {
 class Character;
 struct CharacterDefaultTypeInternal;
 extern CharacterDefaultTypeInternal _Character_default_instance_;
+class EnterGateMessage;
+struct EnterGateMessageDefaultTypeInternal;
+extern EnterGateMessageDefaultTypeInternal _EnterGateMessage_default_instance_;
+class EnterGateResultMessage;
+struct EnterGateResultMessageDefaultTypeInternal;
+extern EnterGateResultMessageDefaultTypeInternal _EnterGateResultMessage_default_instance_;
 class Gate;
 struct GateDefaultTypeInternal;
 extern GateDefaultTypeInternal _Gate_default_instance_;
@@ -97,6 +103,8 @@ extern StringMessageDefaultTypeInternal _StringMessage_default_instance_;
 }  // namespace message
 PROTOBUF_NAMESPACE_OPEN
 template<> ::message::Character* Arena::CreateMaybeMessage<::message::Character>(Arena*);
+template<> ::message::EnterGateMessage* Arena::CreateMaybeMessage<::message::EnterGateMessage>(Arena*);
+template<> ::message::EnterGateResultMessage* Arena::CreateMaybeMessage<::message::EnterGateResultMessage>(Arena*);
 template<> ::message::Gate* Arena::CreateMaybeMessage<::message::Gate>(Arena*);
 template<> ::message::GateMessage* Arena::CreateMaybeMessage<::message::GateMessage>(Arena*);
 template<> ::message::HelloMessage* Arena::CreateMaybeMessage<::message::HelloMessage>(Arena*);
@@ -657,6 +665,8 @@ class MessageWrapper final :
     kPropGetMessage = 7,
     kIntegerMessage = 8,
     kGateMessage = 9,
+    kEnterGateMessage = 10,
+    kEnterGateResultMessage = 11,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -748,6 +758,8 @@ class MessageWrapper final :
     kPropGetMessageFieldNumber = 7,
     kIntegerMessageFieldNumber = 8,
     kGateMessageFieldNumber = 9,
+    kEnterGateMessageFieldNumber = 10,
+    kEnterGateResultMessageFieldNumber = 11,
   };
   // .message.RoomMessage room_message = 1;
   bool has_room_message() const;
@@ -911,6 +923,42 @@ class MessageWrapper final :
       ::message::GateMessage* gate_message);
   ::message::GateMessage* unsafe_arena_release_gate_message();
 
+  // .message.EnterGateMessage enter_gate_message = 10;
+  bool has_enter_gate_message() const;
+  private:
+  bool _internal_has_enter_gate_message() const;
+  public:
+  void clear_enter_gate_message();
+  const ::message::EnterGateMessage& enter_gate_message() const;
+  PROTOBUF_NODISCARD ::message::EnterGateMessage* release_enter_gate_message();
+  ::message::EnterGateMessage* mutable_enter_gate_message();
+  void set_allocated_enter_gate_message(::message::EnterGateMessage* enter_gate_message);
+  private:
+  const ::message::EnterGateMessage& _internal_enter_gate_message() const;
+  ::message::EnterGateMessage* _internal_mutable_enter_gate_message();
+  public:
+  void unsafe_arena_set_allocated_enter_gate_message(
+      ::message::EnterGateMessage* enter_gate_message);
+  ::message::EnterGateMessage* unsafe_arena_release_enter_gate_message();
+
+  // .message.EnterGateResultMessage enter_gate_result_message = 11;
+  bool has_enter_gate_result_message() const;
+  private:
+  bool _internal_has_enter_gate_result_message() const;
+  public:
+  void clear_enter_gate_result_message();
+  const ::message::EnterGateResultMessage& enter_gate_result_message() const;
+  PROTOBUF_NODISCARD ::message::EnterGateResultMessage* release_enter_gate_result_message();
+  ::message::EnterGateResultMessage* mutable_enter_gate_result_message();
+  void set_allocated_enter_gate_result_message(::message::EnterGateResultMessage* enter_gate_result_message);
+  private:
+  const ::message::EnterGateResultMessage& _internal_enter_gate_result_message() const;
+  ::message::EnterGateResultMessage* _internal_mutable_enter_gate_result_message();
+  public:
+  void unsafe_arena_set_allocated_enter_gate_result_message(
+      ::message::EnterGateResultMessage* enter_gate_result_message);
+  ::message::EnterGateResultMessage* unsafe_arena_release_enter_gate_result_message();
+
   void clear_payload();
   PayloadCase payload_case() const;
   // @@protoc_insertion_point(class_scope:message.MessageWrapper)
@@ -925,6 +973,8 @@ class MessageWrapper final :
   void set_has_prop_get_message();
   void set_has_integer_message();
   void set_has_gate_message();
+  void set_has_enter_gate_message();
+  void set_has_enter_gate_result_message();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -944,6 +994,8 @@ class MessageWrapper final :
     ::message::PropGetMessage* prop_get_message_;
     ::message::IntegerMessage* integer_message_;
     ::message::GateMessage* gate_message_;
+    ::message::EnterGateMessage* enter_gate_message_;
+    ::message::EnterGateResultMessage* enter_gate_result_message_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   uint32_t _oneof_case_[1];
@@ -2631,6 +2683,318 @@ class GateMessage final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
 };
+// -------------------------------------------------------------------
+
+class EnterGateMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.EnterGateMessage) */ {
+ public:
+  inline EnterGateMessage() : EnterGateMessage(nullptr) {}
+  ~EnterGateMessage() override;
+  explicit constexpr EnterGateMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  EnterGateMessage(const EnterGateMessage& from);
+  EnterGateMessage(EnterGateMessage&& from) noexcept
+    : EnterGateMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline EnterGateMessage& operator=(const EnterGateMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline EnterGateMessage& operator=(EnterGateMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const EnterGateMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const EnterGateMessage* internal_default_instance() {
+    return reinterpret_cast<const EnterGateMessage*>(
+               &_EnterGateMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  friend void swap(EnterGateMessage& a, EnterGateMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(EnterGateMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(EnterGateMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  EnterGateMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<EnterGateMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const EnterGateMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const EnterGateMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EnterGateMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.EnterGateMessage";
+  }
+  protected:
+  explicit EnterGateMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGateDirectionFieldNumber = 2,
+  };
+  // .message.GateDirection gate_direction = 2;
+  void clear_gate_direction();
+  ::message::GateDirection gate_direction() const;
+  void set_gate_direction(::message::GateDirection value);
+  private:
+  ::message::GateDirection _internal_gate_direction() const;
+  void _internal_set_gate_direction(::message::GateDirection value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:message.EnterGateMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int gate_direction_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class EnterGateResultMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.EnterGateResultMessage) */ {
+ public:
+  inline EnterGateResultMessage() : EnterGateResultMessage(nullptr) {}
+  ~EnterGateResultMessage() override;
+  explicit constexpr EnterGateResultMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  EnterGateResultMessage(const EnterGateResultMessage& from);
+  EnterGateResultMessage(EnterGateResultMessage&& from) noexcept
+    : EnterGateResultMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline EnterGateResultMessage& operator=(const EnterGateResultMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline EnterGateResultMessage& operator=(EnterGateResultMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const EnterGateResultMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const EnterGateResultMessage* internal_default_instance() {
+    return reinterpret_cast<const EnterGateResultMessage*>(
+               &_EnterGateResultMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  friend void swap(EnterGateResultMessage& a, EnterGateResultMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(EnterGateResultMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(EnterGateResultMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  EnterGateResultMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<EnterGateResultMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const EnterGateResultMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const EnterGateResultMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EnterGateResultMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.EnterGateResultMessage";
+  }
+  protected:
+  explicit EnterGateResultMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGateFieldNumber = 2,
+    kPlayerIdFieldNumber = 1,
+  };
+  // .message.Gate gate = 2;
+  bool has_gate() const;
+  private:
+  bool _internal_has_gate() const;
+  public:
+  void clear_gate();
+  const ::message::Gate& gate() const;
+  PROTOBUF_NODISCARD ::message::Gate* release_gate();
+  ::message::Gate* mutable_gate();
+  void set_allocated_gate(::message::Gate* gate);
+  private:
+  const ::message::Gate& _internal_gate() const;
+  ::message::Gate* _internal_mutable_gate();
+  public:
+  void unsafe_arena_set_allocated_gate(
+      ::message::Gate* gate);
+  ::message::Gate* unsafe_arena_release_gate();
+
+  // int32 player_id = 1;
+  void clear_player_id();
+  int32_t player_id() const;
+  void set_player_id(int32_t value);
+  private:
+  int32_t _internal_player_id() const;
+  void _internal_set_player_id(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:message.EnterGateResultMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::message::Gate* gate_;
+  int32_t player_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
 // ===================================================================
 
 
@@ -3376,6 +3740,154 @@ inline ::message::GateMessage* MessageWrapper::mutable_gate_message() {
   return _msg;
 }
 
+// .message.EnterGateMessage enter_gate_message = 10;
+inline bool MessageWrapper::_internal_has_enter_gate_message() const {
+  return payload_case() == kEnterGateMessage;
+}
+inline bool MessageWrapper::has_enter_gate_message() const {
+  return _internal_has_enter_gate_message();
+}
+inline void MessageWrapper::set_has_enter_gate_message() {
+  _oneof_case_[0] = kEnterGateMessage;
+}
+inline void MessageWrapper::clear_enter_gate_message() {
+  if (_internal_has_enter_gate_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.enter_gate_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::EnterGateMessage* MessageWrapper::release_enter_gate_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.enter_gate_message)
+  if (_internal_has_enter_gate_message()) {
+    clear_has_payload();
+      ::message::EnterGateMessage* temp = payload_.enter_gate_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.enter_gate_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::EnterGateMessage& MessageWrapper::_internal_enter_gate_message() const {
+  return _internal_has_enter_gate_message()
+      ? *payload_.enter_gate_message_
+      : reinterpret_cast< ::message::EnterGateMessage&>(::message::_EnterGateMessage_default_instance_);
+}
+inline const ::message::EnterGateMessage& MessageWrapper::enter_gate_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.enter_gate_message)
+  return _internal_enter_gate_message();
+}
+inline ::message::EnterGateMessage* MessageWrapper::unsafe_arena_release_enter_gate_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.enter_gate_message)
+  if (_internal_has_enter_gate_message()) {
+    clear_has_payload();
+    ::message::EnterGateMessage* temp = payload_.enter_gate_message_;
+    payload_.enter_gate_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_enter_gate_message(::message::EnterGateMessage* enter_gate_message) {
+  clear_payload();
+  if (enter_gate_message) {
+    set_has_enter_gate_message();
+    payload_.enter_gate_message_ = enter_gate_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.enter_gate_message)
+}
+inline ::message::EnterGateMessage* MessageWrapper::_internal_mutable_enter_gate_message() {
+  if (!_internal_has_enter_gate_message()) {
+    clear_payload();
+    set_has_enter_gate_message();
+    payload_.enter_gate_message_ = CreateMaybeMessage< ::message::EnterGateMessage >(GetArenaForAllocation());
+  }
+  return payload_.enter_gate_message_;
+}
+inline ::message::EnterGateMessage* MessageWrapper::mutable_enter_gate_message() {
+  ::message::EnterGateMessage* _msg = _internal_mutable_enter_gate_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.enter_gate_message)
+  return _msg;
+}
+
+// .message.EnterGateResultMessage enter_gate_result_message = 11;
+inline bool MessageWrapper::_internal_has_enter_gate_result_message() const {
+  return payload_case() == kEnterGateResultMessage;
+}
+inline bool MessageWrapper::has_enter_gate_result_message() const {
+  return _internal_has_enter_gate_result_message();
+}
+inline void MessageWrapper::set_has_enter_gate_result_message() {
+  _oneof_case_[0] = kEnterGateResultMessage;
+}
+inline void MessageWrapper::clear_enter_gate_result_message() {
+  if (_internal_has_enter_gate_result_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.enter_gate_result_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::EnterGateResultMessage* MessageWrapper::release_enter_gate_result_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.enter_gate_result_message)
+  if (_internal_has_enter_gate_result_message()) {
+    clear_has_payload();
+      ::message::EnterGateResultMessage* temp = payload_.enter_gate_result_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.enter_gate_result_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::EnterGateResultMessage& MessageWrapper::_internal_enter_gate_result_message() const {
+  return _internal_has_enter_gate_result_message()
+      ? *payload_.enter_gate_result_message_
+      : reinterpret_cast< ::message::EnterGateResultMessage&>(::message::_EnterGateResultMessage_default_instance_);
+}
+inline const ::message::EnterGateResultMessage& MessageWrapper::enter_gate_result_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.enter_gate_result_message)
+  return _internal_enter_gate_result_message();
+}
+inline ::message::EnterGateResultMessage* MessageWrapper::unsafe_arena_release_enter_gate_result_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.enter_gate_result_message)
+  if (_internal_has_enter_gate_result_message()) {
+    clear_has_payload();
+    ::message::EnterGateResultMessage* temp = payload_.enter_gate_result_message_;
+    payload_.enter_gate_result_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_enter_gate_result_message(::message::EnterGateResultMessage* enter_gate_result_message) {
+  clear_payload();
+  if (enter_gate_result_message) {
+    set_has_enter_gate_result_message();
+    payload_.enter_gate_result_message_ = enter_gate_result_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.enter_gate_result_message)
+}
+inline ::message::EnterGateResultMessage* MessageWrapper::_internal_mutable_enter_gate_result_message() {
+  if (!_internal_has_enter_gate_result_message()) {
+    clear_payload();
+    set_has_enter_gate_result_message();
+    payload_.enter_gate_result_message_ = CreateMaybeMessage< ::message::EnterGateResultMessage >(GetArenaForAllocation());
+  }
+  return payload_.enter_gate_result_message_;
+}
+inline ::message::EnterGateResultMessage* MessageWrapper::mutable_enter_gate_result_message() {
+  ::message::EnterGateResultMessage* _msg = _internal_mutable_enter_gate_result_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.enter_gate_result_message)
+  return _msg;
+}
+
 inline bool MessageWrapper::has_payload() const {
   return payload_case() != PAYLOAD_NOT_SET;
 }
@@ -4056,9 +4568,151 @@ GateMessage::gates() const {
   return gates_;
 }
 
+// -------------------------------------------------------------------
+
+// EnterGateMessage
+
+// .message.GateDirection gate_direction = 2;
+inline void EnterGateMessage::clear_gate_direction() {
+  gate_direction_ = 0;
+}
+inline ::message::GateDirection EnterGateMessage::_internal_gate_direction() const {
+  return static_cast< ::message::GateDirection >(gate_direction_);
+}
+inline ::message::GateDirection EnterGateMessage::gate_direction() const {
+  // @@protoc_insertion_point(field_get:message.EnterGateMessage.gate_direction)
+  return _internal_gate_direction();
+}
+inline void EnterGateMessage::_internal_set_gate_direction(::message::GateDirection value) {
+  
+  gate_direction_ = value;
+}
+inline void EnterGateMessage::set_gate_direction(::message::GateDirection value) {
+  _internal_set_gate_direction(value);
+  // @@protoc_insertion_point(field_set:message.EnterGateMessage.gate_direction)
+}
+
+// -------------------------------------------------------------------
+
+// EnterGateResultMessage
+
+// int32 player_id = 1;
+inline void EnterGateResultMessage::clear_player_id() {
+  player_id_ = 0;
+}
+inline int32_t EnterGateResultMessage::_internal_player_id() const {
+  return player_id_;
+}
+inline int32_t EnterGateResultMessage::player_id() const {
+  // @@protoc_insertion_point(field_get:message.EnterGateResultMessage.player_id)
+  return _internal_player_id();
+}
+inline void EnterGateResultMessage::_internal_set_player_id(int32_t value) {
+  
+  player_id_ = value;
+}
+inline void EnterGateResultMessage::set_player_id(int32_t value) {
+  _internal_set_player_id(value);
+  // @@protoc_insertion_point(field_set:message.EnterGateResultMessage.player_id)
+}
+
+// .message.Gate gate = 2;
+inline bool EnterGateResultMessage::_internal_has_gate() const {
+  return this != internal_default_instance() && gate_ != nullptr;
+}
+inline bool EnterGateResultMessage::has_gate() const {
+  return _internal_has_gate();
+}
+inline void EnterGateResultMessage::clear_gate() {
+  if (GetArenaForAllocation() == nullptr && gate_ != nullptr) {
+    delete gate_;
+  }
+  gate_ = nullptr;
+}
+inline const ::message::Gate& EnterGateResultMessage::_internal_gate() const {
+  const ::message::Gate* p = gate_;
+  return p != nullptr ? *p : reinterpret_cast<const ::message::Gate&>(
+      ::message::_Gate_default_instance_);
+}
+inline const ::message::Gate& EnterGateResultMessage::gate() const {
+  // @@protoc_insertion_point(field_get:message.EnterGateResultMessage.gate)
+  return _internal_gate();
+}
+inline void EnterGateResultMessage::unsafe_arena_set_allocated_gate(
+    ::message::Gate* gate) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gate_);
+  }
+  gate_ = gate;
+  if (gate) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.EnterGateResultMessage.gate)
+}
+inline ::message::Gate* EnterGateResultMessage::release_gate() {
+  
+  ::message::Gate* temp = gate_;
+  gate_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::message::Gate* EnterGateResultMessage::unsafe_arena_release_gate() {
+  // @@protoc_insertion_point(field_release:message.EnterGateResultMessage.gate)
+  
+  ::message::Gate* temp = gate_;
+  gate_ = nullptr;
+  return temp;
+}
+inline ::message::Gate* EnterGateResultMessage::_internal_mutable_gate() {
+  
+  if (gate_ == nullptr) {
+    auto* p = CreateMaybeMessage<::message::Gate>(GetArenaForAllocation());
+    gate_ = p;
+  }
+  return gate_;
+}
+inline ::message::Gate* EnterGateResultMessage::mutable_gate() {
+  ::message::Gate* _msg = _internal_mutable_gate();
+  // @@protoc_insertion_point(field_mutable:message.EnterGateResultMessage.gate)
+  return _msg;
+}
+inline void EnterGateResultMessage::set_allocated_gate(::message::Gate* gate) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete gate_;
+  }
+  if (gate) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::Gate>::GetOwningArena(gate);
+    if (message_arena != submessage_arena) {
+      gate = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, gate, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  gate_ = gate;
+  // @@protoc_insertion_point(field_set_allocated:message.EnterGateResultMessage.gate)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

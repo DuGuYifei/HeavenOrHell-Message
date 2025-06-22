@@ -28,6 +28,8 @@ message MessageWrapper {
     PropGetMessage prop_get_message = 7;
     IntegerMessage integer_message = 8;
     GateMessage gate_message = 9;
+    EnterGateMessage enter_gate_message = 10;
+    EnterGateResultMessage enter_gate_result_message = 11;
   }
 }
 
@@ -136,4 +138,13 @@ message Gate {
 
 message GateMessage {
   repeated Gate gates = 1;
+}
+
+message EnterGateMessage {
+  GateDirection gate_direction = 2;
+}
+
+message EnterGateResultMessage {
+  int32 player_id = 1;
+  Gate gate = 2;
 }

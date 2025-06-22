@@ -27,7 +27,7 @@ namespace Message {
             "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIh8KDEhlbGxvTWVzc2FnZRIPCgdy",
             "b29tX2lkGAEgASgFIk4KCUNoYXJhY3RlchIRCglwbGF5ZXJfaWQYASABKAUS",
             "LgoOY2hhcmFjdGVyX3R5cGUYAiABKA4yFi5tZXNzYWdlLkNoYXJhY3RlclR5",
-            "cGUigQQKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
+            "cGUigAUKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
             "Lm1lc3NhZ2UuUm9vbU1lc3NhZ2VIABIwCg5zdHJpbmdfbWVzc2FnZRgCIAEo",
             "CzIWLm1lc3NhZ2UuU3RyaW5nTWVzc2FnZUgAEi4KDWxvYmJ5X21lc3NhZ2UY",
             "AyABKAsyFS5tZXNzYWdlLkxvYmJ5TWVzc2FnZUgAEkQKGXN0YXJ0X3JlY2Vp",
@@ -38,47 +38,53 @@ namespace Message {
             "cHJvcF9nZXRfbWVzc2FnZRgHIAEoCzIXLm1lc3NhZ2UuUHJvcEdldE1lc3Nh",
             "Z2VIABIyCg9pbnRlZ2VyX21lc3NhZ2UYCCABKAsyFy5tZXNzYWdlLkludGVn",
             "ZXJNZXNzYWdlSAASLAoMZ2F0ZV9tZXNzYWdlGAkgASgLMhQubWVzc2FnZS5H",
-            "YXRlTWVzc2FnZUgAQgkKB3BheWxvYWQiagoLUm9vbU1lc3NhZ2USDwoHaXNf",
-            "am9pbhgBIAEoCBIPCgdyb29tX2lkGAIgASgFEhEKCXBsYXllcl9pZBgDIAEo",
-            "BRImCgpjaGFyYWN0ZXJzGAQgAygLMhIubWVzc2FnZS5DaGFyYWN0ZXIiPgoN",
-            "U3RyaW5nTWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVzc2Fn",
-            "ZV9jb250ZW50GAIgASgJImMKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFkeRgB",
-            "IAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSLgoOY2hhcmFjdGVyX3R5cGUYAyAB",
-            "KA4yFi5tZXNzYWdlLkNoYXJhY3RlclR5cGUiKwoWU3RhcnRSZWNlaXZlTXNn",
-            "TWVzc2FnZRIRCglwbGF5ZXJfaWQYASABKAUi0wEKElBsYXllckJhc2ljTWVz",
-            "c2FnZRIRCglwbGF5ZXJfaWQYASABKAUSEgoKcG9zaXRpb25feBgCIAEoAhIS",
-            "Cgpwb3NpdGlvbl95GAMgASgCEgoKAmhwGAQgASgCEg4KBm1heF9ocBgFIAEo",
-            "AhI0Cg5hbmltYXRpb25fdHlwZRgGIAEoDjIcLm1lc3NhZ2UuUGxheWVyQW5p",
-            "bWF0aW9uVHlwZRIwCg9jaGFyYWN0ZXJfc3RhdGUYByABKA4yFy5tZXNzYWdl",
-            "LkNoYXJhY3RlclN0YXRlIkoKEVByb3BUcnlHZXRNZXNzYWdlEhEKCXBsYXll",
-            "cl9pZBgBIAEoBRIPCgdwcm9wX2lkGAIgASgFEhEKCXByb3BfdHlwZRgDIAEo",
-            "BSJECg5Qcm9wR2V0TWVzc2FnZRIOCgZpc19nZXQYASABKAgSEQoJcGxheWVy",
-            "X2lkGAIgASgFEg8KB3Byb3BfaWQYAyABKAUiUgoOSW50ZWdlck1lc3NhZ2US",
-            "MQoMbWVzc2FnZV90eXBlGAEgASgOMhsubWVzc2FnZS5JbnRlZ2VyTWVzc2Fn",
-            "ZVR5cGUSDQoFdmFsdWUYAiABKAUiXAoER2F0ZRIuCg5nYXRlX2RpcmVjdGlv",
-            "bhgBIAEoDjIWLm1lc3NhZ2UuR2F0ZURpcmVjdGlvbhIkCglnYXRlX3R5cGUY",
-            "AiABKA4yES5tZXNzYWdlLkdhdGVUeXBlIisKC0dhdGVNZXNzYWdlEhwKBWdh",
-            "dGVzGAEgAygLMg0ubWVzc2FnZS5HYXRlKlQKDUNoYXJhY3RlclR5cGUSCgoG",
-            "UkVBUEVSEAASDAoIU09VTF9ET0cQARIVChFTT1VMX1BTWUNIT0xPR0lTVBAC",
-            "EhIKDlNPVUxfREVURUNUSVZFEAMqIQoRU3RyaW5nTWVzc2FnZVR5cGUSDAoI",
-            "TUFaRV9NQVAQACqFAQoTUGxheWVyQW5pbWF0aW9uVHlwZRIICgRJRExFEAAS",
-            "DQoJV0FMS19MRUZUEAESDgoKV0FMS19SSUdIVBACEg0KCURBU0hfTEVGVBAD",
-            "Eg4KCkRBU0hfUklHSFQQBBIKCgZBVFRBQ0sQBRIHCgNISVQQBhIICgRXRUFL",
-            "EAcSBwoDRElFEAgqewoOQ2hhcmFjdGVyU3RhdGUSGgoWQ2hhcmFjdGVyX1NU",
-            "QVRFX05PUk1BTBAAEhgKFENoYXJhY3Rlcl9TVEFURV9XRUFLEAESFwoTQ2hh",
-            "cmFjdGVyX1NUQVRFX0RJRRACEhoKFkNoYXJhY3Rlcl9TVEFURV9GUkVFWkUQ",
-            "AypLChJJbnRlZ2VyTWVzc2FnZVR5cGUSGwoXQUxUQVJfTUlOSV9HQU1FX1NV",
-            "Q0NFU1MQABIYChRSRUFQRVJfQVRUQUNLX1JFU1VMVBABKioKCEdhdGVUeXBl",
-            "Eg8KC0dBVEVfSEVBVkVOEAASDQoJR0FURV9IRUxMEAEqcgoNR2F0ZURpcmVj",
-            "dGlvbhIVChFHQVRFX0RJUkVDVElPTl9VUBAAEhcKE0dBVEVfRElSRUNUSU9O",
-            "X0RPV04QARIXChNHQVRFX0RJUkVDVElPTl9MRUZUEAISGAoUR0FURV9ESVJF",
-            "Q1RJT05fUklHSFQQA2IGcHJvdG8z"));
+            "YXRlTWVzc2FnZUgAEjcKEmVudGVyX2dhdGVfbWVzc2FnZRgKIAEoCzIZLm1l",
+            "c3NhZ2UuRW50ZXJHYXRlTWVzc2FnZUgAEkQKGWVudGVyX2dhdGVfcmVzdWx0",
+            "X21lc3NhZ2UYCyABKAsyHy5tZXNzYWdlLkVudGVyR2F0ZVJlc3VsdE1lc3Nh",
+            "Z2VIAEIJCgdwYXlsb2FkImoKC1Jvb21NZXNzYWdlEg8KB2lzX2pvaW4YASAB",
+            "KAgSDwoHcm9vbV9pZBgCIAEoBRIRCglwbGF5ZXJfaWQYAyABKAUSJgoKY2hh",
+            "cmFjdGVycxgEIAMoCzISLm1lc3NhZ2UuQ2hhcmFjdGVyIj4KDVN0cmluZ01l",
+            "c3NhZ2USFAoMbWVzc2FnZV90eXBlGAEgASgFEhcKD21lc3NhZ2VfY29udGVu",
+            "dBgCIAEoCSJjCgxMb2JieU1lc3NhZ2USEAoIaXNfcmVhZHkYASABKAgSEQoJ",
+            "cGxheWVyX2lkGAIgASgFEi4KDmNoYXJhY3Rlcl90eXBlGAMgASgOMhYubWVz",
+            "c2FnZS5DaGFyYWN0ZXJUeXBlIisKFlN0YXJ0UmVjZWl2ZU1zZ01lc3NhZ2US",
+            "EQoJcGxheWVyX2lkGAEgASgFItMBChJQbGF5ZXJCYXNpY01lc3NhZ2USEQoJ",
+            "cGxheWVyX2lkGAEgASgFEhIKCnBvc2l0aW9uX3gYAiABKAISEgoKcG9zaXRp",
+            "b25feRgDIAEoAhIKCgJocBgEIAEoAhIOCgZtYXhfaHAYBSABKAISNAoOYW5p",
+            "bWF0aW9uX3R5cGUYBiABKA4yHC5tZXNzYWdlLlBsYXllckFuaW1hdGlvblR5",
+            "cGUSMAoPY2hhcmFjdGVyX3N0YXRlGAcgASgOMhcubWVzc2FnZS5DaGFyYWN0",
+            "ZXJTdGF0ZSJKChFQcm9wVHJ5R2V0TWVzc2FnZRIRCglwbGF5ZXJfaWQYASAB",
+            "KAUSDwoHcHJvcF9pZBgCIAEoBRIRCglwcm9wX3R5cGUYAyABKAUiRAoOUHJv",
+            "cEdldE1lc3NhZ2USDgoGaXNfZ2V0GAEgASgIEhEKCXBsYXllcl9pZBgCIAEo",
+            "BRIPCgdwcm9wX2lkGAMgASgFIlIKDkludGVnZXJNZXNzYWdlEjEKDG1lc3Nh",
+            "Z2VfdHlwZRgBIAEoDjIbLm1lc3NhZ2UuSW50ZWdlck1lc3NhZ2VUeXBlEg0K",
+            "BXZhbHVlGAIgASgFIlwKBEdhdGUSLgoOZ2F0ZV9kaXJlY3Rpb24YASABKA4y",
+            "Fi5tZXNzYWdlLkdhdGVEaXJlY3Rpb24SJAoJZ2F0ZV90eXBlGAIgASgOMhEu",
+            "bWVzc2FnZS5HYXRlVHlwZSIrCgtHYXRlTWVzc2FnZRIcCgVnYXRlcxgBIAMo",
+            "CzINLm1lc3NhZ2UuR2F0ZSJCChBFbnRlckdhdGVNZXNzYWdlEi4KDmdhdGVf",
+            "ZGlyZWN0aW9uGAIgASgOMhYubWVzc2FnZS5HYXRlRGlyZWN0aW9uIkgKFkVu",
+            "dGVyR2F0ZVJlc3VsdE1lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEhsKBGdh",
+            "dGUYAiABKAsyDS5tZXNzYWdlLkdhdGUqVAoNQ2hhcmFjdGVyVHlwZRIKCgZS",
+            "RUFQRVIQABIMCghTT1VMX0RPRxABEhUKEVNPVUxfUFNZQ0hPTE9HSVNUEAIS",
+            "EgoOU09VTF9ERVRFQ1RJVkUQAyohChFTdHJpbmdNZXNzYWdlVHlwZRIMCghN",
+            "QVpFX01BUBAAKoUBChNQbGF5ZXJBbmltYXRpb25UeXBlEggKBElETEUQABIN",
+            "CglXQUxLX0xFRlQQARIOCgpXQUxLX1JJR0hUEAISDQoJREFTSF9MRUZUEAMS",
+            "DgoKREFTSF9SSUdIVBAEEgoKBkFUVEFDSxAFEgcKA0hJVBAGEggKBFdFQUsQ",
+            "BxIHCgNESUUQCCp7Cg5DaGFyYWN0ZXJTdGF0ZRIaChZDaGFyYWN0ZXJfU1RB",
+            "VEVfTk9STUFMEAASGAoUQ2hhcmFjdGVyX1NUQVRFX1dFQUsQARIXChNDaGFy",
+            "YWN0ZXJfU1RBVEVfRElFEAISGgoWQ2hhcmFjdGVyX1NUQVRFX0ZSRUVaRRAD",
+            "KksKEkludGVnZXJNZXNzYWdlVHlwZRIbChdBTFRBUl9NSU5JX0dBTUVfU1VD",
+            "Q0VTUxAAEhgKFFJFQVBFUl9BVFRBQ0tfUkVTVUxUEAEqKgoIR2F0ZVR5cGUS",
+            "DwoLR0FURV9IRUFWRU4QABINCglHQVRFX0hFTEwQASpyCg1HYXRlRGlyZWN0",
+            "aW9uEhUKEUdBVEVfRElSRUNUSU9OX1VQEAASFwoTR0FURV9ESVJFQ1RJT05f",
+            "RE9XThABEhcKE0dBVEVfRElSRUNUSU9OX0xFRlQQAhIYChRHQVRFX0RJUkVD",
+            "VElPTl9SSUdIVBADYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.CharacterType), typeof(global::Message.StringMessageType), typeof(global::Message.PlayerAnimationType), typeof(global::Message.CharacterState), typeof(global::Message.IntegerMessageType), typeof(global::Message.GateType), typeof(global::Message.GateDirection), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.HelloMessage), global::Message.HelloMessage.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.Character), global::Message.Character.Parser, new[]{ "PlayerId", "CharacterType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "PlayerBasicMessage", "PropTryGetMessage", "PropGetMessage", "IntegerMessage", "GateMessage" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "PlayerBasicMessage", "PropTryGetMessage", "PropGetMessage", "IntegerMessage", "GateMessage", "EnterGateMessage", "EnterGateResultMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.RoomMessage), global::Message.RoomMessage.Parser, new[]{ "IsJoin", "RoomId", "PlayerId", "Characters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.LobbyMessage), global::Message.LobbyMessage.Parser, new[]{ "IsReady", "PlayerId", "CharacterType" }, null, null, null, null),
@@ -88,7 +94,9 @@ namespace Message {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropGetMessage), global::Message.PropGetMessage.Parser, new[]{ "IsGet", "PlayerId", "PropId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.IntegerMessage), global::Message.IntegerMessage.Parser, new[]{ "MessageType", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.Gate), global::Message.Gate.Parser, new[]{ "GateDirection", "GateType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.GateMessage), global::Message.GateMessage.Parser, new[]{ "Gates" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.GateMessage), global::Message.GateMessage.Parser, new[]{ "Gates" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.EnterGateMessage), global::Message.EnterGateMessage.Parser, new[]{ "GateDirection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.EnterGateResultMessage), global::Message.EnterGateResultMessage.Parser, new[]{ "PlayerId", "Gate" }, null, null, null, null)
           }));
     }
     #endregion
@@ -625,6 +633,12 @@ namespace Message {
         case PayloadOneofCase.GateMessage:
           GateMessage = other.GateMessage.Clone();
           break;
+        case PayloadOneofCase.EnterGateMessage:
+          EnterGateMessage = other.EnterGateMessage.Clone();
+          break;
+        case PayloadOneofCase.EnterGateResultMessage:
+          EnterGateResultMessage = other.EnterGateResultMessage.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -744,6 +758,30 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "enter_gate_message" field.</summary>
+    public const int EnterGateMessageFieldNumber = 10;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.EnterGateMessage EnterGateMessage {
+      get { return payloadCase_ == PayloadOneofCase.EnterGateMessage ? (global::Message.EnterGateMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.EnterGateMessage;
+      }
+    }
+
+    /// <summary>Field number for the "enter_gate_result_message" field.</summary>
+    public const int EnterGateResultMessageFieldNumber = 11;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.EnterGateResultMessage EnterGateResultMessage {
+      get { return payloadCase_ == PayloadOneofCase.EnterGateResultMessage ? (global::Message.EnterGateResultMessage) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.EnterGateResultMessage;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
@@ -757,6 +795,8 @@ namespace Message {
       PropGetMessage = 7,
       IntegerMessage = 8,
       GateMessage = 9,
+      EnterGateMessage = 10,
+      EnterGateResultMessage = 11,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -796,6 +836,8 @@ namespace Message {
       if (!object.Equals(PropGetMessage, other.PropGetMessage)) return false;
       if (!object.Equals(IntegerMessage, other.IntegerMessage)) return false;
       if (!object.Equals(GateMessage, other.GateMessage)) return false;
+      if (!object.Equals(EnterGateMessage, other.EnterGateMessage)) return false;
+      if (!object.Equals(EnterGateResultMessage, other.EnterGateResultMessage)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -813,6 +855,8 @@ namespace Message {
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) hash ^= PropGetMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.IntegerMessage) hash ^= IntegerMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.GateMessage) hash ^= GateMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.EnterGateMessage) hash ^= EnterGateMessage.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) hash ^= EnterGateResultMessage.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -868,6 +912,14 @@ namespace Message {
         output.WriteRawTag(74);
         output.WriteMessage(GateMessage);
       }
+      if (payloadCase_ == PayloadOneofCase.EnterGateMessage) {
+        output.WriteRawTag(82);
+        output.WriteMessage(EnterGateMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EnterGateResultMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -914,6 +966,14 @@ namespace Message {
         output.WriteRawTag(74);
         output.WriteMessage(GateMessage);
       }
+      if (payloadCase_ == PayloadOneofCase.EnterGateMessage) {
+        output.WriteRawTag(82);
+        output.WriteMessage(EnterGateMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EnterGateResultMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -950,6 +1010,12 @@ namespace Message {
       }
       if (payloadCase_ == PayloadOneofCase.GateMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GateMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.EnterGateMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnterGateMessage);
+      }
+      if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnterGateResultMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1017,6 +1083,18 @@ namespace Message {
             GateMessage = new global::Message.GateMessage();
           }
           GateMessage.MergeFrom(other.GateMessage);
+          break;
+        case PayloadOneofCase.EnterGateMessage:
+          if (EnterGateMessage == null) {
+            EnterGateMessage = new global::Message.EnterGateMessage();
+          }
+          EnterGateMessage.MergeFrom(other.EnterGateMessage);
+          break;
+        case PayloadOneofCase.EnterGateResultMessage:
+          if (EnterGateResultMessage == null) {
+            EnterGateResultMessage = new global::Message.EnterGateResultMessage();
+          }
+          EnterGateResultMessage.MergeFrom(other.EnterGateResultMessage);
           break;
       }
 
@@ -1116,6 +1194,24 @@ namespace Message {
             GateMessage = subBuilder;
             break;
           }
+          case 82: {
+            global::Message.EnterGateMessage subBuilder = new global::Message.EnterGateMessage();
+            if (payloadCase_ == PayloadOneofCase.EnterGateMessage) {
+              subBuilder.MergeFrom(EnterGateMessage);
+            }
+            input.ReadMessage(subBuilder);
+            EnterGateMessage = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Message.EnterGateResultMessage subBuilder = new global::Message.EnterGateResultMessage();
+            if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) {
+              subBuilder.MergeFrom(EnterGateResultMessage);
+            }
+            input.ReadMessage(subBuilder);
+            EnterGateResultMessage = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1210,6 +1306,24 @@ namespace Message {
             }
             input.ReadMessage(subBuilder);
             GateMessage = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Message.EnterGateMessage subBuilder = new global::Message.EnterGateMessage();
+            if (payloadCase_ == PayloadOneofCase.EnterGateMessage) {
+              subBuilder.MergeFrom(EnterGateMessage);
+            }
+            input.ReadMessage(subBuilder);
+            EnterGateMessage = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Message.EnterGateResultMessage subBuilder = new global::Message.EnterGateResultMessage();
+            if (payloadCase_ == PayloadOneofCase.EnterGateResultMessage) {
+              subBuilder.MergeFrom(EnterGateResultMessage);
+            }
+            input.ReadMessage(subBuilder);
+            EnterGateResultMessage = subBuilder;
             break;
           }
         }
@@ -3764,6 +3878,430 @@ namespace Message {
             break;
           case 10: {
             gates_.AddEntriesFrom(ref input, _repeated_gates_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class EnterGateMessage : pb::IMessage<EnterGateMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnterGateMessage> _parser = new pb::MessageParser<EnterGateMessage>(() => new EnterGateMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnterGateMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateMessage(EnterGateMessage other) : this() {
+      gateDirection_ = other.gateDirection_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateMessage Clone() {
+      return new EnterGateMessage(this);
+    }
+
+    /// <summary>Field number for the "gate_direction" field.</summary>
+    public const int GateDirectionFieldNumber = 2;
+    private global::Message.GateDirection gateDirection_ = global::Message.GateDirection.Up;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.GateDirection GateDirection {
+      get { return gateDirection_; }
+      set {
+        gateDirection_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnterGateMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnterGateMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GateDirection != other.GateDirection) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GateDirection != global::Message.GateDirection.Up) hash ^= GateDirection.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GateDirection != global::Message.GateDirection.Up) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) GateDirection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GateDirection != global::Message.GateDirection.Up) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) GateDirection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (GateDirection != global::Message.GateDirection.Up) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GateDirection);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnterGateMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GateDirection != global::Message.GateDirection.Up) {
+        GateDirection = other.GateDirection;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            GateDirection = (global::Message.GateDirection) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            GateDirection = (global::Message.GateDirection) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class EnterGateResultMessage : pb::IMessage<EnterGateResultMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnterGateResultMessage> _parser = new pb::MessageParser<EnterGateResultMessage>(() => new EnterGateResultMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnterGateResultMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateResultMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateResultMessage(EnterGateResultMessage other) : this() {
+      playerId_ = other.playerId_;
+      gate_ = other.gate_ != null ? other.gate_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnterGateResultMessage Clone() {
+      return new EnterGateResultMessage(this);
+    }
+
+    /// <summary>Field number for the "player_id" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private int playerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gate" field.</summary>
+    public const int GateFieldNumber = 2;
+    private global::Message.Gate gate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Message.Gate Gate {
+      get { return gate_; }
+      set {
+        gate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnterGateResultMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnterGateResultMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlayerId != other.PlayerId) return false;
+      if (!object.Equals(Gate, other.Gate)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
+      if (gate_ != null) hash ^= Gate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PlayerId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PlayerId);
+      }
+      if (gate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Gate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PlayerId);
+      }
+      if (gate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Gate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PlayerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerId);
+      }
+      if (gate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gate);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnterGateResultMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PlayerId != 0) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.gate_ != null) {
+        if (gate_ == null) {
+          Gate = new global::Message.Gate();
+        }
+        Gate.MergeFrom(other.Gate);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PlayerId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (gate_ == null) {
+              Gate = new global::Message.Gate();
+            }
+            input.ReadMessage(Gate);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlayerId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (gate_ == null) {
+              Gate = new global::Message.Gate();
+            }
+            input.ReadMessage(Gate);
             break;
           }
         }
