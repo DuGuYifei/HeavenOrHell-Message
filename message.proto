@@ -30,6 +30,7 @@ message MessageWrapper {
     GateMessage gate_message = 9;
     EnterGateMessage enter_gate_message = 10;
     EnterGateResultMessage enter_gate_result_message = 11;
+    GameResultMessage game_result_message = 12;
   }
 }
 
@@ -147,4 +148,21 @@ message EnterGateMessage {
 message EnterGateResultMessage {
   int32 player_id = 1;
   Gate gate = 2;
+}
+
+enum GameResult {
+  GAME_RESULT_TIE = 0;
+  GAME_RESULT_REAPER_WIN = 1;
+  GAME_RESULT_SOUL_WIN = 2;
+}
+
+enum PlayerResult {
+  PLAYER_RESULT_DIE_BY_HIT = 0;
+  PLAYER_RESULT_HELL = 1;
+  PLAYER_RESULT_HEAVEN = 2;
+}
+
+message GameResultMessage {
+  GameResult game_result = 1;
+  repeated PlayerResult player_results = 2;
 }

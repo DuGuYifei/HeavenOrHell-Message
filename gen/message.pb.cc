@@ -225,9 +225,24 @@ struct EnterGateResultMessageDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EnterGateResultMessageDefaultTypeInternal _EnterGateResultMessage_default_instance_;
+constexpr GameResultMessage::GameResultMessage(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : player_results_()
+  , _player_results_cached_byte_size_(0)
+  , game_result_(0)
+{}
+struct GameResultMessageDefaultTypeInternal {
+  constexpr GameResultMessageDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GameResultMessageDefaultTypeInternal() {}
+  union {
+    GameResultMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GameResultMessageDefaultTypeInternal _GameResultMessage_default_instance_;
 }  // namespace message
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[15];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_message_2eproto[7];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_message_2eproto[16];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_message_2eproto[9];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_message_2eproto = nullptr;
 
 const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -252,6 +267,7 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   PROTOBUF_FIELD_OFFSET(::message::MessageWrapper, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
@@ -367,23 +383,32 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::message::EnterGateResultMessage, player_id_),
   PROTOBUF_FIELD_OFFSET(::message::EnterGateResultMessage, gate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::message::GameResultMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::message::GameResultMessage, game_result_),
+  PROTOBUF_FIELD_OFFSET(::message::GameResultMessage, player_results_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::message::HelloMessage)},
   { 7, -1, -1, sizeof(::message::Character)},
   { 15, -1, -1, sizeof(::message::MessageWrapper)},
-  { 33, -1, -1, sizeof(::message::RoomMessage)},
-  { 43, -1, -1, sizeof(::message::StringMessage)},
-  { 51, -1, -1, sizeof(::message::LobbyMessage)},
-  { 60, -1, -1, sizeof(::message::StartReceiveMsgMessage)},
-  { 67, -1, -1, sizeof(::message::PlayerBasicMessage)},
-  { 80, -1, -1, sizeof(::message::PropTryGetMessage)},
-  { 89, -1, -1, sizeof(::message::PropGetMessage)},
-  { 98, -1, -1, sizeof(::message::IntegerMessage)},
-  { 106, -1, -1, sizeof(::message::Gate)},
-  { 114, -1, -1, sizeof(::message::GateMessage)},
-  { 121, -1, -1, sizeof(::message::EnterGateMessage)},
-  { 128, -1, -1, sizeof(::message::EnterGateResultMessage)},
+  { 34, -1, -1, sizeof(::message::RoomMessage)},
+  { 44, -1, -1, sizeof(::message::StringMessage)},
+  { 52, -1, -1, sizeof(::message::LobbyMessage)},
+  { 61, -1, -1, sizeof(::message::StartReceiveMsgMessage)},
+  { 68, -1, -1, sizeof(::message::PlayerBasicMessage)},
+  { 81, -1, -1, sizeof(::message::PropTryGetMessage)},
+  { 90, -1, -1, sizeof(::message::PropGetMessage)},
+  { 99, -1, -1, sizeof(::message::IntegerMessage)},
+  { 107, -1, -1, sizeof(::message::Gate)},
+  { 115, -1, -1, sizeof(::message::GateMessage)},
+  { 122, -1, -1, sizeof(::message::EnterGateMessage)},
+  { 129, -1, -1, sizeof(::message::EnterGateResultMessage)},
+  { 137, -1, -1, sizeof(::message::GameResultMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -402,13 +427,14 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_GateMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_EnterGateMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_EnterGateResultMessage_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::message::_GameResultMessage_default_instance_),
 };
 
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\rmessage.proto\022\007message\"\037\n\014HelloMessage"
   "\022\017\n\007room_id\030\001 \001(\005\"N\n\tCharacter\022\021\n\tplayer"
   "_id\030\001 \001(\005\022.\n\016character_type\030\002 \001(\0162\026.mess"
-  "age.CharacterType\"\200\005\n\016MessageWrapper\022,\n\014"
+  "age.CharacterType\"\273\005\n\016MessageWrapper\022,\n\014"
   "room_message\030\001 \001(\0132\024.message.RoomMessage"
   "H\000\0220\n\016string_message\030\002 \001(\0132\026.message.Str"
   "ingMessageH\000\022.\n\rlobby_message\030\003 \001(\0132\025.me"
@@ -424,54 +450,63 @@ const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE
   "H\000\0227\n\022enter_gate_message\030\n \001(\0132\031.message"
   ".EnterGateMessageH\000\022D\n\031enter_gate_result"
   "_message\030\013 \001(\0132\037.message.EnterGateResult"
-  "MessageH\000B\t\n\007payload\"j\n\013RoomMessage\022\017\n\007i"
-  "s_join\030\001 \001(\010\022\017\n\007room_id\030\002 \001(\005\022\021\n\tplayer_"
-  "id\030\003 \001(\005\022&\n\ncharacters\030\004 \003(\0132\022.message.C"
-  "haracter\">\n\rStringMessage\022\024\n\014message_typ"
-  "e\030\001 \001(\005\022\027\n\017message_content\030\002 \001(\t\"c\n\014Lobb"
-  "yMessage\022\020\n\010is_ready\030\001 \001(\010\022\021\n\tplayer_id\030"
-  "\002 \001(\005\022.\n\016character_type\030\003 \001(\0162\026.message."
-  "CharacterType\"+\n\026StartReceiveMsgMessage\022"
-  "\021\n\tplayer_id\030\001 \001(\005\"\323\001\n\022PlayerBasicMessag"
-  "e\022\021\n\tplayer_id\030\001 \001(\005\022\022\n\nposition_x\030\002 \001(\002"
-  "\022\022\n\nposition_y\030\003 \001(\002\022\n\n\002hp\030\004 \001(\002\022\016\n\006max_"
-  "hp\030\005 \001(\002\0224\n\016animation_type\030\006 \001(\0162\034.messa"
-  "ge.PlayerAnimationType\0220\n\017character_stat"
-  "e\030\007 \001(\0162\027.message.CharacterState\"J\n\021Prop"
-  "TryGetMessage\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007prop"
-  "_id\030\002 \001(\005\022\021\n\tprop_type\030\003 \001(\005\"D\n\016PropGetM"
-  "essage\022\016\n\006is_get\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001("
-  "\005\022\017\n\007prop_id\030\003 \001(\005\"R\n\016IntegerMessage\0221\n\014"
-  "message_type\030\001 \001(\0162\033.message.IntegerMess"
-  "ageType\022\r\n\005value\030\002 \001(\005\"\\\n\004Gate\022.\n\016gate_d"
-  "irection\030\001 \001(\0162\026.message.GateDirection\022$"
-  "\n\tgate_type\030\002 \001(\0162\021.message.GateType\"+\n\013"
-  "GateMessage\022\034\n\005gates\030\001 \003(\0132\r.message.Gat"
-  "e\"B\n\020EnterGateMessage\022.\n\016gate_direction\030"
-  "\002 \001(\0162\026.message.GateDirection\"H\n\026EnterGa"
-  "teResultMessage\022\021\n\tplayer_id\030\001 \001(\005\022\033\n\004ga"
-  "te\030\002 \001(\0132\r.message.Gate*T\n\rCharacterType"
-  "\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG\020\001\022\025\n\021SOUL_PSYCH"
-  "OLOGIST\020\002\022\022\n\016SOUL_DETECTIVE\020\003*!\n\021StringM"
-  "essageType\022\014\n\010MAZE_MAP\020\000*\205\001\n\023PlayerAnima"
-  "tionType\022\010\n\004IDLE\020\000\022\r\n\tWALK_LEFT\020\001\022\016\n\nWAL"
-  "K_RIGHT\020\002\022\r\n\tDASH_LEFT\020\003\022\016\n\nDASH_RIGHT\020\004"
-  "\022\n\n\006ATTACK\020\005\022\007\n\003HIT\020\006\022\010\n\004WEAK\020\007\022\007\n\003DIE\020\010"
-  "*{\n\016CharacterState\022\032\n\026Character_STATE_NO"
-  "RMAL\020\000\022\030\n\024Character_STATE_WEAK\020\001\022\027\n\023Char"
-  "acter_STATE_DIE\020\002\022\032\n\026Character_STATE_FRE"
-  "EZE\020\003*K\n\022IntegerMessageType\022\033\n\027ALTAR_MIN"
-  "I_GAME_SUCCESS\020\000\022\030\n\024REAPER_ATTACK_RESULT"
-  "\020\001**\n\010GateType\022\017\n\013GATE_HEAVEN\020\000\022\r\n\tGATE_"
-  "HELL\020\001*r\n\rGateDirection\022\025\n\021GATE_DIRECTIO"
-  "N_UP\020\000\022\027\n\023GATE_DIRECTION_DOWN\020\001\022\027\n\023GATE_"
-  "DIRECTION_LEFT\020\002\022\030\n\024GATE_DIRECTION_RIGHT"
-  "\020\003b\006proto3"
+  "MessageH\000\0229\n\023game_result_message\030\014 \001(\0132\032"
+  ".message.GameResultMessageH\000B\t\n\007payload\""
+  "j\n\013RoomMessage\022\017\n\007is_join\030\001 \001(\010\022\017\n\007room_"
+  "id\030\002 \001(\005\022\021\n\tplayer_id\030\003 \001(\005\022&\n\ncharacter"
+  "s\030\004 \003(\0132\022.message.Character\">\n\rStringMes"
+  "sage\022\024\n\014message_type\030\001 \001(\005\022\027\n\017message_co"
+  "ntent\030\002 \001(\t\"c\n\014LobbyMessage\022\020\n\010is_ready\030"
+  "\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022.\n\016character_ty"
+  "pe\030\003 \001(\0162\026.message.CharacterType\"+\n\026Star"
+  "tReceiveMsgMessage\022\021\n\tplayer_id\030\001 \001(\005\"\323\001"
+  "\n\022PlayerBasicMessage\022\021\n\tplayer_id\030\001 \001(\005\022"
+  "\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001(\002\022"
+  "\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\0224\n\016animation"
+  "_type\030\006 \001(\0162\034.message.PlayerAnimationTyp"
+  "e\0220\n\017character_state\030\007 \001(\0162\027.message.Cha"
+  "racterState\"J\n\021PropTryGetMessage\022\021\n\tplay"
+  "er_id\030\001 \001(\005\022\017\n\007prop_id\030\002 \001(\005\022\021\n\tprop_typ"
+  "e\030\003 \001(\005\"D\n\016PropGetMessage\022\016\n\006is_get\030\001 \001("
+  "\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007prop_id\030\003 \001(\005\"R\n"
+  "\016IntegerMessage\0221\n\014message_type\030\001 \001(\0162\033."
+  "message.IntegerMessageType\022\r\n\005value\030\002 \001("
+  "\005\"\\\n\004Gate\022.\n\016gate_direction\030\001 \001(\0162\026.mess"
+  "age.GateDirection\022$\n\tgate_type\030\002 \001(\0162\021.m"
+  "essage.GateType\"+\n\013GateMessage\022\034\n\005gates\030"
+  "\001 \003(\0132\r.message.Gate\"B\n\020EnterGateMessage"
+  "\022.\n\016gate_direction\030\002 \001(\0162\026.message.GateD"
+  "irection\"H\n\026EnterGateResultMessage\022\021\n\tpl"
+  "ayer_id\030\001 \001(\005\022\033\n\004gate\030\002 \001(\0132\r.message.Ga"
+  "te\"l\n\021GameResultMessage\022(\n\013game_result\030\001"
+  " \001(\0162\023.message.GameResult\022-\n\016player_resu"
+  "lts\030\002 \003(\0162\025.message.PlayerResult*T\n\rChar"
+  "acterType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG\020\001\022\025\n\021S"
+  "OUL_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETECTIVE\020\003*!"
+  "\n\021StringMessageType\022\014\n\010MAZE_MAP\020\000*\205\001\n\023Pl"
+  "ayerAnimationType\022\010\n\004IDLE\020\000\022\r\n\tWALK_LEFT"
+  "\020\001\022\016\n\nWALK_RIGHT\020\002\022\r\n\tDASH_LEFT\020\003\022\016\n\nDAS"
+  "H_RIGHT\020\004\022\n\n\006ATTACK\020\005\022\007\n\003HIT\020\006\022\010\n\004WEAK\020\007"
+  "\022\007\n\003DIE\020\010*{\n\016CharacterState\022\032\n\026Character"
+  "_STATE_NORMAL\020\000\022\030\n\024Character_STATE_WEAK\020"
+  "\001\022\027\n\023Character_STATE_DIE\020\002\022\032\n\026Character_"
+  "STATE_FREEZE\020\003*K\n\022IntegerMessageType\022\033\n\027"
+  "ALTAR_MINI_GAME_SUCCESS\020\000\022\030\n\024REAPER_ATTA"
+  "CK_RESULT\020\001**\n\010GateType\022\017\n\013GATE_HEAVEN\020\000"
+  "\022\r\n\tGATE_HELL\020\001*r\n\rGateDirection\022\025\n\021GATE"
+  "_DIRECTION_UP\020\000\022\027\n\023GATE_DIRECTION_DOWN\020\001"
+  "\022\027\n\023GATE_DIRECTION_LEFT\020\002\022\030\n\024GATE_DIRECT"
+  "ION_RIGHT\020\003*W\n\nGameResult\022\023\n\017GAME_RESULT"
+  "_TIE\020\000\022\032\n\026GAME_RESULT_REAPER_WIN\020\001\022\030\n\024GA"
+  "ME_RESULT_SOUL_WIN\020\002*^\n\014PlayerResult\022\034\n\030"
+  "PLAYER_RESULT_DIE_BY_HIT\020\000\022\026\n\022PLAYER_RES"
+  "ULT_HELL\020\001\022\030\n\024PLAYER_RESULT_HEAVEN\020\002b\006pr"
+  "oto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 2450, descriptor_table_protodef_message_2eproto, "message.proto", 
-  &descriptor_table_message_2eproto_once, nullptr, 0, 15,
+  false, false, 2804, descriptor_table_protodef_message_2eproto, "message.proto", 
+  &descriptor_table_message_2eproto_once, nullptr, 0, 16,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
 };
@@ -586,6 +621,36 @@ bool GateDirection_IsValid(int value) {
     case 1:
     case 2:
     case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GameResult_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_message_2eproto);
+  return file_level_enum_descriptors_message_2eproto[7];
+}
+bool GameResult_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PlayerResult_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_message_2eproto);
+  return file_level_enum_descriptors_message_2eproto[8];
+}
+bool PlayerResult_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
       return true;
     default:
       return false;
@@ -1001,6 +1066,7 @@ class MessageWrapper::_Internal {
   static const ::message::GateMessage& gate_message(const MessageWrapper* msg);
   static const ::message::EnterGateMessage& enter_gate_message(const MessageWrapper* msg);
   static const ::message::EnterGateResultMessage& enter_gate_result_message(const MessageWrapper* msg);
+  static const ::message::GameResultMessage& game_result_message(const MessageWrapper* msg);
 };
 
 const ::message::RoomMessage&
@@ -1046,6 +1112,10 @@ MessageWrapper::_Internal::enter_gate_message(const MessageWrapper* msg) {
 const ::message::EnterGateResultMessage&
 MessageWrapper::_Internal::enter_gate_result_message(const MessageWrapper* msg) {
   return *msg->payload_.enter_gate_result_message_;
+}
+const ::message::GameResultMessage&
+MessageWrapper::_Internal::game_result_message(const MessageWrapper* msg) {
+  return *msg->payload_.game_result_message_;
 }
 void MessageWrapper::set_allocated_room_message(::message::RoomMessage* room_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
@@ -1212,6 +1282,21 @@ void MessageWrapper::set_allocated_enter_gate_result_message(::message::EnterGat
   }
   // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.enter_gate_result_message)
 }
+void MessageWrapper::set_allocated_game_result_message(::message::GameResultMessage* game_result_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  clear_payload();
+  if (game_result_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::message::GameResultMessage>::GetOwningArena(game_result_message);
+    if (message_arena != submessage_arena) {
+      game_result_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, game_result_message, submessage_arena);
+    }
+    set_has_game_result_message();
+    payload_.game_result_message_ = game_result_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:message.MessageWrapper.game_result_message)
+}
 MessageWrapper::MessageWrapper(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -1268,6 +1353,10 @@ MessageWrapper::MessageWrapper(const MessageWrapper& from)
     }
     case kEnterGateResultMessage: {
       _internal_mutable_enter_gate_result_message()->::message::EnterGateResultMessage::MergeFrom(from._internal_enter_gate_result_message());
+      break;
+    }
+    case kGameResultMessage: {
+      _internal_mutable_game_result_message()->::message::GameResultMessage::MergeFrom(from._internal_game_result_message());
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -1371,6 +1460,12 @@ void MessageWrapper::clear_payload() {
     case kEnterGateResultMessage: {
       if (GetArenaForAllocation() == nullptr) {
         delete payload_.enter_gate_result_message_;
+      }
+      break;
+    }
+    case kGameResultMessage: {
+      if (GetArenaForAllocation() == nullptr) {
+        delete payload_.game_result_message_;
       }
       break;
     }
@@ -1482,6 +1577,14 @@ const char* MessageWrapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_enter_gate_result_message(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.GameResultMessage game_result_message = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_game_result_message(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1603,6 +1706,14 @@ uint8_t* MessageWrapper::_InternalSerialize(
         11, _Internal::enter_gate_result_message(this), target, stream);
   }
 
+  // .message.GameResultMessage game_result_message = 12;
+  if (_internal_has_game_result_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        12, _Internal::game_result_message(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1697,6 +1808,13 @@ size_t MessageWrapper::ByteSizeLong() const {
           *payload_.enter_gate_result_message_);
       break;
     }
+    // .message.GameResultMessage game_result_message = 12;
+    case kGameResultMessage: {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.game_result_message_);
+      break;
+    }
     case PAYLOAD_NOT_SET: {
       break;
     }
@@ -1766,6 +1884,10 @@ void MessageWrapper::MergeFrom(const MessageWrapper& from) {
     }
     case kEnterGateResultMessage: {
       _internal_mutable_enter_gate_result_message()->::message::EnterGateResultMessage::MergeFrom(from._internal_enter_gate_result_message());
+      break;
+    }
+    case kGameResultMessage: {
+      _internal_mutable_game_result_message()->::message::GameResultMessage::MergeFrom(from._internal_game_result_message());
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -4580,6 +4702,231 @@ void EnterGateResultMessage::InternalSwap(EnterGateResultMessage* other) {
       file_level_metadata_message_2eproto[14]);
 }
 
+// ===================================================================
+
+class GameResultMessage::_Internal {
+ public:
+};
+
+GameResultMessage::GameResultMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  player_results_(arena) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:message.GameResultMessage)
+}
+GameResultMessage::GameResultMessage(const GameResultMessage& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      player_results_(from.player_results_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  game_result_ = from.game_result_;
+  // @@protoc_insertion_point(copy_constructor:message.GameResultMessage)
+}
+
+inline void GameResultMessage::SharedCtor() {
+game_result_ = 0;
+}
+
+GameResultMessage::~GameResultMessage() {
+  // @@protoc_insertion_point(destructor:message.GameResultMessage)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void GameResultMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GameResultMessage::ArenaDtor(void* object) {
+  GameResultMessage* _this = reinterpret_cast< GameResultMessage* >(object);
+  (void)_this;
+}
+void GameResultMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void GameResultMessage::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void GameResultMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.GameResultMessage)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  player_results_.Clear();
+  game_result_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* GameResultMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .message.GameResult game_result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_game_result(static_cast<::message::GameResult>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .message.PlayerResult player_results = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedEnumParser(_internal_mutable_player_results(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 16) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_add_player_results(static_cast<::message::PlayerResult>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GameResultMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:message.GameResultMessage)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .message.GameResult game_result = 1;
+  if (this->_internal_game_result() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_game_result(), target);
+  }
+
+  // repeated .message.PlayerResult player_results = 2;
+  {
+    int byte_size = _player_results_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteEnumPacked(
+          2, player_results_, byte_size, target);
+    }
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:message.GameResultMessage)
+  return target;
+}
+
+size_t GameResultMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.GameResultMessage)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .message.PlayerResult player_results = 2;
+  {
+    size_t data_size = 0;
+    unsigned int count = static_cast<unsigned int>(this->_internal_player_results_size());for (unsigned int i = 0; i < count; i++) {
+      data_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(
+        this->_internal_player_results(static_cast<int>(i)));
+    }
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _player_results_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // .message.GameResult game_result = 1;
+  if (this->_internal_game_result() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_game_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GameResultMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    GameResultMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GameResultMessage::GetClassData() const { return &_class_data_; }
+
+void GameResultMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<GameResultMessage *>(to)->MergeFrom(
+      static_cast<const GameResultMessage &>(from));
+}
+
+
+void GameResultMessage::MergeFrom(const GameResultMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:message.GameResultMessage)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  player_results_.MergeFrom(from.player_results_);
+  if (from._internal_game_result() != 0) {
+    _internal_set_game_result(from._internal_game_result());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GameResultMessage::CopyFrom(const GameResultMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.GameResultMessage)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GameResultMessage::IsInitialized() const {
+  return true;
+}
+
+void GameResultMessage::InternalSwap(GameResultMessage* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  player_results_.InternalSwap(&other->player_results_);
+  swap(game_result_, other->game_result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GameResultMessage::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
+      file_level_metadata_message_2eproto[15]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace message
 PROTOBUF_NAMESPACE_OPEN
@@ -4627,6 +4974,9 @@ template<> PROTOBUF_NOINLINE ::message::EnterGateMessage* Arena::CreateMaybeMess
 }
 template<> PROTOBUF_NOINLINE ::message::EnterGateResultMessage* Arena::CreateMaybeMessage< ::message::EnterGateResultMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::message::EnterGateResultMessage >(arena);
+}
+template<> PROTOBUF_NOINLINE ::message::GameResultMessage* Arena::CreateMaybeMessage< ::message::GameResultMessage >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::message::GameResultMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
