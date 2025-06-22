@@ -162,7 +162,12 @@ enum PlayerResult {
   PLAYER_RESULT_HEAVEN = 2;
 }
 
+message PlayerResultMessage {
+  PlayerResult player_result = 1;
+  int32 player_id = 2;
+}
+
 message GameResultMessage {
   GameResult game_result = 1;
-  repeated PlayerResult player_results = 2;
+  repeated PlayerResultMessage player_result_messages = 2;
 }

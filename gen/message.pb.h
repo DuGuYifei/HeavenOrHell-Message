@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[16]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[17]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -88,6 +88,9 @@ extern MessageWrapperDefaultTypeInternal _MessageWrapper_default_instance_;
 class PlayerBasicMessage;
 struct PlayerBasicMessageDefaultTypeInternal;
 extern PlayerBasicMessageDefaultTypeInternal _PlayerBasicMessage_default_instance_;
+class PlayerResultMessage;
+struct PlayerResultMessageDefaultTypeInternal;
+extern PlayerResultMessageDefaultTypeInternal _PlayerResultMessage_default_instance_;
 class PropGetMessage;
 struct PropGetMessageDefaultTypeInternal;
 extern PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
@@ -116,6 +119,7 @@ template<> ::message::IntegerMessage* Arena::CreateMaybeMessage<::message::Integ
 template<> ::message::LobbyMessage* Arena::CreateMaybeMessage<::message::LobbyMessage>(Arena*);
 template<> ::message::MessageWrapper* Arena::CreateMaybeMessage<::message::MessageWrapper>(Arena*);
 template<> ::message::PlayerBasicMessage* Arena::CreateMaybeMessage<::message::PlayerBasicMessage>(Arena*);
+template<> ::message::PlayerResultMessage* Arena::CreateMaybeMessage<::message::PlayerResultMessage>(Arena*);
 template<> ::message::PropGetMessage* Arena::CreateMaybeMessage<::message::PropGetMessage>(Arena*);
 template<> ::message::PropTryGetMessage* Arena::CreateMaybeMessage<::message::PropTryGetMessage>(Arena*);
 template<> ::message::RoomMessage* Arena::CreateMaybeMessage<::message::RoomMessage>(Arena*);
@@ -3075,6 +3079,163 @@ class EnterGateResultMessage final :
 };
 // -------------------------------------------------------------------
 
+class PlayerResultMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.PlayerResultMessage) */ {
+ public:
+  inline PlayerResultMessage() : PlayerResultMessage(nullptr) {}
+  ~PlayerResultMessage() override;
+  explicit constexpr PlayerResultMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  PlayerResultMessage(const PlayerResultMessage& from);
+  PlayerResultMessage(PlayerResultMessage&& from) noexcept
+    : PlayerResultMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline PlayerResultMessage& operator=(const PlayerResultMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PlayerResultMessage& operator=(PlayerResultMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PlayerResultMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PlayerResultMessage* internal_default_instance() {
+    return reinterpret_cast<const PlayerResultMessage*>(
+               &_PlayerResultMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  friend void swap(PlayerResultMessage& a, PlayerResultMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PlayerResultMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PlayerResultMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PlayerResultMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PlayerResultMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const PlayerResultMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const PlayerResultMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PlayerResultMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.PlayerResultMessage";
+  }
+  protected:
+  explicit PlayerResultMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPlayerResultFieldNumber = 1,
+    kPlayerIdFieldNumber = 2,
+  };
+  // .message.PlayerResult player_result = 1;
+  void clear_player_result();
+  ::message::PlayerResult player_result() const;
+  void set_player_result(::message::PlayerResult value);
+  private:
+  ::message::PlayerResult _internal_player_result() const;
+  void _internal_set_player_result(::message::PlayerResult value);
+  public:
+
+  // int32 player_id = 2;
+  void clear_player_id();
+  int32_t player_id() const;
+  void set_player_id(int32_t value);
+  private:
+  int32_t _internal_player_id() const;
+  void _internal_set_player_id(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:message.PlayerResultMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int player_result_;
+  int32_t player_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
 class GameResultMessage final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.GameResultMessage) */ {
  public:
@@ -3123,7 +3284,7 @@ class GameResultMessage final :
                &_GameResultMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   friend void swap(GameResultMessage& a, GameResultMessage& b) {
     a.Swap(&b);
@@ -3197,25 +3358,26 @@ class GameResultMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPlayerResultsFieldNumber = 2,
+    kPlayerResultMessagesFieldNumber = 2,
     kGameResultFieldNumber = 1,
   };
-  // repeated .message.PlayerResult player_results = 2;
-  int player_results_size() const;
+  // repeated .message.PlayerResultMessage player_result_messages = 2;
+  int player_result_messages_size() const;
   private:
-  int _internal_player_results_size() const;
+  int _internal_player_result_messages_size() const;
   public:
-  void clear_player_results();
+  void clear_player_result_messages();
+  ::message::PlayerResultMessage* mutable_player_result_messages(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::PlayerResultMessage >*
+      mutable_player_result_messages();
   private:
-  ::message::PlayerResult _internal_player_results(int index) const;
-  void _internal_add_player_results(::message::PlayerResult value);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* _internal_mutable_player_results();
+  const ::message::PlayerResultMessage& _internal_player_result_messages(int index) const;
+  ::message::PlayerResultMessage* _internal_add_player_result_messages();
   public:
-  ::message::PlayerResult player_results(int index) const;
-  void set_player_results(int index, ::message::PlayerResult value);
-  void add_player_results(::message::PlayerResult value);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>& player_results() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* mutable_player_results();
+  const ::message::PlayerResultMessage& player_result_messages(int index) const;
+  ::message::PlayerResultMessage* add_player_result_messages();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::PlayerResultMessage >&
+      player_result_messages() const;
 
   // .message.GameResult game_result = 1;
   void clear_game_result();
@@ -3233,8 +3395,7 @@ class GameResultMessage final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField<int> player_results_;
-  mutable std::atomic<int> _player_results_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::PlayerResultMessage > player_result_messages_;
   int game_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
@@ -5026,6 +5187,50 @@ inline void EnterGateResultMessage::set_allocated_gate(::message::Gate* gate) {
 
 // -------------------------------------------------------------------
 
+// PlayerResultMessage
+
+// .message.PlayerResult player_result = 1;
+inline void PlayerResultMessage::clear_player_result() {
+  player_result_ = 0;
+}
+inline ::message::PlayerResult PlayerResultMessage::_internal_player_result() const {
+  return static_cast< ::message::PlayerResult >(player_result_);
+}
+inline ::message::PlayerResult PlayerResultMessage::player_result() const {
+  // @@protoc_insertion_point(field_get:message.PlayerResultMessage.player_result)
+  return _internal_player_result();
+}
+inline void PlayerResultMessage::_internal_set_player_result(::message::PlayerResult value) {
+  
+  player_result_ = value;
+}
+inline void PlayerResultMessage::set_player_result(::message::PlayerResult value) {
+  _internal_set_player_result(value);
+  // @@protoc_insertion_point(field_set:message.PlayerResultMessage.player_result)
+}
+
+// int32 player_id = 2;
+inline void PlayerResultMessage::clear_player_id() {
+  player_id_ = 0;
+}
+inline int32_t PlayerResultMessage::_internal_player_id() const {
+  return player_id_;
+}
+inline int32_t PlayerResultMessage::player_id() const {
+  // @@protoc_insertion_point(field_get:message.PlayerResultMessage.player_id)
+  return _internal_player_id();
+}
+inline void PlayerResultMessage::_internal_set_player_id(int32_t value) {
+  
+  player_id_ = value;
+}
+inline void PlayerResultMessage::set_player_id(int32_t value) {
+  _internal_set_player_id(value);
+  // @@protoc_insertion_point(field_set:message.PlayerResultMessage.player_id)
+}
+
+// -------------------------------------------------------------------
+
 // GameResultMessage
 
 // .message.GameResult game_result = 1;
@@ -5048,52 +5253,51 @@ inline void GameResultMessage::set_game_result(::message::GameResult value) {
   // @@protoc_insertion_point(field_set:message.GameResultMessage.game_result)
 }
 
-// repeated .message.PlayerResult player_results = 2;
-inline int GameResultMessage::_internal_player_results_size() const {
-  return player_results_.size();
+// repeated .message.PlayerResultMessage player_result_messages = 2;
+inline int GameResultMessage::_internal_player_result_messages_size() const {
+  return player_result_messages_.size();
 }
-inline int GameResultMessage::player_results_size() const {
-  return _internal_player_results_size();
+inline int GameResultMessage::player_result_messages_size() const {
+  return _internal_player_result_messages_size();
 }
-inline void GameResultMessage::clear_player_results() {
-  player_results_.Clear();
+inline void GameResultMessage::clear_player_result_messages() {
+  player_result_messages_.Clear();
 }
-inline ::message::PlayerResult GameResultMessage::_internal_player_results(int index) const {
-  return static_cast< ::message::PlayerResult >(player_results_.Get(index));
+inline ::message::PlayerResultMessage* GameResultMessage::mutable_player_result_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:message.GameResultMessage.player_result_messages)
+  return player_result_messages_.Mutable(index);
 }
-inline ::message::PlayerResult GameResultMessage::player_results(int index) const {
-  // @@protoc_insertion_point(field_get:message.GameResultMessage.player_results)
-  return _internal_player_results(index);
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::PlayerResultMessage >*
+GameResultMessage::mutable_player_result_messages() {
+  // @@protoc_insertion_point(field_mutable_list:message.GameResultMessage.player_result_messages)
+  return &player_result_messages_;
 }
-inline void GameResultMessage::set_player_results(int index, ::message::PlayerResult value) {
-  player_results_.Set(index, value);
-  // @@protoc_insertion_point(field_set:message.GameResultMessage.player_results)
+inline const ::message::PlayerResultMessage& GameResultMessage::_internal_player_result_messages(int index) const {
+  return player_result_messages_.Get(index);
 }
-inline void GameResultMessage::_internal_add_player_results(::message::PlayerResult value) {
-  player_results_.Add(value);
+inline const ::message::PlayerResultMessage& GameResultMessage::player_result_messages(int index) const {
+  // @@protoc_insertion_point(field_get:message.GameResultMessage.player_result_messages)
+  return _internal_player_result_messages(index);
 }
-inline void GameResultMessage::add_player_results(::message::PlayerResult value) {
-  _internal_add_player_results(value);
-  // @@protoc_insertion_point(field_add:message.GameResultMessage.player_results)
+inline ::message::PlayerResultMessage* GameResultMessage::_internal_add_player_result_messages() {
+  return player_result_messages_.Add();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>&
-GameResultMessage::player_results() const {
-  // @@protoc_insertion_point(field_list:message.GameResultMessage.player_results)
-  return player_results_;
+inline ::message::PlayerResultMessage* GameResultMessage::add_player_result_messages() {
+  ::message::PlayerResultMessage* _add = _internal_add_player_result_messages();
+  // @@protoc_insertion_point(field_add:message.GameResultMessage.player_result_messages)
+  return _add;
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
-GameResultMessage::_internal_mutable_player_results() {
-  return &player_results_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
-GameResultMessage::mutable_player_results() {
-  // @@protoc_insertion_point(field_mutable_list:message.GameResultMessage.player_results)
-  return _internal_mutable_player_results();
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::PlayerResultMessage >&
+GameResultMessage::player_result_messages() const {
+  // @@protoc_insertion_point(field_list:message.GameResultMessage.player_result_messages)
+  return player_result_messages_;
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
