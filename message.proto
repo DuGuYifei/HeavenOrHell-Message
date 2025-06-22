@@ -66,12 +66,25 @@ message StartReceiveMsgMessage {
   int32 player_id = 1;
 }
 
+enum PlayerAnimationType {
+  IDLE = 0;
+  WALK_LEFT = 1;
+  WALK_RIGHT = 2;
+  DASH_LEFT = 3;
+  DASH_RIGHT = 4;
+  ATTACK = 5;
+  HIT = 6;
+  WEAK = 7;
+  DIE = 8;
+}
+
 message PlayerBasicMessage {
   int32 player_id = 1;
   float position_x = 2;
   float position_y = 3;
   float hp = 4;
   float max_hp = 5;
+  PlayerAnimationType animation_type = 6;
 }
 
 message ReaperAttackMessage {
