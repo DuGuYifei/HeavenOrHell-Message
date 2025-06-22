@@ -24,10 +24,9 @@ message MessageWrapper {
     LobbyMessage lobby_message = 3;
     StartReceiveMsgMessage start_receive_msg_message = 4;
     PlayerBasicMessage player_basic_message = 5;
-    ReaperAttackResultMessage reaper_attack_result_message = 6;
-    PropTryGetMessage prop_try_get_message = 7;
-    PropGetMessage prop_get_message = 8;
-    IntegerMessage integer_message = 9;
+    PropTryGetMessage prop_try_get_message = 6;
+    PropGetMessage prop_get_message = 7;
+    IntegerMessage integer_message = 8;
   }
 }
 
@@ -106,16 +105,13 @@ message PropGetMessage {
   int32 prop_id = 3;
 }
 
-message ReaperAttackResultMessage {
-  int32 soul_player_id = 1;
-  bool is_hit = 2;
-}
-
 enum IntegerMessageType {
   ALTAR_MINI_GAME_SUCCESS = 0;
+  REAPER_ATTACK_RESULT = 1;
 }
 
 message IntegerMessage {
   IntegerMessageType message_type = 1;
-  int32 value = 2;
+  int32 value = 2; // if ALTERN_MINI_GAME_SUCCESS, value is the player_id of recovered soul.
+                   // if REAPER_ATTACK_RESULT, value is the player_id of attacked soul.
 }

@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[11]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -79,9 +79,6 @@ extern PropGetMessageDefaultTypeInternal _PropGetMessage_default_instance_;
 class PropTryGetMessage;
 struct PropTryGetMessageDefaultTypeInternal;
 extern PropTryGetMessageDefaultTypeInternal _PropTryGetMessage_default_instance_;
-class ReaperAttackResultMessage;
-struct ReaperAttackResultMessageDefaultTypeInternal;
-extern ReaperAttackResultMessageDefaultTypeInternal _ReaperAttackResultMessage_default_instance_;
 class RoomMessage;
 struct RoomMessageDefaultTypeInternal;
 extern RoomMessageDefaultTypeInternal _RoomMessage_default_instance_;
@@ -101,7 +98,6 @@ template<> ::message::MessageWrapper* Arena::CreateMaybeMessage<::message::Messa
 template<> ::message::PlayerBasicMessage* Arena::CreateMaybeMessage<::message::PlayerBasicMessage>(Arena*);
 template<> ::message::PropGetMessage* Arena::CreateMaybeMessage<::message::PropGetMessage>(Arena*);
 template<> ::message::PropTryGetMessage* Arena::CreateMaybeMessage<::message::PropTryGetMessage>(Arena*);
-template<> ::message::ReaperAttackResultMessage* Arena::CreateMaybeMessage<::message::ReaperAttackResultMessage>(Arena*);
 template<> ::message::RoomMessage* Arena::CreateMaybeMessage<::message::RoomMessage>(Arena*);
 template<> ::message::StartReceiveMsgMessage* Arena::CreateMaybeMessage<::message::StartReceiveMsgMessage>(Arena*);
 template<> ::message::StringMessage* Arena::CreateMaybeMessage<::message::StringMessage>(Arena*);
@@ -220,12 +216,13 @@ inline bool CharacterState_Parse(
 }
 enum IntegerMessageType : int {
   ALTAR_MINI_GAME_SUCCESS = 0,
+  REAPER_ATTACK_RESULT = 1,
   IntegerMessageType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
   IntegerMessageType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
 bool IntegerMessageType_IsValid(int value);
 constexpr IntegerMessageType IntegerMessageType_MIN = ALTAR_MINI_GAME_SUCCESS;
-constexpr IntegerMessageType IntegerMessageType_MAX = ALTAR_MINI_GAME_SUCCESS;
+constexpr IntegerMessageType IntegerMessageType_MAX = REAPER_ATTACK_RESULT;
 constexpr int IntegerMessageType_ARRAYSIZE = IntegerMessageType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* IntegerMessageType_descriptor();
@@ -596,10 +593,9 @@ class MessageWrapper final :
     kLobbyMessage = 3,
     kStartReceiveMsgMessage = 4,
     kPlayerBasicMessage = 5,
-    kReaperAttackResultMessage = 6,
-    kPropTryGetMessage = 7,
-    kPropGetMessage = 8,
-    kIntegerMessage = 9,
+    kPropTryGetMessage = 6,
+    kPropGetMessage = 7,
+    kIntegerMessage = 8,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -687,10 +683,9 @@ class MessageWrapper final :
     kLobbyMessageFieldNumber = 3,
     kStartReceiveMsgMessageFieldNumber = 4,
     kPlayerBasicMessageFieldNumber = 5,
-    kReaperAttackResultMessageFieldNumber = 6,
-    kPropTryGetMessageFieldNumber = 7,
-    kPropGetMessageFieldNumber = 8,
-    kIntegerMessageFieldNumber = 9,
+    kPropTryGetMessageFieldNumber = 6,
+    kPropGetMessageFieldNumber = 7,
+    kIntegerMessageFieldNumber = 8,
   };
   // .message.RoomMessage room_message = 1;
   bool has_room_message() const;
@@ -782,25 +777,7 @@ class MessageWrapper final :
       ::message::PlayerBasicMessage* player_basic_message);
   ::message::PlayerBasicMessage* unsafe_arena_release_player_basic_message();
 
-  // .message.ReaperAttackResultMessage reaper_attack_result_message = 6;
-  bool has_reaper_attack_result_message() const;
-  private:
-  bool _internal_has_reaper_attack_result_message() const;
-  public:
-  void clear_reaper_attack_result_message();
-  const ::message::ReaperAttackResultMessage& reaper_attack_result_message() const;
-  PROTOBUF_NODISCARD ::message::ReaperAttackResultMessage* release_reaper_attack_result_message();
-  ::message::ReaperAttackResultMessage* mutable_reaper_attack_result_message();
-  void set_allocated_reaper_attack_result_message(::message::ReaperAttackResultMessage* reaper_attack_result_message);
-  private:
-  const ::message::ReaperAttackResultMessage& _internal_reaper_attack_result_message() const;
-  ::message::ReaperAttackResultMessage* _internal_mutable_reaper_attack_result_message();
-  public:
-  void unsafe_arena_set_allocated_reaper_attack_result_message(
-      ::message::ReaperAttackResultMessage* reaper_attack_result_message);
-  ::message::ReaperAttackResultMessage* unsafe_arena_release_reaper_attack_result_message();
-
-  // .message.PropTryGetMessage prop_try_get_message = 7;
+  // .message.PropTryGetMessage prop_try_get_message = 6;
   bool has_prop_try_get_message() const;
   private:
   bool _internal_has_prop_try_get_message() const;
@@ -818,7 +795,7 @@ class MessageWrapper final :
       ::message::PropTryGetMessage* prop_try_get_message);
   ::message::PropTryGetMessage* unsafe_arena_release_prop_try_get_message();
 
-  // .message.PropGetMessage prop_get_message = 8;
+  // .message.PropGetMessage prop_get_message = 7;
   bool has_prop_get_message() const;
   private:
   bool _internal_has_prop_get_message() const;
@@ -836,7 +813,7 @@ class MessageWrapper final :
       ::message::PropGetMessage* prop_get_message);
   ::message::PropGetMessage* unsafe_arena_release_prop_get_message();
 
-  // .message.IntegerMessage integer_message = 9;
+  // .message.IntegerMessage integer_message = 8;
   bool has_integer_message() const;
   private:
   bool _internal_has_integer_message() const;
@@ -864,7 +841,6 @@ class MessageWrapper final :
   void set_has_lobby_message();
   void set_has_start_receive_msg_message();
   void set_has_player_basic_message();
-  void set_has_reaper_attack_result_message();
   void set_has_prop_try_get_message();
   void set_has_prop_get_message();
   void set_has_integer_message();
@@ -883,7 +859,6 @@ class MessageWrapper final :
     ::message::LobbyMessage* lobby_message_;
     ::message::StartReceiveMsgMessage* start_receive_msg_message_;
     ::message::PlayerBasicMessage* player_basic_message_;
-    ::message::ReaperAttackResultMessage* reaper_attack_result_message_;
     ::message::PropTryGetMessage* prop_try_get_message_;
     ::message::PropGetMessage* prop_get_message_;
     ::message::IntegerMessage* integer_message_;
@@ -2107,163 +2082,6 @@ class PropGetMessage final :
 };
 // -------------------------------------------------------------------
 
-class ReaperAttackResultMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.ReaperAttackResultMessage) */ {
- public:
-  inline ReaperAttackResultMessage() : ReaperAttackResultMessage(nullptr) {}
-  ~ReaperAttackResultMessage() override;
-  explicit constexpr ReaperAttackResultMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  ReaperAttackResultMessage(const ReaperAttackResultMessage& from);
-  ReaperAttackResultMessage(ReaperAttackResultMessage&& from) noexcept
-    : ReaperAttackResultMessage() {
-    *this = ::std::move(from);
-  }
-
-  inline ReaperAttackResultMessage& operator=(const ReaperAttackResultMessage& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline ReaperAttackResultMessage& operator=(ReaperAttackResultMessage&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const ReaperAttackResultMessage& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const ReaperAttackResultMessage* internal_default_instance() {
-    return reinterpret_cast<const ReaperAttackResultMessage*>(
-               &_ReaperAttackResultMessage_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(ReaperAttackResultMessage& a, ReaperAttackResultMessage& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(ReaperAttackResultMessage* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(ReaperAttackResultMessage* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  ReaperAttackResultMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReaperAttackResultMessage>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ReaperAttackResultMessage& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const ReaperAttackResultMessage& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(ReaperAttackResultMessage* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "message.ReaperAttackResultMessage";
-  }
-  protected:
-  explicit ReaperAttackResultMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSoulPlayerIdFieldNumber = 1,
-    kIsHitFieldNumber = 2,
-  };
-  // int32 soul_player_id = 1;
-  void clear_soul_player_id();
-  int32_t soul_player_id() const;
-  void set_soul_player_id(int32_t value);
-  private:
-  int32_t _internal_soul_player_id() const;
-  void _internal_set_soul_player_id(int32_t value);
-  public:
-
-  // bool is_hit = 2;
-  void clear_is_hit();
-  bool is_hit() const;
-  void set_is_hit(bool value);
-  private:
-  bool _internal_is_hit() const;
-  void _internal_set_is_hit(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:message.ReaperAttackResultMessage)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  int32_t soul_player_id_;
-  bool is_hit_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_message_2eproto;
-};
-// -------------------------------------------------------------------
-
 class IntegerMessage final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.IntegerMessage) */ {
  public:
@@ -2312,7 +2130,7 @@ class IntegerMessage final :
                &_IntegerMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(IntegerMessage& a, IntegerMessage& b) {
     a.Swap(&b);
@@ -2868,81 +2686,7 @@ inline ::message::PlayerBasicMessage* MessageWrapper::mutable_player_basic_messa
   return _msg;
 }
 
-// .message.ReaperAttackResultMessage reaper_attack_result_message = 6;
-inline bool MessageWrapper::_internal_has_reaper_attack_result_message() const {
-  return payload_case() == kReaperAttackResultMessage;
-}
-inline bool MessageWrapper::has_reaper_attack_result_message() const {
-  return _internal_has_reaper_attack_result_message();
-}
-inline void MessageWrapper::set_has_reaper_attack_result_message() {
-  _oneof_case_[0] = kReaperAttackResultMessage;
-}
-inline void MessageWrapper::clear_reaper_attack_result_message() {
-  if (_internal_has_reaper_attack_result_message()) {
-    if (GetArenaForAllocation() == nullptr) {
-      delete payload_.reaper_attack_result_message_;
-    }
-    clear_has_payload();
-  }
-}
-inline ::message::ReaperAttackResultMessage* MessageWrapper::release_reaper_attack_result_message() {
-  // @@protoc_insertion_point(field_release:message.MessageWrapper.reaper_attack_result_message)
-  if (_internal_has_reaper_attack_result_message()) {
-    clear_has_payload();
-      ::message::ReaperAttackResultMessage* temp = payload_.reaper_attack_result_message_;
-    if (GetArenaForAllocation() != nullptr) {
-      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-    }
-    payload_.reaper_attack_result_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::message::ReaperAttackResultMessage& MessageWrapper::_internal_reaper_attack_result_message() const {
-  return _internal_has_reaper_attack_result_message()
-      ? *payload_.reaper_attack_result_message_
-      : reinterpret_cast< ::message::ReaperAttackResultMessage&>(::message::_ReaperAttackResultMessage_default_instance_);
-}
-inline const ::message::ReaperAttackResultMessage& MessageWrapper::reaper_attack_result_message() const {
-  // @@protoc_insertion_point(field_get:message.MessageWrapper.reaper_attack_result_message)
-  return _internal_reaper_attack_result_message();
-}
-inline ::message::ReaperAttackResultMessage* MessageWrapper::unsafe_arena_release_reaper_attack_result_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.reaper_attack_result_message)
-  if (_internal_has_reaper_attack_result_message()) {
-    clear_has_payload();
-    ::message::ReaperAttackResultMessage* temp = payload_.reaper_attack_result_message_;
-    payload_.reaper_attack_result_message_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline void MessageWrapper::unsafe_arena_set_allocated_reaper_attack_result_message(::message::ReaperAttackResultMessage* reaper_attack_result_message) {
-  clear_payload();
-  if (reaper_attack_result_message) {
-    set_has_reaper_attack_result_message();
-    payload_.reaper_attack_result_message_ = reaper_attack_result_message;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.reaper_attack_result_message)
-}
-inline ::message::ReaperAttackResultMessage* MessageWrapper::_internal_mutable_reaper_attack_result_message() {
-  if (!_internal_has_reaper_attack_result_message()) {
-    clear_payload();
-    set_has_reaper_attack_result_message();
-    payload_.reaper_attack_result_message_ = CreateMaybeMessage< ::message::ReaperAttackResultMessage >(GetArenaForAllocation());
-  }
-  return payload_.reaper_attack_result_message_;
-}
-inline ::message::ReaperAttackResultMessage* MessageWrapper::mutable_reaper_attack_result_message() {
-  ::message::ReaperAttackResultMessage* _msg = _internal_mutable_reaper_attack_result_message();
-  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.reaper_attack_result_message)
-  return _msg;
-}
-
-// .message.PropTryGetMessage prop_try_get_message = 7;
+// .message.PropTryGetMessage prop_try_get_message = 6;
 inline bool MessageWrapper::_internal_has_prop_try_get_message() const {
   return payload_case() == kPropTryGetMessage;
 }
@@ -3016,7 +2760,7 @@ inline ::message::PropTryGetMessage* MessageWrapper::mutable_prop_try_get_messag
   return _msg;
 }
 
-// .message.PropGetMessage prop_get_message = 8;
+// .message.PropGetMessage prop_get_message = 7;
 inline bool MessageWrapper::_internal_has_prop_get_message() const {
   return payload_case() == kPropGetMessage;
 }
@@ -3090,7 +2834,7 @@ inline ::message::PropGetMessage* MessageWrapper::mutable_prop_get_message() {
   return _msg;
 }
 
-// .message.IntegerMessage integer_message = 9;
+// .message.IntegerMessage integer_message = 8;
 inline bool MessageWrapper::_internal_has_integer_message() const {
   return payload_case() == kIntegerMessage;
 }
@@ -3714,50 +3458,6 @@ inline void PropGetMessage::set_prop_id(int32_t value) {
 
 // -------------------------------------------------------------------
 
-// ReaperAttackResultMessage
-
-// int32 soul_player_id = 1;
-inline void ReaperAttackResultMessage::clear_soul_player_id() {
-  soul_player_id_ = 0;
-}
-inline int32_t ReaperAttackResultMessage::_internal_soul_player_id() const {
-  return soul_player_id_;
-}
-inline int32_t ReaperAttackResultMessage::soul_player_id() const {
-  // @@protoc_insertion_point(field_get:message.ReaperAttackResultMessage.soul_player_id)
-  return _internal_soul_player_id();
-}
-inline void ReaperAttackResultMessage::_internal_set_soul_player_id(int32_t value) {
-  
-  soul_player_id_ = value;
-}
-inline void ReaperAttackResultMessage::set_soul_player_id(int32_t value) {
-  _internal_set_soul_player_id(value);
-  // @@protoc_insertion_point(field_set:message.ReaperAttackResultMessage.soul_player_id)
-}
-
-// bool is_hit = 2;
-inline void ReaperAttackResultMessage::clear_is_hit() {
-  is_hit_ = false;
-}
-inline bool ReaperAttackResultMessage::_internal_is_hit() const {
-  return is_hit_;
-}
-inline bool ReaperAttackResultMessage::is_hit() const {
-  // @@protoc_insertion_point(field_get:message.ReaperAttackResultMessage.is_hit)
-  return _internal_is_hit();
-}
-inline void ReaperAttackResultMessage::_internal_set_is_hit(bool value) {
-  
-  is_hit_ = value;
-}
-inline void ReaperAttackResultMessage::set_is_hit(bool value) {
-  _internal_set_is_hit(value);
-  // @@protoc_insertion_point(field_set:message.ReaperAttackResultMessage.is_hit)
-}
-
-// -------------------------------------------------------------------
-
 // IntegerMessage
 
 // .message.IntegerMessageType message_type = 1;
@@ -3803,8 +3503,6 @@ inline void IntegerMessage::set_value(int32_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
