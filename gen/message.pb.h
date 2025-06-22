@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[14]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -88,6 +88,9 @@ extern ReaperAttackResultMessageDefaultTypeInternal _ReaperAttackResultMessage_d
 class RoomMessage;
 struct RoomMessageDefaultTypeInternal;
 extern RoomMessageDefaultTypeInternal _RoomMessage_default_instance_;
+class SoulStateMessage;
+struct SoulStateMessageDefaultTypeInternal;
+extern SoulStateMessageDefaultTypeInternal _SoulStateMessage_default_instance_;
 class StartReceiveMsgMessage;
 struct StartReceiveMsgMessageDefaultTypeInternal;
 extern StartReceiveMsgMessageDefaultTypeInternal _StartReceiveMsgMessage_default_instance_;
@@ -107,6 +110,7 @@ template<> ::message::PropTryGetMessage* Arena::CreateMaybeMessage<::message::Pr
 template<> ::message::ReaperAttackMessage* Arena::CreateMaybeMessage<::message::ReaperAttackMessage>(Arena*);
 template<> ::message::ReaperAttackResultMessage* Arena::CreateMaybeMessage<::message::ReaperAttackResultMessage>(Arena*);
 template<> ::message::RoomMessage* Arena::CreateMaybeMessage<::message::RoomMessage>(Arena*);
+template<> ::message::SoulStateMessage* Arena::CreateMaybeMessage<::message::SoulStateMessage>(Arena*);
 template<> ::message::StartReceiveMsgMessage* Arena::CreateMaybeMessage<::message::StartReceiveMsgMessage>(Arena*);
 template<> ::message::StringMessage* Arena::CreateMaybeMessage<::message::StringMessage>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -194,6 +198,32 @@ inline bool PlayerAnimationType_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PlayerAnimationType* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PlayerAnimationType>(
     PlayerAnimationType_descriptor(), name, value);
+}
+enum SoulState : int {
+  SOUL_STATE_NORMAL = 0,
+  SOUL_STATE_WEAK = 1,
+  SOUL_STATE_DIE = 2,
+  SoulState_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  SoulState_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool SoulState_IsValid(int value);
+constexpr SoulState SoulState_MIN = SOUL_STATE_NORMAL;
+constexpr SoulState SoulState_MAX = SOUL_STATE_DIE;
+constexpr int SoulState_ARRAYSIZE = SoulState_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* SoulState_descriptor();
+template<typename T>
+inline const std::string& SoulState_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, SoulState>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function SoulState_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    SoulState_descriptor(), enum_t_value);
+}
+inline bool SoulState_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SoulState* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<SoulState>(
+    SoulState_descriptor(), name, value);
 }
 enum IntegerMessageType : int {
   ALTAR_MINI_GAME_SUCCESS = 0,
@@ -1759,6 +1789,163 @@ class PlayerBasicMessage final :
 };
 // -------------------------------------------------------------------
 
+class SoulStateMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.SoulStateMessage) */ {
+ public:
+  inline SoulStateMessage() : SoulStateMessage(nullptr) {}
+  ~SoulStateMessage() override;
+  explicit constexpr SoulStateMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  SoulStateMessage(const SoulStateMessage& from);
+  SoulStateMessage(SoulStateMessage&& from) noexcept
+    : SoulStateMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline SoulStateMessage& operator=(const SoulStateMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SoulStateMessage& operator=(SoulStateMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const SoulStateMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const SoulStateMessage* internal_default_instance() {
+    return reinterpret_cast<const SoulStateMessage*>(
+               &_SoulStateMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(SoulStateMessage& a, SoulStateMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SoulStateMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SoulStateMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  SoulStateMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SoulStateMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const SoulStateMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const SoulStateMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SoulStateMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.SoulStateMessage";
+  }
+  protected:
+  explicit SoulStateMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSoulPlayerIdFieldNumber = 1,
+    kSoulStateFieldNumber = 2,
+  };
+  // int32 soul_player_id = 1;
+  void clear_soul_player_id();
+  int32_t soul_player_id() const;
+  void set_soul_player_id(int32_t value);
+  private:
+  int32_t _internal_soul_player_id() const;
+  void _internal_set_soul_player_id(int32_t value);
+  public:
+
+  // .message.SoulState soul_state = 2;
+  void clear_soul_state();
+  ::message::SoulState soul_state() const;
+  void set_soul_state(::message::SoulState value);
+  private:
+  ::message::SoulState _internal_soul_state() const;
+  void _internal_set_soul_state(::message::SoulState value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:message.SoulStateMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int32_t soul_player_id_;
+  int soul_state_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ReaperAttackMessage final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.ReaperAttackMessage) */ {
  public:
@@ -1807,7 +1994,7 @@ class ReaperAttackMessage final :
                &_ReaperAttackMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   friend void swap(ReaperAttackMessage& a, ReaperAttackMessage& b) {
     a.Swap(&b);
@@ -1964,7 +2151,7 @@ class PropTryGetMessage final :
                &_PropTryGetMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   friend void swap(PropTryGetMessage& a, PropTryGetMessage& b) {
     a.Swap(&b);
@@ -2132,7 +2319,7 @@ class PropGetMessage final :
                &_PropGetMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   friend void swap(PropGetMessage& a, PropGetMessage& b) {
     a.Swap(&b);
@@ -2300,7 +2487,7 @@ class ReaperAttackResultMessage final :
                &_ReaperAttackResultMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   friend void swap(ReaperAttackResultMessage& a, ReaperAttackResultMessage& b) {
     a.Swap(&b);
@@ -2457,7 +2644,7 @@ class IntegerMessage final :
                &_IntegerMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   friend void swap(IntegerMessage& a, IntegerMessage& b) {
     a.Swap(&b);
@@ -3785,6 +3972,50 @@ inline void PlayerBasicMessage::set_animation_type(::message::PlayerAnimationTyp
 
 // -------------------------------------------------------------------
 
+// SoulStateMessage
+
+// int32 soul_player_id = 1;
+inline void SoulStateMessage::clear_soul_player_id() {
+  soul_player_id_ = 0;
+}
+inline int32_t SoulStateMessage::_internal_soul_player_id() const {
+  return soul_player_id_;
+}
+inline int32_t SoulStateMessage::soul_player_id() const {
+  // @@protoc_insertion_point(field_get:message.SoulStateMessage.soul_player_id)
+  return _internal_soul_player_id();
+}
+inline void SoulStateMessage::_internal_set_soul_player_id(int32_t value) {
+  
+  soul_player_id_ = value;
+}
+inline void SoulStateMessage::set_soul_player_id(int32_t value) {
+  _internal_set_soul_player_id(value);
+  // @@protoc_insertion_point(field_set:message.SoulStateMessage.soul_player_id)
+}
+
+// .message.SoulState soul_state = 2;
+inline void SoulStateMessage::clear_soul_state() {
+  soul_state_ = 0;
+}
+inline ::message::SoulState SoulStateMessage::_internal_soul_state() const {
+  return static_cast< ::message::SoulState >(soul_state_);
+}
+inline ::message::SoulState SoulStateMessage::soul_state() const {
+  // @@protoc_insertion_point(field_get:message.SoulStateMessage.soul_state)
+  return _internal_soul_state();
+}
+inline void SoulStateMessage::_internal_set_soul_state(::message::SoulState value) {
+  
+  soul_state_ = value;
+}
+inline void SoulStateMessage::set_soul_state(::message::SoulState value) {
+  _internal_set_soul_state(value);
+  // @@protoc_insertion_point(field_set:message.SoulStateMessage.soul_state)
+}
+
+// -------------------------------------------------------------------
+
 // ReaperAttackMessage
 
 // int32 soul_player_id = 1;
@@ -4070,6 +4301,8 @@ inline void IntegerMessage::set_value(int32_t value) {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -4091,6 +4324,11 @@ template <> struct is_proto_enum< ::message::PlayerAnimationType> : ::std::true_
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::message::PlayerAnimationType>() {
   return ::message::PlayerAnimationType_descriptor();
+}
+template <> struct is_proto_enum< ::message::SoulState> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::message::SoulState>() {
+  return ::message::SoulState_descriptor();
 }
 template <> struct is_proto_enum< ::message::IntegerMessageType> : ::std::true_type {};
 template <>
