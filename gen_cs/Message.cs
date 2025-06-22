@@ -27,62 +27,58 @@ namespace Message {
             "Cg1tZXNzYWdlLnByb3RvEgdtZXNzYWdlIh8KDEhlbGxvTWVzc2FnZRIPCgdy",
             "b29tX2lkGAEgASgFIk4KCUNoYXJhY3RlchIRCglwbGF5ZXJfaWQYASABKAUS",
             "LgoOY2hhcmFjdGVyX3R5cGUYAiABKA4yFi5tZXNzYWdlLkNoYXJhY3RlclR5",
-            "cGUi3gQKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
+            "cGUinwQKDk1lc3NhZ2VXcmFwcGVyEiwKDHJvb21fbWVzc2FnZRgBIAEoCzIU",
             "Lm1lc3NhZ2UuUm9vbU1lc3NhZ2VIABIwCg5zdHJpbmdfbWVzc2FnZRgCIAEo",
             "CzIWLm1lc3NhZ2UuU3RyaW5nTWVzc2FnZUgAEi4KDWxvYmJ5X21lc3NhZ2UY",
             "AyABKAsyFS5tZXNzYWdlLkxvYmJ5TWVzc2FnZUgAEkQKGXN0YXJ0X3JlY2Vp",
             "dmVfbXNnX21lc3NhZ2UYBCABKAsyHy5tZXNzYWdlLlN0YXJ0UmVjZWl2ZU1z",
             "Z01lc3NhZ2VIABI7ChRwbGF5ZXJfYmFzaWNfbWVzc2FnZRgFIAEoCzIbLm1l",
-            "c3NhZ2UuUGxheWVyQmFzaWNNZXNzYWdlSAASPQoVcmVhcGVyX2F0dGFja19t",
-            "ZXNzYWdlGAYgASgLMhwubWVzc2FnZS5SZWFwZXJBdHRhY2tNZXNzYWdlSAAS",
-            "SgoccmVhcGVyX2F0dGFja19yZXN1bHRfbWVzc2FnZRgHIAEoCzIiLm1lc3Nh",
-            "Z2UuUmVhcGVyQXR0YWNrUmVzdWx0TWVzc2FnZUgAEjoKFHByb3BfdHJ5X2dl",
-            "dF9tZXNzYWdlGAggASgLMhoubWVzc2FnZS5Qcm9wVHJ5R2V0TWVzc2FnZUgA",
-            "EjMKEHByb3BfZ2V0X21lc3NhZ2UYCSABKAsyFy5tZXNzYWdlLlByb3BHZXRN",
-            "ZXNzYWdlSAASMgoPaW50ZWdlcl9tZXNzYWdlGAogASgLMhcubWVzc2FnZS5J",
-            "bnRlZ2VyTWVzc2FnZUgAQgkKB3BheWxvYWQiagoLUm9vbU1lc3NhZ2USDwoH",
-            "aXNfam9pbhgBIAEoCBIPCgdyb29tX2lkGAIgASgFEhEKCXBsYXllcl9pZBgD",
-            "IAEoBRImCgpjaGFyYWN0ZXJzGAQgAygLMhIubWVzc2FnZS5DaGFyYWN0ZXIi",
-            "PgoNU3RyaW5nTWVzc2FnZRIUCgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVz",
-            "c2FnZV9jb250ZW50GAIgASgJImMKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFk",
-            "eRgBIAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSLgoOY2hhcmFjdGVyX3R5cGUY",
-            "AyABKA4yFi5tZXNzYWdlLkNoYXJhY3RlclR5cGUiKwoWU3RhcnRSZWNlaXZl",
-            "TXNnTWVzc2FnZRIRCglwbGF5ZXJfaWQYASABKAUi0wEKElBsYXllckJhc2lj",
-            "TWVzc2FnZRIRCglwbGF5ZXJfaWQYASABKAUSEgoKcG9zaXRpb25feBgCIAEo",
-            "AhISCgpwb3NpdGlvbl95GAMgASgCEgoKAmhwGAQgASgCEg4KBm1heF9ocBgF",
-            "IAEoAhI0Cg5hbmltYXRpb25fdHlwZRgGIAEoDjIcLm1lc3NhZ2UuUGxheWVy",
-            "QW5pbWF0aW9uVHlwZRIwCg9jaGFyYWN0ZXJfc3RhdGUYByABKA4yFy5tZXNz",
-            "YWdlLkNoYXJhY3RlclN0YXRlIj8KE1JlYXBlckF0dGFja01lc3NhZ2USFgoO",
-            "c291bF9wbGF5ZXJfaWQYASABKAUSEAoIc2tpbGxfaWQYAiABKAUiSgoRUHJv",
-            "cFRyeUdldE1lc3NhZ2USEQoJcGxheWVyX2lkGAEgASgFEg8KB3Byb3BfaWQY",
-            "AiABKAUSEQoJcHJvcF90eXBlGAMgASgFIkQKDlByb3BHZXRNZXNzYWdlEg4K",
-            "BmlzX2dldBgBIAEoCBIRCglwbGF5ZXJfaWQYAiABKAUSDwoHcHJvcF9pZBgD",
-            "IAEoBSJDChlSZWFwZXJBdHRhY2tSZXN1bHRNZXNzYWdlEhYKDnNvdWxfcGxh",
-            "eWVyX2lkGAEgASgFEg4KBmlzX2hpdBgCIAEoCCJSCg5JbnRlZ2VyTWVzc2Fn",
-            "ZRIxCgxtZXNzYWdlX3R5cGUYASABKA4yGy5tZXNzYWdlLkludGVnZXJNZXNz",
-            "YWdlVHlwZRINCgV2YWx1ZRgCIAEoBSpUCg1DaGFyYWN0ZXJUeXBlEgoKBlJF",
-            "QVBFUhAAEgwKCFNPVUxfRE9HEAESFQoRU09VTF9QU1lDSE9MT0dJU1QQAhIS",
-            "Cg5TT1VMX0RFVEVDVElWRRADKiEKEVN0cmluZ01lc3NhZ2VUeXBlEgwKCE1B",
-            "WkVfTUFQEAAqhQEKE1BsYXllckFuaW1hdGlvblR5cGUSCAoESURMRRAAEg0K",
-            "CVdBTEtfTEVGVBABEg4KCldBTEtfUklHSFQQAhINCglEQVNIX0xFRlQQAxIO",
-            "CgpEQVNIX1JJR0hUEAQSCgoGQVRUQUNLEAUSBwoDSElUEAYSCAoEV0VBSxAH",
-            "EgcKA0RJRRAIKnsKDkNoYXJhY3RlclN0YXRlEhoKFkNoYXJhY3Rlcl9TVEFU",
-            "RV9OT1JNQUwQABIYChRDaGFyYWN0ZXJfU1RBVEVfV0VBSxABEhcKE0NoYXJh",
-            "Y3Rlcl9TVEFURV9ESUUQAhIaChZDaGFyYWN0ZXJfU1RBVEVfRlJFRVpFEAMq",
-            "MQoSSW50ZWdlck1lc3NhZ2VUeXBlEhsKF0FMVEFSX01JTklfR0FNRV9TVUND",
-            "RVNTEABiBnByb3RvMw=="));
+            "c3NhZ2UuUGxheWVyQmFzaWNNZXNzYWdlSAASSgoccmVhcGVyX2F0dGFja19y",
+            "ZXN1bHRfbWVzc2FnZRgGIAEoCzIiLm1lc3NhZ2UuUmVhcGVyQXR0YWNrUmVz",
+            "dWx0TWVzc2FnZUgAEjoKFHByb3BfdHJ5X2dldF9tZXNzYWdlGAcgASgLMhou",
+            "bWVzc2FnZS5Qcm9wVHJ5R2V0TWVzc2FnZUgAEjMKEHByb3BfZ2V0X21lc3Nh",
+            "Z2UYCCABKAsyFy5tZXNzYWdlLlByb3BHZXRNZXNzYWdlSAASMgoPaW50ZWdl",
+            "cl9tZXNzYWdlGAkgASgLMhcubWVzc2FnZS5JbnRlZ2VyTWVzc2FnZUgAQgkK",
+            "B3BheWxvYWQiagoLUm9vbU1lc3NhZ2USDwoHaXNfam9pbhgBIAEoCBIPCgdy",
+            "b29tX2lkGAIgASgFEhEKCXBsYXllcl9pZBgDIAEoBRImCgpjaGFyYWN0ZXJz",
+            "GAQgAygLMhIubWVzc2FnZS5DaGFyYWN0ZXIiPgoNU3RyaW5nTWVzc2FnZRIU",
+            "CgxtZXNzYWdlX3R5cGUYASABKAUSFwoPbWVzc2FnZV9jb250ZW50GAIgASgJ",
+            "ImMKDExvYmJ5TWVzc2FnZRIQCghpc19yZWFkeRgBIAEoCBIRCglwbGF5ZXJf",
+            "aWQYAiABKAUSLgoOY2hhcmFjdGVyX3R5cGUYAyABKA4yFi5tZXNzYWdlLkNo",
+            "YXJhY3RlclR5cGUiKwoWU3RhcnRSZWNlaXZlTXNnTWVzc2FnZRIRCglwbGF5",
+            "ZXJfaWQYASABKAUi0wEKElBsYXllckJhc2ljTWVzc2FnZRIRCglwbGF5ZXJf",
+            "aWQYASABKAUSEgoKcG9zaXRpb25feBgCIAEoAhISCgpwb3NpdGlvbl95GAMg",
+            "ASgCEgoKAmhwGAQgASgCEg4KBm1heF9ocBgFIAEoAhI0Cg5hbmltYXRpb25f",
+            "dHlwZRgGIAEoDjIcLm1lc3NhZ2UuUGxheWVyQW5pbWF0aW9uVHlwZRIwCg9j",
+            "aGFyYWN0ZXJfc3RhdGUYByABKA4yFy5tZXNzYWdlLkNoYXJhY3RlclN0YXRl",
+            "IkoKEVByb3BUcnlHZXRNZXNzYWdlEhEKCXBsYXllcl9pZBgBIAEoBRIPCgdw",
+            "cm9wX2lkGAIgASgFEhEKCXByb3BfdHlwZRgDIAEoBSJECg5Qcm9wR2V0TWVz",
+            "c2FnZRIOCgZpc19nZXQYASABKAgSEQoJcGxheWVyX2lkGAIgASgFEg8KB3By",
+            "b3BfaWQYAyABKAUiQwoZUmVhcGVyQXR0YWNrUmVzdWx0TWVzc2FnZRIWCg5z",
+            "b3VsX3BsYXllcl9pZBgBIAEoBRIOCgZpc19oaXQYAiABKAgiUgoOSW50ZWdl",
+            "ck1lc3NhZ2USMQoMbWVzc2FnZV90eXBlGAEgASgOMhsubWVzc2FnZS5JbnRl",
+            "Z2VyTWVzc2FnZVR5cGUSDQoFdmFsdWUYAiABKAUqVAoNQ2hhcmFjdGVyVHlw",
+            "ZRIKCgZSRUFQRVIQABIMCghTT1VMX0RPRxABEhUKEVNPVUxfUFNZQ0hPTE9H",
+            "SVNUEAISEgoOU09VTF9ERVRFQ1RJVkUQAyohChFTdHJpbmdNZXNzYWdlVHlw",
+            "ZRIMCghNQVpFX01BUBAAKoUBChNQbGF5ZXJBbmltYXRpb25UeXBlEggKBElE",
+            "TEUQABINCglXQUxLX0xFRlQQARIOCgpXQUxLX1JJR0hUEAISDQoJREFTSF9M",
+            "RUZUEAMSDgoKREFTSF9SSUdIVBAEEgoKBkFUVEFDSxAFEgcKA0hJVBAGEggK",
+            "BFdFQUsQBxIHCgNESUUQCCp7Cg5DaGFyYWN0ZXJTdGF0ZRIaChZDaGFyYWN0",
+            "ZXJfU1RBVEVfTk9STUFMEAASGAoUQ2hhcmFjdGVyX1NUQVRFX1dFQUsQARIX",
+            "ChNDaGFyYWN0ZXJfU1RBVEVfRElFEAISGgoWQ2hhcmFjdGVyX1NUQVRFX0ZS",
+            "RUVaRRADKjEKEkludGVnZXJNZXNzYWdlVHlwZRIbChdBTFRBUl9NSU5JX0dB",
+            "TUVfU1VDQ0VTUxAAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.CharacterType), typeof(global::Message.StringMessageType), typeof(global::Message.PlayerAnimationType), typeof(global::Message.CharacterState), typeof(global::Message.IntegerMessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.HelloMessage), global::Message.HelloMessage.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.Character), global::Message.Character.Parser, new[]{ "PlayerId", "CharacterType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "PlayerBasicMessage", "ReaperAttackMessage", "ReaperAttackResultMessage", "PropTryGetMessage", "PropGetMessage", "IntegerMessage" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.MessageWrapper), global::Message.MessageWrapper.Parser, new[]{ "RoomMessage", "StringMessage", "LobbyMessage", "StartReceiveMsgMessage", "PlayerBasicMessage", "ReaperAttackResultMessage", "PropTryGetMessage", "PropGetMessage", "IntegerMessage" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.RoomMessage), global::Message.RoomMessage.Parser, new[]{ "IsJoin", "RoomId", "PlayerId", "Characters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StringMessage), global::Message.StringMessage.Parser, new[]{ "MessageType", "MessageContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.LobbyMessage), global::Message.LobbyMessage.Parser, new[]{ "IsReady", "PlayerId", "CharacterType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.StartReceiveMsgMessage), global::Message.StartReceiveMsgMessage.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerBasicMessage), global::Message.PlayerBasicMessage.Parser, new[]{ "PlayerId", "PositionX", "PositionY", "Hp", "MaxHp", "AnimationType", "CharacterState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.ReaperAttackMessage), global::Message.ReaperAttackMessage.Parser, new[]{ "SoulPlayerId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropTryGetMessage), global::Message.PropTryGetMessage.Parser, new[]{ "PlayerId", "PropId", "PropType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PropGetMessage), global::Message.PropGetMessage.Parser, new[]{ "IsGet", "PlayerId", "PropId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.ReaperAttackResultMessage), global::Message.ReaperAttackResultMessage.Parser, new[]{ "SoulPlayerId", "IsHit" }, null, null, null, null),
@@ -598,9 +594,6 @@ namespace Message {
         case PayloadOneofCase.PlayerBasicMessage:
           PlayerBasicMessage = other.PlayerBasicMessage.Clone();
           break;
-        case PayloadOneofCase.ReaperAttackMessage:
-          ReaperAttackMessage = other.ReaperAttackMessage.Clone();
-          break;
         case PayloadOneofCase.ReaperAttackResultMessage:
           ReaperAttackResultMessage = other.ReaperAttackResultMessage.Clone();
           break;
@@ -684,20 +677,8 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "reaper_attack_message" field.</summary>
-    public const int ReaperAttackMessageFieldNumber = 6;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Message.ReaperAttackMessage ReaperAttackMessage {
-      get { return payloadCase_ == PayloadOneofCase.ReaperAttackMessage ? (global::Message.ReaperAttackMessage) payload_ : null; }
-      set {
-        payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReaperAttackMessage;
-      }
-    }
-
     /// <summary>Field number for the "reaper_attack_result_message" field.</summary>
-    public const int ReaperAttackResultMessageFieldNumber = 7;
+    public const int ReaperAttackResultMessageFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Message.ReaperAttackResultMessage ReaperAttackResultMessage {
@@ -709,7 +690,7 @@ namespace Message {
     }
 
     /// <summary>Field number for the "prop_try_get_message" field.</summary>
-    public const int PropTryGetMessageFieldNumber = 8;
+    public const int PropTryGetMessageFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Message.PropTryGetMessage PropTryGetMessage {
@@ -721,7 +702,7 @@ namespace Message {
     }
 
     /// <summary>Field number for the "prop_get_message" field.</summary>
-    public const int PropGetMessageFieldNumber = 9;
+    public const int PropGetMessageFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Message.PropGetMessage PropGetMessage {
@@ -733,7 +714,7 @@ namespace Message {
     }
 
     /// <summary>Field number for the "integer_message" field.</summary>
-    public const int IntegerMessageFieldNumber = 10;
+    public const int IntegerMessageFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Message.IntegerMessage IntegerMessage {
@@ -753,11 +734,10 @@ namespace Message {
       LobbyMessage = 3,
       StartReceiveMsgMessage = 4,
       PlayerBasicMessage = 5,
-      ReaperAttackMessage = 6,
-      ReaperAttackResultMessage = 7,
-      PropTryGetMessage = 8,
-      PropGetMessage = 9,
-      IntegerMessage = 10,
+      ReaperAttackResultMessage = 6,
+      PropTryGetMessage = 7,
+      PropGetMessage = 8,
+      IntegerMessage = 9,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -793,7 +773,6 @@ namespace Message {
       if (!object.Equals(LobbyMessage, other.LobbyMessage)) return false;
       if (!object.Equals(StartReceiveMsgMessage, other.StartReceiveMsgMessage)) return false;
       if (!object.Equals(PlayerBasicMessage, other.PlayerBasicMessage)) return false;
-      if (!object.Equals(ReaperAttackMessage, other.ReaperAttackMessage)) return false;
       if (!object.Equals(ReaperAttackResultMessage, other.ReaperAttackResultMessage)) return false;
       if (!object.Equals(PropTryGetMessage, other.PropTryGetMessage)) return false;
       if (!object.Equals(PropGetMessage, other.PropGetMessage)) return false;
@@ -811,7 +790,6 @@ namespace Message {
       if (payloadCase_ == PayloadOneofCase.LobbyMessage) hash ^= LobbyMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.StartReceiveMsgMessage) hash ^= StartReceiveMsgMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) hash ^= PlayerBasicMessage.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) hash ^= ReaperAttackMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) hash ^= ReaperAttackResultMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) hash ^= PropTryGetMessage.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) hash ^= PropGetMessage.GetHashCode();
@@ -855,24 +833,20 @@ namespace Message {
         output.WriteRawTag(42);
         output.WriteMessage(PlayerBasicMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ReaperAttackMessage);
-      }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(ReaperAttackResultMessage);
       }
       if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(PropTryGetMessage);
       }
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(PropGetMessage);
       }
       if (payloadCase_ == PayloadOneofCase.IntegerMessage) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(IntegerMessage);
       }
       if (_unknownFields != null) {
@@ -905,24 +879,20 @@ namespace Message {
         output.WriteRawTag(42);
         output.WriteMessage(PlayerBasicMessage);
       }
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ReaperAttackMessage);
-      }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(ReaperAttackResultMessage);
       }
       if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(PropTryGetMessage);
       }
       if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(PropGetMessage);
       }
       if (payloadCase_ == PayloadOneofCase.IntegerMessage) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(IntegerMessage);
       }
       if (_unknownFields != null) {
@@ -949,9 +919,6 @@ namespace Message {
       }
       if (payloadCase_ == PayloadOneofCase.PlayerBasicMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerBasicMessage);
-      }
-      if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReaperAttackMessage);
       }
       if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReaperAttackResultMessage);
@@ -1007,12 +974,6 @@ namespace Message {
             PlayerBasicMessage = new global::Message.PlayerBasicMessage();
           }
           PlayerBasicMessage.MergeFrom(other.PlayerBasicMessage);
-          break;
-        case PayloadOneofCase.ReaperAttackMessage:
-          if (ReaperAttackMessage == null) {
-            ReaperAttackMessage = new global::Message.ReaperAttackMessage();
-          }
-          ReaperAttackMessage.MergeFrom(other.ReaperAttackMessage);
           break;
         case PayloadOneofCase.ReaperAttackResultMessage:
           if (ReaperAttackResultMessage == null) {
@@ -1101,15 +1062,6 @@ namespace Message {
             break;
           }
           case 50: {
-            global::Message.ReaperAttackMessage subBuilder = new global::Message.ReaperAttackMessage();
-            if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-              subBuilder.MergeFrom(ReaperAttackMessage);
-            }
-            input.ReadMessage(subBuilder);
-            ReaperAttackMessage = subBuilder;
-            break;
-          }
-          case 58: {
             global::Message.ReaperAttackResultMessage subBuilder = new global::Message.ReaperAttackResultMessage();
             if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
               subBuilder.MergeFrom(ReaperAttackResultMessage);
@@ -1118,7 +1070,7 @@ namespace Message {
             ReaperAttackResultMessage = subBuilder;
             break;
           }
-          case 66: {
+          case 58: {
             global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
             if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
               subBuilder.MergeFrom(PropTryGetMessage);
@@ -1127,7 +1079,7 @@ namespace Message {
             PropTryGetMessage = subBuilder;
             break;
           }
-          case 74: {
+          case 66: {
             global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
             if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
               subBuilder.MergeFrom(PropGetMessage);
@@ -1136,7 +1088,7 @@ namespace Message {
             PropGetMessage = subBuilder;
             break;
           }
-          case 82: {
+          case 74: {
             global::Message.IntegerMessage subBuilder = new global::Message.IntegerMessage();
             if (payloadCase_ == PayloadOneofCase.IntegerMessage) {
               subBuilder.MergeFrom(IntegerMessage);
@@ -1206,15 +1158,6 @@ namespace Message {
             break;
           }
           case 50: {
-            global::Message.ReaperAttackMessage subBuilder = new global::Message.ReaperAttackMessage();
-            if (payloadCase_ == PayloadOneofCase.ReaperAttackMessage) {
-              subBuilder.MergeFrom(ReaperAttackMessage);
-            }
-            input.ReadMessage(subBuilder);
-            ReaperAttackMessage = subBuilder;
-            break;
-          }
-          case 58: {
             global::Message.ReaperAttackResultMessage subBuilder = new global::Message.ReaperAttackResultMessage();
             if (payloadCase_ == PayloadOneofCase.ReaperAttackResultMessage) {
               subBuilder.MergeFrom(ReaperAttackResultMessage);
@@ -1223,7 +1166,7 @@ namespace Message {
             ReaperAttackResultMessage = subBuilder;
             break;
           }
-          case 66: {
+          case 58: {
             global::Message.PropTryGetMessage subBuilder = new global::Message.PropTryGetMessage();
             if (payloadCase_ == PayloadOneofCase.PropTryGetMessage) {
               subBuilder.MergeFrom(PropTryGetMessage);
@@ -1232,7 +1175,7 @@ namespace Message {
             PropTryGetMessage = subBuilder;
             break;
           }
-          case 74: {
+          case 66: {
             global::Message.PropGetMessage subBuilder = new global::Message.PropGetMessage();
             if (payloadCase_ == PayloadOneofCase.PropGetMessage) {
               subBuilder.MergeFrom(PropGetMessage);
@@ -1241,7 +1184,7 @@ namespace Message {
             PropGetMessage = subBuilder;
             break;
           }
-          case 82: {
+          case 74: {
             global::Message.IntegerMessage subBuilder = new global::Message.IntegerMessage();
             if (payloadCase_ == PayloadOneofCase.IntegerMessage) {
               subBuilder.MergeFrom(IntegerMessage);
@@ -2649,232 +2592,6 @@ namespace Message {
 
   }
 
-  public sealed partial class ReaperAttackMessage : pb::IMessage<ReaperAttackMessage>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ReaperAttackMessage> _parser = new pb::MessageParser<ReaperAttackMessage>(() => new ReaperAttackMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ReaperAttackMessage> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[8]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperAttackMessage() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperAttackMessage(ReaperAttackMessage other) : this() {
-      soulPlayerId_ = other.soulPlayerId_;
-      skillId_ = other.skillId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ReaperAttackMessage Clone() {
-      return new ReaperAttackMessage(this);
-    }
-
-    /// <summary>Field number for the "soul_player_id" field.</summary>
-    public const int SoulPlayerIdFieldNumber = 1;
-    private int soulPlayerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int SoulPlayerId {
-      get { return soulPlayerId_; }
-      set {
-        soulPlayerId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 2;
-    private int skillId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int SkillId {
-      get { return skillId_; }
-      set {
-        skillId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as ReaperAttackMessage);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ReaperAttackMessage other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (SoulPlayerId != other.SoulPlayerId) return false;
-      if (SkillId != other.SkillId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (SoulPlayerId != 0) hash ^= SoulPlayerId.GetHashCode();
-      if (SkillId != 0) hash ^= SkillId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (SoulPlayerId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(SoulPlayerId);
-      }
-      if (SkillId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SkillId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SoulPlayerId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(SoulPlayerId);
-      }
-      if (SkillId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SkillId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (SoulPlayerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SoulPlayerId);
-      }
-      if (SkillId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SkillId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ReaperAttackMessage other) {
-      if (other == null) {
-        return;
-      }
-      if (other.SoulPlayerId != 0) {
-        SoulPlayerId = other.SoulPlayerId;
-      }
-      if (other.SkillId != 0) {
-        SkillId = other.SkillId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            SoulPlayerId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            SkillId = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            SoulPlayerId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            SkillId = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class PropTryGetMessage : pb::IMessage<PropTryGetMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2889,7 +2606,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3155,7 +2872,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3418,7 +3135,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3644,7 +3361,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.MessageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Message.MessageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
