@@ -28,6 +28,7 @@ message MessageWrapper {
     ReaperAttackResultMessage reaper_attack_result_message = 7;
     PropTryGetMessage prop_try_get_message = 8;
     PropGetMessage prop_get_message = 9;
+    IntegerMessage integer_message = 10;
   }
 }
 
@@ -93,4 +94,14 @@ message PropGetMessage {
 message ReaperAttackResultMessage {
   int32 soul_player_id = 1;
   bool is_hit = 2;
+}
+
+
+enum IntegerMessageType {
+  ALTAR_MINI_GAME_SUCCESS = 0;
+}
+
+message IntegerMessage {
+  IntegerMessageType message_type = 1;
+  int32 value = 2;
 }
