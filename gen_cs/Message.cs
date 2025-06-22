@@ -86,9 +86,10 @@ namespace Message {
             "Tl9ET1dOEAESFwoTR0FURV9ESVJFQ1RJT05fTEVGVBACEhgKFEdBVEVfRElS",
             "RUNUSU9OX1JJR0hUEAMqVwoKR2FtZVJlc3VsdBITCg9HQU1FX1JFU1VMVF9U",
             "SUUQABIaChZHQU1FX1JFU1VMVF9SRUFQRVJfV0lOEAESGAoUR0FNRV9SRVNV",
-            "TFRfU09VTF9XSU4QAipeCgxQbGF5ZXJSZXN1bHQSHAoYUExBWUVSX1JFU1VM",
-            "VF9ESUVfQllfSElUEAASFgoSUExBWUVSX1JFU1VMVF9IRUxMEAESGAoUUExB",
-            "WUVSX1JFU1VMVF9IRUFWRU4QAmIGcHJvdG8z"));
+            "TFRfU09VTF9XSU4QAiqcAQoMUGxheWVyUmVzdWx0EhwKGFBMQVlFUl9SRVNV",
+            "TFRfRElFX0JZX0hJVBAAEhYKElBMQVlFUl9SRVNVTFRfSEVMTBABEhgKFFBM",
+            "QVlFUl9SRVNVTFRfSEVBVkVOEAISHgoaUExBWUVSX1JFU1VMVF9SRUFQRVJf",
+            "SEFQUFkQAxIcChhQTEFZRVJfUkVTVUxUX1JFQVBFUl9TQUQQBGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.CharacterType), typeof(global::Message.StringMessageType), typeof(global::Message.PlayerAnimationType), typeof(global::Message.CharacterState), typeof(global::Message.IntegerMessageType), typeof(global::Message.GateType), typeof(global::Message.GateDirection), typeof(global::Message.GameResult), typeof(global::Message.PlayerResult), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -172,6 +173,8 @@ namespace Message {
     [pbr::OriginalName("PLAYER_RESULT_DIE_BY_HIT")] DieByHit = 0,
     [pbr::OriginalName("PLAYER_RESULT_HELL")] Hell = 1,
     [pbr::OriginalName("PLAYER_RESULT_HEAVEN")] Heaven = 2,
+    [pbr::OriginalName("PLAYER_RESULT_REAPER_HAPPY")] ReaperHappy = 3,
+    [pbr::OriginalName("PLAYER_RESULT_REAPER_SAD")] ReaperSad = 4,
   }
 
   #endregion

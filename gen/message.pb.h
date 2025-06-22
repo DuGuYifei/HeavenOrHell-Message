@@ -345,12 +345,14 @@ enum PlayerResult : int {
   PLAYER_RESULT_DIE_BY_HIT = 0,
   PLAYER_RESULT_HELL = 1,
   PLAYER_RESULT_HEAVEN = 2,
+  PLAYER_RESULT_REAPER_HAPPY = 3,
+  PLAYER_RESULT_REAPER_SAD = 4,
   PlayerResult_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
   PlayerResult_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
 bool PlayerResult_IsValid(int value);
 constexpr PlayerResult PlayerResult_MIN = PLAYER_RESULT_DIE_BY_HIT;
-constexpr PlayerResult PlayerResult_MAX = PLAYER_RESULT_HEAVEN;
+constexpr PlayerResult PlayerResult_MAX = PLAYER_RESULT_REAPER_SAD;
 constexpr int PlayerResult_ARRAYSIZE = PlayerResult_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PlayerResult_descriptor();

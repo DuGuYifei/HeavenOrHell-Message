@@ -160,6 +160,8 @@ enum PlayerResult {
   PLAYER_RESULT_DIE_BY_HIT = 0;
   PLAYER_RESULT_HELL = 1;
   PLAYER_RESULT_HEAVEN = 2;
+  PLAYER_RESULT_REAPER_HAPPY = 3;
+  PLAYER_RESULT_REAPER_SAD = 4;
 }
 
 message PlayerResultMessage {

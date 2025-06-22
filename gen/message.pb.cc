@@ -524,13 +524,15 @@ const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE
   "N_LEFT\020\002\022\030\n\024GATE_DIRECTION_RIGHT\020\003*W\n\nGa"
   "meResult\022\023\n\017GAME_RESULT_TIE\020\000\022\032\n\026GAME_RE"
   "SULT_REAPER_WIN\020\001\022\030\n\024GAME_RESULT_SOUL_WI"
-  "N\020\002*^\n\014PlayerResult\022\034\n\030PLAYER_RESULT_DIE"
-  "_BY_HIT\020\000\022\026\n\022PLAYER_RESULT_HELL\020\001\022\030\n\024PLA"
-  "YER_RESULT_HEAVEN\020\002b\006proto3"
+  "N\020\002*\234\001\n\014PlayerResult\022\034\n\030PLAYER_RESULT_DI"
+  "E_BY_HIT\020\000\022\026\n\022PLAYER_RESULT_HELL\020\001\022\030\n\024PL"
+  "AYER_RESULT_HEAVEN\020\002\022\036\n\032PLAYER_RESULT_RE"
+  "APER_HAPPY\020\003\022\034\n\030PLAYER_RESULT_REAPER_SAD"
+  "\020\004b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 2907, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 2970, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 17,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -676,6 +678,8 @@ bool PlayerResult_IsValid(int value) {
     case 0:
     case 1:
     case 2:
+    case 3:
+    case 4:
       return true;
     default:
       return false;
