@@ -78,6 +78,13 @@ enum PlayerAnimationType {
   DIE = 8;
 }
 
+enum CharacterState {
+  Character_STATE_NORMAL = 0;
+  Character_STATE_WEAK = 1;
+  Character_STATE_DIE = 2;
+  Character_STATE_FREEZE = 3;
+}
+
 message PlayerBasicMessage {
   int32 player_id = 1;
   float position_x = 2;
@@ -85,17 +92,7 @@ message PlayerBasicMessage {
   float hp = 4;
   float max_hp = 5;
   PlayerAnimationType animation_type = 6;
-}
-
-enum SoulState {
-  SOUL_STATE_NORMAL = 0;
-  SOUL_STATE_WEAK = 1;
-  SOUL_STATE_DIE = 2;
-}
-
-message SoulStateMessage {
-  int32 soul_player_id = 1;
-  SoulState soul_state = 2;
+  CharacterState character_state = 7;
 }
 
 message ReaperAttackMessage {
