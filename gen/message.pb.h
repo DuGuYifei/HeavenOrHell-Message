@@ -47,7 +47,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[11]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,6 +58,12 @@ namespace message {
 class Character;
 struct CharacterDefaultTypeInternal;
 extern CharacterDefaultTypeInternal _Character_default_instance_;
+class Gate;
+struct GateDefaultTypeInternal;
+extern GateDefaultTypeInternal _Gate_default_instance_;
+class GateMessage;
+struct GateMessageDefaultTypeInternal;
+extern GateMessageDefaultTypeInternal _GateMessage_default_instance_;
 class HelloMessage;
 struct HelloMessageDefaultTypeInternal;
 extern HelloMessageDefaultTypeInternal _HelloMessage_default_instance_;
@@ -91,6 +97,8 @@ extern StringMessageDefaultTypeInternal _StringMessage_default_instance_;
 }  // namespace message
 PROTOBUF_NAMESPACE_OPEN
 template<> ::message::Character* Arena::CreateMaybeMessage<::message::Character>(Arena*);
+template<> ::message::Gate* Arena::CreateMaybeMessage<::message::Gate>(Arena*);
+template<> ::message::GateMessage* Arena::CreateMaybeMessage<::message::GateMessage>(Arena*);
 template<> ::message::HelloMessage* Arena::CreateMaybeMessage<::message::HelloMessage>(Arena*);
 template<> ::message::IntegerMessage* Arena::CreateMaybeMessage<::message::IntegerMessage>(Arena*);
 template<> ::message::LobbyMessage* Arena::CreateMaybeMessage<::message::LobbyMessage>(Arena*);
@@ -238,6 +246,58 @@ inline bool IntegerMessageType_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, IntegerMessageType* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<IntegerMessageType>(
     IntegerMessageType_descriptor(), name, value);
+}
+enum GateType : int {
+  GATE_HEAVEN = 0,
+  GATE_HELL = 1,
+  GateType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  GateType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool GateType_IsValid(int value);
+constexpr GateType GateType_MIN = GATE_HEAVEN;
+constexpr GateType GateType_MAX = GATE_HELL;
+constexpr int GateType_ARRAYSIZE = GateType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GateType_descriptor();
+template<typename T>
+inline const std::string& GateType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, GateType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function GateType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    GateType_descriptor(), enum_t_value);
+}
+inline bool GateType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, GateType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<GateType>(
+    GateType_descriptor(), name, value);
+}
+enum GateDirection : int {
+  GATE_DIRECTION_UP = 0,
+  GATE_DIRECTION_DOWN = 1,
+  GATE_DIRECTION_LEFT = 2,
+  GATE_DIRECTION_RIGHT = 3,
+  GateDirection_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  GateDirection_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool GateDirection_IsValid(int value);
+constexpr GateDirection GateDirection_MIN = GATE_DIRECTION_UP;
+constexpr GateDirection GateDirection_MAX = GATE_DIRECTION_RIGHT;
+constexpr int GateDirection_ARRAYSIZE = GateDirection_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GateDirection_descriptor();
+template<typename T>
+inline const std::string& GateDirection_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, GateDirection>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function GateDirection_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    GateDirection_descriptor(), enum_t_value);
+}
+inline bool GateDirection_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, GateDirection* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<GateDirection>(
+    GateDirection_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -596,6 +656,7 @@ class MessageWrapper final :
     kPropTryGetMessage = 6,
     kPropGetMessage = 7,
     kIntegerMessage = 8,
+    kGateMessage = 9,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -686,6 +747,7 @@ class MessageWrapper final :
     kPropTryGetMessageFieldNumber = 6,
     kPropGetMessageFieldNumber = 7,
     kIntegerMessageFieldNumber = 8,
+    kGateMessageFieldNumber = 9,
   };
   // .message.RoomMessage room_message = 1;
   bool has_room_message() const;
@@ -831,6 +893,24 @@ class MessageWrapper final :
       ::message::IntegerMessage* integer_message);
   ::message::IntegerMessage* unsafe_arena_release_integer_message();
 
+  // .message.GateMessage gate_message = 9;
+  bool has_gate_message() const;
+  private:
+  bool _internal_has_gate_message() const;
+  public:
+  void clear_gate_message();
+  const ::message::GateMessage& gate_message() const;
+  PROTOBUF_NODISCARD ::message::GateMessage* release_gate_message();
+  ::message::GateMessage* mutable_gate_message();
+  void set_allocated_gate_message(::message::GateMessage* gate_message);
+  private:
+  const ::message::GateMessage& _internal_gate_message() const;
+  ::message::GateMessage* _internal_mutable_gate_message();
+  public:
+  void unsafe_arena_set_allocated_gate_message(
+      ::message::GateMessage* gate_message);
+  ::message::GateMessage* unsafe_arena_release_gate_message();
+
   void clear_payload();
   PayloadCase payload_case() const;
   // @@protoc_insertion_point(class_scope:message.MessageWrapper)
@@ -844,6 +924,7 @@ class MessageWrapper final :
   void set_has_prop_try_get_message();
   void set_has_prop_get_message();
   void set_has_integer_message();
+  void set_has_gate_message();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -862,6 +943,7 @@ class MessageWrapper final :
     ::message::PropTryGetMessage* prop_try_get_message_;
     ::message::PropGetMessage* prop_get_message_;
     ::message::IntegerMessage* integer_message_;
+    ::message::GateMessage* gate_message_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   uint32_t _oneof_case_[1];
@@ -2237,6 +2319,318 @@ class IntegerMessage final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
 };
+// -------------------------------------------------------------------
+
+class Gate final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.Gate) */ {
+ public:
+  inline Gate() : Gate(nullptr) {}
+  ~Gate() override;
+  explicit constexpr Gate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Gate(const Gate& from);
+  Gate(Gate&& from) noexcept
+    : Gate() {
+    *this = ::std::move(from);
+  }
+
+  inline Gate& operator=(const Gate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Gate& operator=(Gate&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Gate& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Gate* internal_default_instance() {
+    return reinterpret_cast<const Gate*>(
+               &_Gate_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  friend void swap(Gate& a, Gate& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Gate* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Gate* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  Gate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Gate>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Gate& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Gate& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Gate* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.Gate";
+  }
+  protected:
+  explicit Gate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGateDirectionFieldNumber = 1,
+    kGateTypeFieldNumber = 2,
+  };
+  // .message.GateDirection gate_direction = 1;
+  void clear_gate_direction();
+  ::message::GateDirection gate_direction() const;
+  void set_gate_direction(::message::GateDirection value);
+  private:
+  ::message::GateDirection _internal_gate_direction() const;
+  void _internal_set_gate_direction(::message::GateDirection value);
+  public:
+
+  // .message.GateType gate_type = 2;
+  void clear_gate_type();
+  ::message::GateType gate_type() const;
+  void set_gate_type(::message::GateType value);
+  private:
+  ::message::GateType _internal_gate_type() const;
+  void _internal_set_gate_type(::message::GateType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:message.Gate)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int gate_direction_;
+  int gate_type_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GateMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:message.GateMessage) */ {
+ public:
+  inline GateMessage() : GateMessage(nullptr) {}
+  ~GateMessage() override;
+  explicit constexpr GateMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  GateMessage(const GateMessage& from);
+  GateMessage(GateMessage&& from) noexcept
+    : GateMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline GateMessage& operator=(const GateMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GateMessage& operator=(GateMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GateMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GateMessage* internal_default_instance() {
+    return reinterpret_cast<const GateMessage*>(
+               &_GateMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(GateMessage& a, GateMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GateMessage* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GateMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GateMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GateMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const GateMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const GateMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GateMessage* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "message.GateMessage";
+  }
+  protected:
+  explicit GateMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kGatesFieldNumber = 1,
+  };
+  // repeated .message.Gate gates = 1;
+  int gates_size() const;
+  private:
+  int _internal_gates_size() const;
+  public:
+  void clear_gates();
+  ::message::Gate* mutable_gates(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::Gate >*
+      mutable_gates();
+  private:
+  const ::message::Gate& _internal_gates(int index) const;
+  ::message::Gate* _internal_add_gates();
+  public:
+  const ::message::Gate& gates(int index) const;
+  ::message::Gate* add_gates();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::Gate >&
+      gates() const;
+
+  // @@protoc_insertion_point(class_scope:message.GateMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::Gate > gates_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
 // ===================================================================
 
 
@@ -2908,6 +3302,80 @@ inline ::message::IntegerMessage* MessageWrapper::mutable_integer_message() {
   return _msg;
 }
 
+// .message.GateMessage gate_message = 9;
+inline bool MessageWrapper::_internal_has_gate_message() const {
+  return payload_case() == kGateMessage;
+}
+inline bool MessageWrapper::has_gate_message() const {
+  return _internal_has_gate_message();
+}
+inline void MessageWrapper::set_has_gate_message() {
+  _oneof_case_[0] = kGateMessage;
+}
+inline void MessageWrapper::clear_gate_message() {
+  if (_internal_has_gate_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.gate_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::GateMessage* MessageWrapper::release_gate_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.gate_message)
+  if (_internal_has_gate_message()) {
+    clear_has_payload();
+      ::message::GateMessage* temp = payload_.gate_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.gate_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::GateMessage& MessageWrapper::_internal_gate_message() const {
+  return _internal_has_gate_message()
+      ? *payload_.gate_message_
+      : reinterpret_cast< ::message::GateMessage&>(::message::_GateMessage_default_instance_);
+}
+inline const ::message::GateMessage& MessageWrapper::gate_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.gate_message)
+  return _internal_gate_message();
+}
+inline ::message::GateMessage* MessageWrapper::unsafe_arena_release_gate_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.gate_message)
+  if (_internal_has_gate_message()) {
+    clear_has_payload();
+    ::message::GateMessage* temp = payload_.gate_message_;
+    payload_.gate_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_gate_message(::message::GateMessage* gate_message) {
+  clear_payload();
+  if (gate_message) {
+    set_has_gate_message();
+    payload_.gate_message_ = gate_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.gate_message)
+}
+inline ::message::GateMessage* MessageWrapper::_internal_mutable_gate_message() {
+  if (!_internal_has_gate_message()) {
+    clear_payload();
+    set_has_gate_message();
+    payload_.gate_message_ = CreateMaybeMessage< ::message::GateMessage >(GetArenaForAllocation());
+  }
+  return payload_.gate_message_;
+}
+inline ::message::GateMessage* MessageWrapper::mutable_gate_message() {
+  ::message::GateMessage* _msg = _internal_mutable_gate_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.gate_message)
+  return _msg;
+}
+
 inline bool MessageWrapper::has_payload() const {
   return payload_case() != PAYLOAD_NOT_SET;
 }
@@ -3500,9 +3968,101 @@ inline void IntegerMessage::set_value(int32_t value) {
   // @@protoc_insertion_point(field_set:message.IntegerMessage.value)
 }
 
+// -------------------------------------------------------------------
+
+// Gate
+
+// .message.GateDirection gate_direction = 1;
+inline void Gate::clear_gate_direction() {
+  gate_direction_ = 0;
+}
+inline ::message::GateDirection Gate::_internal_gate_direction() const {
+  return static_cast< ::message::GateDirection >(gate_direction_);
+}
+inline ::message::GateDirection Gate::gate_direction() const {
+  // @@protoc_insertion_point(field_get:message.Gate.gate_direction)
+  return _internal_gate_direction();
+}
+inline void Gate::_internal_set_gate_direction(::message::GateDirection value) {
+  
+  gate_direction_ = value;
+}
+inline void Gate::set_gate_direction(::message::GateDirection value) {
+  _internal_set_gate_direction(value);
+  // @@protoc_insertion_point(field_set:message.Gate.gate_direction)
+}
+
+// .message.GateType gate_type = 2;
+inline void Gate::clear_gate_type() {
+  gate_type_ = 0;
+}
+inline ::message::GateType Gate::_internal_gate_type() const {
+  return static_cast< ::message::GateType >(gate_type_);
+}
+inline ::message::GateType Gate::gate_type() const {
+  // @@protoc_insertion_point(field_get:message.Gate.gate_type)
+  return _internal_gate_type();
+}
+inline void Gate::_internal_set_gate_type(::message::GateType value) {
+  
+  gate_type_ = value;
+}
+inline void Gate::set_gate_type(::message::GateType value) {
+  _internal_set_gate_type(value);
+  // @@protoc_insertion_point(field_set:message.Gate.gate_type)
+}
+
+// -------------------------------------------------------------------
+
+// GateMessage
+
+// repeated .message.Gate gates = 1;
+inline int GateMessage::_internal_gates_size() const {
+  return gates_.size();
+}
+inline int GateMessage::gates_size() const {
+  return _internal_gates_size();
+}
+inline void GateMessage::clear_gates() {
+  gates_.Clear();
+}
+inline ::message::Gate* GateMessage::mutable_gates(int index) {
+  // @@protoc_insertion_point(field_mutable:message.GateMessage.gates)
+  return gates_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::Gate >*
+GateMessage::mutable_gates() {
+  // @@protoc_insertion_point(field_mutable_list:message.GateMessage.gates)
+  return &gates_;
+}
+inline const ::message::Gate& GateMessage::_internal_gates(int index) const {
+  return gates_.Get(index);
+}
+inline const ::message::Gate& GateMessage::gates(int index) const {
+  // @@protoc_insertion_point(field_get:message.GateMessage.gates)
+  return _internal_gates(index);
+}
+inline ::message::Gate* GateMessage::_internal_add_gates() {
+  return gates_.Add();
+}
+inline ::message::Gate* GateMessage::add_gates() {
+  ::message::Gate* _add = _internal_add_gates();
+  // @@protoc_insertion_point(field_add:message.GateMessage.gates)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::message::Gate >&
+GateMessage::gates() const {
+  // @@protoc_insertion_point(field_list:message.GateMessage.gates)
+  return gates_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -3554,6 +4114,16 @@ template <> struct is_proto_enum< ::message::IntegerMessageType> : ::std::true_t
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::message::IntegerMessageType>() {
   return ::message::IntegerMessageType_descriptor();
+}
+template <> struct is_proto_enum< ::message::GateType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::message::GateType>() {
+  return ::message::GateType_descriptor();
+}
+template <> struct is_proto_enum< ::message::GateDirection> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::message::GateDirection>() {
+  return ::message::GateDirection_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

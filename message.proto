@@ -27,6 +27,7 @@ message MessageWrapper {
     PropTryGetMessage prop_try_get_message = 6;
     PropGetMessage prop_get_message = 7;
     IntegerMessage integer_message = 8;
+    GateMessage gate_message = 9;
   }
 }
 
@@ -114,4 +115,25 @@ message IntegerMessage {
   IntegerMessageType message_type = 1;
   int32 value = 2; // if ALTERN_MINI_GAME_SUCCESS, value is the player_id of recovered soul.
                    // if REAPER_ATTACK_RESULT, value is the player_id of attacked soul.
+}
+
+enum GateType {
+  GATE_HEAVEN = 0;
+  GATE_HELL = 1;
+}
+
+enum GateDirection {
+  GATE_DIRECTION_UP = 0;
+  GATE_DIRECTION_DOWN = 1;
+  GATE_DIRECTION_LEFT = 2;
+  GATE_DIRECTION_RIGHT = 3;
+}
+
+message Gate {
+  GateDirection gate_direction = 1;
+  GateType gate_type = 2;
+}
+
+message GateMessage {
+  repeated Gate gates = 1;
 }
