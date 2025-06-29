@@ -93,8 +93,9 @@ message PlayerBasicMessage {
   float position_y = 3;
   float hp = 4;
   float max_hp = 5;
-  PlayerAnimationType animation_type = 6;
-  CharacterState character_state = 7;
+  float weak_timer = 6;
+  PlayerAnimationType animation_type = 7;
+  CharacterState character_state = 8;
 }
 
 message PropTryGetMessage {
