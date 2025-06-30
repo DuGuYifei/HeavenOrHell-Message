@@ -1879,8 +1879,9 @@ class PlayerBasicMessage final :
     kPositionYFieldNumber = 3,
     kHpFieldNumber = 4,
     kMaxHpFieldNumber = 5,
-    kAnimationTypeFieldNumber = 6,
-    kCharacterStateFieldNumber = 7,
+    kWeakTimerFieldNumber = 6,
+    kAnimationTypeFieldNumber = 7,
+    kCharacterStateFieldNumber = 8,
   };
   // int32 player_id = 1;
   void clear_player_id();
@@ -1927,7 +1928,16 @@ class PlayerBasicMessage final :
   void _internal_set_max_hp(float value);
   public:
 
-  // .message.PlayerAnimationType animation_type = 6;
+  // float weak_timer = 6;
+  void clear_weak_timer();
+  float weak_timer() const;
+  void set_weak_timer(float value);
+  private:
+  float _internal_weak_timer() const;
+  void _internal_set_weak_timer(float value);
+  public:
+
+  // .message.PlayerAnimationType animation_type = 7;
   void clear_animation_type();
   ::message::PlayerAnimationType animation_type() const;
   void set_animation_type(::message::PlayerAnimationType value);
@@ -1936,7 +1946,7 @@ class PlayerBasicMessage final :
   void _internal_set_animation_type(::message::PlayerAnimationType value);
   public:
 
-  // .message.CharacterState character_state = 7;
+  // .message.CharacterState character_state = 8;
   void clear_character_state();
   ::message::CharacterState character_state() const;
   void set_character_state(::message::CharacterState value);
@@ -1957,6 +1967,7 @@ class PlayerBasicMessage final :
   float position_y_;
   float hp_;
   float max_hp_;
+  float weak_timer_;
   int animation_type_;
   int character_state_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4749,7 +4760,27 @@ inline void PlayerBasicMessage::set_max_hp(float value) {
   // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.max_hp)
 }
 
-// .message.PlayerAnimationType animation_type = 6;
+// float weak_timer = 6;
+inline void PlayerBasicMessage::clear_weak_timer() {
+  weak_timer_ = 0;
+}
+inline float PlayerBasicMessage::_internal_weak_timer() const {
+  return weak_timer_;
+}
+inline float PlayerBasicMessage::weak_timer() const {
+  // @@protoc_insertion_point(field_get:message.PlayerBasicMessage.weak_timer)
+  return _internal_weak_timer();
+}
+inline void PlayerBasicMessage::_internal_set_weak_timer(float value) {
+  
+  weak_timer_ = value;
+}
+inline void PlayerBasicMessage::set_weak_timer(float value) {
+  _internal_set_weak_timer(value);
+  // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.weak_timer)
+}
+
+// .message.PlayerAnimationType animation_type = 7;
 inline void PlayerBasicMessage::clear_animation_type() {
   animation_type_ = 0;
 }
@@ -4769,7 +4800,7 @@ inline void PlayerBasicMessage::set_animation_type(::message::PlayerAnimationTyp
   // @@protoc_insertion_point(field_set:message.PlayerBasicMessage.animation_type)
 }
 
-// .message.CharacterState character_state = 7;
+// .message.CharacterState character_state = 8;
 inline void PlayerBasicMessage::clear_character_state() {
   character_state_ = 0;
 }

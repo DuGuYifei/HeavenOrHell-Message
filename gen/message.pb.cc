@@ -117,6 +117,7 @@ constexpr PlayerBasicMessage::PlayerBasicMessage(
   , position_y_(0)
   , hp_(0)
   , max_hp_(0)
+  , weak_timer_(0)
   , animation_type_(0)
 
   , character_state_(0)
@@ -338,6 +339,7 @@ const uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, position_y_),
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, hp_),
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, max_hp_),
+  PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, weak_timer_),
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, animation_type_),
   PROTOBUF_FIELD_OFFSET(::message::PlayerBasicMessage, character_state_),
   ~0u,  // no _has_bits_
@@ -422,15 +424,15 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 52, -1, -1, sizeof(::message::LobbyMessage)},
   { 61, -1, -1, sizeof(::message::StartReceiveMsgMessage)},
   { 68, -1, -1, sizeof(::message::PlayerBasicMessage)},
-  { 81, -1, -1, sizeof(::message::PropTryGetMessage)},
-  { 90, -1, -1, sizeof(::message::PropGetMessage)},
-  { 99, -1, -1, sizeof(::message::IntegerMessage)},
-  { 107, -1, -1, sizeof(::message::Gate)},
-  { 115, -1, -1, sizeof(::message::GateMessage)},
-  { 122, -1, -1, sizeof(::message::EnterGateMessage)},
-  { 129, -1, -1, sizeof(::message::EnterGateResultMessage)},
-  { 137, -1, -1, sizeof(::message::PlayerResultMessage)},
-  { 145, -1, -1, sizeof(::message::GameResultMessage)},
+  { 82, -1, -1, sizeof(::message::PropTryGetMessage)},
+  { 91, -1, -1, sizeof(::message::PropGetMessage)},
+  { 100, -1, -1, sizeof(::message::IntegerMessage)},
+  { 108, -1, -1, sizeof(::message::Gate)},
+  { 116, -1, -1, sizeof(::message::GateMessage)},
+  { 123, -1, -1, sizeof(::message::EnterGateMessage)},
+  { 130, -1, -1, sizeof(::message::EnterGateResultMessage)},
+  { 138, -1, -1, sizeof(::message::PlayerResultMessage)},
+  { 146, -1, -1, sizeof(::message::GameResultMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -482,57 +484,57 @@ const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE
   "ntent\030\002 \001(\t\"c\n\014LobbyMessage\022\020\n\010is_ready\030"
   "\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005\022.\n\016character_ty"
   "pe\030\003 \001(\0162\026.message.CharacterType\"+\n\026Star"
-  "tReceiveMsgMessage\022\021\n\tplayer_id\030\001 \001(\005\"\323\001"
+  "tReceiveMsgMessage\022\021\n\tplayer_id\030\001 \001(\005\"\347\001"
   "\n\022PlayerBasicMessage\022\021\n\tplayer_id\030\001 \001(\005\022"
   "\022\n\nposition_x\030\002 \001(\002\022\022\n\nposition_y\030\003 \001(\002\022"
-  "\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\0224\n\016animation"
-  "_type\030\006 \001(\0162\034.message.PlayerAnimationTyp"
-  "e\0220\n\017character_state\030\007 \001(\0162\027.message.Cha"
-  "racterState\"J\n\021PropTryGetMessage\022\021\n\tplay"
-  "er_id\030\001 \001(\005\022\017\n\007prop_id\030\002 \001(\005\022\021\n\tprop_typ"
-  "e\030\003 \001(\005\"D\n\016PropGetMessage\022\016\n\006is_get\030\001 \001("
-  "\010\022\021\n\tplayer_id\030\002 \001(\005\022\017\n\007prop_id\030\003 \001(\005\"R\n"
-  "\016IntegerMessage\0221\n\014message_type\030\001 \001(\0162\033."
-  "message.IntegerMessageType\022\r\n\005value\030\002 \001("
-  "\005\"\\\n\004Gate\022.\n\016gate_direction\030\001 \001(\0162\026.mess"
-  "age.GateDirection\022$\n\tgate_type\030\002 \001(\0162\021.m"
-  "essage.GateType\"+\n\013GateMessage\022\034\n\005gates\030"
-  "\001 \003(\0132\r.message.Gate\"B\n\020EnterGateMessage"
-  "\022.\n\016gate_direction\030\002 \001(\0162\026.message.GateD"
-  "irection\"H\n\026EnterGateResultMessage\022\021\n\tpl"
-  "ayer_id\030\001 \001(\005\022\033\n\004gate\030\002 \001(\0132\r.message.Ga"
-  "te\"V\n\023PlayerResultMessage\022,\n\rplayer_resu"
-  "lt\030\001 \001(\0162\025.message.PlayerResult\022\021\n\tplaye"
-  "r_id\030\002 \001(\005\"{\n\021GameResultMessage\022(\n\013game_"
-  "result\030\001 \001(\0162\023.message.GameResult\022<\n\026pla"
-  "yer_result_messages\030\002 \003(\0132\034.message.Play"
-  "erResultMessage*T\n\rCharacterType\022\n\n\006REAP"
-  "ER\020\000\022\014\n\010SOUL_DOG\020\001\022\025\n\021SOUL_PSYCHOLOGIST\020"
-  "\002\022\022\n\016SOUL_DETECTIVE\020\003*!\n\021StringMessageTy"
-  "pe\022\014\n\010MAZE_MAP\020\000*\205\001\n\023PlayerAnimationType"
-  "\022\010\n\004IDLE\020\000\022\r\n\tWALK_LEFT\020\001\022\016\n\nWALK_RIGHT\020"
-  "\002\022\r\n\tDASH_LEFT\020\003\022\016\n\nDASH_RIGHT\020\004\022\n\n\006ATTA"
-  "CK\020\005\022\007\n\003HIT\020\006\022\010\n\004WEAK\020\007\022\007\n\003DIE\020\010*{\n\016Char"
-  "acterState\022\032\n\026Character_STATE_NORMAL\020\000\022\030"
-  "\n\024Character_STATE_WEAK\020\001\022\027\n\023Character_ST"
-  "ATE_DIE\020\002\022\032\n\026Character_STATE_FREEZE\020\003*K\n"
-  "\022IntegerMessageType\022\033\n\027ALTAR_MINI_GAME_S"
-  "UCCESS\020\000\022\030\n\024REAPER_ATTACK_RESULT\020\001**\n\010Ga"
-  "teType\022\017\n\013GATE_HEAVEN\020\000\022\r\n\tGATE_HELL\020\001*r"
-  "\n\rGateDirection\022\025\n\021GATE_DIRECTION_UP\020\000\022\027"
-  "\n\023GATE_DIRECTION_DOWN\020\001\022\027\n\023GATE_DIRECTIO"
-  "N_LEFT\020\002\022\030\n\024GATE_DIRECTION_RIGHT\020\003*W\n\nGa"
-  "meResult\022\023\n\017GAME_RESULT_TIE\020\000\022\032\n\026GAME_RE"
-  "SULT_REAPER_WIN\020\001\022\030\n\024GAME_RESULT_SOUL_WI"
-  "N\020\002*\234\001\n\014PlayerResult\022\034\n\030PLAYER_RESULT_DI"
-  "E_BY_HIT\020\000\022\026\n\022PLAYER_RESULT_HELL\020\001\022\030\n\024PL"
-  "AYER_RESULT_HEAVEN\020\002\022\036\n\032PLAYER_RESULT_RE"
-  "APER_HAPPY\020\003\022\034\n\030PLAYER_RESULT_REAPER_SAD"
-  "\020\004b\006proto3"
+  "\n\n\002hp\030\004 \001(\002\022\016\n\006max_hp\030\005 \001(\002\022\022\n\nweak_time"
+  "r\030\006 \001(\002\0224\n\016animation_type\030\007 \001(\0162\034.messag"
+  "e.PlayerAnimationType\0220\n\017character_state"
+  "\030\010 \001(\0162\027.message.CharacterState\"J\n\021PropT"
+  "ryGetMessage\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007prop_"
+  "id\030\002 \001(\005\022\021\n\tprop_type\030\003 \001(\005\"D\n\016PropGetMe"
+  "ssage\022\016\n\006is_get\030\001 \001(\010\022\021\n\tplayer_id\030\002 \001(\005"
+  "\022\017\n\007prop_id\030\003 \001(\005\"R\n\016IntegerMessage\0221\n\014m"
+  "essage_type\030\001 \001(\0162\033.message.IntegerMessa"
+  "geType\022\r\n\005value\030\002 \001(\005\"\\\n\004Gate\022.\n\016gate_di"
+  "rection\030\001 \001(\0162\026.message.GateDirection\022$\n"
+  "\tgate_type\030\002 \001(\0162\021.message.GateType\"+\n\013G"
+  "ateMessage\022\034\n\005gates\030\001 \003(\0132\r.message.Gate"
+  "\"B\n\020EnterGateMessage\022.\n\016gate_direction\030\002"
+  " \001(\0162\026.message.GateDirection\"H\n\026EnterGat"
+  "eResultMessage\022\021\n\tplayer_id\030\001 \001(\005\022\033\n\004gat"
+  "e\030\002 \001(\0132\r.message.Gate\"V\n\023PlayerResultMe"
+  "ssage\022,\n\rplayer_result\030\001 \001(\0162\025.message.P"
+  "layerResult\022\021\n\tplayer_id\030\002 \001(\005\"{\n\021GameRe"
+  "sultMessage\022(\n\013game_result\030\001 \001(\0162\023.messa"
+  "ge.GameResult\022<\n\026player_result_messages\030"
+  "\002 \003(\0132\034.message.PlayerResultMessage*T\n\rC"
+  "haracterType\022\n\n\006REAPER\020\000\022\014\n\010SOUL_DOG\020\001\022\025"
+  "\n\021SOUL_PSYCHOLOGIST\020\002\022\022\n\016SOUL_DETECTIVE\020"
+  "\003*!\n\021StringMessageType\022\014\n\010MAZE_MAP\020\000*\205\001\n"
+  "\023PlayerAnimationType\022\010\n\004IDLE\020\000\022\r\n\tWALK_L"
+  "EFT\020\001\022\016\n\nWALK_RIGHT\020\002\022\r\n\tDASH_LEFT\020\003\022\016\n\n"
+  "DASH_RIGHT\020\004\022\n\n\006ATTACK\020\005\022\007\n\003HIT\020\006\022\010\n\004WEA"
+  "K\020\007\022\007\n\003DIE\020\010*{\n\016CharacterState\022\032\n\026Charac"
+  "ter_STATE_NORMAL\020\000\022\030\n\024Character_STATE_WE"
+  "AK\020\001\022\027\n\023Character_STATE_DIE\020\002\022\032\n\026Charact"
+  "er_STATE_FREEZE\020\003*K\n\022IntegerMessageType\022"
+  "\033\n\027ALTAR_MINI_GAME_SUCCESS\020\000\022\030\n\024REAPER_A"
+  "TTACK_RESULT\020\001**\n\010GateType\022\017\n\013GATE_HEAVE"
+  "N\020\000\022\r\n\tGATE_HELL\020\001*r\n\rGateDirection\022\025\n\021G"
+  "ATE_DIRECTION_UP\020\000\022\027\n\023GATE_DIRECTION_DOW"
+  "N\020\001\022\027\n\023GATE_DIRECTION_LEFT\020\002\022\030\n\024GATE_DIR"
+  "ECTION_RIGHT\020\003*W\n\nGameResult\022\023\n\017GAME_RES"
+  "ULT_TIE\020\000\022\032\n\026GAME_RESULT_REAPER_WIN\020\001\022\030\n"
+  "\024GAME_RESULT_SOUL_WIN\020\002*\234\001\n\014PlayerResult"
+  "\022\034\n\030PLAYER_RESULT_DIE_BY_HIT\020\000\022\026\n\022PLAYER"
+  "_RESULT_HELL\020\001\022\030\n\024PLAYER_RESULT_HEAVEN\020\002"
+  "\022\036\n\032PLAYER_RESULT_REAPER_HAPPY\020\003\022\034\n\030PLAY"
+  "ER_RESULT_REAPER_SAD\020\004b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_message_2eproto = {
-  false, false, 2970, descriptor_table_protodef_message_2eproto, "message.proto", 
+  false, false, 2990, descriptor_table_protodef_message_2eproto, "message.proto", 
   &descriptor_table_message_2eproto_once, nullptr, 0, 17,
   schemas, file_default_instances, TableStruct_message_2eproto::offsets,
   file_level_metadata_message_2eproto, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
@@ -2971,18 +2973,26 @@ const char* PlayerBasicMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         } else
           goto handle_unusual;
         continue;
-      // .message.PlayerAnimationType animation_type = 6;
+      // float weak_timer = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+          weak_timer_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // .message.PlayerAnimationType animation_type = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_animation_type(static_cast<::message::PlayerAnimationType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .message.CharacterState character_state = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+      // .message.CharacterState character_state = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_character_state(static_cast<::message::CharacterState>(val));
@@ -3064,18 +3074,28 @@ uint8_t* PlayerBasicMessage::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_max_hp(), target);
   }
 
-  // .message.PlayerAnimationType animation_type = 6;
+  // float weak_timer = 6;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_weak_timer = this->_internal_weak_timer();
+  uint32_t raw_weak_timer;
+  memcpy(&raw_weak_timer, &tmp_weak_timer, sizeof(tmp_weak_timer));
+  if (raw_weak_timer != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_weak_timer(), target);
+  }
+
+  // .message.PlayerAnimationType animation_type = 7;
   if (this->_internal_animation_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      6, this->_internal_animation_type(), target);
+      7, this->_internal_animation_type(), target);
   }
 
-  // .message.CharacterState character_state = 7;
+  // .message.CharacterState character_state = 8;
   if (this->_internal_character_state() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      7, this->_internal_character_state(), target);
+      8, this->_internal_character_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3135,13 +3155,22 @@ size_t PlayerBasicMessage::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  // .message.PlayerAnimationType animation_type = 6;
+  // float weak_timer = 6;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_weak_timer = this->_internal_weak_timer();
+  uint32_t raw_weak_timer;
+  memcpy(&raw_weak_timer, &tmp_weak_timer, sizeof(tmp_weak_timer));
+  if (raw_weak_timer != 0) {
+    total_size += 1 + 4;
+  }
+
+  // .message.PlayerAnimationType animation_type = 7;
   if (this->_internal_animation_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_animation_type());
   }
 
-  // .message.CharacterState character_state = 7;
+  // .message.CharacterState character_state = 8;
   if (this->_internal_character_state() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_character_state());
@@ -3199,6 +3228,13 @@ void PlayerBasicMessage::MergeFrom(const PlayerBasicMessage& from) {
   memcpy(&raw_max_hp, &tmp_max_hp, sizeof(tmp_max_hp));
   if (raw_max_hp != 0) {
     _internal_set_max_hp(from._internal_max_hp());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_weak_timer = from._internal_weak_timer();
+  uint32_t raw_weak_timer;
+  memcpy(&raw_weak_timer, &tmp_weak_timer, sizeof(tmp_weak_timer));
+  if (raw_weak_timer != 0) {
+    _internal_set_weak_timer(from._internal_weak_timer());
   }
   if (from._internal_animation_type() != 0) {
     _internal_set_animation_type(from._internal_animation_type());
