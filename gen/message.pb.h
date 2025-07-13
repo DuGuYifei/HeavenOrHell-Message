@@ -3563,10 +3563,24 @@ class ChatMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kFromPlayerFieldNumber = 1,
     kContentFieldNumber = 3,
-    kFromPlayerIdFieldNumber = 1,
     kIsToAllFieldNumber = 2,
   };
+  // string from_player = 1;
+  void clear_from_player();
+  const std::string& from_player() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_from_player(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_from_player();
+  PROTOBUF_NODISCARD std::string* release_from_player();
+  void set_allocated_from_player(std::string* from_player);
+  private:
+  const std::string& _internal_from_player() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_from_player(const std::string& value);
+  std::string* _internal_mutable_from_player();
+  public:
+
   // string content = 3;
   void clear_content();
   const std::string& content() const;
@@ -3579,15 +3593,6 @@ class ChatMessage final :
   const std::string& _internal_content() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_content(const std::string& value);
   std::string* _internal_mutable_content();
-  public:
-
-  // int32 from_player_id = 1;
-  void clear_from_player_id();
-  int32_t from_player_id() const;
-  void set_from_player_id(int32_t value);
-  private:
-  int32_t _internal_from_player_id() const;
-  void _internal_set_from_player_id(int32_t value);
   public:
 
   // bool is_to_all = 2;
@@ -3606,8 +3611,8 @@ class ChatMessage final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr from_player_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr content_;
-  int32_t from_player_id_;
   bool is_to_all_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_message_2eproto;
@@ -5603,24 +5608,55 @@ GameResultMessage::player_result_messages() const {
 
 // ChatMessage
 
-// int32 from_player_id = 1;
-inline void ChatMessage::clear_from_player_id() {
-  from_player_id_ = 0;
+// string from_player = 1;
+inline void ChatMessage::clear_from_player() {
+  from_player_.ClearToEmpty();
 }
-inline int32_t ChatMessage::_internal_from_player_id() const {
-  return from_player_id_;
+inline const std::string& ChatMessage::from_player() const {
+  // @@protoc_insertion_point(field_get:message.ChatMessage.from_player)
+  return _internal_from_player();
 }
-inline int32_t ChatMessage::from_player_id() const {
-  // @@protoc_insertion_point(field_get:message.ChatMessage.from_player_id)
-  return _internal_from_player_id();
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ChatMessage::set_from_player(ArgT0&& arg0, ArgT... args) {
+ 
+ from_player_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:message.ChatMessage.from_player)
 }
-inline void ChatMessage::_internal_set_from_player_id(int32_t value) {
+inline std::string* ChatMessage::mutable_from_player() {
+  std::string* _s = _internal_mutable_from_player();
+  // @@protoc_insertion_point(field_mutable:message.ChatMessage.from_player)
+  return _s;
+}
+inline const std::string& ChatMessage::_internal_from_player() const {
+  return from_player_.Get();
+}
+inline void ChatMessage::_internal_set_from_player(const std::string& value) {
   
-  from_player_id_ = value;
+  from_player_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline void ChatMessage::set_from_player_id(int32_t value) {
-  _internal_set_from_player_id(value);
-  // @@protoc_insertion_point(field_set:message.ChatMessage.from_player_id)
+inline std::string* ChatMessage::_internal_mutable_from_player() {
+  
+  return from_player_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ChatMessage::release_from_player() {
+  // @@protoc_insertion_point(field_release:message.ChatMessage.from_player)
+  return from_player_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ChatMessage::set_allocated_from_player(std::string* from_player) {
+  if (from_player != nullptr) {
+    
+  } else {
+    
+  }
+  from_player_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from_player,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from_player_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    from_player_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:message.ChatMessage.from_player)
 }
 
 // bool is_to_all = 2;

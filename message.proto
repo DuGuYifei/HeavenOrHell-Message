@@ -174,7 +174,7 @@ message GameResultMessage {
 }
 
 message ChatMessage {
-  int32 from_player_id = 1;
+  string from_player = 1;
   bool is_to_all = 2;
   string content = 3;
 }
