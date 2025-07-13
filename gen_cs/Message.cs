@@ -73,7 +73,7 @@ namespace Message {
             "bHQYASABKA4yEy5tZXNzYWdlLkdhbWVSZXN1bHQSPAoWcGxheWVyX3Jlc3Vs",
             "dF9tZXNzYWdlcxgCIAMoCzIcLm1lc3NhZ2UuUGxheWVyUmVzdWx0TWVzc2Fn",
             "ZSJJCgtDaGF0TWVzc2FnZRIWCg5mcm9tX3BsYXllcl9pZBgBIAEoBRIRCglp",
-            "c190b19hbGwYAiABKAgSDwoHbWVzc2FnZRgDIAEoCSpUCg1DaGFyYWN0ZXJU",
+            "c190b19hbGwYAiABKAgSDwoHY29udGVudBgDIAEoCSpUCg1DaGFyYWN0ZXJU",
             "eXBlEgoKBlJFQVBFUhAAEgwKCFNPVUxfRE9HEAESFQoRU09VTF9QU1lDSE9M",
             "T0dJU1QQAhISCg5TT1VMX0RFVEVDVElWRRADKiEKEVN0cmluZ01lc3NhZ2VU",
             "eXBlEgwKCE1BWkVfTUFQEAAqhQEKE1BsYXllckFuaW1hdGlvblR5cGUSCAoE",
@@ -114,7 +114,7 @@ namespace Message {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.EnterGateResultMessage), global::Message.EnterGateResultMessage.Parser, new[]{ "PlayerId", "Gate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerResultMessage), global::Message.PlayerResultMessage.Parser, new[]{ "PlayerResult", "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.GameResultMessage), global::Message.GameResultMessage.Parser, new[]{ "GameResult", "PlayerResultMessages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.ChatMessage), global::Message.ChatMessage.Parser, new[]{ "FromPlayerId", "IsToAll", "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.ChatMessage), global::Message.ChatMessage.Parser, new[]{ "FromPlayerId", "IsToAll", "Content" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4963,7 +4963,7 @@ namespace Message {
     public ChatMessage(ChatMessage other) : this() {
       fromPlayerId_ = other.fromPlayerId_;
       isToAll_ = other.isToAll_;
-      message_ = other.message_;
+      content_ = other.content_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4997,15 +4997,15 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 3;
-    private string message_ = "";
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 3;
+    private string content_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
+    public string Content {
+      get { return content_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5026,7 +5026,7 @@ namespace Message {
       }
       if (FromPlayerId != other.FromPlayerId) return false;
       if (IsToAll != other.IsToAll) return false;
-      if (Message != other.Message) return false;
+      if (Content != other.Content) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5036,7 +5036,7 @@ namespace Message {
       int hash = 1;
       if (FromPlayerId != 0) hash ^= FromPlayerId.GetHashCode();
       if (IsToAll != false) hash ^= IsToAll.GetHashCode();
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5063,9 +5063,9 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteBool(IsToAll);
       }
-      if (Message.Length != 0) {
+      if (Content.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Message);
+        output.WriteString(Content);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5085,9 +5085,9 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteBool(IsToAll);
       }
-      if (Message.Length != 0) {
+      if (Content.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Message);
+        output.WriteString(Content);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5105,8 +5105,8 @@ namespace Message {
       if (IsToAll != false) {
         size += 1 + 1;
       }
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5126,8 +5126,8 @@ namespace Message {
       if (other.IsToAll != false) {
         IsToAll = other.IsToAll;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.Content.Length != 0) {
+        Content = other.Content;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5153,7 +5153,7 @@ namespace Message {
             break;
           }
           case 26: {
-            Message = input.ReadString();
+            Content = input.ReadString();
             break;
           }
         }
@@ -5180,7 +5180,7 @@ namespace Message {
             break;
           }
           case 26: {
-            Message = input.ReadString();
+            Content = input.ReadString();
             break;
           }
         }

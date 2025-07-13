@@ -3563,22 +3563,22 @@ class ChatMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 3,
+    kContentFieldNumber = 3,
     kFromPlayerIdFieldNumber = 1,
     kIsToAllFieldNumber = 2,
   };
-  // string message = 3;
-  void clear_message();
-  const std::string& message() const;
+  // string content = 3;
+  void clear_content();
+  const std::string& content() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_content(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_content();
+  PROTOBUF_NODISCARD std::string* release_content();
+  void set_allocated_content(std::string* content);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_content() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_content(const std::string& value);
+  std::string* _internal_mutable_content();
   public:
 
   // int32 from_player_id = 1;
@@ -3606,7 +3606,7 @@ class ChatMessage final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr content_;
   int32_t from_player_id_;
   bool is_to_all_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -5643,55 +5643,55 @@ inline void ChatMessage::set_is_to_all(bool value) {
   // @@protoc_insertion_point(field_set:message.ChatMessage.is_to_all)
 }
 
-// string message = 3;
-inline void ChatMessage::clear_message() {
-  message_.ClearToEmpty();
+// string content = 3;
+inline void ChatMessage::clear_content() {
+  content_.ClearToEmpty();
 }
-inline const std::string& ChatMessage::message() const {
-  // @@protoc_insertion_point(field_get:message.ChatMessage.message)
-  return _internal_message();
+inline const std::string& ChatMessage::content() const {
+  // @@protoc_insertion_point(field_get:message.ChatMessage.content)
+  return _internal_content();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ChatMessage::set_message(ArgT0&& arg0, ArgT... args) {
+void ChatMessage::set_content(ArgT0&& arg0, ArgT... args) {
  
- message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:message.ChatMessage.message)
+ content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:message.ChatMessage.content)
 }
-inline std::string* ChatMessage::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:message.ChatMessage.message)
+inline std::string* ChatMessage::mutable_content() {
+  std::string* _s = _internal_mutable_content();
+  // @@protoc_insertion_point(field_mutable:message.ChatMessage.content)
   return _s;
 }
-inline const std::string& ChatMessage::_internal_message() const {
-  return message_.Get();
+inline const std::string& ChatMessage::_internal_content() const {
+  return content_.Get();
 }
-inline void ChatMessage::_internal_set_message(const std::string& value) {
+inline void ChatMessage::_internal_set_content(const std::string& value) {
   
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  content_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ChatMessage::_internal_mutable_message() {
+inline std::string* ChatMessage::_internal_mutable_content() {
   
-  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+  return content_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ChatMessage::release_message() {
-  // @@protoc_insertion_point(field_release:message.ChatMessage.message)
-  return message_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+inline std::string* ChatMessage::release_content() {
+  // @@protoc_insertion_point(field_release:message.ChatMessage.content)
+  return content_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
-inline void ChatMessage::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void ChatMessage::set_allocated_content(std::string* content) {
+  if (content != nullptr) {
     
   } else {
     
   }
-  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
+  content_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), content,
       GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (message_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  if (content_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    content_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:message.ChatMessage.message)
+  // @@protoc_insertion_point(field_set_allocated:message.ChatMessage.content)
 }
 
 #ifdef __GNUC__
