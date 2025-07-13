@@ -64,9 +64,7 @@ message LobbyMessage {
 // otherwise not send anything.
 // This message is
 // sent by player when they start game in map
-message StartReceiveMsgMessage {
-  int32 player_id = 1;
-}
+message StartReceiveMsgMessage { int32 player_id = 1; }
 
 enum PlayerAnimationType {
   IDLE = 0;
@@ -101,7 +99,9 @@ message PlayerBasicMessage {
 message PropTryGetMessage {
   int32 player_id = 1;
   int32 prop_id = 2;
-  int32 prop_type = 3; // TODO: Need define 'a b c d' in map to give prop type, or random by client (server can mutex lock to only one client get prop)
+  int32 prop_type =
+      3; // TODO: Need define 'a b c d' in map to give prop type, or random by
+         // client (server can mutex lock to only one client get prop)
 }
 
 message PropGetMessage {
@@ -117,8 +117,9 @@ enum IntegerMessageType {
 
 message IntegerMessage {
   IntegerMessageType message_type = 1;
-  int32 value = 2; // if ALTERN_MINI_GAME_SUCCESS, value is the player_id of recovered soul.
-                   // if REAPER_ATTACK_RESULT, value is the player_id of attacked soul.
+  int32 value = 2; // if ALTERN_MINI_GAME_SUCCESS, value is the player_id of
+                   // recovered soul. if REAPER_ATTACK_RESULT, value is the
+                   // player_id of attacked soul.
 }
 
 enum GateType {
@@ -138,13 +139,9 @@ message Gate {
   GateType gate_type = 2;
 }
 
-message GateMessage {
-  repeated Gate gates = 1;
-}
+message GateMessage { repeated Gate gates = 1; }
 
-message EnterGateMessage {
-  GateDirection gate_direction = 2;
-}
+message EnterGateMessage { GateDirection gate_direction = 2; }
 
 message EnterGateResultMessage {
   int32 player_id = 1;
@@ -173,4 +170,10 @@ message PlayerResultMessage {
 message GameResultMessage {
   GameResult game_result = 1;
   repeated PlayerResultMessage player_result_messages = 2;
+}
+
+message ChatMessage {
+  int32 from_player_id = 1;
+  bool is_to_all = 2;
+  string message = 3;
 }
