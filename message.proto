@@ -31,6 +31,7 @@ message MessageWrapper {
     EnterGateMessage enter_gate_message = 10;
     EnterGateResultMessage enter_gate_result_message = 11;
     GameResultMessage game_result_message = 12;
+    ChatMessage chat_message = 13;
   }
 }
 

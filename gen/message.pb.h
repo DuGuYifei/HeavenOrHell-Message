@@ -734,6 +734,7 @@ class MessageWrapper final :
     kEnterGateMessage = 10,
     kEnterGateResultMessage = 11,
     kGameResultMessage = 12,
+    kChatMessage = 13,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -828,6 +829,7 @@ class MessageWrapper final :
     kEnterGateMessageFieldNumber = 10,
     kEnterGateResultMessageFieldNumber = 11,
     kGameResultMessageFieldNumber = 12,
+    kChatMessageFieldNumber = 13,
   };
   // .message.RoomMessage room_message = 1;
   bool has_room_message() const;
@@ -1045,6 +1047,24 @@ class MessageWrapper final :
       ::message::GameResultMessage* game_result_message);
   ::message::GameResultMessage* unsafe_arena_release_game_result_message();
 
+  // .message.ChatMessage chat_message = 13;
+  bool has_chat_message() const;
+  private:
+  bool _internal_has_chat_message() const;
+  public:
+  void clear_chat_message();
+  const ::message::ChatMessage& chat_message() const;
+  PROTOBUF_NODISCARD ::message::ChatMessage* release_chat_message();
+  ::message::ChatMessage* mutable_chat_message();
+  void set_allocated_chat_message(::message::ChatMessage* chat_message);
+  private:
+  const ::message::ChatMessage& _internal_chat_message() const;
+  ::message::ChatMessage* _internal_mutable_chat_message();
+  public:
+  void unsafe_arena_set_allocated_chat_message(
+      ::message::ChatMessage* chat_message);
+  ::message::ChatMessage* unsafe_arena_release_chat_message();
+
   void clear_payload();
   PayloadCase payload_case() const;
   // @@protoc_insertion_point(class_scope:message.MessageWrapper)
@@ -1062,6 +1082,7 @@ class MessageWrapper final :
   void set_has_enter_gate_message();
   void set_has_enter_gate_result_message();
   void set_has_game_result_message();
+  void set_has_chat_message();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -1084,6 +1105,7 @@ class MessageWrapper final :
     ::message::EnterGateMessage* enter_gate_message_;
     ::message::EnterGateResultMessage* enter_gate_result_message_;
     ::message::GameResultMessage* game_result_message_;
+    ::message::ChatMessage* chat_message_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   uint32_t _oneof_case_[1];
@@ -4554,6 +4576,80 @@ inline ::message::GameResultMessage* MessageWrapper::_internal_mutable_game_resu
 inline ::message::GameResultMessage* MessageWrapper::mutable_game_result_message() {
   ::message::GameResultMessage* _msg = _internal_mutable_game_result_message();
   // @@protoc_insertion_point(field_mutable:message.MessageWrapper.game_result_message)
+  return _msg;
+}
+
+// .message.ChatMessage chat_message = 13;
+inline bool MessageWrapper::_internal_has_chat_message() const {
+  return payload_case() == kChatMessage;
+}
+inline bool MessageWrapper::has_chat_message() const {
+  return _internal_has_chat_message();
+}
+inline void MessageWrapper::set_has_chat_message() {
+  _oneof_case_[0] = kChatMessage;
+}
+inline void MessageWrapper::clear_chat_message() {
+  if (_internal_has_chat_message()) {
+    if (GetArenaForAllocation() == nullptr) {
+      delete payload_.chat_message_;
+    }
+    clear_has_payload();
+  }
+}
+inline ::message::ChatMessage* MessageWrapper::release_chat_message() {
+  // @@protoc_insertion_point(field_release:message.MessageWrapper.chat_message)
+  if (_internal_has_chat_message()) {
+    clear_has_payload();
+      ::message::ChatMessage* temp = payload_.chat_message_;
+    if (GetArenaForAllocation() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    payload_.chat_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::message::ChatMessage& MessageWrapper::_internal_chat_message() const {
+  return _internal_has_chat_message()
+      ? *payload_.chat_message_
+      : reinterpret_cast< ::message::ChatMessage&>(::message::_ChatMessage_default_instance_);
+}
+inline const ::message::ChatMessage& MessageWrapper::chat_message() const {
+  // @@protoc_insertion_point(field_get:message.MessageWrapper.chat_message)
+  return _internal_chat_message();
+}
+inline ::message::ChatMessage* MessageWrapper::unsafe_arena_release_chat_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:message.MessageWrapper.chat_message)
+  if (_internal_has_chat_message()) {
+    clear_has_payload();
+    ::message::ChatMessage* temp = payload_.chat_message_;
+    payload_.chat_message_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void MessageWrapper::unsafe_arena_set_allocated_chat_message(::message::ChatMessage* chat_message) {
+  clear_payload();
+  if (chat_message) {
+    set_has_chat_message();
+    payload_.chat_message_ = chat_message;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:message.MessageWrapper.chat_message)
+}
+inline ::message::ChatMessage* MessageWrapper::_internal_mutable_chat_message() {
+  if (!_internal_has_chat_message()) {
+    clear_payload();
+    set_has_chat_message();
+    payload_.chat_message_ = CreateMaybeMessage< ::message::ChatMessage >(GetArenaForAllocation());
+  }
+  return payload_.chat_message_;
+}
+inline ::message::ChatMessage* MessageWrapper::mutable_chat_message() {
+  ::message::ChatMessage* _msg = _internal_mutable_chat_message();
+  // @@protoc_insertion_point(field_mutable:message.MessageWrapper.chat_message)
   return _msg;
 }
 
